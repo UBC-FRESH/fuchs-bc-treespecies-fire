@@ -4,16 +4,19 @@
 \subsection{Study area}
 
 We model the Prince George Timber Supply Area (TSA~24) in the Omineca region of interior British
-Columbia, Canada: a fire-prone landscape of about \SI{7.97}{\mega\hectare} gross area, of which
-\SI{6.02}{\mega\hectare} carries forest stands in the compiled inventory used here. The area is
-represented by \num{458708} spatial blocks, each with a species, age, and site description drawn
-from the provincial forest inventory.
+Columbia, Canada: a fire-prone landscape of about \SI{7.97}{\mega\hectare} gross area. The
+compiled dataset represents \SI{5.90}{\mega\hectare} of forest stands, of which
+\SI{3.06}{\mega\hectare} is managed timber harvesting land base and \SI{2.84}{\mega\hectare}
+unmanaged forest, in \num{458708} blocks.
 
-The landscape is dominated by spruce (\SI{33.1}{\percent} of stand area), subalpine fir
-(\SI{25.3}{\percent}), and lodgepole pine (\SI{24.0}{\percent}), with trembling aspen at
-\SI{6.9}{\percent} and Engelmann spruce at \SI{4.5}{\percent}; deciduous species together occupy
-\SI{8.7}{\percent} of the area (\autoref{tab:meth_studyregion_spec}). The official allowable
-annual cut is \SI{6917231}{\cubic\meter\per\year}, effective 28 August 2025
+The managed land base is dominated by spruce (\SI{44.9}{\percent}), lodgepole pine
+(\SI{29.4}{\percent}), and subalpine fir (\SI{16.3}{\percent}), with trembling aspen at
+\SI{5.3}{\percent}, Engelmann spruce at \SI{4.0}{\percent}, and black cottonwood at
+\SI{0.1}{\percent}; deciduous species together occupy \SI{5.4}{\percent} of the managed area and
+\SI{5.4}{\percent} of harvested volume (\autoref{tab:meth_studyregion_spec}). The managed area
+matches the base-case timber harvesting land base in the 2017 timber supply review,
+\SI{3070301}{\hectare}, to within \SI{0.3}{\percent}. The official allowable annual cut is
+\SI{6917231}{\cubic\meter\per\year}, effective 28 August 2025
 \citep{government_of_british_columbia_aac_2026}.
 
 \begin{figure}
@@ -31,24 +34,21 @@ Williams Lake study area from the earlier design. \color{black}
 % Requires: \usepackage{booktabs}
 \begin{table}[h]
     \centering
-    \caption{Species composition of the modelled landscape by leading species, as share of stand
-    area (\SI{6.02}{\mega\hectare}) and as share of harvested volume in the reference schedule.}
+    \caption{Species composition of the managed land base (\SI{3.06}{\mega\hectare}) and of
+    harvested volume in the reference schedule.}
     \label{tab:meth_studyregion_spec}
     \begin{tabular}{lrr}
         \toprule
         Species group & Area share [\%] & Harvested share [\%] \\
         \midrule
-        Spruce (Sx)                        & 33.1 & 46.7 \\
-        Subalpine fir (Bl)                 & 25.3 & 14.8 \\
-        Lodgepole pine (Pl)                & 24.0 & 29.5 \\
-        Trembling aspen (At)               & 6.9  & 5.8  \\
-        Engelmann spruce (Se)              & 4.5  & 3.0  \\
-        Douglas-fir (Fd)                   & 2.1  & ---  \\
-        Paper birch (Ep)                   & 1.3  & ---  \\
-        Black cottonwood (Ac)              & ---  & 0.2  \\
-        Other conifers                     & 2.8  & ---  \\
+        Spruce (Sx)                        & 44.9 & 45.2 \\
+        Lodgepole pine (Pl)                & 29.4 & 31.3 \\
+        Subalpine fir (Bl)                 & 16.3 & 14.7 \\
+        Trembling aspen (At)               & 5.3  & 5.3  \\
+        Engelmann spruce (Se)              & 4.0  & 3.4  \\
+        Black cottonwood (Ac)              & 0.1  & 0.1  \\
         \midrule
-        Deciduous, all                    & 8.7  & 6.0  \\
+        Deciduous, all                    & 5.4  & 5.4  \\
         \bottomrule
     \end{tabular}
 \end{table}
