@@ -57,8 +57,9 @@ Williams Lake study area from the earlier design. \color{black}
 
 We represent two decision levels. A regional policy maker sets a harvest level and targets for
 species composition, seeking to maintain the productive capacity of the area under fire risk. An
-enterprise then decides where, when, and with which species to harvest and regenerate, maximizing
-profit subject to those policy constraints.
+enterprise then decides where, when, and with which species to harvest and regenerate in response
+to those targets. The enterprise's response is a schedule; its profit is computed from that
+schedule after the fact.
 
 \paragraph{Policy level} The policy maker chooses an allowable annual cut $A$ and a target share
 $\sigma^{\ast}$ of harvested area by species group. Policies are evaluated on the downside risk of
@@ -73,13 +74,24 @@ disturbance here is a spatial fire process rather than a correlated damage proba
 
 \paragraph{Enterprise level} For a given policy, the enterprise chooses the area to harvest in each
 period from each development type and age class, and the species to replant on harvested area. The
-problem is
+model is a weighted goal program: the enterprise minimizes the weighted deviation of the realized
+harvest level and species composition from the policy's targets, subject to the area balance and
+the treatment options available on each block,
 \begin{equation}
-    \max\ \mathrm{NPV} \quad \text{subject to}\quad A,\ \sigma,\ \text{even flow, and the area
-    balance},
+    \min\ \sum_{t} \Big( w_A \, \big|H_t - A\big| + w_\sigma \, \big|S_t - \sigma^{\ast}\big| \Big)
+    \quad \text{subject to the area balance},
 \end{equation}
-where $\sigma$ is the realized species composition of harvested area. Harvest is offered oldest
-first, so the enterprise takes the oldest available stands up to the policy's cut.
+where $H_t$ is the harvest in period $t$ and $S_t$ the realized species composition.
+
+Two properties of this formulation must be stated because they bound the claims. First, WS4's
+minimum and maximum are the hinges of one-sided penalties, not feasibility bounds: a target is an
+aspiration, and the realized value is an outcome of the weighted compromise
+\citep{ubc_fresh_ws4_2026}. We therefore report the realized cut and composition beside every
+target, and we do not describe a target as a constraint that was met or violated. Second, the model
+has no economic objective: net present value is computed from the schedule after the search, not
+optimized inside it. The enterprise in this paper is therefore a satisficing scheduler responding
+to policy targets, not a profit-maximizing agent, and the results are read accordingly. An
+economic objective inside the search is a natural extension and is not attempted here.
 
 \subsection{Forest estate model and estate data}
 
