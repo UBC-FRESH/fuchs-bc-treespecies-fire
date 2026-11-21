@@ -37,10 +37,11 @@ Status: active
 
 Goal: a complete draft in which no section is an empty stub.
 
-- [ ] W1.1 Abstract and introduction
+- [x] W1.1 Introduction (#9)
 - [ ] W1.2 Methods
 - [ ] W1.3 Results
-- [ ] W1.4 Discussion and conclusion
+- [ ] W1.4 Discussion and conclusion (#12)
+- [ ] W1.5 Abstract (#13)
 
 Acceptance criteria:
 

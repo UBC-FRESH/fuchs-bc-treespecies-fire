@@ -16,6 +16,20 @@ Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
 \newblock TSA 24 Prince George, \SI{6917231}{\cubic\meter\per\year}, effective
   28 August 2025. Accessed 21 November 2026.
 
+\bibitem[Seidl et~al., 2014]{seidl_increasing_2014}
+Seidl, R., Schelhaas, M.-J., Rammer, W., and Verkerk, P.~J. (2014).
+\newblock Increasing forest disturbances in {Europe} and their impact on carbon
+  storage.
+\newblock {\em Nature Climate Change}, 4(9):806--810.
+\newblock Num Pages: 7.
+
+\bibitem[Topanotti et~al., 2024]{topanotti_enhancing_2024}
+Topanotti, L.~R., Fuchs, J.~M., Albert, M., Schick, J., Penanhoat, A., Lu,
+  J.-Z., Rivera~P{\'e}rez, C.~A., Foltran, E.~C., et~al. (2024).
+\newblock Enhancing economic multifunctionality without compromising
+  multidiversity and ecosystem multifunctionality via forest enrichment.
+\newblock {\em Science Advances}, 10:eadp6566.
+
 \bibitem[{UBC FRESH Laboratory}, 2026a]{ubc_fresh_fire_calibration_2026}
 {UBC FRESH Laboratory} (2026a).
 \newblock {TSA24} fire regime calibration: 24-tile real-layer ensemble and
@@ -29,5 +43,11 @@ Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
 \newblock {WS4}: spatially explicit wood supply simulation system.
 \newblock \url{https://github.com/UBC-FRESH/ws4}.
 \newblock Accessed 21 November 2026.
+
+\bibitem[Zelnik et~al., 2025]{zelnik_managing_2025}
+Zelnik, Y.~R., Launiainen, S., and Vico, G. (2025).
+\newblock Managing for heterogeneity reduces fire risk in boreal forest
+  landscapes---a model analysis.
+\newblock {\em Ecological Modelling}, 509:111222.
 
 \end{thebibliography}
