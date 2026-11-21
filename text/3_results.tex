@@ -1,3 +1,111 @@
-% Draft placeholder: filled in W1.3 (#11).
 \section{Results}
 \label{sec:results}
+
+\subsection{The compiled estate}
+
+The TSA~24 dataset compiles to \num{458708} blocks, 48 treatments, \num{10326} growth curves, and
+99 accounts. Validation of the compiled estate returns no consistency errors: every block resolves
+to a treatment and a curve, every curve is defined over the planning horizon, and every account is
+reachable. The species composition reported in \autoref{tab:meth_studyregion_spec} is that of the
+same compilation, so the landscape described in the methods and the landscape solved in the model
+are the same object.
+
+\subsection{Harvest against the official cut}
+
+The reference schedule delivers \SI{70}{\mega\cubic\meter} per ten-year period for 20 periods, a
+mean of \SI{7.0}{\mega\cubic\meter\per\year}. The official allowable annual cut for the area is
+\SI{6917231}{\cubic\meter\per\year}, so the schedule sits \SI{1.2}{\percent} above the cut. That
+is the expected result for a regulated even-flow schedule: it is feasible at the stated cut, and
+the small excess reflects the discretisation of blocks into periods rather than a policy choice.
+
+The schedule is offered oldest first. It therefore harvests stands in order of age, which is the
+standard rule in the absence of a spatial objective, and it is the baseline against which the
+composition policies are compared.
+
+\subsection{Economic value of the reference schedule}
+
+Valued with the constants in \autoref{sec:methods}, the reference schedule produces
+\SI{151518}{million\CAD} of log revenue and \SI{83465}{million\CAD} of undiscounted net value over
+the 20 periods. At a \SI{3}{\percent} real discount rate the net present value is
+\SI{12248}{million\CAD} (\autoref{tab:res_economics}).
+
+Unit margins differ sharply by species group. Conifers return between \SI{56.81}{CAD\per\cubic\meter}
+and \SI{64.79}{CAD\per\cubic\meter} after harvest, haul, silviculture, and stumpage. Deciduous
+species return \SI{-2.25}{CAD\per\cubic\meter}: at the recorded interior hardwood price, harvesting
+deciduous timber does not cover its delivered cost. Since deciduous species are
+\SI{8.7}{\percent} of stand area and \SI{6.0}{\percent} of harvested volume, the reference schedule
+already carries a small negative-margin component, which any composition policy that raises the
+deciduous share will enlarge.
+
+\begin{table}[h]
+    \centering
+    \caption{Economic result of the reference schedule over 20 periods of ten years.}
+    \label{tab:res_economics}
+    \begin{tabular}{lr}
+        \toprule
+        Item & Value \\
+        \midrule
+        Log revenue                        & \SI{151518}{million\CAD} \\
+        Undiscounted net value             & \SI{83465}{million\CAD} \\
+        Net present value, \SI{3}{\percent}& \SI{12248}{million\CAD} \\
+        Conifer unit margin                & \SIrange{56.81}{64.79}{CAD\per\cubic\meter} \\
+        Deciduous unit margin              & \SI{-2.25}{CAD\per\cubic\meter} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Sensitivity to the documented ranges}
+
+Four constants are ranges rather than points: the discount rate, the deciduous log price, the haul
+distance, and the fire-weather initialisation. The first three are applied to the reference
+schedule in \autoref{tab:res_sensitivity}; the last is a property of the fire scenario and is
+reported with it.
+
+The discount rate dominates every other lever. Moving from \SI{3}{\percent} to \SI{5}{\percent}
+reduces net present value by \SI{5462}{million\CAD}, close to half the base value, and moving to
+zero would raise it to \SI{83465}{million\CAD}. No other constant moves the result by more than
+about two percent.
+
+The deciduous price is immaterial to mean value across its documented range: from
+\SI{35}{CAD\per\cubic\meter} to \SI{40}{CAD\per\cubic\meter} the net present value moves by
+\SI{22}{million\CAD} in either direction, and even the higher ``other species'' proxy of
+\SI{61.74}{CAD\per\cubic\meter} adds only \SI{209}{million\CAD}. Haul distance from
+\SI{90}{\kilo\meter} to \SI{117}{\kilo\meter} costs \SI{250}{million\CAD}.
+
+\begin{table}[h]
+    \centering
+    \caption{Sensitivity of net present value (base \SI{12248}{million\CAD}) to the documented
+    ranges of the economic constants.}
+    \label{tab:res_sensitivity}
+    \begin{tabular}{llrr}
+        \toprule
+        Lever & Setting & NPV & Change \\
+        \midrule
+        Discount rate & \SI{0}{\percent} & \SI{83465}{million\CAD} & \SI{+71217}{million\CAD} \\
+        Discount rate & \SI{5}{\percent} & \SI{6786}{million\CAD} & \SI{-5462}{million\CAD} \\
+        Deciduous price & \SI{35}{CAD\per\cubic\meter} & \SI{12226}{million\CAD} & \SI{-22}{million\CAD} \\
+        Deciduous price & \SI{61.74}{CAD\per\cubic\meter} & \SI{12457}{million\CAD} & \SI{+209}{million\CAD} \\
+        Haul distance & \SI{117}{\kilo\meter} & \SI{11998}{million\CAD} & \SI{-250}{million\CAD} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Two readings follow. First, the economic result is robust to the constants that are genuinely
+uncertain, and sensitive to the one that is a policy choice. Second, the mean value is not where a
+composition policy will show its effect: the deciduous price range, which spans the plausible
+value of the species that a diversification policy would promote, moves the result by less than
+two percent. If composition matters, it matters in the tail.
+
+\pending{Composition surface on TSA24: the composition target has not yet been varied on this
+estate, so no statement about mean value by composition is made here.}
+
+\subsection{Fire scenario}
+
+\pending{Fire-regime statistics for the estate run, and the comparison with the historical
+distribution and its bootstrap interval.}
+
+\subsection{Synergies and trade-offs with rotation length}
+
+\pending{Implied rotation length by allowable cut on TSA24. The relation is non-monotonic on the
+TSA29 anchor instance, where it is not a paper result; it must be recomputed here before any
+statement is made.}

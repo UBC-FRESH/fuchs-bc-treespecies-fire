@@ -35,6 +35,10 @@ and its sampling uncertainty. This is ADR 0002 in the code repository, and it go
 | RQ4 | How do favourable mixtures change with risk attitude? | Vary the CVaR confidence level | Pending fire scenario |
 | RQ5 | Over which planning horizons does mixing pay? | Discount-rate and horizon sensitivity | Computed: the discount rate dominates every other lever |
 
+Manuscript numbering: the paper presents four questions numbered RQ1 to RQ4. They correspond to
+the plan's RQ1, RQ3, RQ4, and RQ5; the plan's RQ2 is the declared limitation. This mapping is kept
+so the plan and the manuscript can be read side by side.
+
 **Decision (W0.3, 2026-11-21):** RQ2 is a declared limitation. The policy level sets a
 landscape-wide composition share, not where the broadleaf is placed, so the fire-break question
 cannot be answered with this model. It is stated as a limitation in the discussion and as future
@@ -133,6 +137,14 @@ as the direct predecessor.
 
 `fuchs_severe_2024` found that diversification did not buffer the economic consequences of extreme
 events, and that severe events pushed allocation toward homogenisation and low-investment choices.
-Our result that mean NPV is insensitive to composition, with the policy-relevant signal in the
-tail, is consistent with that. The discussion must make the comparison explicitly, and must not
-present the BC case as contradicting the European finding.
+
+What this study can say so far is narrower: mean net present value is insensitive to the deciduous
+log price across its full documented range (plus or minus 22 million CAD, or 0.2 percent) and to
+haul distance (250 million CAD), while the discount rate halves it. That is a statement about
+prices, not about composition. The composition surface on TSA24 has not been computed, so the
+claim that mean NPV is insensitive to composition is **not yet established** and must not appear in
+the manuscript until it is.
+
+If the composition surface does turn out flat in the mean, the signal will be in the tail, which
+is consistent with the European finding and with the CVaR framing. The discussion must make that
+comparison explicitly, and must not present the BC case as contradicting the European result.
