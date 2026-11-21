@@ -20,6 +20,10 @@ calibration), `to compute` (not yet produced).
 | Unmanaged forest area | 2,839,207 ha | same | verified |
 | Published THLB, 2017 base case | 3,070,301 ha | BC AAC rationale, October 2017 | verified |
 | Model minus published THLB | -9,828 ha, -0.32 percent | same | verified |
+| Area-weighted maximum MAI, model curves | 2.309 m3/ha/yr | `fresh-fuchs-ws4` `notes/reference/tsa24-yield-reconciliation.md` | verified |
+| Implied perennial yield on managed area | 7.07 million m3/yr | same | verified |
+| Model flat even flow | 5.19 million m3/yr | `experiments/tsa24-evenflow/summary.json` | verified |
+| Cost of the flat-profile constraint | 1.88 million m3/yr | difference of the two above | verified |
 | Species composition, managed area | Sx 44.9, Pl 29.4, Bl 16.3, At 5.3, Se 4.0, Ac 0.1 percent | `feature.SpeciesProp.managed.*` at offset 0 | verified |
 | Deciduous share, managed area | 5.4 percent | same | verified |
 | Harvested composition, model schedule | Sx 45.2, Pl 31.3, Bl 14.7, At 5.3, Se 3.4, Ac 0.1 percent of harvested volume | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/species_periods.csv` | verified |
