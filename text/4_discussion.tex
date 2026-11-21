@@ -1,3 +1,112 @@
-% Draft placeholder: filled in W1.4 (#12).
 \section{Discussion}
 \label{sec:discussion}
+
+\subsection{What the two-level model contributes}
+
+The value of the bilevel formulation is that it forces the policy question to be asked in the
+terms the enterprise will answer it. A composition target is not an instruction to the landscape;
+it is a constraint that the enterprise satisfies by choosing which stands to cut and what to plant,
+and the cost of that choice is borne in the schedule. Making the two levels explicit is what allows
+the analysis to say whether a policy is achievable at the cut it sets, and at what economic cost,
+rather than assuming that area shares of species translate into outcomes.
+
+On the TSA~24 estate this distinction is concrete. The reference schedule is feasible at
+\SI{1.2}{\percent} above the official allowable annual cut, so the policy level is not asking for
+something the estate cannot deliver. The economic result, \SI{12248}{million\CAD} of net present
+value at \SI{3}{\percent}, is the cost of that schedule under current prices, costs, and stumpage.
+Any composition policy is a movement away from this baseline, and its cost can now be measured
+rather than asserted.
+
+\subsection{The discount rate dominates}
+
+Across the documented ranges of the economic constants, one lever governs the result: the discount
+rate. Moving from \SI{3}{\percent} to \SI{5}{\percent} removes \SI{5462}{million\CAD} of net
+present value, close to half the base case, while the deciduous log price across its full range
+moves the result by \SI{22}{million\CAD} and haul distance by \SI{250}{million\CAD}.
+
+This ordering has a policy reading that is easy to miss. The constants that are uncertain in the
+data are not the ones that decide the answer. The discount rate is not an empirical constant at
+all: it is a statement about how much weight the decision maker gives to future harvests, and it is
+therefore a policy choice in the same sense as the allowable cut. A policy analysis that reports a
+single net present value at a single rate hides the lever that matters most. The sensitivity table
+should be read as part of the result, not as an appendix to it.
+
+\subsection{Composition: what the price sensitivity does and does not show}
+
+The insensitivity of mean value to the deciduous price is a real finding, but it is narrower than
+it looks. Deciduous species are \SI{8.7}{\percent} of stand area and \SI{6.0}{\percent} of
+harvested volume, and their unit margin is \SI{-2.25}{CAD\per\cubic\meter}: at the recorded interior
+hardwood price, deciduous timber does not cover its delivered cost. Because the share is small and
+the margin is close to zero, moving the price across its plausible range changes the total by
+little.
+
+What this does not show is that the composition target is economically immaterial. The composition
+surface on TSA~24 has not been computed, and varying the price of a fixed deciduous share is not
+the same experiment as varying the share itself. A policy that raises the deciduous share changes
+which stands are cut and what is planted, and those changes act through the schedule, not only
+through the price of the marginal cubic metre.
+
+\pending{Composition surface and its interpretation. Compute net present value and CVaR across the
+composition targets and allowable cuts on TSA24 before this subsection makes any claim about the
+shape of the surface.}
+
+\subsection{Fire as a scenario, and the discipline that follows}
+
+Fire enters this analysis as a spatially explicit process calibrated to the historical perimeter
+record of the area, not as a probability of loss applied to a stand. That choice is what makes fuel
+structure, composition, and connectivity representable, and it is the main methodological
+difference from the portfolio approach of \citet{fuchs_severe_2024}.
+
+It also imposes a discipline on the claims. The calibration's central distribution is close to the
+historical record, but its upper tail is thin and weakly identified: the historical 90th percentile
+of fire size has a bootstrap interval that spans roughly a factor of three, and the share of fires
+above \SI{5000}{\hectare} rests on 13 of 432 events. The simulated tail is also sensitive to the
+antecedent fire-weather initialisation, which determines how dry the fuel is when a fire starts.
+An absolute statement about future fire size would therefore be a statement about a weather
+reconstruction and a sample of thirteen events, not about the forest.
+
+We therefore compare policies against each other on identical fire draws, and report the historical
+interval beside every distributional comparison. This is the same logic that
+\citet{fuchs_severe_2024} applied to extreme weather: the economically relevant question is how a
+policy performs relative to the alternatives under a severe regime, not whether the model
+reproduces a particular historical event.
+
+\pending{Fire-regime comparison and CVaR by policy, with the historical bootstrap interval beside
+each statistic.}
+
+\subsection{Relation to the European evidence}
+
+The European result was that diversification raises expected returns and reduces isolated risk,
+but that severe and frequent extreme events undermine the economic gain and push the optimal
+allocation toward homogenisation and low-investment species. Our framework is built to test
+whether that conclusion survives when disturbance is a spatial process on a real estate rather than
+a correlated draw on stylized units.
+
+\pending{The comparison of the composition surface with the European finding, once the surface
+exists. The text must state whether the BC case confirms, qualifies, or contradicts the European
+result, and must not present a difference in setting as a refutation.}
+
+\subsection{Limitations}
+
+Five limitations bound what the paper can claim. First, the analysis covers one timber supply area.
+TSA~24 is large and fire-prone, but it is one landscape with one inventory, one set of prices, and
+one administrative history; the results are not a provincial assessment. Second, growth is
+represented by compiled yield curves rather than by individual-tree simulation, so the response of
+growth to composition and climate is not modelled. Third, the policy level sets a landscape-wide
+composition share rather than a spatial placement rule, so the question of where to put broadleaf
+fuel breaks, and how far that can go before production suffers, is not answered here; it is the
+natural next step and requires the policy to act on location, not only on share. Fourth, prices,
+costs, and stumpage are point values or documented ranges from a single period, and the deciduous
+price in particular is an interior hardwood average that may not represent a future market for
+small-diameter material. Fifth, the fire model, while calibrated, has not been validated on an
+independent period or region, and its tail is weakly identified; the comparative framing protects
+the policy conclusions but not a claim about absolute risk.
+
+\subsection{Implications for policy}
+
+Three implications follow, each conditional on the results above. The allowable cut and the
+composition target should be evaluated together, because the enterprise's response to one depends
+on the other. Risk attitude belongs in the analysis explicitly, because the composition that looks
+best at the mean need not be the one that looks best in the tail. And the discount rate deserves
+as much scrutiny as the silvicultural prescription, because it moves the result more than any
+biological or market parameter in the model.
