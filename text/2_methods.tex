@@ -1,0 +1,68 @@
+\section{Methods}
+
+\subsection{Model region}
+
+We build a model forest landscape for a fire-prone region in interior British Columbia, Canada. The stylized landscape (\autoref{fig:meth:modelregion}) is based on an area of approximately \SI{10000}{\hectare} in the center of the Williams Lake Timber Supply Area (WL~TSA). WL~TSA has been strongly affected by Mountain Pine Beetle outbreaks in the early 2000s, strongly reducing the forest inventory dominated by lodgepole pine. The area is moving from an intensive salvage harvest phase to forest regeneration. This results in an allowable annual cut of about \SI{1.6}{\cubic\meter\per\hectare} timber harvesting land base (excl., a.o., First Nations territory), only \SI{50}{\percent} of which is live volume \citep{peterson_williams_2015}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/studyArea_map.pdf}
+    \caption{Map of the model region within its timber supply area and Canada. Map contains information licensed under the Open Government Licence – British Columbia and was made using Natural Earth data.}
+    \label{fig:meth:modelregion}
+\end{figure}
+
+Our model landscape is mainly located in the Interior Douglas-Fir bioclimatic zone and dominated by stand types with leading Douglas-fir or pine (\SI{58}{\percent} and \SI{42}{\percent}, see \autoref{tab:meth_studyregion_spec}). \color{red} TODO: add origin, age structure, and dataset used as input data \color{black}
+
+% Requires: \usepackage{booktabs}
+\begin{table}[h]
+    \centering
+    \caption{Bioclimatic zones and species composition in the model landscape.}
+    \label{tab:meth_studyregion_spec}
+    \begin{tabular}{llr}
+        \toprule
+        Biogeoclimatic zone & Stand type (by leading species) & Area share [\%]\\
+        \midrule
+        Interior Douglas-Fir & Douglas-fir (\textit{Pseudotsuga menziesii})  & 19 \\
+        (\SI{86}{\percent})& interior Douglas-fir (\textit{Pseudotsuga menziesii} var. \textit{glauca}) & 39 \\
+        & lodgepole pine (\textit{Pinus contorta})  & 1 \\
+        & lodgepole pine (\textit{Pinus contorta} var. \textit{latifolia}) & 28 \\
+        Sub-Boreal Pine-Spruce & lodgepole pine (\textit{Pinus contorta})  & 1 \\
+        (\SI{14}{\percent})& lodgepole pine (\textit{Pinus contorta} var. \textit{latifolia}) & 12 \\
+        & spruce hybrid (\textit{Picea} cross)  & 1 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Rationale for decision-making}
+
+Independent of the actual property rights and decision-makers in the stylized model forest, we are interested in two decision-making levels. A regional policy maker seeks to establish forest management policies that maintain long-term productive capacities of the forest area under fire disturbances. A local forest/logging enterprise aims to maximize short-term profits. The policies constrain the enterprise's decision space. 
+
+\subsubsection{Policy-level decision problem}
+
+max long-term economic timber productivity of the area
+
+subject to constraining downside risks (for future generations?)
+
+decision variables: AAC (interacting with or expressing rotation periods?), species composition targets
+
+\subsubsection{Enterprise-level decision problem}
+
+We assume the logging company to exploit as much 
+
+max short-term profit from harvesting
+
+constrained by available forest area per development type etc. and policies on species composition targets, AAC, (rotation period?)
+
+decision variables: area share per forest development type and age that is harvested, species for replanting the harvested area
+
+\subsection{Forest Estate Model}
+
+WS3 general into
+
+\subsubsection{Growth and yield}
+
+\subsubsection{Harvesting}
+
+\subsubsection{Fire disturbance}
+
+\subsubsection{Economic valuation}
