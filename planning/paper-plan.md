@@ -95,3 +95,42 @@ does not ship.
    present it as a range, not a point.
 4. **The tail is weakly identified.** Report it with intervals, never as a point estimate.
 5. **Author order and affiliations** are unresolved in the title block.
+
+## Relation to prior work
+
+This paper continues Jasper Fuchs's European work on tree-species diversification under
+disturbance risk and must be written as a continuation of it, not alongside it.
+
+| Prior work | What it established | What it did not do |
+| --- | --- | --- |
+| Fuchs et al. (2024), *Scientific Reports* 14:2140, `fuchs_severe_2024` | Stand-type portfolios across 24 planning units; spatially correlated extreme events; CVaR as the objective; top-down versus bottom-up planning | No process-based disturbance; homogeneous planning units; bare-land composition rather than an operating forest; German species and prices |
+| Fuchs (2024), dissertation, `fuchs_dissertation_2024` | The economic limits of diversification as an adaptation strategy | Same scope limits as above |
+| Topanotti, Fuchs et al. (2024), *Science Advances* 10:eadp6566, `topanotti_enhancing_2024` | Empirical evidence that enrichment can serve economic and ecological multifunctionality | Stand-scale and empirical; not a planning model |
+| Zelnik et al. (2025), *Ecological Modelling* 509:111222, `zelnik_managing_2025` | Stand size and conifer/deciduous composition reduce landscape fire risk | Not an economic or policy model; no harvest or regeneration decisions |
+
+### What this paper inherits
+
+The two-level structure (a regional planner and local decision-makers), the CVaR objective, and the
+portfolio reading of composition. The introduction should open from `fuchs_severe_2024` and name it
+as the direct predecessor.
+
+### What this paper adds
+
+1. **Disturbance is a process, not a probability.** Fire spreads over the landscape with fuel,
+   weather, terrain, and suppression, so firebreaks, fuel structure, and connectivity are
+   representable. This is the step `zelnik_managing_2025` makes physically and this paper makes
+   economically.
+2. **A real management unit.** TSA24 with its actual age structure and an official allowable cut,
+   rather than bare-land allocation of stylised stand types.
+3. **Operating decisions.** Harvest scheduling and regeneration under policy constraints, rather
+   than area shares of stand types across homogeneous units.
+4. **A different species axis.** Interior BC conifer and deciduous, with BC prices, costs, and
+   stumpage, rather than German spruce, beech, and Douglas-fir.
+
+### Where the findings should meet
+
+`fuchs_severe_2024` found that diversification did not buffer the economic consequences of extreme
+events, and that severe events pushed allocation toward homogenisation and low-investment choices.
+Our result that mean NPV is insensitive to composition, with the policy-relevant signal in the
+tail, is consistent with that. The discussion must make the comparison explicitly, and must not
+present the BC case as contradicting the European finding.
