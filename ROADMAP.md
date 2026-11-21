@@ -1,0 +1,80 @@
+# Roadmap: fuchs-bc-treespecies-fire
+
+Plan of record. One phase is one parent issue; one task is one child issue. Keep this file in step
+with the issues and `CHANGE_LOG.md`.
+
+## Issue Tracker Map
+
+| Phase | Parent issue | Branch | Status |
+| --- | --- | --- | --- |
+| W0 Plan and reconcile the design | TBD | `feature/w0-plan` | planned |
+| W1 Draft the manuscript | TBD | `feature/w1-draft` | planned |
+| W2 Audit the claims | TBD | `feature/w2-audit` | planned |
+| W3 Submit | TBD | `feature/w3-submit` | planned |
+
+## Phase W0: Plan and reconcile the design
+
+Parent issue: TBD
+Branch: `feature/w0-plan`
+Status: planned
+
+Goal: fix the paper's argument, and reconcile the existing draft with where the model actually went.
+
+- [ ] W0.1 Write the paper plan and the claims register
+- [ ] W0.2 Reconcile the methods section with TSA24 and WS4
+- [ ] W0.3 Decide the disposition of RQ2 (broadleaf fire breaks)
+
+Acceptance criteria:
+
+The plan and register exist, the methods section names the same landscape and model as the results,
+and every research question has a stated analysis or an explicit limitation.
+
+## Phase W1: Draft the manuscript
+
+Parent issue: TBD
+Branch: `feature/w1-draft`
+Status: planned
+
+Goal: a complete draft in which no section is an empty stub.
+
+- [ ] W1.1 Abstract and introduction
+- [ ] W1.2 Methods
+- [ ] W1.3 Results
+- [ ] W1.4 Discussion and conclusion
+
+Acceptance criteria:
+
+Every section has prose, every number is either final or marked pending and registered, and the
+argument runs from the research questions to the conclusions without a gap.
+
+## Phase W2: Audit the claims
+
+Parent issue: TBD
+Branch: `feature/w2-audit`
+Status: planned
+
+Goal: every number recomputed from tracked records, by a reader trying to reject the paper.
+
+- [ ] W2.1 Referee pass 1: internal consistency and arithmetic
+- [ ] W2.2 Referee pass 2: claims against artifacts
+- [ ] W2.3 Referee pass 3: hostile reading of the argument
+
+Acceptance criteria:
+
+Each pass is recorded in `review/` with its findings, the defects are fixed, and no claim lacks a
+register row.
+
+## Phase W3: Submit
+
+Parent issue: TBD
+Branch: `feature/w3-submit`
+Status: planned
+
+Goal: a submission package the maintainer approves.
+
+- [ ] W3.1 Submission package and declarations
+- [ ] W3.2 Maintainer approval and submission
+
+Acceptance criteria:
+
+The package is complete, the register is fully verified, and the maintainer approved in writing.
