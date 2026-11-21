@@ -1,6 +1,11 @@
 # Cover letter (draft)
 
-Status: draft, 2026-11-21. Journal not yet chosen; replace `[Journal]` and the scope sentence.
+Status: draft, 2026-11-21. Before submission:
+
+- [ ] choose the journal and replace `[Journal]`
+- [ ] replace the bracketed scope sentence with the journal's remit
+- [ ] confirm every author's approval
+- [ ] confirm the funding statement in the manuscript
 
 ---
 
@@ -41,8 +46,6 @@ The manuscript is original and is not under consideration elsewhere. The authors
 financial competing interests; one author develops the open-source estate model used in the work,
 which is declared in the manuscript.
 
-Before submission: confirm author approval, fill in the journal name, and replace the bracketed
-scope sentence with the journal's own remit.
 
 Yours sincerely,
 
