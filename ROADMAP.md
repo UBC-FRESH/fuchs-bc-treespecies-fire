@@ -7,22 +7,22 @@ with the issues and `CHANGE_LOG.md`.
 
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
-| W0 Plan and reconcile the design | TBD | `feature/w0-plan` | planned |
-| W1 Draft the manuscript | TBD | `feature/w1-draft` | planned |
-| W2 Audit the claims | TBD | `feature/w2-audit` | planned |
-| W3 Submit | TBD | `feature/w3-submit` | planned |
+| W0 Plan and reconcile the design | #1 | `feature/w0-plan` | active |
+| W1 Draft the manuscript | #5 | `feature/w1-draft` | planned |
+| W2 Audit the claims | #6 | `feature/w2-audit` | planned |
+| W3 Submit | #7 | `feature/w3-submit` | planned |
 
 ## Phase W0: Plan and reconcile the design
 
-Parent issue: TBD
+Parent issue: #1
 Branch: `feature/w0-plan`
-Status: planned
+Status: active
 
 Goal: fix the paper's argument, and reconcile the existing draft with where the model actually went.
 
-- [ ] W0.1 Write the paper plan and the claims register
-- [ ] W0.2 Reconcile the methods section with TSA24 and WS4
-- [ ] W0.3 Decide the disposition of RQ2 (broadleaf fire breaks)
+- [x] W0.1 Write the paper plan and the claims register (#2)
+- [x] W0.2 Reconcile the methods section with TSA24 and WS4 (#3)
+- [ ] W0.3 Decide the disposition of RQ2 (broadleaf fire breaks) (#4)
 
 Acceptance criteria:
 
@@ -31,7 +31,7 @@ and every research question has a stated analysis or an explicit limitation.
 
 ## Phase W1: Draft the manuscript
 
-Parent issue: TBD
+Parent issue: #5
 Branch: `feature/w1-draft`
 Status: planned
 
@@ -49,7 +49,7 @@ argument runs from the research questions to the conclusions without a gap.
 
 ## Phase W2: Audit the claims
 
-Parent issue: TBD
+Parent issue: #6
 Branch: `feature/w2-audit`
 Status: planned
 
@@ -66,7 +66,7 @@ register row.
 
 ## Phase W3: Submit
 
-Parent issue: TBD
+Parent issue: #7
 Branch: `feature/w3-submit`
 Status: planned
 

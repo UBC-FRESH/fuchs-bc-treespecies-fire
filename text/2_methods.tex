@@ -1,68 +1,140 @@
 \section{Methods}
 
-\subsection{Model region}
+\subsection{Study area}
 
-We build a model forest landscape for a fire-prone region in interior British Columbia, Canada. The stylized landscape (\autoref{fig:meth:modelregion}) is based on an area of approximately \SI{10000}{\hectare} in the center of the Williams Lake Timber Supply Area (WL~TSA). WL~TSA has been strongly affected by Mountain Pine Beetle outbreaks in the early 2000s, strongly reducing the forest inventory dominated by lodgepole pine. The area is moving from an intensive salvage harvest phase to forest regeneration. This results in an allowable annual cut of about \SI{1.6}{\cubic\meter\per\hectare} timber harvesting land base (excl., a.o., First Nations territory), only \SI{50}{\percent} of which is live volume \citep{peterson_williams_2015}.
+We model the Prince George Timber Supply Area (TSA~24) in the Omineca region of interior British
+Columbia, Canada: a fire-prone landscape of about \SI{7.97}{\mega\hectare} gross area, of which
+\SI{6.02}{\mega\hectare} carries forest stands in the compiled inventory used here. The area is
+represented by \num{458708} spatial blocks, each with a species, age, and site description drawn
+from the provincial forest inventory.
+
+The landscape is dominated by spruce (\SI{33.1}{\percent} of stand area), subalpine fir
+(\SI{25.3}{\percent}), and lodgepole pine (\SI{24.0}{\percent}), with trembling aspen at
+\SI{6.9}{\percent} and Engelmann spruce at \SI{4.5}{\percent}; deciduous species together occupy
+\SI{8.7}{\percent} of the area (\autoref{tab:meth_studyregion_spec}). The official allowable
+annual cut is \SI{6917231}{\cubic\meter\per\year}, effective 28 August 2025
+\citep{government_of_british_columbia_aac_2026}.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.75\linewidth]{figures/studyArea_map.pdf}
-    \caption{Map of the model region within its timber supply area and Canada. Map contains information licensed under the Open Government Licence – British Columbia and was made using Natural Earth data.}
+    \caption{The study area within its timber supply area and within Canada. Map contains
+    information licensed under the Open Government Licence -- British Columbia and was made using
+    Natural Earth data.}
     \label{fig:meth:modelregion}
 \end{figure}
 
-Our model landscape is mainly located in the Interior Douglas-Fir bioclimatic zone and dominated by stand types with leading Douglas-fir or pine (\SI{58}{\percent} and \SI{42}{\percent}, see \autoref{tab:meth_studyregion_spec}). \color{red} TODO: add origin, age structure, and dataset used as input data \color{black}
+\color{red} TODO: redraw \autoref{fig:meth:modelregion} for TSA~24. The current figure shows the
+Williams Lake study area from the earlier design. \color{black}
 
 % Requires: \usepackage{booktabs}
 \begin{table}[h]
     \centering
-    \caption{Bioclimatic zones and species composition in the model landscape.}
+    \caption{Species composition of the modelled landscape, by leading species and share of stand
+    area (\SI{6.02}{\mega\hectare}).}
     \label{tab:meth_studyregion_spec}
-    \begin{tabular}{llr}
+    \begin{tabular}{lrr}
         \toprule
-        Biogeoclimatic zone & Stand type (by leading species) & Area share [\%]\\
+        Species group & Area share [\%] & Harvested share [\%] \\
         \midrule
-        Interior Douglas-Fir & Douglas-fir (\textit{Pseudotsuga menziesii})  & 19 \\
-        (\SI{86}{\percent})& interior Douglas-fir (\textit{Pseudotsuga menziesii} var. \textit{glauca}) & 39 \\
-        & lodgepole pine (\textit{Pinus contorta})  & 1 \\
-        & lodgepole pine (\textit{Pinus contorta} var. \textit{latifolia}) & 28 \\
-        Sub-Boreal Pine-Spruce & lodgepole pine (\textit{Pinus contorta})  & 1 \\
-        (\SI{14}{\percent})& lodgepole pine (\textit{Pinus contorta} var. \textit{latifolia}) & 12 \\
-        & spruce hybrid (\textit{Picea} cross)  & 1 \\
+        Spruce (Sx)                        & 33.1 & 46.7 \\
+        Subalpine fir (Bl)                 & 25.3 & 14.8 \\
+        Lodgepole pine (Pl)                & 24.0 & 29.5 \\
+        Trembling aspen (At)               & 6.9  & 5.8  \\
+        Engelmann spruce (Se)              & 4.5  & 3.0  \\
+        Douglas-fir (Fd)                   & 2.1  & ---  \\
+        Paper birch (Ep)                   & 1.3  & ---  \\
+        Others                             & 2.8  & 0.2  \\
+        \midrule
+        Deciduous, all                    & 8.7  & 6.0  \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-\subsection{Rationale for decision-making}
+\subsection{Decision structure}
 
-Independent of the actual property rights and decision-makers in the stylized model forest, we are interested in two decision-making levels. A regional policy maker seeks to establish forest management policies that maintain long-term productive capacities of the forest area under fire disturbances. A local forest/logging enterprise aims to maximize short-term profits. The policies constrain the enterprise's decision space. 
+We represent two decision levels. A regional policy maker sets a harvest level and targets for
+species composition, seeking to maintain the productive capacity of the area under fire risk. An
+enterprise then decides where, when, and with which species to harvest and regenerate, maximizing
+profit subject to those policy constraints.
 
-\subsubsection{Policy-level decision problem}
+\paragraph{Policy level} The policy maker chooses an allowable annual cut $A$ and a target share
+$\sigma^{\ast}$ of harvested area by species group. Policies are evaluated on the downside risk of
+the resulting net present value, measured as the conditional value at risk at the
+\SI{5}{\percent} level. Formally, the policy problem is
+\begin{equation}
+    \min_{A,\ \sigma^{\ast}}\ \mathrm{CVaR}_{5\%}\Big(\mathrm{NPV}(A, \sigma^{\ast})\Big),
+\end{equation}
+where the distribution of $\mathrm{NPV}$ arises from the fire scenarios described below. This
+follows the risk-sensitive formulation of \citet{fuchs_severe_2024}, with the difference that the
+disturbance here is a spatial fire process rather than a correlated damage probability.
 
-max long-term economic timber productivity of the area
+\paragraph{Enterprise level} For a given policy, the enterprise chooses the area to harvest in each
+period from each development type and age class, and the species to replant on harvested area. The
+problem is
+\begin{equation}
+    \max\ \mathrm{NPV} \quad \text{subject to}\quad A,\ \sigma,\ \text{even flow, and the area
+    balance},
+\end{equation}
+where $\sigma$ is the realized species composition of harvested area. Harvest is offered oldest
+first, so the enterprise takes the oldest available stands up to the policy's cut.
 
-subject to constraining downside risks (for future generations?)
+\subsection{Forest estate model and estate data}
 
-decision variables: AAC (interacting with or expressing rotation periods?), species composition targets
+The model is implemented in \textsc{ws4}, the spatially explicit estate model of the UBC FRESH
+laboratory \citep{ubc_fresh_ws4_2026}. The compiled dataset contains \num{458708} blocks, 48
+treatments, \num{10326} yield curves, and 99 accounts. Growth, treatment, and transition
+information are carried as curves per block, compiled from the provincial inventory and the
+timber supply analysis.
 
-\subsubsection{Enterprise-level decision problem}
+We run 20 periods of ten years. The policy scenarios we evaluate are specified by their annual
+cut and their composition target; the enterprise responds with a harvest and regeneration
+schedule. The reference schedule delivers \SI{70}{\mega\cubic\meter} per period, that is
+\SI{7.0}{\mega\cubic\meter\per\year}, or \SI{1.2}{\percent} above the official cut.
 
-We assume the logging company to exploit as much 
+\subsection{Growth and yield}
 
-max short-term profit from harvesting
+Growth is represented by yield curves compiled per block from the TSA~24 inventory bundle. A
+switch to individual-tree growth through the BC variant of the Forest Vegetation Simulator is
+planned but not part of the results reported here; the curve representation is therefore a stated
+limitation of the growth side, in the same way that the fire representation is a stated scenario.
 
-constrained by available forest area per development type etc. and policies on species composition targets, AAC, (rotation period?)
+\subsection{Fire disturbance as a scenario}
 
-decision variables: area share per forest development type and age that is harvested, species for replanting the harvested area
+Fire enters as a scenario, not as a prediction. We use the laboratory's calibrated surface-fire
+model, which couples the Canadian Forest Fire Behaviour Prediction system with a spatially
+explicit spread kernel and an explicit suppression layer. The suppression parameters were
+calibrated on 24 tiles across the TSA~24 extent against 432 historical perimeters from 1950 to
+2024 \citep{ubc_fresh_fire_calibration_2026}.
 
-\subsection{Forest Estate Model}
+Two properties of that calibration govern how we read the results. First, the central distribution
+is close to the historical record while the extreme tail is thinner, and the tail itself is
+weakly identified: the historical median is \SI{22.97}{\hectare} with a bootstrap interval of
+\SIrange{20.85}{30.16}{\hectare}, but the historical 90th percentile is
+\SI{490.17}{\hectare} with an interval of \SIrange{349}{1051}{\hectare}, and the share of fires
+above \SI{5000}{\hectare} rests on 13 of 432 events. Second, the simulated tail is sensitive to
+the antecedent fire-weather initialisation. We therefore compare policies against each other on
+identical fire draws and never report an absolute fire size as a result.
 
-WS3 general into
+\color{red} TODO: insert the simulated regime statistics for the estate run and the CVaR results
+once the calibration is final. \color{black}
 
-\subsubsection{Growth and yield}
+\subsection{Economic valuation}
 
-\subsubsection{Harvesting}
+Harvested volume is valued by species group at BC interior log prices for the three months ending
+30 September 2026: \SI{113.96}{CAD\per\cubic\meter} for spruce, pine, and balsam fir,
+\SI{105.98}{CAD\per\cubic\meter} for hemlock and balsam, and a range of \SIrange{35}{40}{CAD\per\cubic\meter}
+for deciduous species. Costs are a tree-length ground harvest system at
+\SI{21.38}{CAD\per\cubic\meter} from machine rates, haul at \SI{7.85}{CAD\per\cubic\meter} over a
+mean distance of \SI{90}{\kilo\meter} to the nearest sawmill, basic silviculture at
+\SI{10.02}{CAD\per\cubic\meter} for the North Central zone, and stumpage at
+\SI{9.92}{CAD\per\cubic\meter} for conifers and \SI{0.50}{CAD\per\cubic\meter} for deciduous
+timber. Net present value is computed at a \SI{3}{\percent} real discount rate, with each period's
+net value discounted at its end.
 
-\subsubsection{Fire disturbance}
+\subsection{Sensitivity and reproduction}
 
-\subsubsection{Economic valuation}
+Because several constants are ranges rather than points, every headline result is reported with a
+sensitivity across the documented range: the deciduous price, the haul distance, the discount
+rate, and the fire-weather initialisation. All constants, their sources, and the code that applies
+them are recorded in the companion repository.

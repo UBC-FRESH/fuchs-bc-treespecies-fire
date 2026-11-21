@@ -1,0 +1,33 @@
+\begin{thebibliography}{}
+
+\bibitem[Fuchs et~al., 2024]{fuchs_severe_2024}
+Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
+  (2024).
+\newblock Severe and frequent extreme weather events undermine economic
+  adaptation gains of tree-species diversification.
+\newblock {\em Scientific Reports}, 14:2140.
+
+\bibitem[{Government of British Columbia},
+  2026]{government_of_british_columbia_aac_2026}
+{Government of British Columbia} (2026).
+\newblock Allowable annual cut --- timber supply areas.
+\newblock
+  \url{https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/timber-supply-review-and-allowable-annual-cut/allowable-annual-cut-timber-supply-areas}.
+\newblock TSA 24 Prince George, \SI{6917231}{\cubic\meter\per\year}, effective
+  28 August 2025. Accessed 21 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026a]{ubc_fresh_fire_calibration_2026}
+{UBC FRESH Laboratory} (2026a).
+\newblock {TSA24} fire regime calibration: 24-tile real-layer ensemble and
+  region-level suppression.
+\newblock \url{https://github.com/UBC-FRESH/ws4}.
+\newblock Calibration index and reports under \texttt{notes/reports/}. Accessed
+  21 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026b]{ubc_fresh_ws4_2026}
+{UBC FRESH Laboratory} (2026b).
+\newblock {WS4}: spatially explicit wood supply simulation system.
+\newblock \url{https://github.com/UBC-FRESH/ws4}.
+\newblock Accessed 21 November 2026.
+
+\end{thebibliography}
