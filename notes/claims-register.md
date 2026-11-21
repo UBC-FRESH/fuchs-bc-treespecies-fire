@@ -25,8 +25,12 @@ calibration), `to compute` (not yet produced).
 
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
+| Model-produced even flow | 51.89 to 52.06 million m3/period across six seeds; replayed schedule 51.2 to 52.3 | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/summary.json` | verified |
+| Model-produced mean annual volume | 5.19 million m3/yr | same | verified |
+| Model-produced deciduous share | 5.4 percent | same | verified |
+| Model-produced revenue, net, NPV | 112,776 / 62,270 / 8,779 million CAD | same | verified |
 | Periods | 20 periods of 10 years | `tests/data/tsa24_evenflow_periods.csv` | verified as a fixture |
-| Volume per period | 70,000,000 m3 | same | **provenance unverified**: fixture matches the target to 0.04 m3; no inspected ws4 run reproduces it (`fresh-fuchs-ws4` `notes/reports/tsa24-evenflow-fixture-audit.md`) |
+| Volume per period (benchmark fixture) | 70,000,000 m3 | same | **superseded**: fixture matches the target to 0.04 m3; the model sustains about 52M per period (`experiments/tsa24-evenflow/`) |
 | Mean annual volume | 7,000,000 m3/yr | same | provenance unverified |
 | Ratio to official cut | 1.012 | `tests/test_tsa24_validation.py` | provenance unverified |
 
@@ -34,15 +38,15 @@ calibration), `to compute` (not yet produced).
 
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
-| Revenue | 151,518 million CAD | `scripts/valuation.py` on the fixture | conditional on the fixture |
+| Revenue (benchmark fixture) | 151,518 million CAD | `scripts/valuation.py` on the fixture | superseded by the model-produced schedule |
 | Log prices | 113.96 CAD/m3 (SPF), 105.98 (Hem-Bal) | `notes/reference/economics-constants.md` | verified |
 | Harvest cost, tree-length ground system | 21.38 CAD/m3 | same | verified |
 | Haul cost | 7.85 CAD/m3 at 90 km mean distance | same | verified |
 | Silviculture cost | 10.02 CAD/m3, North Central zone | same | verified |
 | Stumpage | 9.92 conifer, 0.50 deciduous CAD/m3 | same | verified |
 | Discount rate | 3 percent real | same | verified |
-| Undiscounted net | 83,465 million CAD | same | conditional on the fixture |
-| NPV at 3 percent | 12,248 million CAD | same | conditional on the fixture |
+| Undiscounted net (benchmark fixture) | 83,465 million CAD | same | superseded by the model-produced schedule |
+| NPV at 3 percent (benchmark fixture) | 12,248 million CAD | same | superseded by the model-produced schedule |
 | Conifer margin | 56.81 to 64.79 CAD/m3 | same | verified |
 | Deciduous margin | -2.25 CAD/m3 | same | verified |
 | Discount rate effect | 5 percent gives 6,786 million CAD; 0 percent gives 83,465 million CAD | `notes/reference/economics-sensitivity.md` | verified |
