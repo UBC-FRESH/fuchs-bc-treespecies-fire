@@ -30,13 +30,15 @@ and its sampling uncertainty. This is ADR 0002 in the code repository, and it go
 | RQ | Question | Analysis | Status |
 | --- | --- | --- | --- |
 | RQ1 | Which landscape mixtures balance production and fire risk? | Composition target × allowable cut surface, NPV and CVaR | Surface computed (perpetuity LP); CVaR pending fire scenario |
-| RQ2 | How far can broadleaf be used as fire breaks before production suffers? | Spatially explicit composition targets for a corridor | **Not implemented.** Requires the corridor policy; currently out of scope |
+| RQ2 | How far can broadleaf be used as fire breaks before production suffers? | None in this paper | **Declared limitation (W0.3).** Requires a spatial placement rule that the model does not have; named in the discussion and carried as future work |
 | RQ3 | What are the synergies and trade-offs between diversification and rotation length? | Implied rotation length per allowable cut | Computed; the rotation–AAC relation is **non-monotonic**, which is itself a result |
 | RQ4 | How do favourable mixtures change with risk attitude? | Vary the CVaR confidence level | Pending fire scenario |
 | RQ5 | Over which planning horizons does mixing pay? | Discount-rate and horizon sensitivity | Computed: the discount rate dominates every other lever |
 
-**Decision needed:** RQ2 is the weakest link. Either it becomes a named limitation with the current
-draft, or the paper waits for the corridor policy. The plan assumes the former.
+**Decision (W0.3, 2026-11-21):** RQ2 is a declared limitation. The policy level sets a
+landscape-wide composition share, not where the broadleaf is placed, so the fire-break question
+cannot be answered with this model. It is stated as a limitation in the discussion and as future
+work requiring a corridor placement rule. The paper answers RQ1, RQ3, RQ4, and RQ5.
 
 ## Section plan
 
