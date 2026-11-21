@@ -106,8 +106,45 @@ composition policy will show its effect: the deciduous price range, which spans 
 value of the species that a diversification policy would promote, moves the result by a fraction
 of a percent. If composition matters, it matters in the tail.
 
-\pending{Composition surface on TSA24: the composition target has not yet been varied on this
-estate, so no statement about mean value by composition is made here.}
+\subsection{Composition at the sustained level}
+
+To test whether composition can be changed at the level the estate sustains, we set an aspen harvest
+target of \SI{5.19}{\mega\cubic\meter} per period, ten percent of the level, and searched from
+the baseline schedule. With the composition target weighted twice the level target, the deciduous
+share rose from \SI{5.4}{\percent} to \SI{5.69}{\percent}; with the composition target weighted
+five hundred times the level target it reached \SI{5.94}{\percent}. Neither reached ten percent,
+and neither bought the target by reducing the level.
+
+An aspen-maximisation run bounds the cause. With no level or flow target and an unreachable aspen
+aspiration, the search realizes a mean of \SI{3.20}{\mega\cubic\meter} per period of aspen,
+\SI{6.2}{\percent} of a \SI{5.18}{\mega\cubic\meter\per\year} total. Deciduous supply is
+therefore capped near six percent of current harvest, and a share target above that must be paid for
+in level (\autoref{tab:res_composition}). At a constant aspen supply of
+\SI{3.20}{\mega\cubic\meter} per period, an eight percent share implies a total near
+\SI{40}{\mega\cubic\meter} per period, and a ten percent share a total near
+\SI{32}{\mega\cubic\meter}, about \SI{38}{\percent} below the sustained level.
+
+\begin{table}[h]
+    \centering
+    \caption{Composition-production frontier. The aspen supply is about
+    \SI{3.20}{\mega\cubic\meter} per period; the total level follows from the chosen share.}
+    \label{tab:res_composition}
+    \begin{tabular}{rrr}
+        \toprule
+        Deciduous share [\%] & Total level [M m3/period] & Mean annual [M m3/yr] \\
+        \midrule
+        6  & 53.3 & 5.33 \\
+        8  & 40.0 & 4.00 \\
+        10 & 32.0 & 3.20 \\
+        15 & 21.3 & 2.13 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Composition is therefore supply-limited on this estate, and the trade-off is in volume rather than
+in price: the deciduous log price moves mean value by less than one percent, while the volume
+required to raise its share is large. Whether that volume buys a sufficient reduction in fire risk
+is the question the fire scenario is built to answer.
 
 \subsection{Fire scenario}
 

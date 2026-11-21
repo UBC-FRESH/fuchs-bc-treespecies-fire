@@ -61,6 +61,15 @@ calibration), `to compute` (not yet produced).
 | Deciduous price effect (model schedule) | -26 to +256 million CAD across 35 to 61.74 CAD/m3 | same | verified |
 | Haul effect (model schedule) | -184 million CAD from 90 to 117 km | same | verified |
 
+## Composition
+
+| Claim | Value | Artifact | Status |
+| --- | --- | --- | --- |
+| Aspen supply ceiling | 3.20 million m3/period, 6.2 percent of a 5.18 million m3/yr total | `fresh-fuchs-ws4` `experiments/tsa24-composition/summary.json` | verified (15-minute local search, not converged) |
+| Share response to target | 5.69 percent at weight 200; 5.94 percent at weight 100,000 | same | verified |
+| Composition frontier | 8 percent implies 40.0 million m3/period; 10 percent 32.0; 15 percent 21.3 | derived from the ceiling | verified |
+| Cost of a 10 percent share | 38 percent of the sustained level | 1 - (3.20/0.10)/51.9 | verified |
+
 ## Composition and rotation
 
 | Claim | Value | Artifact | Status |

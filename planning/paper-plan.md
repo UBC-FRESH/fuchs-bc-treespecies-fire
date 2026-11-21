@@ -29,7 +29,7 @@ and its sampling uncertainty. This is ADR 0002 in the code repository, and it go
 
 | RQ | Question | Analysis | Status |
 | --- | --- | --- | --- |
-| RQ1 | Which landscape mixtures balance production and fire risk? | Composition target × allowable cut surface, NPV and CVaR | Surface computed (perpetuity LP); CVaR pending fire scenario |
+| RQ1 | Which landscape mixtures balance production and fire risk? | Composition target × allowable cut surface, NPV and CVaR | Composition-production frontier computed on the real estate (supply-limited at about 6 percent deciduous); CVaR pending fire scenario |
 | RQ2 | How far can broadleaf be used as fire breaks before production suffers? | None in this paper | **Declared limitation (W0.3).** Requires a spatial placement rule that the model does not have; named in the discussion and carried as future work |
 | RQ3 | What are the synergies and trade-offs between diversification and rotation length? | Implied rotation length per allowable cut | Computed; the rotation–AAC relation is **non-monotonic**, which is itself a result |
 | RQ4 | How do favourable mixtures change with risk attitude? | Vary the CVaR confidence level | Pending fire scenario |
@@ -66,7 +66,8 @@ work requiring a corridor placement rule. The paper answers RQ1, RQ3, RQ4, and R
 | Fig. 4 | Implied rotation length by allowable cut | same |
 | Table 1 | Landscape composition | estate summary |
 | Table 2 | Prices, costs, and their provenance | `notes/reference/economics-constants.md` |
-| Table 3 | Sensitivities | `notes/reference/economics-sensitivity.md` |
+| Table 3 | Sensitivities | model schedule, `scripts/valuation.py` |
+| Table 4 | Composition-production frontier | `experiments/tsa24-composition/summary.json` |
 
 ## What the pending calibration affects
 
