@@ -51,7 +51,7 @@ work requiring a corridor placement rule. The paper answers RQ1, RQ3, RQ4, and R
 | Abstract | 250 | Question, method, three findings, one limitation |
 | 1 Introduction | 900 | Policy tension, gap, five research questions, contribution |
 | 2 Methods | 2000 | Region, bilevel formulation, estate model, fire scenario, economics |
-| 3 Results | 1500 | Estate validation, even flow against the cut, composition surface, rotation, sensitivities |
+| 3 Results | 1500 | Estate validation, the sustained level and its gap to the official cut, economics, sensitivities, composition surface, rotation |
 | 4 Discussion | 900 | Interpretation, policy reading, limitations |
 | 5 Conclusion | 250 | What a policy maker should take away |
 | Supplement | — | Data provenance, model settings, sensitivity tables |
@@ -138,9 +138,9 @@ as the direct predecessor.
 `fuchs_severe_2024` found that diversification did not buffer the economic consequences of extreme
 events, and that severe events pushed allocation toward homogenisation and low-investment choices.
 
-What this study can say so far is narrower: mean net present value is insensitive to the deciduous
-log price across its full documented range (plus or minus 22 million CAD, or 0.2 percent) and to
-haul distance (250 million CAD), while the discount rate halves it. That is a statement about
+What this study can say so far is narrower: on the model-produced schedule, mean net present value
+is insensitive to the deciduous log price across its full documented range (plus or minus 26
+million CAD) and to haul distance (184 million CAD), while the discount rate halves it. That is a statement about
 prices, not about composition. The composition surface on TSA24 has not been computed, so the
 claim that mean NPV is insensitive to composition is **not yet established** and must not appear in
 the manuscript until it is.

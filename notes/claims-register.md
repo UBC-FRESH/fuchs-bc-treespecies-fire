@@ -49,9 +49,9 @@ calibration), `to compute` (not yet produced).
 | NPV at 3 percent (benchmark fixture) | 12,248 million CAD | same | superseded by the model-produced schedule |
 | Conifer margin | 56.81 to 64.79 CAD/m3 | same | verified |
 | Deciduous margin | -2.25 CAD/m3 | same | verified |
-| Discount rate effect | 5 percent gives 6,786 million CAD; 0 percent gives 83,465 million CAD | `notes/reference/economics-sensitivity.md` | verified |
-| Deciduous price effect | -22 to +209 million CAD across 35 to 61.74 CAD/m3 | same | verified |
-| Haul effect | -250 million CAD from 90 to 117 km | same | verified |
+| Discount rate effect (model schedule) | 5 percent gives 4,769 million CAD; 0 percent gives 62,270 million CAD | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/summary.json` and `scripts/valuation.py` | verified |
+| Deciduous price effect (model schedule) | -26 to +256 million CAD across 35 to 61.74 CAD/m3 | same | verified |
+| Haul effect (model schedule) | -184 million CAD from 90 to 117 km | same | verified |
 
 ## Composition and rotation
 
