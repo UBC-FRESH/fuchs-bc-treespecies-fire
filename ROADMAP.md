@@ -56,7 +56,7 @@ Status: planned
 
 Goal: every number recomputed from tracked records, by a reader trying to reject the paper.
 
-- [ ] W2.1 Referee pass 1: internal consistency and arithmetic
+- [x] W2.1 Referee pass 1: internal consistency and arithmetic (#14) — early pass on the non-fire draft
 - [ ] W2.2 Referee pass 2: claims against artifacts
 - [ ] W2.3 Referee pass 3: hostile reading of the argument
 
