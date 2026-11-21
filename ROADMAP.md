@@ -73,7 +73,7 @@ Status: planned
 
 Goal: a submission package the maintainer approves.
 
-- [ ] W3.1 Submission package and declarations
+- [x] W3.1 Submission package and declarations (#15)
 - [ ] W3.2 Maintainer approval and submission
 
 Acceptance criteria:

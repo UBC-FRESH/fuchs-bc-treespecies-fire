@@ -30,16 +30,32 @@ Topanotti, L.~R., Fuchs, J.~M., Albert, M., Schick, J., Penanhoat, A., Lu,
   multidiversity and ecosystem multifunctionality via forest enrichment.
 \newblock {\em Science Advances}, 10:eadp6566.
 
-\bibitem[{UBC FRESH Laboratory}, 2026a]{ubc_fresh_fire_calibration_2026}
+\bibitem[{UBC FRESH Laboratory}, 2026a]{femic_tsa24_2026}
 {UBC FRESH Laboratory} (2026a).
+\newblock {FEMIC} {TSA24} instance: compiled forest estate for the prince
+  george timber supply area.
+\newblock \url{https://github.com/UBC-FRESH/femic-tsa24-instance}.
+\newblock Built from BC Vegetation Resources Inventory, disturbance mapping,
+  and Site Productivity data under the Open Government Licence -- British
+  Columbia. Accessed 21 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026b]{fhops_2026}
+{UBC FRESH Laboratory} (2026b).
+\newblock {FHOPS}: forest harvest and operations planning system.
+\newblock \url{https://github.com/UBC-FRESH/fhops}.
+\newblock Machine rates for the tree-length ground harvest system and highway
+  haul. Accessed 21 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026c]{ubc_fresh_fire_calibration_2026}
+{UBC FRESH Laboratory} (2026c).
 \newblock {TSA24} fire regime calibration: 24-tile real-layer ensemble and
   region-level suppression.
 \newblock \url{https://github.com/UBC-FRESH/ws4}.
 \newblock Calibration index and reports under \texttt{notes/reports/}. Accessed
   21 November 2026.
 
-\bibitem[{UBC FRESH Laboratory}, 2026b]{ubc_fresh_ws4_2026}
-{UBC FRESH Laboratory} (2026b).
+\bibitem[{UBC FRESH Laboratory}, 2026d]{ubc_fresh_ws4_2026}
+{UBC FRESH Laboratory} (2026d).
 \newblock {WS4}: spatially explicit wood supply simulation system.
 \newblock \url{https://github.com/UBC-FRESH/ws4}.
 \newblock Accessed 21 November 2026.
