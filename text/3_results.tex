@@ -146,10 +146,44 @@ in price: the deciduous log price moves mean value by less than one percent, whi
 required to raise its share is large. Whether that volume buys a sufficient reduction in fire risk
 is the question the fire scenario is built to answer.
 
-\subsection{Fire scenario}
+\subsection{Fire regime}
 
-\pending{Fire-regime statistics for the estate run, and the comparison with the historical
-distribution and its bootstrap interval.}
+The calibrated regime is compared with the 432 historical perimeters through the historical
+bootstrap interval (\autoref{tab:res_fire}). The median, the 90th percentile, the share above
+\SI{500}{\hectare}, and the maximum all sit inside the historical interval. The 95th percentile is
+below it, and the two extreme-tail shares sit at its lower edge. The central distribution is
+therefore reproduced, and the upper tail is thin by more than sampling noise explains. No parameter
+was adjusted to lift it.
+
+\begin{table}[h]
+    \centering
+    \small
+    \caption{Simulated fire-size distribution against the historical record. Intervals are the
+    5th to 95th percentile of 20,000 bootstrap resamples of the 432 historical perimeters.}
+    \label{tab:res_fire}
+    \begin{tabular}{lrrr}
+        \toprule
+        Statistic & Historical & Historical interval & Simulated \\
+        \midrule
+        Median [ha]            & 22.97   & 20.85 to 30.16      & 23.8 \\
+        90th percentile [ha]   & 490.17  & 349.13 to 1,051.26  & 361.5 \\
+        95th percentile [ha]   & 1,918.88& 1,415.35 to 2,955.33& 1,100.9 \\
+        Share above 500 [\%]   & 10.0    & 7.6 to 12.5         & 8.3 \\
+        Share above 5,000 [\%] & 3.0     & 1.9 to 4.4          & 1.8 \\
+        Maximum [ha]           & 25,114.8& 15,069.3 to 25,114.8& 20,770.4 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The calibrated regime was then run on the full estate through the public estate workflow, with the
+fitted parameters unchanged, the full 250 m layer stack, and the regional suppression map. Twenty-four
+ignitions, one per calibration tile and spread across the periods, reached \num{1331} fragments and
+grew \SI{16331}{\hectare} of potential fire; \SI{10444}{\hectare} were applied to the compiled
+dataset, and the ending volume was \SI{1015.9}{\mega\cubic\meter}. That is about
+\SI{680}{\hectare} grown and \SI{435}{\hectare} applied per ignition, against a historical mean
+of \SI{512.9}{\hectare}; the scenario sits inside the historical spread. It is a scenario for
+coupling fire to harvest decisions, not a distribution sample, and it is not used for the
+comparison above.
 
 \subsection{Rotation length and diversification}
 

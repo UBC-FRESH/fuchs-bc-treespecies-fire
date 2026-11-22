@@ -96,7 +96,12 @@ calibration), `to compute` (not yet produced).
 | Median, p90 | 22.97 ha, 490.17 ha | same | verified |
 | p90 interval | 349 to 1,051 ha | `notes/reference/fire-tail-uncertainty.md` | verified |
 | Share above 5,000 ha | 3.0 percent, interval 1.9 to 4.4 | same | verified |
-| Simulated regime | region-level fit, 23 tiles | calibration repository, `tsa24-region-configs.json` | pending |
+| Simulated regime | regional fit, 24 tiles plus median default; 3,450 fires | `fresh-fuchs-ws4` `notes/reports/p3-3-distribution-comparison.md`, WS4 commit `9918fb17` | verified |
+| Simulated median, p90, p95 | 23.8, 361.5, 1,100.9 ha | same | verified |
+| Simulated share above 500, 5,000 ha | 8.3 percent, 1.8 percent | same | verified |
+| Simulated maximum | 20,770.4 ha | same | verified |
+| Distribution verdict | median, p90, share above 500 and maximum inside the historical interval; p95 and tail shares below it | same | verified |
+| Estate fire scenario | 24 ignitions, 1,331 fragments, 16,331 ha grown, 10,444 ha applied, ending volume 1,015.9 million m3 | `experiments/p3-fire/scenario-estate-01.json` | verified |
 | CVaR by policy | to compute | — | to compute |
 
 ## Notes
