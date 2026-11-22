@@ -8,7 +8,6 @@ modelling — a fire regime at historical frequency and size, species-resolved h
 fire, and CVaR across policy alternatives — is the work that has to be done before the paper is
 the paper described below.
 
-successive antagonistic referee passes that recomputed every number from tracked records).
 
 ## The paper in three sentences
 
