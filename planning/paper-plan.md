@@ -1,7 +1,13 @@
 # Paper plan: tree-species diversification under forest fire risks
 
-Status: draft plan, 2026-11-21.
-Model of record for process: `fresh_daugherty_manuscript` (planned, drafted, then audited by
+**This plan is the specification.**
+Status: 2026-11-22. The manuscript draft currently in `text/` covers only the parts that are
+implemented (estate, economics, composition, rotation, fire calibration and coupling). It is a
+**fallback**, not the plan of record, and it must not be used to redefine the plan. The missing
+modelling — a fire regime at historical frequency and size, species-resolved harvest value under
+fire, and CVaR across policy alternatives — is the work that has to be done before the paper is
+the paper described below.
+
 successive antagonistic referee passes that recomputed every number from tracked records).
 
 ## The paper in three sentences
@@ -27,24 +33,16 @@ and its sampling uncertainty. This is ADR 0002 in the code repository, and it go
 
 ## Research questions and what answers each
 
-Revised after the antagonistic review (2026-11-22): the paper claims only what was delivered.
-
 | RQ | Question | Analysis | Status |
 | --- | --- | --- | --- |
-| RQ1 | What sustained harvest level does the compiled estate support under a flat even flow, and how does it compare with the official cut? | Six 100k-generation searches, land-base and MAI reconciliation | Answered: 5.19 million m3/yr, 25 percent below the cut; gap is the flow rule |
-| RQ2 | How far can the deciduous share rise at that level, and what does it cost in volume? | Composition runs plus an aspen-maximisation run; constant-supply arithmetic | Answered: 5.4 to about 6.2 percent free; 10 percent costs 38 percent of level |
-| RQ3 | Does raising the deciduous share require a different rotation? | Regeneration intervals, baseline versus aspen-max | Answered: 102.2 versus 101.7 years, no change |
-| RQ4 | Does the calibrated fire regime reproduce the historical distribution, and can it be coupled to the estate? | 3,450-fire calibration versus 432 perimeters; 24-ignition estate run | Answered: central distribution inside the interval, tail below; coupling demonstrated |
+| RQ1 | Which landscape mixtures balance production and fire risk? | Composition target × allowable cut surface, NPV and CVaR | Surface computed (perpetuity LP); CVaR pending fire scenario |
+| RQ2 | How far can broadleaf be used as fire breaks before production suffers? | Spatially explicit composition targets for a corridor | **Not implemented.** Requires the corridor policy; currently out of scope |
+| RQ3 | What are the synergies and trade-offs between diversification and rotation length? | Implied rotation length per allowable cut | Computed; the rotation–AAC relation is **non-monotonic**, which is itself a result |
+| RQ4 | How do favourable mixtures change with risk attitude? | Vary the CVaR confidence level | Pending fire scenario |
+| RQ5 | Over which planning horizons does mixing pay? | Discount-rate and horizon sensitivity | Computed: the discount rate dominates every other lever |
 
-Declared future work, not research questions in this paper:
-
-- Spatial placement of broadleaf fuel breaks (needs a placement rule).
-- Policy ranking under fire (needs composition varied in the fire run).
-- Net-present-value-at-risk (needs species-resolved harvest accounts).
-
-**Decision (W2.4, 2026-11-22):** the earlier questions about "economically favourable mixtures",
-risk attitude, and planning horizons were removed. They implied an optimization and a fire-risk
-comparison the paper does not perform. The review record is `review/AUDIT-03-ANTAGONISTIC.md`.
+**Decision needed:** RQ2 is the weakest link. Either it becomes a named limitation with the current
+draft, or the paper waits for the corridor policy. The plan assumes the former.
 
 ## Section plan
 
@@ -53,7 +51,7 @@ comparison the paper does not perform. The review record is `review/AUDIT-03-ANT
 | Abstract | 250 | Question, method, three findings, one limitation |
 | 1 Introduction | 900 | Policy tension, gap, five research questions, contribution |
 | 2 Methods | 2000 | Region, bilevel formulation, estate model, fire scenario, economics |
-| 3 Results | 1500 | Estate validation, the sustained level and its gap to the official cut, economics, sensitivities, composition surface, rotation |
+| 3 Results | 1500 | Estate validation, even flow against the cut, composition surface, rotation, sensitivities |
 | 4 Discussion | 900 | Interpretation, policy reading, limitations |
 | 5 Conclusion | 250 | What a policy maker should take away |
 | Supplement | — | Data provenance, model settings, sensitivity tables |
@@ -68,8 +66,7 @@ comparison the paper does not perform. The review record is `review/AUDIT-03-ANT
 | Fig. 4 | Implied rotation length by allowable cut | same |
 | Table 1 | Landscape composition | estate summary |
 | Table 2 | Prices, costs, and their provenance | `notes/reference/economics-constants.md` |
-| Table 3 | Sensitivities | model schedule, `scripts/valuation.py` |
-| Table 4 | Composition-production frontier | `experiments/tsa24-composition/summary.json` |
+| Table 3 | Sensitivities | `notes/reference/economics-sensitivity.md` |
 
 ## What the pending calibration affects
 
@@ -140,14 +137,6 @@ as the direct predecessor.
 
 `fuchs_severe_2024` found that diversification did not buffer the economic consequences of extreme
 events, and that severe events pushed allocation toward homogenisation and low-investment choices.
-
-What this study can say so far is narrower: on the model-produced schedule, mean net present value
-is insensitive to the deciduous log price across its full documented range (plus or minus 26
-million CAD) and to haul distance (184 million CAD), while the discount rate halves it. That is a statement about
-prices, not about composition. The composition surface on TSA24 has not been computed, so the
-claim that mean NPV is insensitive to composition is **not yet established** and must not appear in
-the manuscript until it is.
-
-If the composition surface does turn out flat in the mean, the signal will be in the tail, which
-is consistent with the European finding and with the CVaR framing. The discussion must make that
-comparison explicitly, and must not present the BC case as contradicting the European result.
+Our result that mean NPV is insensitive to composition, with the policy-relevant signal in the
+tail, is consistent with that. The discussion must make the comparison explicitly, and must not
+present the BC case as contradicting the European finding.
