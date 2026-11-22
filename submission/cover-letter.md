@@ -29,8 +29,8 @@ can rise from 5.4 to about 6.2 percent at no cost in volume; a ten percent share
 about 38 percent below the sustained level. The binding constraint is the physical supply of aspen,
 not its price: the deciduous log price moves mean net present value by less than one percent.
 
-Third, it shows that the implied rotation is invariant to composition, 102.2 years against 101.7
-years under the most diversified schedule. Diversification does not require a different age at
+Third, it shows that the implied rotation is invariant between the two schedules, 102.2 years
+against 101.7 years under the most diversified one. Diversification does not require a different age at
 harvest.
 
 Fourth, it compares a calibrated, spatially explicit fire regime with the 432-perimeter historical

@@ -27,7 +27,7 @@ calibration), `to compute` (not yet produced).
 | Total harvested volume | 1,037.9 million m3 | `experiments/tsa24-evenflow/species_periods.csv` | verified |
 | Gap to official cut | 25 percent | 1 - 5.189/6.917 | verified |
 | MAI above the cut per hectare | 2.5 percent | 2.309/2.253 | verified |
-| Base even-flow weight | 10,000 (non-linear, reference period 1) | `experiments/tsa24-evenflow/README.md` | verified |
+| Base even-flow weight | 10,000 (non-linear, reference period 1) | benchmark target `evenflow_tsa24.yaml` (`min_weight: 10000`) | verified |
 | Even-flow and level penalties | 1.3 to 2.7; about 515 | same | verified |
 | 2017 transition profile | 8.35 then 7.35 million m3/yr; 6.917 in 2025 | `government_of_british_columbia_pg_rationale_2017`; AAC table | verified |
 | Species composition, managed area | Sx 44.9, Pl 29.4, Bl 16.3, At 5.3, Se 4.0, Ac 0.1 percent | `feature.SpeciesProp.managed.*` at offset 0 | verified |
@@ -95,12 +95,12 @@ calibration), `to compute` (not yet produced).
 | Median, p90 | 22.97 ha, 490.17 ha | same | verified |
 | p90 interval | 349 to 1,051 ha | `notes/reference/fire-tail-uncertainty.md` | verified |
 | Share above 5,000 ha | 3.0 percent, interval 1.9 to 4.4 | same | verified |
-| Share above 100 ha | 26.2 percent, interval 22.7 to 29.6 | `fresh-fuchs-ws4:notes/reference/fire-tail-uncertainty.md` | verified |
+| Share above 100 ha | 26.2 percent, interval 22.7 to 29.6 | `fresh-fuchs-ws4:notes/reports/p3-3-distribution-comparison.md` | verified |
 | Share above 1,000 ha | 7.9 percent, interval 5.8 to 10.2 | same | verified |
 | p95 | 1,918.88 ha, interval 1,415.35 to 2,955.33 | same | verified |
 | Simulated regime | regional fit, 24 tiles plus median default; 3,450 fires | `fresh-fuchs-ws4` `notes/reports/p3-3-distribution-comparison.md`, WS4 commit `9918fb17` | verified |
 | Simulated median, p90, p95 | 23.8, 361.5, 1,100.9 ha | same | verified |
-| Simulated share above 500, 5,000 ha | 8.3 percent, 1.8 percent | same | verified |
+| Simulated shares | above 100: 23.6 percent; above 500: 8.3; above 1,000: 5.5; above 5,000: 1.8 | same | verified |
 | Simulated maximum | 20,770.4 ha | same | verified |
 | Distribution verdict | median, p90 and share above 500 inside the historical interval; p95 below; shares above 1,000 and 5,000 at the lower edge | same | verified |
 | Maximum | 20,770.4 ha simulated; historical 25,114.8 ha; interval one-sided and not used as a target | same | verified |
