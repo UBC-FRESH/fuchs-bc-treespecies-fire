@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  22 NOV 2026 03:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  22 NOV 2026 03:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -575,25 +575,25 @@ its doc-u-mented range: from $35$$[]\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 m[]$ to $
 40$$[]\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 m[]$
  []
 
-[11]) [12]
+[11]) [12] [13]
 \openout2 = `text/4_discussion.aux'.
 
- (./text/4_discussion.tex [13
+ (./text/4_discussion.tex [14
 
 
 
-] [14]) [15] [16]
+] [15]) [16] [17]
 \openout2 = `text/5_conclusion.aux'.
 
 
-(./text/5_conclusion.tex) [17
+(./text/5_conclusion.tex) [18
 
 
 
 ]
 \openout2 = `text/6_declarations.aux'.
 
- (./text/6_declarations.tex) [18
+ (./text/6_declarations.tex) [19
 
 
 
@@ -604,7 +604,7 @@ its doc-u-mented range: from $35$$[]\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 m[]$ to $
 (./text/9_acknowledgements.tex)
 \openout2 = `text/99_online_supplement.aux'.
 
- (./text/99_online_supplement.tex) [19
+ (./text/99_online_supplement.tex) [20
 
 
 
@@ -632,7 +632,7 @@ com / UBC [] -FRESH / ws4$[]\OT1/cmr/m/n/10 .  Cal-i-bra-tion in-dex and re-por
 ts un-der
  []
 
-) [20
+) [21
 
 
 ] (./main.aux (./text/0_abstract.aux) (./text/1_introduction.aux)
@@ -647,8 +647,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BCCF38F866A54B9A5BDCA332B4B5E43B;5225.
  ) 
 Here is how much of TeX's memory you used:
- 15049 strings out of 476106
- 294560 string characters out of 5793934
+ 15050 strings out of 476106
+ 294567 string characters out of 5793934
  1938975 words of memory out of 5000000
  36753 multiletter control sequences out of 15000+600000
  567741 words of font info for 73 fonts, out of 8000000 for 9000
@@ -672,10 +672,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive
 dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (20 pages, 1892423 bytes).
+Output written on main.pdf (21 pages, 1892861 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 349 compressed objects within 4 object streams
- 75 named destinations out of 1000 (max. 500000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 76 named destinations out of 1000 (max. 500000)
  222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
