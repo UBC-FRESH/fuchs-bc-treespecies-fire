@@ -15,15 +15,21 @@ calibration), `to compute` (not yet produced).
 | Blocks in the compiled estate | 458,708 | `notes/reference/tsa24-estate.md` | verified |
 | Treatments, curves, accounts | 48, 10,326, 99 | same | verified |
 | Official allowable cut | 6,917,231 m3/yr, effective 2025-08-28 | BC allowable annual cut table, verified 2026-11-21 | verified |
-| Compiled forest area | 5,899,680 ha | `fresh-fuchs-ws4` `notes/reference/tsa24-thlb.md` | verified |
-| Managed land base (model THLB) | 3,060,473 ha | same | verified |
-| Unmanaged forest area | 2,839,207 ha | same | verified |
+| Compiled forest area | 5,899,680 ha | `fresh-fuchs-ws4:notes/reference/tsa24-thlb.md` | verified |
+| Managed land base (model THLB) | 3,060,473 ha | `fresh-fuchs-ws4:notes/reference/tsa24-thlb.md` | verified |
+| Unmanaged forest area | 2,839,207 ha | `fresh-fuchs-ws4:notes/reference/tsa24-thlb.md` | verified |
 | Published THLB, 2017 base case | 3,070,301 ha | `government_of_british_columbia_pg_rationale_2017` | verified |
-| Model minus published THLB | -9,828 ha, -0.32 percent | same | verified |
-| Area-weighted maximum MAI, model curves | 2.309 m3/ha/yr | `fresh-fuchs-ws4` `notes/reference/tsa24-yield-reconciliation.md` | verified |
-| Implied perennial yield on managed area | 7.07 million m3/yr | same | verified |
+| Model minus published THLB | -9,828 ha, -0.32 percent | `fresh-fuchs-ws4:notes/reference/tsa24-thlb.md` | verified |
+| Area-weighted maximum MAI, model curves | 2.309 m3/ha/yr | `fresh-fuchs-ws4:notes/reference/tsa24-yield-reconciliation.md` | verified |
+| Implied perennial yield on managed area | 7.07 million m3/yr | `fresh-fuchs-ws4:notes/reference/tsa24-yield-reconciliation.md` | verified |
 | Model flat even flow | 5.19 million m3/yr | `experiments/tsa24-evenflow/summary.json` | verified |
 | Cost of the flat-profile constraint | 1.88 million m3/yr | difference of the two above | verified |
+| Total harvested volume | 1,037.9 million m3 | `experiments/tsa24-evenflow/species_periods.csv` | verified |
+| Gap to official cut | 25 percent | 1 - 5.189/6.917 | verified |
+| MAI above the cut per hectare | 2.5 percent | 2.309/2.253 | verified |
+| Base even-flow weight | 10,000 (non-linear, reference period 1) | `experiments/tsa24-evenflow/README.md` | verified |
+| Even-flow and level penalties | 1.3 to 2.7; about 515 | same | verified |
+| 2017 transition profile | 8.35 then 7.35 million m3/yr; 6.917 in 2025 | `government_of_british_columbia_pg_rationale_2017`; AAC table | verified |
 | Species composition, managed area | Sx 44.9, Pl 29.4, Bl 16.3, At 5.3, Se 4.0, Ac 0.1 percent | `feature.SpeciesProp.managed.*` at offset 0 | verified |
 | Deciduous share, managed area | 5.4 percent | same | verified |
 | Harvested composition, model schedule | Sx 45.2, Pl 31.3, Bl 14.7, At 5.3, Se 3.4, Ac 0.1 percent of harvested volume | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/species_periods.csv` | verified |
@@ -76,8 +82,8 @@ calibration), `to compute` (not yet produced).
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
 | Realized rotation, baseline | 102.2 years area-weighted (median 100, p10-p90 60-160) | `experiments/tsa24-evenflow/rotation.json` | verified |
-| Realized rotation, aspen-maximisation | 101.7 years | same | verified |
-| Median managed age | 92 years area-weighted; 44 percent of managed area older than 100 years | same | verified |
+| Realized rotation, aspen-maximisation | 101.7 years | `experiments/tsa24-composition/rotation-aspen-max.json` | verified |
+| Median managed age | 92 years area-weighted; 44 percent of managed area older than 100 years | both rotation artifacts | verified |
 | Harvested area at a 102-year rotation | about 30,000 ha/yr | 3,060,473 / 102 | derived |
 | Volume per harvested hectare | 173 m3/ha | 5.19 million / 30,000 | derived |
 
@@ -89,6 +95,9 @@ calibration), `to compute` (not yet produced).
 | Median, p90 | 22.97 ha, 490.17 ha | same | verified |
 | p90 interval | 349 to 1,051 ha | `notes/reference/fire-tail-uncertainty.md` | verified |
 | Share above 5,000 ha | 3.0 percent, interval 1.9 to 4.4 | same | verified |
+| Share above 100 ha | 26.2 percent, interval 22.7 to 29.6 | `fresh-fuchs-ws4:notes/reference/fire-tail-uncertainty.md` | verified |
+| Share above 1,000 ha | 7.9 percent, interval 5.8 to 10.2 | same | verified |
+| p95 | 1,918.88 ha, interval 1,415.35 to 2,955.33 | same | verified |
 | Simulated regime | regional fit, 24 tiles plus median default; 3,450 fires | `fresh-fuchs-ws4` `notes/reports/p3-3-distribution-comparison.md`, WS4 commit `9918fb17` | verified |
 | Simulated median, p90, p95 | 23.8, 361.5, 1,100.9 ha | same | verified |
 | Simulated share above 500, 5,000 ha | 8.3 percent, 1.8 percent | same | verified |
@@ -96,7 +105,8 @@ calibration), `to compute` (not yet produced).
 | Distribution verdict | median, p90 and share above 500 inside the historical interval; p95 below; shares above 1,000 and 5,000 at the lower edge | same | verified |
 | Maximum | 20,770.4 ha simulated; historical 25,114.8 ha; interval one-sided and not used as a target | same | verified |
 | Estate fire scenario | 24 ignitions, 1,331 fragments, 16,331 ha grown, 10,444 ha applied, ending volume 1,015.9 million m3 | `experiments/p3-fire/scenario-estate-01.json` | verified |
-| Volume-at-risk by policy | paired ensemble running; 20 percent lower-tail of ending volume, valued at 59.99 CAD/m3 | `fresh-fuchs-ws4` `experiments/p4-risk/` | pending |
+| Burned area per ignition | 680 ha grown, 435 ha applied | same, divided by 24 | verified |
+| Policy risk ranking | not reported in this paper | — | not claimed |
 | Historical mean fire size | 512.9 ha | calibration `tsa24-regime24/summary.json` | verified |
 
 ## Notes

@@ -1,6 +1,6 @@
 # Cover letter (draft)
 
-Status: draft, 2026-11-21. Before submission:
+Status: draft, 2026-11-22. Before submission:
 
 - [ ] choose the journal and replace `[Journal]`
 - [ ] replace the bracketed scope sentence with the journal's remit
@@ -12,40 +12,41 @@ Status: draft, 2026-11-21. Before submission:
 Dear Editor,
 
 We submit for consideration in *[Journal]* the manuscript **"Tree-species diversification under
-forest fire risks: a two-level policy model for the Prince George Timber Supply Area"**.
+forest fire risks: composition--production trade-offs and a calibrated fire scenario for the Prince
+George Timber Supply Area"**.
 
-The paper asks how much species diversification a real forest management unit can deliver, and at
-what cost, when a regional policy sets the harvest level and species targets and an enterprise
-answers with harvest and regeneration decisions. It makes three contributions.
+The paper asks what a species-composition aspiration costs on a real forest management unit, and
+whether a calibrated fire process can be run on the same estate. It makes four contributions.
 
-First, it puts the question on a real estate. The model uses the compiled TSA~24 inventory, whose
-managed area matches the base-case timber harvesting land base in the 2017 timber supply review to
-within 0.3 percent, rather than a stylised landscape of stand types.
+First, it validates the estate and reconciles the harvest level. The compiled TSA~24 managed area
+matches the published timber harvesting land base to within 0.32 percent, and the model sustains
+5.19 million m3/yr under a flat even flow, about 25 percent below the official cut. We attribute the
+gap to the flow rule rather than to the land base, and we say that the attribution is an
+interpretation, not a counterfactual test.
 
-Second, it treats disturbance as a spatially explicit process calibrated to the historical
-perimeter record, not as a probability of loss applied to a stand. Fire enters as a scenario, and
-every distributional claim carries the sampling uncertainty of the record behind it.
+Second, it measures a composition--production frontier. At the sustained level the deciduous share
+can rise from 5.4 to about 6.2 percent at no cost in volume; a ten percent share requires a total
+about 38 percent below the sustained level. The binding constraint is the physical supply of aspen,
+not its price: the deciduous log price moves mean net present value by less than one percent.
 
-Third, it reports a composition–production frontier rather than a single optimum. At the level the
-estate sustains, about 5.19 million cubic metres per year, the deciduous share can be raised only
-from 5.4 to about 6.2 percent at no cost in level; a 10 percent share would require giving up about
-38 percent of the harvest. The economic side is equally sharp: the discount rate dominates every market and
-biological parameter in the model, and the deciduous log price moves mean value by less than one
-percent.
+Third, it shows that the implied rotation is invariant to composition, 102.2 years against 101.7
+years under the most diversified schedule. Diversification does not require a different age at
+harvest.
+
+Fourth, it compares a calibrated, spatially explicit fire regime with the 432-perimeter historical
+record. The median and the share of fires above 500 ha sit inside the historical sampling interval,
+the 90th percentile at its lower edge, and the 95th percentile and extreme-tail shares below it. A
+24-ignition run couples the fire process to the full estate. We do not report a policy ranking under
+fire, and we do not claim net-present-value-at-risk; both need experiments this paper does not run.
 
 The work continues the line of research on diversification under disturbance risk in European
-forests (Fuchs et al., 2024, *Scientific Reports*), and it differs from it in the two ways that
-matter for policy: the disturbance is a process with spatial structure, and the decisions are made
-on an operating forest under an allowable cut.
-
-We report the difference between the model's sustained level and the official allowable annual cut
-openly, and show that it comes from the flat harvest-profile rule rather than from the land base or
-the growth curves. We do not claim to reproduce the chief forester's determination.
+forests (Fuchs et al., 2024, *Scientific Reports*), with two differences that matter for policy: the
+disturbance is a process with spatial structure, and the decisions are made on an operating forest
+under an allowable cut.
 
 The manuscript is original and is not under consideration elsewhere. The authors declare no
 financial competing interests; one author develops the open-source estate model used in the work,
 which is declared in the manuscript.
-
 
 Yours sincerely,
 

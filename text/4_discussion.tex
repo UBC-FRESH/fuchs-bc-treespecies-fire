@@ -27,7 +27,9 @@ above the cut per hectare.
 
 What remains is the flow rule. A constant level from period 1 must be low enough to survive the
 trough of a non-regulated age structure, whose area-weighted median age is \SI{92}{\year} and in
-which \SI{44}{\percent} of the managed area is older than a century. The official determination is
+which \SI{44}{\percent} of the managed area is older than a century
+(\texttt{rotation.json}). We attribute the residual to the flow rule; a declining-profile
+counterfactual is not run, so the attribution is an interpretation. The official determination is
 a declining transition profile: \SI{8.35}{\mega\cubic\meter\per\year} for five years, then
 \SI{7.35}{\mega\cubic\meter\per\year}, adjusted to \SI{6.92}{\mega\cubic\meter\per\year} in
 2025~\citep{government_of_british_columbia_pg_rationale_2017,government_of_british_columbia_aac_2026}. A constant profile cannot take the
@@ -50,8 +52,8 @@ percent case costs about \SI{38}{\percent} of the sustained harvest.
 
 That asymmetry is the central economic finding. A policy analyst who looks only at prices will
 conclude that composition is nearly free, because the deciduous log price moves mean value by less
-than one percent. A policy analyst who looks at the schedule will find that it costs a third of the
-harvest. The results also show why the composition question cannot be answered by varying the price
+than one percent. A policy analyst who looks at the schedule will find that a ten percent share costs about
+\SI{38}{\percent} of the harvest. The results also show why the composition question cannot be answered by varying the price
 of a fixed deciduous share: the binding constraint is the volume of the minority species, not its
 price.
 
@@ -86,9 +88,9 @@ The fire process is coupled to the full estate in a single 24-ignition run, and 
 applies about \SI{10444}{\hectare} of burned area to the compiled dataset. That run demonstrates
 that the calibration, the layer stack, the regional suppression map, and the estate model can be
 run together. It is not a policy comparison: composition is not varied in the fire run, so the paper
-cannot say whether a more diversified estate burns differently. The paired ensemble reports
-volume-at-risk for two schedules on common draws; it does not produce a net-present-value-at-risk
-ranking, because species-resolved harvest is not exposed by the process evaluation.
+cannot say whether a more diversified estate burns differently. No policy risk ranking is
+reported; volume-at-risk across paired draws and net-present-value-at-risk are natural extensions,
+and the latter needs species-resolved harvest accounts.
 
 \subsection{Relation to the European evidence}
 
@@ -122,9 +124,9 @@ Fourth, the fire process is run on one schedule and one ignition set. Compositio
 the fire run, so the paper does not estimate whether diversification reduces fire risk. That is the
 natural next experiment, and it is not this one.
 
-Fifth, no net-present-value-at-risk is computed. The risk metric is volume-at-risk, and it is
-paired across schedules on common draws; a value-at-risk metric would need species-resolved harvest
-accounts that the process evaluation does not expose.
+Fifth, no policy risk metric is computed. The paper reports neither volume-at-risk nor
+net-present-value-at-risk across policy alternatives; the latter would need species-resolved
+harvest accounts that the process evaluation does not expose.
 
 Sixth, prices mix vintages: conifer prices are from the quarter ending 30 September 2026, the
 deciduous price is a 2018 ten-year average, and stumpage is a 2026 tabular rate. The deciduous price

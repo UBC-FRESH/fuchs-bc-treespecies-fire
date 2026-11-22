@@ -80,11 +80,10 @@ level the estate sustains, not at the official cut, because the estate cannot ho
 under a flat even flow. The composition results are therefore conditional on the model's sustained
 level, and we say so wherever they are reported.
 
-\paragraph{Risk metric} Downside risk is measured as volume-at-risk: the lower-tail conditional
-value at risk of the estate's ending standing volume across paired fire draws, expressed in value
-at the schedule's mean net margin. We do not report net-present-value-at-risk, because the process
-evaluation exposes ending volume and biomass rather than species-resolved harvest; that metric is
-left to future work.
+\paragraph{Scope of the risk analysis} The paper does not report a policy risk ranking. The fire
+process is used as a scenario, and composition is not varied in the fire run. Volume-at-risk and
+net-present-value-at-risk are natural extensions; the latter needs species-resolved harvest
+accounts that the process evaluation does not expose.
 
 \subsection{Forest estate model and estate data}
 
@@ -124,8 +123,9 @@ weakly identified: the historical median is \SI{22.97}{\hectare} with a bootstra
 \SIrange{20.85}{30.16}{\hectare}, but the historical 90th percentile is
 \SI{490.17}{\hectare} with an interval of \SIrange{349}{1051}{\hectare}, and the share of fires
 above \SI{5000}{\hectare} rests on 13 of 432 events. Second, the simulated tail is sensitive to
-the antecedent fire-weather initialisation. We therefore never report an absolute fire size as a
-result, and every distributional statement is read against the historical sampling interval.
+the antecedent fire-weather initialisation. We therefore do not interpret an absolute fire size as
+a prediction: absolute values are reported beside the historical sampling interval, and every
+distributional statement is read against that interval.
 
 The calibrated regime reproduces the historical median, the 90th percentile, and the share above
 \SI{500}{\hectare} inside the historical sampling interval; the 95th percentile and the
@@ -138,8 +138,7 @@ calibration tile, 24 in total, drawn from the calibration's potential-fire sampl
 the periods; one 2023 weather season with 90-day antecedent spin-up; current fuel and terrain
 layers; and clearcut harvesting only. It is a coupling demonstration, not a Monte Carlo of the
 estate: five schedule blocks are dropped because the compiled dataset has no fragment mapping for
-them. A paired ensemble then grows one source per draw and evaluates two schedules on it, which
-supports a volume-at-risk comparison but not a policy ranking under fire.
+them. A paired ensemble across draws is the natural extension; it is not reported here.
 
 \subsection{Economic valuation}
 
@@ -157,7 +156,7 @@ net value discounted at its end.
 
 \subsection{Sensitivity and reproduction}
 
-Because several constants are ranges rather than points, every headline result is reported with a
-sensitivity across the documented range: the deciduous price, the haul distance, the discount
-rate, and the fire-weather initialisation. All constants, their sources, and the code that applies
-them are recorded in the companion repository.
+Three economic constants are ranges rather than points: the deciduous price, the haul distance,
+and the discount rate. Every economic result is reported with a sensitivity across those ranges.
+The fire scenario uses one weather season and is not treated as a sensitivity axis. All constants,
+their sources, and the code that applies them are recorded in the companion repository.

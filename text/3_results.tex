@@ -75,7 +75,7 @@ Three economic constants are ranges rather than points: the discount rate, the d
 price, and the haul distance. Their effect on the model-produced schedule is shown in
 \autoref{tab:res_sensitivity}.
 
-The discount rate dominates every other lever. Moving from \SI{3}{\percent} to \SI{5}{\percent}
+Among the economic constants, the discount rate dominates every other lever. Moving from \SI{3}{\percent} to \SI{5}{\percent}
 reduces net present value by \SI{4010}{million\CAD}, close to half the base value, and moving to
 zero would raise it to the undiscounted total of \SI{62270}{million\CAD}. No other constant moves
 the result by more than about three percent.
@@ -128,20 +128,20 @@ level (\autoref{tab:res_composition}). The table is arithmetic under a constant 
 does not represent separate optimization runs. At \SI{3.20}{\mega\cubic\meter} per period of
 aspen, an eight percent share implies a total near \SI{40}{\mega\cubic\meter} per period, and a
 ten percent share a total near \SI{32}{\mega\cubic\meter}, about \SI{38}{\percent} below the
-sustained level. A six percent share is feasible at the sustained level, because the ceiling is
-about \SI{6.2}{\percent}.
+sustained level. A six percent share needs \SI{3.11}{\mega\cubic\meter} per period of aspen,
+below the \SI{3.20}{\mega\cubic\meter} ceiling, so it is feasible at the sustained level and is
+not a binding row; the table reports the shares that bind.
 
 \begin{table}[h]
     \centering
     \caption{Composition-production frontier. The aspen supply is about
-    \SI{3.20}{\mega\cubic\meter} per period; the total level is the level at which the share is
-    reached. A six percent share is feasible at the sustained level.}
+    \SI{3.20}{\mega\cubic\meter} per period; the total level is the maximum at which the share is
+    attainable. A six percent share is feasible at the sustained level and is not shown.}
     \label{tab:res_composition}
     \begin{tabular}{rrr}
         \toprule
-        Deciduous share [\%] & Level at which the share is reached [M m3/period] & Mean annual [M m3/yr] \\
+        Deciduous share [\%] & Maximum total level [M m3/period] & Mean annual [M m3/yr] \\
         \midrule
-        6  & 53.3 & 5.33 \\
         8  & 40.0 & 4.00 \\
         10 & 32.0 & 3.20 \\
         15 & 21.3 & 2.13 \\
@@ -157,9 +157,9 @@ composition scenarios; it is a coupling demonstration and a distribution compari
 \subsection{Fire regime}
 
 The calibrated regime is compared with the 432 historical perimeters through the historical
-bootstrap interval (\autoref{tab:res_fire}). The median, the 90th percentile, and the share above
-\SI{500}{\hectare} sit inside the historical interval. The 95th percentile is below it, and the
-shares above \SI{1000}{\hectare} and \SI{5000}{\hectare} sit at or just below its lower edge. The
+bootstrap interval (\autoref{tab:res_fire}). The median and the share above \SI{500}{\hectare} sit inside the historical interval; the 90th
+percentile sits at its lower edge. The 95th percentile is below it, and the shares above
+\SI{1000}{\hectare} and \SI{5000}{\hectare} sit at or just below its lower edge. The
 central distribution is therefore reproduced, and the upper tail is thin by more than sampling
 noise explains. No parameter was adjusted to lift it. The maximum is reported for completeness but
 not used as a target: its bootstrap interval is one-sided by construction and cannot be interpreted
@@ -202,8 +202,9 @@ comparison above.
 \subsection{Rotation length and diversification}
 
 We estimate the rotation from the schedule itself. For every block harvested more than once, the
-interval between successive harvests is the realized rotation on that block; the summary is written to
-the project artifact \texttt{rotation.json} in the even-flow experiment directory. Across the baseline schedule, \num{53071}
+interval between successive harvests is the realized rotation on that block; the baseline summary is written to \texttt{rotation.json} in the even-flow experiment directory,
+and the aspen-maximisation summary to \texttt{rotation-aspen-max.json} in the composition
+directory. In the baseline, \SI{44}{\percent} of the managed area is older than 100 years. Across the baseline schedule, \num{53071}
 such intervals give an area-weighted mean rotation of \SI{102.2}{\year}, with a median of
 \SI{100}{\year} and a tenth-to-ninetieth percentile range of \SIrange{60}{160}{\year}. These are blocks harvested twice within the horizon, so the estimate is
 conditional on being re-entered within 200 years and is biased toward the more productive and
