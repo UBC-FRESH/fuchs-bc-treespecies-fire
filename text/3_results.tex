@@ -4,30 +4,34 @@
 \subsection{The compiled estate}
 
 The TSA~24 dataset compiles to \num{458708} blocks, 48 treatments, \num{10326} growth curves, and
-99 accounts. Validation of the compiled estate returns no consistency errors: every block resolves
-to a treatment and a curve, every curve is defined over the planning horizon, and every account is
-reachable. The species composition reported in \autoref{tab:meth_studyregion_spec} is that of the
-same compilation, so the landscape described in the methods and the landscape solved in the model
-are the same object.
+99 accounts. The compiled dataset passes the WS4 validator (\texttt{ws4 validate} reports
+\texttt{Dataset is valid}). The validator checks the manifest and schema invariants; it does not
+audit the inventory against its source, so we describe the estate as internally consistent rather
+than field-verified. The species composition reported in \autoref{tab:meth_studyregion_spec} is
+that of the same compilation, so the landscape described in the methods and the landscape solved
+in the model are the same object.
 
 \subsection{The sustained harvest level}
 
-The highest even flow the estate sustains over 20 ten-year periods is about
-\SI{51.9}{\mega\cubic\meter} per period, a mean of \SI{5.19}{\mega\cubic\meter\per\year}. We
-established the level with six independent searches of 100,000 generations each: their realized
-levels span \SIrange{51.89}{52.06}{\mega\cubic\meter} per period, with an even-flow penalty of 1.3
-to 2.7 against a level penalty of about 515. The profiles are therefore flat, and the shortfall
-from the aspiration is uniform rather than a search artefact. The replayed schedule itself ranges
-from \SI{51.2}{\mega\cubic\meter} to \SI{52.3}{\mega\cubic\meter} across periods.
+Six independent searches, all starting from a \SI{70}{\mega\cubic\meter} per-period aspiration,
+converged to realized levels of \SIrange{51.89}{52.06}{\mega\cubic\meter} per period, a mean of
+\SI{5.19}{\mega\cubic\meter\per\year}. The even-flow penalty is 1.3 to 2.7 against a level
+penalty of about 515, so the profiles are flat and the shortfall from the aspiration is uniform.
+We interpret the plateau as the estate's sustained even-flow level; it is not a proven maximum.
+The replayed schedule ranges from \SI{51.2}{\mega\cubic\meter} to
+\SI{52.3}{\mega\cubic\meter} across periods.
 
 That level is about \SI{25}{\percent} below the official allowable annual cut of
-\SI{6917231}{\cubic\meter\per\year}, and the gap is not the land base or the growth curves.
-The managed area matches the published timber harvesting land base to within \SI{0.3}{\percent},
-and the area-weighted maximum mean annual increment of the model's curves,
-\SI{2.31}{\cubic\meter\per\hectare\per\year}, implies \SI{7.07}{\mega\cubic\meter\per\year}
-on that area, within \SI{2.5}{\percent} of the cut per hectare. The difference is the cost of
-holding a constant level from the first period on a non-regulated age structure, where the official
-determination is a declining transition profile.
+\SI{6917231}{\cubic\meter\per\year}. The gap is not the land base: the managed area matches the
+published timber harvesting land base to within \SI{0.32}{\percent}
+(\SI{3060473}{\hectare} against \SI{3070301}{\hectare}). Nor is it a lack of growth potential in
+the curves. The area-weighted maximum mean annual increment of the model's own curves is
+\SI{2.31}{\cubic\meter\per\hectare\per\year}; multiplied by the managed area, that is
+\SI{7.07}{\mega\cubic\meter\per\year}, \SI{2.5}{\percent} above the cut per hectare. This is
+an upper-bound consistency check, not a validation of the curves: it shows that their potential is
+not below the cut, not that they reproduce the timber supply analysis. The difference between that
+bound and the realized level is the cost of holding a constant profile from the first period on a
+non-regulated age structure, where the official determination is a declining transition profile.
 
 We do not claim that the model reproduces the official cut. No result below depends on that claim.
 
@@ -50,6 +54,7 @@ share will enlarge.
     \centering
     \caption{Economic result of the model-produced schedule over 20 periods of ten years.}
     \label{tab:res_economics}
+    \small
     \begin{tabular}{lr}
         \toprule
         Item & Value \\
@@ -66,10 +71,9 @@ share will enlarge.
 
 \subsection{Sensitivity to the documented ranges}
 
-Four constants are ranges rather than points: the discount rate, the deciduous log price, the haul
-distance, and the fire-weather initialisation. The first three are applied to the model-produced
-schedule in \autoref{tab:res_sensitivity}; the last is a property of the fire scenario and is
-reported with it.
+Three economic constants are ranges rather than points: the discount rate, the deciduous log
+price, and the haul distance. Their effect on the model-produced schedule is shown in
+\autoref{tab:res_sensitivity}.
 
 The discount rate dominates every other lever. Moving from \SI{3}{\percent} to \SI{5}{\percent}
 reduces net present value by \SI{4010}{million\CAD}, close to half the base value, and moving to
@@ -78,8 +82,7 @@ the result by more than about three percent.
 
 The deciduous price is immaterial to mean value across its documented range: between
 \num{35} and \num{40} CAD per cubic metre the net present value moves by
-\SI{26}{million\CAD} in either direction, and even the higher ``other species'' proxy of
-\SI{61.74}{CAD\per\cubic\meter} adds only \SI{256}{million\CAD}. Haul distance from
+\SI{26}{million\CAD} in either direction. Haul distance from
 \SI{90}{\kilo\meter} to \SI{117}{\kilo\meter} costs \SI{184}{million\CAD}.
 
 \begin{table}[h]
@@ -87,6 +90,7 @@ The deciduous price is immaterial to mean value across its documented range: bet
     \caption{Sensitivity of net present value (base \SI{8779}{million\CAD}) to the documented
     ranges of the economic constants.}
     \label{tab:res_sensitivity}
+    \small
     \begin{tabular}{llrr}
         \toprule
         Lever & Setting & NPV & Change \\
@@ -94,7 +98,7 @@ The deciduous price is immaterial to mean value across its documented range: bet
         Discount rate & \SI{0}{\percent} & \SI{62270}{million\CAD} & \SI{+53491}{million\CAD} \\
         Discount rate & \SI{5}{\percent} & \SI{4769}{million\CAD} & \SI{-4010}{million\CAD} \\
         Deciduous price & \SI{35}{CAD\per\cubic\meter} & \SI{8752}{million\CAD} & \SI{-26}{million\CAD} \\
-        Deciduous price & \SI{61.74}{CAD\per\cubic\meter} & \SI{9035}{million\CAD} & \SI{+256}{million\CAD} \\
+        Deciduous price & \SI{40}{CAD\per\cubic\meter} & \SI{8805}{million\CAD} & \SI{+26}{million\CAD} \\
         Haul distance & \SI{117}{\kilo\meter} & \SI{8595}{million\CAD} & \SI{-184}{million\CAD} \\
         \bottomrule
     \end{tabular}
@@ -108,30 +112,34 @@ of a percent. If composition matters, it matters in the tail.
 
 \subsection{Composition at the sustained level}
 
-To test whether composition can be changed at the level the estate sustains, we set an aspen harvest
-target of \SI{5.19}{\mega\cubic\meter} per period, ten percent of the level, and searched from
-the baseline schedule. With the composition target weighted twice the level target, the deciduous
-share rose from \SI{5.4}{\percent} to \SI{5.69}{\percent}; with the composition target weighted
-five hundred times the level target it reached \SI{5.94}{\percent}. Neither reached ten percent,
-and neither bought the target by reducing the level.
+To test whether composition can be changed at the level the estate sustains, we set an aspen
+harvest target of \SI{5.19}{\mega\cubic\meter} per period, ten percent of the level, and searched
+from the baseline schedule. The target is an absolute volume, not a share, so the realized share is
+reported beside it. With the composition weight at 200, twice the level weight, the deciduous share
+rose from \SI{5.4}{\percent} to \SI{5.69}{\percent}; with the composition weight raised to
+\num{100000}, a 500-fold increase over that run, it reached \SI{5.94}{\percent} and the realized
+level fell from \SI{5.19}{\mega\cubic\meter\per\year} to \SI{5.16}{\mega\cubic\meter\per\year}.
 
 An aspen-maximisation run bounds the cause. With no level or flow target and an unreachable aspen
 aspiration, the search realizes a mean of \SI{3.20}{\mega\cubic\meter} per period of aspen,
 \SI{6.2}{\percent} of a \SI{5.18}{\mega\cubic\meter\per\year} total. Deciduous supply is
-therefore capped near six percent of current harvest, and a share target above that must be paid for
-in level (\autoref{tab:res_composition}). At a constant aspen supply of
-\SI{3.20}{\mega\cubic\meter} per period, an eight percent share implies a total near
-\SI{40}{\mega\cubic\meter} per period, and a ten percent share a total near
-\SI{32}{\mega\cubic\meter}, about \SI{38}{\percent} below the sustained level.
+therefore capped near six percent of current harvest, and a share above that must be paid for in
+level (\autoref{tab:res_composition}). The table is arithmetic under a constant aspen supply and
+does not represent separate optimization runs. At \SI{3.20}{\mega\cubic\meter} per period of
+aspen, an eight percent share implies a total near \SI{40}{\mega\cubic\meter} per period, and a
+ten percent share a total near \SI{32}{\mega\cubic\meter}, about \SI{38}{\percent} below the
+sustained level. A six percent share is feasible at the sustained level, because the ceiling is
+about \SI{6.2}{\percent}.
 
 \begin{table}[h]
     \centering
     \caption{Composition-production frontier. The aspen supply is about
-    \SI{3.20}{\mega\cubic\meter} per period; the total level follows from the chosen share.}
+    \SI{3.20}{\mega\cubic\meter} per period; the total level is the level at which the share is
+    reached. A six percent share is feasible at the sustained level.}
     \label{tab:res_composition}
     \begin{tabular}{rrr}
         \toprule
-        Deciduous share [\%] & Total level [M m3/period] & Mean annual [M m3/yr] \\
+        Deciduous share [\%] & Level at which the share is reached [M m3/period] & Mean annual [M m3/yr] \\
         \midrule
         6  & 53.3 & 5.33 \\
         8  & 40.0 & 4.00 \\
@@ -143,23 +151,27 @@ in level (\autoref{tab:res_composition}). At a constant aspen supply of
 
 Composition is therefore supply-limited on this estate, and the trade-off is in volume rather than
 in price: the deciduous log price moves mean value by less than one percent, while the volume
-required to raise its share is large. Whether that volume buys a sufficient reduction in fire risk
-is the question the fire scenario is built to answer.
+required to raise its share is large. The fire scenario in this paper is not used to rank
+composition scenarios; it is a coupling demonstration and a distribution comparison.
 
 \subsection{Fire regime}
 
 The calibrated regime is compared with the 432 historical perimeters through the historical
-bootstrap interval (\autoref{tab:res_fire}). The median, the 90th percentile, the share above
-\SI{500}{\hectare}, and the maximum all sit inside the historical interval. The 95th percentile is
-below it, and the two extreme-tail shares sit at its lower edge. The central distribution is
-therefore reproduced, and the upper tail is thin by more than sampling noise explains. No parameter
-was adjusted to lift it.
+bootstrap interval (\autoref{tab:res_fire}). The median, the 90th percentile, and the share above
+\SI{500}{\hectare} sit inside the historical interval. The 95th percentile is below it, and the
+shares above \SI{1000}{\hectare} and \SI{5000}{\hectare} sit at or just below its lower edge. The
+central distribution is therefore reproduced, and the upper tail is thin by more than sampling
+noise explains. No parameter was adjusted to lift it. The maximum is reported for completeness but
+not used as a target: its bootstrap interval is one-sided by construction and cannot be interpreted
+as an upper bound.
 
 \begin{table}[h]
     \centering
     \small
-    \caption{Simulated fire-size distribution against the historical record. Intervals are the
-    5th to 95th percentile of 20,000 bootstrap resamples of the 432 historical perimeters.}
+    \caption{Simulated fire-size distribution against the historical record. Historical intervals
+    are the 5th to 95th percentiles of 20,000 bootstrap resamples of the 432 perimeters; simulated
+    values are point estimates from 3,450 fires and were not bootstrapped. The maximum interval is
+    one-sided and is not used as a target.}
     \label{tab:res_fire}
     \begin{tabular}{lrrr}
         \toprule
@@ -168,9 +180,11 @@ was adjusted to lift it.
         Median [ha]            & 22.97   & 20.85 to 30.16      & 23.8 \\
         90th percentile [ha]   & 490.17  & 349.13 to 1,051.26  & 361.5 \\
         95th percentile [ha]   & 1,918.88& 1,415.35 to 2,955.33& 1,100.9 \\
+        Share above 100 [\%]   & 26.2    & 22.7 to 29.6        & 23.6 \\
         Share above 500 [\%]   & 10.0    & 7.6 to 12.5         & 8.3 \\
+        Share above 1,000 [\%] & 7.9     & 5.8 to 10.2         & 5.5 \\
         Share above 5,000 [\%] & 3.0     & 1.9 to 4.4          & 1.8 \\
-        Maximum [ha]           & 25,114.8& 15,069.3 to 25,114.8& 20,770.4 \\
+        Maximum [ha]           & 25,114.8& one-sided           & 20,770.4 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -188,10 +202,10 @@ comparison above.
 \subsection{Rotation length and diversification}
 
 We estimate the rotation from the schedule itself. For every block harvested more than once, the
-interval between successive harvests is the realized rotation on that block. Across the baseline
-schedule, \num{53071} such intervals give an area-weighted mean rotation of \SI{102.2}{\year},
-with a median of \SI{100}{\year} and a tenth-to-ninetieth percentile range of
-\SIrange{60}{160}{\year}. These are blocks harvested twice within the horizon, so the estimate is
+interval between successive harvests is the realized rotation on that block; the summary is written to
+the project artifact \texttt{rotation.json} in the even-flow experiment directory. Across the baseline schedule, \num{53071}
+such intervals give an area-weighted mean rotation of \SI{102.2}{\year}, with a median of
+\SI{100}{\year} and a tenth-to-ninetieth percentile range of \SIrange{60}{160}{\year}. These are blocks harvested twice within the horizon, so the estimate is
 conditional on being re-entered within 200 years and is biased toward the more productive and
 accessible stands. Under the aspen-maximisation schedule the mean is \SI{101.7}{\year}.
 

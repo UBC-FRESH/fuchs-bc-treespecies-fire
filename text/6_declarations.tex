@@ -6,10 +6,12 @@ Inventory, the Forest and Range Evaluation Program disturbance mapping, and Site
 estimates, under the Open Government Licence -- British Columbia. The instance and the frozen
 benchmark artifact used here carry the source licences and the rebuild recipe.
 
-The estate model is WS4 \citep{ubc_fresh_ws4_2026}, released under the Apache License 2.0. Harvest
+The estate model is WS4 \citep{ubc_fresh_ws4_2026}, released under the Apache License 2.0; the fire run uses the public estate-fire API at commit \texttt{9918fb17}, with the durable handoff summaries at \texttt{474dca6e}. Harvest
 costing uses the FHOPS machine-rate library \citep{fhops_2026}. The fire calibration, the
-historical perimeter set, and the calibrated suppression configurations are part of a companion
-calibration study and are archived with it; they are not redistributed here.
+historical perimeter set, the calibrated suppression configurations, and the regional calibration
+JSON are part of a companion calibration study. They are archived with that study on acceptance
+and are not redistributed here; the manuscript does not depend on redistributing the raw perimeter
+data.
 
 The schedules, the derived species-period tables, the sensitivity runs, and the analysis code that
 produce every number in this paper are held in the project repository and will be archived with a

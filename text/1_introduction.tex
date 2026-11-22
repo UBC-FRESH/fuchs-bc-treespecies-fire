@@ -1,90 +1,87 @@
 \section{Introduction}
 
-Forest management in British Columbia is decided at two levels that do not share an objective.
-The Chief Forester sets an allowable annual cut for each timber supply area, with the duty to
-sustain the timber supply over time~\citep{government_of_british_columbia_aac_2026}. The
-enterprises that hold the harvesting rights then decide where, when, and with which species to
-harvest and regenerate, answering to price, cost, and the terms of their tenure. Policy wants a
-forest that stays productive and resilient under fire risk. The enterprise wants a margin. When
-the two objectives diverge, a policy that ignores the enterprise response misses its target, and
-an enterprise that ignores policy is corrected after the fact, at a cost.
+Forest management in British Columbia is organised around two decisions that are made by
+different actors. The Chief Forester sets an allowable annual cut for each timber supply area, a
+maximum rather than a target, after a timber supply review that projects growth, operability, and
+land-base constraints~\citep{government_of_british_columbia_aac_2026}. The enterprises that hold
+harvesting rights then decide where, when, and with which species to harvest and regenerate, inside
+the silviculture prescriptions and stocking standards that apply to their tenures. The species
+composition of the future forest therefore emerges from many local regeneration decisions, not from
+a single landscape plan. A regional aspiration for composition, if one exists, has to be translated
+into choices that enterprises will actually make.
 
-The divergence matters more as the disturbance regime changes. Forest disturbances in Europe have
-increased in extent and severity over recent decades~\citep{seidl_increasing_2014}, and the
-Canadian forest sector faces the same direction of change, with fire seasons that exceed the
-historical range and a timber supply that carries the legacy of beetle-killed pine and past
-harvest. Under such a regime, the composition of the forest is not only a silvicultural choice but
-a risk decision: species differ in how they burn, how they grow, and what they are worth.
+That distinction matters more as the disturbance regime changes. Forest disturbances in Europe have
+increased in extent and severity over recent decades~\citep{seidl_increasing_2014}, and interior
+British Columbia carries a legacy of beetle-killed pine and past harvest that shapes both the
+current age structure and the fuel profile~\citep{government_of_british_columbia_pg_rationale_2017}.
+Under such a regime, composition is not only a silvicultural choice but a risk decision: species
+differ in how they burn, how they grow, and what they are worth.
 
-Tree-species diversification has been proposed as the adaptation strategy that reconciles the two
-objectives. The economic case was tested at scale for European forests by
+Tree-species diversification has been proposed as the adaptation strategy that reconciles
+production and risk. The economic case was tested at scale for European forests by
 \citet{fuchs_severe_2024}, who optimized stand-type portfolios across planning units under both
 small-scale disturbances and spatially correlated extreme weather events. Diversification raised
 expected returns and reduced risk from isolated disturbances, but severe and frequent extreme
 events undermined the economic gain, and the optimal response shifted toward homogenisation and
-low-investment species. That result is the point of departure for this paper: the benefit of
-mixing is conditional on the disturbance regime, and a risk analysis that treats disturbances as
-independent draws will overstate it.
+low-investment species. Two further results bound the question: enrichment of production forests
+can serve economic and ecological multifunctionality at the same time
+\citep{topanotti_enhancing_2024}, and managing for heterogeneity in stand size and conifer--deciduous
+composition reduces fire risk at the landscape scale~\citep{zelnik_managing_2025}.
 
-Two further lines of work bound the question. \citet{topanotti_enhancing_2024} showed empirically
-that enrichment of production forests can serve economic and ecological multifunctionality at the
-same time, so composition is not a simple trade-off between profit and diversity. And
-\citet{zelnik_managing_2025} showed with a process model that managing for heterogeneity, in stand
-size and in conifer--deciduous composition, reduces fire risk at the landscape scale. Together they
-suggest that the relevant composition decision is spatial and dynamic, not a single landscape
-average.
+A separate literature optimises the spatial arrangement of fuel treatments to reduce fire risk
+\citep{chung_optimizing_2015,wei_optimize_2012}, including a recent bilevel formulation in which a
+planner chooses treatments and nature chooses the fire~\citep{lagos_bilevel_2025}. That work treats
+treatment location as the decision and fire as the adversary. It does not ask how much composition
+change a real estate can supply under a harvest level, nor what that change costs in volume.
 
-What is missing is a study that joins these pieces. The European portfolio analysis represents
-disturbance as a probability over stylized units and allocates area shares of stand types; it does
-not simulate fire spread, and its units do not have the age structure, access, and adjacency of an
-operating forest. The fire-heterogeneity work simulates spread but has no economic agent, no
-harvest scheduling, and no policy constraint. Neither asks what an enterprise would actually do
-under a policy that targets composition, nor what that response costs in the tail of the
-distribution rather than at the mean.
+This paper sits between those lines. We do not optimise fuel-treatment placement, and we do not
+solve a bilevel program: the composition aspiration is an exogenous scenario, not a leader's
+decision. What we do is quantify, on a real management unit, what a composition aspiration costs in
+harvest volume, how it interacts with rotation, and whether a calibrated fire process can be run on
+the same estate. To our knowledge, no study combines a policy-level composition aspiration, a real
+timber supply area estate, and a calibrated process fire used as a scenario; the claim is
+deliberately narrower than "no study joins these pieces", because the fuel-treatment and
+stochastic-scheduling literatures are large and we do not review them exhaustively.
 
-This paper builds that bridge for one real management unit, the Prince George Timber Supply Area
-(TSA~24) in interior British Columbia. We formulate a two-level problem in which a regional policy
-maker chooses an allowable annual cut and a target species composition, while an enterprise
-responds with a harvest and regeneration schedule that meets those targets as closely as it can.
-The enterprise's profit is evaluated on the resulting schedule rather than optimized inside it; we
-return to what that means for the claims below. The estate is the compiled TSA~24 inventory, with its actual blocks, ages, species,
-and yield curves. Fire is a spatially explicit process coupled to the Canadian Forest Fire
-Behaviour Prediction system, calibrated against the historical perimeter record for the area, and
-driven by reconstructed weather; it enters the analysis as a scenario, and policies are compared
-against each other on identical fire draws. Risk is measured as the conditional value at risk of
-net present value, following \citet{fuchs_severe_2024}, so that the tail of the distribution, not
-only its mean, is part of the objective.
+We build the analysis on the Prince George Timber Supply Area (TSA~24) in interior British
+Columbia. The estate is the compiled TSA~24 inventory, with its actual blocks, ages, species, and
+yield curves. A weighted goal program responds to a harvest level and a species-composition
+aspiration with a harvest and regeneration schedule, and the schedule is valued with sourced prices
+and costs. Fire enters as a spatially explicit process coupled to the Canadian Forest Fire Behaviour
+Prediction system, calibrated against the historical perimeter record for the area, and run on the
+full 250 m estate support. Downside risk is expressed as volume-at-risk across paired fire draws; we
+do not claim a net-present-value-at-risk result, because the process evaluation does not expose
+species-resolved harvest.
 
 We ask four questions:
 
 \begin{enumerate}
-    \item[\textit{RQ1}] Which landscape-scale species mixtures best balance economic production
-    capacity and fire risk under a stated fire regime?
-    \item[\textit{RQ2}] What are the synergies and trade-offs between species diversification and
-    the rotation length implied by the allowable cut?
-    \item[\textit{RQ3}] How do the economically favourable mixtures change with the decision
-    maker's risk attitude?
-    \item[\textit{RQ4}] Over which planning horizons and discount rates does mixing become
-    economically favourable?
+    \item[\textit{RQ1}] What sustained harvest level does the compiled estate support under a flat
+    even flow, and how does it compare with the official cut?
+    \item[\textit{RQ2}] How far can the deciduous share rise at that level, and what does it cost in
+    harvest volume?
+    \item[\textit{RQ3}] Does raising the deciduous share require a different rotation?
+    \item[\textit{RQ4}] Does the calibrated fire regime reproduce the historical fire-size
+    distribution, and can it be coupled to the estate?
 \end{enumerate}
 
 A fifth question motivates the work but is not answered here: to what extent non-productive
 broadleaf species can be placed as fire breaks before production is over-proportionally
-compromised. Answering it requires a spatial placement rule for the breaks, which the policy level
-in this model does not have; we return to it as a limitation and as the natural extension of the
-framework.
+compromised. Answering it requires a spatial placement rule, which the composition aspiration in
+this model does not provide; we return to it as a limitation and as the natural extension.
 
-The contribution is therefore threefold. First, a two-level formulation that makes the policy and
-enterprise objectives explicit on a real estate, rather than assuming that area shares translate
-into outcomes. Second, a coupling of that formulation to a calibrated, spatially explicit fire
-process, so that fuel structure, composition, and connectivity affect the risk that the policy is
-meant to manage. Third, an evaluation on downside risk, reported with the sampling uncertainty of
-the historical fire record, which is what makes the comparison between policies meaningful when
-the tail of the disturbance distribution is itself weakly identified.
+The contribution is fourfold. First, a validated estate and a reconciled harvest level: the compiled
+managed area matches the published land base, and the gap to the official cut is attributed to the
+flow rule rather than to a missing land base. Second, a composition--production frontier at the
+sustained level, showing that the deciduous share is supply-limited and that the cost of
+diversification is paid in volume, not in log price. Third, evidence that the implied rotation is
+invariant to composition, so diversification does not require a different age at harvest. Fourth, a
+calibrated fire regime compared with the historical record and coupled to the full estate, with its
+tail limitations stated and a paired volume-at-risk comparison of two schedules.
 
-The paper proceeds as follows. \autoref{sec:methods} describes the study area, the two decision
-levels, the estate model, the fire scenario, and the economic valuation.
-\autoref{sec:results} reports the estate validation, the even-flow schedule against the official
-cut, the economic results and their sensitivities, and the fire comparison.
-\autoref{sec:discussion} interprets the results against the European evidence on diversification,
-states the limitations, and closes with what a policy maker should take from the analysis.
+The paper proceeds as follows. \autoref{sec:methods} describes the study area, the two-layer
+structure, the estate model, the economic valuation, the composition and rotation experiments, and
+the fire scenario. \autoref{sec:results} reports the sustained level, the economics and
+sensitivities, the composition frontier, the rotation, and the fire comparison and coupling.
+\autoref{sec:discussion} interprets the results against the European evidence, states the
+limitations, and closes with what a policy maker should take from the analysis.

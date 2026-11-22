@@ -27,22 +27,24 @@ and its sampling uncertainty. This is ADR 0002 in the code repository, and it go
 
 ## Research questions and what answers each
 
+Revised after the antagonistic review (2026-11-22): the paper claims only what was delivered.
+
 | RQ | Question | Analysis | Status |
 | --- | --- | --- | --- |
-| RQ1 | Which landscape mixtures balance production and fire risk? | Composition target × allowable cut surface, NPV and CVaR | Composition-production frontier computed on the real estate (supply-limited at about 6 percent deciduous); CVaR pending fire scenario |
-| RQ2 | How far can broadleaf be used as fire breaks before production suffers? | None in this paper | **Declared limitation (W0.3).** Requires a spatial placement rule that the model does not have; named in the discussion and carried as future work |
-| RQ3 | What are the synergies and trade-offs between diversification and rotation length? | Implied rotation length per allowable cut | Computed; the rotation–AAC relation is **non-monotonic**, which is itself a result |
-| RQ4 | How do favourable mixtures change with risk attitude? | Vary the CVaR confidence level | Pending fire scenario |
-| RQ5 | Over which planning horizons does mixing pay? | Discount-rate and horizon sensitivity | Computed: the discount rate dominates every other lever |
+| RQ1 | What sustained harvest level does the compiled estate support under a flat even flow, and how does it compare with the official cut? | Six 100k-generation searches, land-base and MAI reconciliation | Answered: 5.19 million m3/yr, 25 percent below the cut; gap is the flow rule |
+| RQ2 | How far can the deciduous share rise at that level, and what does it cost in volume? | Composition runs plus an aspen-maximisation run; constant-supply arithmetic | Answered: 5.4 to about 6.2 percent free; 10 percent costs 38 percent of level |
+| RQ3 | Does raising the deciduous share require a different rotation? | Regeneration intervals, baseline versus aspen-max | Answered: 102.2 versus 101.7 years, no change |
+| RQ4 | Does the calibrated fire regime reproduce the historical distribution, and can it be coupled to the estate? | 3,450-fire calibration versus 432 perimeters; 24-ignition estate run | Answered: central distribution inside the interval, tail below; coupling demonstrated |
 
-Manuscript numbering: the paper presents four questions numbered RQ1 to RQ4. They correspond to
-the plan's RQ1, RQ3, RQ4, and RQ5; the plan's RQ2 is the declared limitation. This mapping is kept
-so the plan and the manuscript can be read side by side.
+Declared future work, not research questions in this paper:
 
-**Decision (W0.3, 2026-11-21):** RQ2 is a declared limitation. The policy level sets a
-landscape-wide composition share, not where the broadleaf is placed, so the fire-break question
-cannot be answered with this model. It is stated as a limitation in the discussion and as future
-work requiring a corridor placement rule. The paper answers RQ1, RQ3, RQ4, and RQ5.
+- Spatial placement of broadleaf fuel breaks (needs a placement rule).
+- Policy ranking under fire (needs composition varied in the fire run).
+- Net-present-value-at-risk (needs species-resolved harvest accounts).
+
+**Decision (W2.4, 2026-11-22):** the earlier questions about "economically favourable mixtures",
+risk attitude, and planning horizons were removed. They implied an optimization and a fire-risk
+comparison the paper does not perform. The review record is `review/AUDIT-03-ANTAGONISTIC.md`.
 
 ## Section plan
 

@@ -28,8 +28,8 @@ every distributional claim carries the sampling uncertainty of the record behind
 
 Third, it reports a composition–production frontier rather than a single optimum. At the level the
 estate sustains, about 5.19 million cubic metres per year, the deciduous share can be raised only
-from 5.4 to about 5.9 percent; a 10 percent share would require giving up roughly 40 percent of the
-harvest. The economic side is equally sharp: the discount rate dominates every market and
+from 5.4 to about 6.2 percent at no cost in level; a 10 percent share would require giving up about
+38 percent of the harvest. The economic side is equally sharp: the discount rate dominates every market and
 biological parameter in the model, and the deciduous log price moves mean value by less than one
 percent.
 

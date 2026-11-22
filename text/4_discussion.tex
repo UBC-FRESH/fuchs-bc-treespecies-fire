@@ -1,126 +1,96 @@
 \section{Discussion}
 \label{sec:discussion}
 
-\subsection{What the two-level model contributes}
+\subsection{What the two-layer analysis contributes}
 
-The value of the two-level formulation is that it forces the policy question to be asked in the
-terms the enterprise will answer it. A composition target is not an instruction to the landscape;
-it is an aspiration that the enterprise meets, or misses, by choosing which stands to cut and what
-to plant, and the cost of that choice is borne in the schedule. Making the two levels explicit is what allows
-the analysis to say whether a policy is achievable at the cut it sets, and at what economic cost,
-rather than assuming that area shares of species translate into outcomes.
+The value of separating the two decision layers is that it forces the composition question to be
+asked in the terms an enterprise would answer it. A composition aspiration is not an instruction to
+the landscape: it is an outcome of which stands are cut and what is planted, and its cost is borne
+in the schedule. Making the layers explicit lets the analysis say what a composition aspiration
+costs in harvest volume and whether it requires a different rotation, rather than assuming that an
+area share of species translates into an outcome.
 
-On the TSA~24 estate this distinction is concrete. The highest even flow the compiled estate
-sustains is about \SI{51.9}{\mega\cubic\meter} per period, or
-\SI{5.19}{\mega\cubic\meter\per\year}, and the schedule is worth \SI{8779}{million\CAD} of net
-present value at \SI{3}{\percent} under current prices, costs, and stumpage. That is the feasible
-baseline. Any composition policy is a movement away from it, and its cost can now be measured
-rather than asserted.
+This is a scenario analysis, not a bilevel program. The composition aspiration is exogenous and
+hypothetical; British Columbia sets the allowable annual cut as a maximum and constrains
+silviculture through prescriptions and stocking standards, not through a landscape composition
+target. The results should be read as the response of a real estate to a hypothetical composition
+aspiration, not as an evaluation of an existing policy instrument.
 
-\subsection{Why the model sustains less than the official cut}
+\subsection{The sustained level and the official cut}
 
-The sustained level is about \SI{25}{\percent} below the official allowable annual cut. We treat
-this as a result, not a failure to be tuned away, and we can locate it.
+The compiled estate sustains about \SI{5.19}{\mega\cubic\meter\per\year} under a flat even flow from
+the first period, \SI{25}{\percent} below the official cut. The gap is not the land base: the
+managed area matches the published timber harvesting land base to within \SI{0.32}{\percent}. Nor is
+it a lack of growth potential in the curves: their area-weighted maximum mean annual increment
+implies \SI{7.07}{\mega\cubic\meter\per\year} on the managed area, an upper bound that sits just
+above the cut per hectare.
 
-It is not the land base. The model's managed area, \SI{3.06}{\mega\hectare}, matches the
-base-case timber harvesting land base in the 2017 review, \SI{3.070}{\mega\hectare}, to within
-\SI{0.3}{\percent}. It is not the growth potential either: the area-weighted maximum mean annual
-increment of the model's own yield curves is \SI{2.31}{\cubic\meter\per\hectare\per\year},
-which on the managed area gives \SI{7.07}{\mega\cubic\meter\per\year}, within
-\SI{2.5}{\percent} of the published cut per hectare.
+What remains is the flow rule. A constant level from period 1 must be low enough to survive the
+trough of a non-regulated age structure, whose area-weighted median age is \SI{92}{\year} and in
+which \SI{44}{\percent} of the managed area is older than a century. The official determination is
+a declining transition profile: \SI{8.35}{\mega\cubic\meter\per\year} for five years, then
+\SI{7.35}{\mega\cubic\meter\per\year}, adjusted to \SI{6.92}{\mega\cubic\meter\per\year} in
+2025~\citep{government_of_british_columbia_pg_rationale_2017,government_of_british_columbia_aac_2026}. A constant profile cannot take the
+transition harvest that a declining profile allows, and the difference is the cost of the rule we
+imposed.
 
-The difference is in the harvest-flow formulation. Our policy holds every period to within
-\SI{1}{\percent} of the first, while a timber supply review reports a declining transition
-profile: the 2017 determination was \SI{8.35}{\mega\cubic\meter\per\year} for five years,
-then \SI{7.35}{\mega\cubic\meter\per\year}, and the 2025 adjustment set it at
-\SI{6.92}{\mega\cubic\meter\per\year}. A constant level
-cannot use the transition harvest that a declining profile allows, and it must survive the trough
-in a managed area whose median age is 104 years and whose age structure is far from regulated over a
-200-year horizon. The gap is therefore the cost of the flow rule we imposed, not a defect in the
-estate.
+The upper-bound check is not a validation of the yield curves. It shows that the curves' potential
+is not below the cut; it does not show that they reproduce the timber supply analysis. We report it
+as a consistency check, and we do not claim that the model reproduces the official cut.
 
-The practical consequence is that the model and the policy are not answering exactly the same
-question. The model asks what this compiled estate can sustain at a constant level, because that is
-the object a composition policy has to be compared on. The cut is a decision for a jurisdiction
-that includes areas, species, and inventory the model does not carry, and it is itself a transition
-level. Reporting the difference as a stated bridge is more useful than forcing the model to
-reproduce a number it cannot support.
+\subsection{Composition is supply-limited}
 
-\subsection{The discount rate dominates}
-
-Across the documented ranges of the economic constants, one lever governs the result: the discount
-rate. Moving from \SI{3}{\percent} to \SI{5}{\percent} removes \SI{4010}{million\CAD} of net
-present value, close to half the base case, while the deciduous log price across its full range
-moves the result by \SI{26}{million\CAD} and haul distance by \SI{184}{million\CAD}.
-
-This ordering has a policy reading that is easy to miss. The constants that are uncertain in the
-data are not the ones that decide the answer. The discount rate is not an empirical constant at
-all: it is a statement about how much weight the decision maker gives to future harvests, and it is
-therefore a policy choice in the same sense as the allowable cut. A policy analysis that reports a
-single net present value at a single rate hides the lever that matters most. The sensitivity table
-should be read as part of the result, not as an appendix to it.
-
-\subsection{Composition: what the price sensitivity does and does not show}
-
-The insensitivity of mean value to the deciduous price is a real finding, but it is narrower than
-it looks. Deciduous species are \SI{5.4}{\percent} of the managed land base and \SI{5.4}{\percent} of
-harvested volume, and their unit margin is \SI{-2.25}{CAD\per\cubic\meter}: at the recorded interior
-hardwood price, deciduous timber does not cover its delivered cost. Because the share is small and
-the margin is close to zero, moving the price across its plausible range changes the total by
-little.
-
-What this does not show is that the composition target is economically immaterial. The composition
-surface on TSA~24 has not been computed, and varying the price of a fixed deciduous share is not
-the same experiment as varying the share itself. A policy that raises the deciduous share changes
-which stands are cut and what is planted, and those changes act through the schedule, not only
-through the price of the marginal cubic metre.
-
-At the level the estate sustains, the deciduous share can rise from \SI{5.4}{\percent} to about
-\SI{6.2}{\percent} at no cost in total harvest, because the physical supply of aspen runs out at
-that point. Beyond it, every point of share is bought with level: an eight percent share implies a
-total near \SI{40}{\mega\cubic\meter} per period, a ten percent share near \SI{32}{\mega\cubic\meter}, and
-a fifteen percent share near \SI{21}{\mega\cubic\meter}. The economic price channel is almost silent; the
-physical volume channel is not.
+At the sustained level the deciduous share can rise from \SI{5.4}{\percent} to about
+\SI{6.2}{\percent} of harvest without reducing the level. The constraint is physical: the aspen
+supply caps out at about \SI{3.20}{\mega\cubic\meter} per period, so a larger share requires a
+smaller total. An eight percent share implies a total near \SI{40}{\mega\cubic\meter} per period, a
+ten percent share near \SI{32}{\mega\cubic\meter}, and a fifteen percent share near
+\SI{21}{\mega\cubic\meter}. The ten
+percent case costs about \SI{38}{\percent} of the sustained harvest.
 
 That asymmetry is the central economic finding. A policy analyst who looks only at prices will
-conclude that composition is nearly free; a policy analyst who looks at the schedule will find that
-it costs a third of the harvest.
+conclude that composition is nearly free, because the deciduous log price moves mean value by less
+than one percent. A policy analyst who looks at the schedule will find that it costs a third of the
+harvest. The results also show why the composition question cannot be answered by varying the price
+of a fixed deciduous share: the binding constraint is the volume of the minority species, not its
+price.
 
-\subsection{Fire as a scenario, and the discipline that follows}
+The frontier is an arithmetic bound under a constant aspen supply, not a set of optimized
+schedules. The two searches behind the ceiling use composition weights of 200 and \num{100000}; the
+second raises the share only to \SI{5.94}{\percent} and reduces the level from 5.19 to
+\SI{5.16}{\mega\cubic\meter\per\year}, which is consistent with a supply limit rather than a
+weighting artefact. The searches are short local runs, and the ceiling should be read as a bounded
+estimate.
 
-Fire enters this analysis as a spatially explicit process calibrated to the historical perimeter
-record of the area, not as a probability of loss applied to a stand. That choice is what makes fuel
-structure, composition, and connectivity representable, and it is the main methodological
-difference from the portfolio approach of \citet{fuchs_severe_2024}.
+\subsection{Rotation is not the constraint}
 
-It also imposes a discipline on the claims. The calibration's central distribution is close to the
-historical record, but its upper tail is thin and weakly identified: the historical 90th percentile
-of fire size has a bootstrap interval that spans roughly a factor of three, and the share of fires
-above \SI{5000}{\hectare} rests on 13 of 432 events. The simulated tail is also sensitive to the
-antecedent fire-weather initialisation, which determines how dry the fuel is when a fire starts.
-An absolute statement about future fire size would therefore be a statement about a weather
-reconstruction and a sample of thirteen events, not about the forest.
+The implied rotation is \SI{102.2}{\year} in the baseline schedule and \SI{101.7}{\year} under the
+most diversified schedule. Diversification does not require a different age at harvest: the
+trade-off operates through which species are cut, not through when stands are cut. That is a useful
+negative result, because it removes one of the mechanisms by which composition policy could be
+expected to conflict with timber supply.
 
-We therefore compare policies against each other on identical fire draws, and report the historical
-interval beside every distributional comparison. This is the same logic that
-\citet{fuchs_severe_2024} applied to extreme weather: the economically relevant question is how a
-policy performs relative to the alternatives under a severe regime, not whether the model
-reproduces a particular historical event.
+The estimate is conditional. It uses only blocks re-entered within the 200-year horizon, so it is
+biased toward productive and accessible stands, and it is an observed interval rather than a
+silvicultural rotation.
 
-The comparison supports the discipline rather than undermining it. The median, the 90th
-percentile, the share above \SI{500}{\hectare}, and the maximum are reproduced inside the
-historical interval. The 95th percentile and the extreme-tail shares are low. That is the part of
-the distribution the policy is meant to manage, and it is the part the calibration cannot pin down.
-Reporting the interval beside every statistic is therefore not a hedge; it is the only honest way to
-read a model whose tail is thinner than the record.
+\subsection{The fire regime: calibration and coupling}
+
+The calibrated regime reproduces the historical median, the 90th percentile, and the share above
+\SI{500}{\hectare} inside the sampling interval of the historical record. The 95th percentile and
+the extreme-tail shares remain below it. The maximum is not used as a target, because its
+bootstrap interval is one-sided by construction. The fit is in-sample per tile, with no independent
+holdout, and the tail limitation is a property of the calibration, not of the search.
+
+The fire process is coupled to the full estate in a single 24-ignition run, and the coupled run
+applies about \SI{10444}{\hectare} of burned area to the compiled dataset. That run demonstrates
+that the calibration, the layer stack, the regional suppression map, and the estate model can be
+run together. It is not a policy comparison: composition is not varied in the fire run, so the paper
+cannot say whether a more diversified estate burns differently. The paired ensemble reports
+volume-at-risk for two schedules on common draws; it does not produce a net-present-value-at-risk
+ranking, because species-resolved harvest is not exposed by the process evaluation.
 
 \subsection{Relation to the European evidence}
-
-The European result was that diversification raises expected returns and reduces isolated risk,
-but that severe and frequent extreme events undermine the economic gain and push the optimal
-allocation toward homogenisation and low-investment species. Our framework is built to test
-whether that conclusion survives when disturbance is a spatial process on a real estate rather than
-a correlated draw on stylized units.
 
 \citet{fuchs_severe_2024} found that diversification raises expected returns and reduces isolated
 risk, but that severe and frequent extreme events undermine the economic gain. Our result qualifies
@@ -128,31 +98,61 @@ that finding rather than contradicting it. The composition lever here is not a f
 reweighting: the minority species is physically limited to about six percent of harvest, so the
 choice is constrained before economics enters. And the tail that would justify paying for
 diversification is exactly the part of the distribution the model understates. In the European
-setting, the constraint was the correlation of extreme events; in the BC setting, it is the supply
-of the minority species and the thinness of the modelled tail. Both point the same way: the case
-for diversification is conditional, and the condition is empirical.
+setting the constraint was the correlation of extreme events; in the BC setting it is the supply of
+the minority species and the thinness of the modelled tail. Both point the same way: the case for
+diversification is conditional, and the condition is empirical.
 
 \subsection{Limitations}
 
-Seven limitations bound what the paper can claim. First, the analysis covers one timber supply area.
-TSA~24 is large and fire-prone, but it is one landscape with one inventory, one set of prices, and
-one administrative history; the results are not a provincial assessment. Second, growth is
-represented by compiled yield curves rather than by individual-tree simulation, so the response of
-growth to composition and climate is not modelled. Third, the policy level sets a landscape-wide
-composition share rather than a spatial placement rule, so the question of where to put broadleaf
-fuel breaks, and how far that can go before production suffers, is not answered here; it is the
-natural next step and requires the policy to act on location, not only on share. Fourth, prices,
-costs, and stumpage are point values or documented ranges from a single period, and the deciduous
-price in particular is an interior hardwood average that may not represent a future market for
-small-diameter material. Fifth, the fire model, while calibrated, has not been validated on an
-independent period or region, and its tail is weakly identified; the comparative framing protects
-the policy conclusions but not a claim about absolute risk.
+Nine limitations bound what the paper can claim.
+
+First, the analysis covers one timber supply area. TSA~24 is large and fire-prone, but it is one
+landscape with one inventory and one administrative history; the results are not a provincial
+assessment.
+
+Second, growth is represented by compiled yield curves rather than by individual-tree simulation,
+so the response of growth to composition and climate is not modelled.
+
+Third, the policy layer sets a landscape-wide composition aspiration rather than a spatial
+placement rule. The question of where to put broadleaf fuel breaks, and how far that can go before
+production suffers, is not answered. This is the most important gap: the literature suggests the
+composition decision is spatial, and this paper quantifies only the landscape-level trade-off.
+
+Fourth, the fire process is run on one schedule and one ignition set. Composition is not varied in
+the fire run, so the paper does not estimate whether diversification reduces fire risk. That is the
+natural next experiment, and it is not this one.
+
+Fifth, no net-present-value-at-risk is computed. The risk metric is volume-at-risk, and it is
+paired across schedules on common draws; a value-at-risk metric would need species-resolved harvest
+accounts that the process evaluation does not expose.
+
+Sixth, prices mix vintages: conifer prices are from the quarter ending 30 September 2026, the
+deciduous price is a 2018 ten-year average, and stumpage is a 2026 tabular rate. The deciduous price
+is reported as a range, and the sensitivity shows that the economic conclusion does not depend on
+it.
+
+Seventh, harvest is represented by clearcut with regeneration. Partial cutting and selection
+systems, which are the obvious way to manage composition at finer scales, are not in the model.
+
+Eighth, composition is tracked by leading species group, so a mixed stand is assigned to its
+leading species and the within-stand mix is not represented.
+
+Ninth, the fire calibration is in-sample, the tail is thin, the estate run uses one 2023 weather
+season with current fuels, and five schedule blocks are dropped because the compiled dataset has no
+fragment mapping for them. The scenario is a comparative instrument, not a forecast.
 
 \subsection{Implications for policy}
 
-Three implications follow, each conditional on the results above. The allowable cut and the
-composition target should be evaluated together, because the enterprise's response to one depends
-on the other. Risk attitude belongs in the analysis explicitly, because the composition that looks
-best at the mean need not be the one that looks best in the tail. And the discount rate deserves
-as much scrutiny as the silvicultural prescription, because it moves the result more than any
-biological or market parameter in the model.
+Three implications follow, each conditional on the results above.
+
+The cost of a composition aspiration is paid in harvest volume, not in log price. A policy analyst
+who evaluates diversification through stumpage or log values will miss the binding constraint,
+which is the physical supply of the minority species.
+
+Rotation length is not a barrier to diversification on this estate. The composition trade-off
+operates through species choice, and an appeal to rotation age would be misplaced.
+
+The harvest-flow rule deserves as much scrutiny as the silvicultural prescription. The gap between
+the model's sustained level and the official cut is a flow-rule cost, and the discount rate moves
+the value result more than any market or biological parameter in the model. A policy analysis that
+reports a single net present value at a single rate hides the lever that matters most.

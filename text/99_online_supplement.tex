@@ -7,7 +7,8 @@ The compiled dataset is derived from the public FEMIC TSA24 instance of the UBC 
 Range Evaluation Program disturbance mapping, and Site Productivity estimates, under the Open
 Government Licence -- British Columbia. The frozen benchmark artifact
 (\texttt{tsa24-public-artifact}, manifest prefix \texttt{c1304ed9}) carries the compiled tables and
-the even-flow target used here.
+the benchmark even-flow target. The schedule used in this paper is the GPU genetic-algorithm run
+that realizes 51.9 million m3 per period, recorded in the project's even-flow experiment.
 
 \begin{table}[h]
     \centering
@@ -50,7 +51,7 @@ is verified here.
         Horizon                     & 20 periods of 10 years \\
         Harvest treatment           & clearcut with regeneration \\
         Even-flow target            & within 1 percent of period 1, non-linear, weight 10,000 \\
-        Level aspiration            & 70,000,000 m3 per period in the benchmark; 51,900,000 in the restated runs \\
+        Level aspiration            & 70,000,000 m3/period in the benchmark; 51.9 million realized here \\
         Baseline search             & GPU genetic algorithm, 100,000 generations, six seeds \\
         Replayed schedule           & seed r1, exact CPU replay of objective 518.62 \\
         Composition searches        & simulated annealing, 32 threads, 15-minute budget, seed 7 \\
@@ -119,7 +120,9 @@ For every block with more than one harvest in the schedule, the rotation is the 
 consecutive harvests. The baseline yields 53,071 intervals, an area-weighted mean of 102.2 years
 (median 100, tenth-to-ninetieth percentile 60 to 160). The aspen-maximisation schedule yields
 101.7 years. The estimate is conditional on re-entry within the 200-year horizon and is therefore
-biased toward productive and accessible stands.
+biased toward productive and accessible stands. The summary is written by \texttt{scripts/rotation.py}
+to the even-flow experiment's \texttt{rotation.json}; the area-weighted median managed age is 92
+years, and 44 percent of the managed area is older than 100 years.
 
 \subsection*{S6. Reproduction}
 

@@ -15,7 +15,8 @@ The managed land base is dominated by spruce (\SI{44.9}{\percent}), lodgepole pi
 \SI{0.1}{\percent}; deciduous species together occupy \SI{5.4}{\percent} of the managed area and
 \SI{5.4}{\percent} of harvested volume (\autoref{tab:meth_studyregion_spec}). The managed area
 matches the base-case timber harvesting land base in the 2017 timber supply review,
-\SI{3070301}{\hectare}, to within \SI{0.3}{\percent}. The official allowable annual cut is
+\SI{3070301}{\hectare}~\citep{government_of_british_columbia_pg_rationale_2017}, to within
+\SI{0.32}{\percent}. The official allowable annual cut is
 \SI{6917231}{\cubic\meter\per\year}, effective 28 August 2025
 \citep{government_of_british_columbia_aac_2026}.
 
@@ -52,43 +53,38 @@ matches the base-case timber harvesting land base in the 2017 timber supply revi
 
 \subsection{Decision structure}
 
-We represent two decision levels. A regional policy maker sets a harvest level and targets for
-species composition, seeking to maintain the productive capacity of the area under fire risk. An
-enterprise then decides where, when, and with which species to harvest and regenerate in response
-to those targets. The enterprise's response is a schedule; its profit is computed from that
-schedule after the fact.
+We analyse two layers of decision. An analyst sets a harvest level and a species-composition
+aspiration as a scenario; an enterprise responds with a harvest and regeneration schedule, and the
+resulting schedule is valued economically. This is a two-layer scenario analysis, not a bilevel
+program: no leader objective is solved, there is no follower best response, and no equilibrium is
+claimed. The composition aspiration is a hypothetical instrument used to trace a trade-off. British
+Columbia sets the allowable annual cut as a maximum and constrains silviculture through
+prescriptions and stocking standards; it does not set a landscape-wide species-composition target
+for TSA~24, and the aspiration here should be read in that light.
 
-\paragraph{Policy level} The policy maker chooses an allowable annual cut $A$ and a target share
-$\sigma^{\ast}$ of harvested area by species group. Policies are evaluated on the downside risk of
-the resulting net present value, measured as the conditional value at risk at the
-\SI{5}{\percent} level. Formally, the policy problem is
-\begin{equation}
-    \min_{A,\ \sigma^{\ast}}\ \mathrm{CVaR}_{5\%}\Big(\mathrm{NPV}(A, \sigma^{\ast})\Big),
-\end{equation}
-where the distribution of $\mathrm{NPV}$ arises from the fire scenarios described below. This
-follows the risk-sensitive formulation of \citet{fuchs_severe_2024}, with the difference that the
-disturbance here is a spatial fire process rather than a correlated damage probability.
-
-\paragraph{Enterprise level} For a given policy, the enterprise chooses the area to harvest in each
-period from each development type and age class, and the species to replant on harvested area. The
-model is a weighted goal program: the enterprise minimizes the weighted deviation of the realized
-harvest level and species composition from the policy's targets, subject to the area balance and
-the treatment options available on each block,
-\begin{equation}
-    \min\ \sum_{t} \Big( w_A \, \big|H_t - A\big| + w_\sigma \, \big|S_t - \sigma^{\ast}\big| \Big)
-    \quad \text{subject to the area balance},
-\end{equation}
-where $H_t$ is the harvest in period $t$ and $S_t$ the realized species composition.
-
-Two properties of this formulation must be stated because they bound the claims. First, WS4's
-minimum and maximum are the hinges of one-sided penalties, not feasibility bounds: a target is an
-aspiration, and the realized value is an outcome of the weighted compromise
+\paragraph{Enterprise level} For a given scenario, the enterprise chooses the area to harvest in
+each period from each development type and age class, and the species to replant on harvested area.
+The model is a weighted goal program: it minimizes weighted deviations from the harvest-level
+aspirations and the composition aspiration, plus an even-flow term that holds each period close to
+a reference period, subject to the area balance and the treatment options available on each block.
+WS4's minimum and maximum are the hinges of one-sided penalties, not feasibility bounds: a target
+is an aspiration, and the realized value is an outcome of the weighted compromise
 \citep{ubc_fresh_ws4_2026}. We therefore report the realized cut and composition beside every
-target, and we do not describe a target as a constraint that was met or violated. Second, the model
-has no economic objective: net present value is computed from the schedule after the search, not
-optimized inside it. The enterprise in this paper is therefore a satisficing scheduler responding
-to policy targets, not a profit-maximizing agent, and the results are read accordingly. An
-economic objective inside the search is a natural extension and is not attempted here.
+target, and we do not describe a target as a constraint that was met or violated.
+
+Two further properties bound the claims. The model has no economic objective: net present value is
+computed from the schedule after the search, not optimized inside it, so the enterprise is a
+satisficing scheduler in the sense of minimizing weighted deviations from aspiration levels, not in
+the sense of a behavioural stopping rule. And the analyst's composition aspiration is set at the
+level the estate sustains, not at the official cut, because the estate cannot hold the official cut
+under a flat even flow. The composition results are therefore conditional on the model's sustained
+level, and we say so wherever they are reported.
+
+\paragraph{Risk metric} Downside risk is measured as volume-at-risk: the lower-tail conditional
+value at risk of the estate's ending standing volume across paired fire draws, expressed in value
+at the schedule's mean net margin. We do not report net-present-value-at-risk, because the process
+evaluation exposes ending volume and biomass rather than species-resolved harvest; that metric is
+left to future work.
 
 \subsection{Forest estate model and estate data}
 
@@ -99,11 +95,13 @@ information are carried as curves per block, compiled from the provincial invent
 timber supply analysis.
 
 We run 20 periods of ten years. The policy scenarios we evaluate are specified by their annual
-cut and their composition target; the enterprise responds with a harvest and regeneration
-schedule. The reference schedule is the highest even flow the estate sustains, about
-\SI{51.9}{\mega\cubic\meter} per period or \SI{5.19}{\mega\cubic\meter\per\year}, which is below
-the official cut. We report the level as a property of the compiled estate and explain the gap in
-\autoref{sec:results} rather than treating the official cut as a model constraint.
+cut and their composition aspiration; the enterprise responds with a harvest and regeneration
+schedule. Six independent searches, all starting from a \SI{70}{\mega\cubic\meter} per-period
+aspiration, converged to a realized level of \SI{51.89}{\mega\cubic\meter} to
+\SI{52.06}{\mega\cubic\meter} per period, a mean of \SI{5.19}{\mega\cubic\meter\per\year}. We
+interpret this plateau as the estate's sustained even-flow level; it is not a proven maximum. The
+level is below the official cut, and \autoref{sec:results} attributes the gap to the flow rule
+rather than treating the official cut as a model constraint.
 
 \subsection{Growth and yield}
 
@@ -126,20 +124,30 @@ weakly identified: the historical median is \SI{22.97}{\hectare} with a bootstra
 \SIrange{20.85}{30.16}{\hectare}, but the historical 90th percentile is
 \SI{490.17}{\hectare} with an interval of \SIrange{349}{1051}{\hectare}, and the share of fires
 above \SI{5000}{\hectare} rests on 13 of 432 events. Second, the simulated tail is sensitive to
-the antecedent fire-weather initialisation. We therefore compare policies against each other on
-identical fire draws and never report an absolute fire size as a result.
+the antecedent fire-weather initialisation. We therefore never report an absolute fire size as a
+result, and every distributional statement is read against the historical sampling interval.
 
-The calibrated regime reproduces the historical median, the 90th percentile, the share above
-\SI{500}{\hectare}, and the maximum within the historical sampling interval; the 95th percentile
-and the extreme-tail shares remain below it (\autoref{sec:results}). Downside risk is measured as
-the conditional value at risk across policy alternatives, never as a single policy's prediction.
+The calibrated regime reproduces the historical median, the 90th percentile, and the share above
+\SI{500}{\hectare} inside the historical sampling interval; the 95th percentile and the
+extreme-tail shares remain below it (\autoref{sec:results}). The fit is in-sample per tile: there is
+no independent holdout, and the tail limitation is a stated boundary rather than a tuning target.
+
+\paragraph{Estate coupling} The calibrated source is run on the full 250 m estate support through
+the public WS4 estate-fire API at commit \texttt{9918fb17}. The run uses one ignition per
+calibration tile, 24 in total, drawn from the calibration's potential-fire sample and spread across
+the periods; one 2023 weather season with 90-day antecedent spin-up; current fuel and terrain
+layers; and clearcut harvesting only. It is a coupling demonstration, not a Monte Carlo of the
+estate: five schedule blocks are dropped because the compiled dataset has no fragment mapping for
+them. A paired ensemble then grows one source per draw and evaluates two schedules on it, which
+supports a volume-at-risk comparison but not a policy ranking under fire.
 
 \subsection{Economic valuation}
 
 Harvested volume is valued by species group at BC interior log prices for the three months ending
-30 September 2026: \SI{113.96}{CAD\per\cubic\meter} for spruce, pine, and balsam fir,
-\SI{105.98}{CAD\per\cubic\meter} for hemlock and balsam, and a range of \SIrange{35}{40}{CAD\per\cubic\meter}
-for deciduous species. Costs are a tree-length ground harvest system at
+30 September 2026: \SI{113.96}{CAD\per\cubic\meter} for spruce and pine,
+\SI{105.98}{CAD\per\cubic\meter} for subalpine fir on the hemlock--balsam series, which is the
+nearest reported grade for that species, and a range of
+\SIrange{35}{40}{CAD\per\cubic\meter} for deciduous species. Costs are a tree-length ground harvest system at
 \SI{21.38}{CAD\per\cubic\meter} from machine rates, haul at \SI{7.85}{CAD\per\cubic\meter} over a
 mean distance of \SI{90}{\kilo\meter} to the nearest sawmill, basic silviculture at
 \SI{10.02}{CAD\per\cubic\meter} for the North Central zone, and stumpage at

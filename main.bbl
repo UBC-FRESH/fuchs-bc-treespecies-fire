@@ -1,11 +1,24 @@
 \begin{thebibliography}{}
 
+\bibitem[Chung, 2015]{chung_optimizing_2015}
+Chung, W. (2015).
+\newblock Optimizing fuel treatments to reduce wildland fire risk.
+\newblock {\em Current Forestry Reports}, 1:44--51.
+
 \bibitem[Fuchs et~al., 2024]{fuchs_severe_2024}
 Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
   (2024).
 \newblock Severe and frequent extreme weather events undermine economic
   adaptation gains of tree-species diversification.
 \newblock {\em Scientific Reports}, 14:2140.
+
+\bibitem[{Government of British Columbia},
+  2017]{government_of_british_columbia_pg_rationale_2017}
+{Government of British Columbia} (2017).
+\newblock Prince george timber supply area: Rationale for allowable annual cut
+  determination.
+\newblock Technical report, Ministry of Forests, Lands, Natural Resource
+  Operations and Rural Development.
 
 \bibitem[{Government of British Columbia},
   2026]{government_of_british_columbia_aac_2026}
@@ -15,6 +28,12 @@ Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
   \url{https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/timber-supply-review-and-allowable-annual-cut/allowable-annual-cut-timber-supply-areas}.
 \newblock TSA 24 Prince George, \SI{6917231}{\cubic\meter\per\year}, effective
   28 August 2025. Accessed 21 November 2026.
+
+\bibitem[Lagos et~al., 2025]{lagos_bilevel_2025}
+Lagos, T., Choi, J., Segundo, B., Gan, J., Ntaimo, L., and Prokopyev, O.~A.
+  (2025).
+\newblock Bilevel optimization approach for fuel treatment planning.
+\newblock {\em European Journal of Operational Research}, 320:205--218.
 
 \bibitem[Seidl et~al., 2014]{seidl_increasing_2014}
 Seidl, R., Schelhaas, M.-J., Rammer, W., and Verkerk, P.~J. (2014).
@@ -59,6 +78,12 @@ Topanotti, L.~R., Fuchs, J.~M., Albert, M., Schick, J., Penanhoat, A., Lu,
 \newblock {WS4}: spatially explicit wood supply simulation system.
 \newblock \url{https://github.com/UBC-FRESH/ws4}.
 \newblock Accessed 21 November 2026.
+
+\bibitem[Wei, 2012]{wei_optimize_2012}
+Wei, Y. (2012).
+\newblock Optimize landscape fuel treatment locations to create control
+  opportunities for future fires.
+\newblock {\em Canadian Journal of Forest Research}, 42:1002--1014.
 
 \bibitem[Zelnik et~al., 2025]{zelnik_managing_2025}
 Zelnik, Y.~R., Launiainen, S., and Vico, G. (2025).

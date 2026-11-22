@@ -11,14 +11,14 @@ calibration), `to compute` (not yet produced).
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
 | Study area | TSA24, Prince George | `fresh-fuchs-ws4` ADR 0001 | verified |
-| TSA gross area | about 7.97 million ha | BC Prince George TSA page, 2026-11-21 | verified |
+| TSA gross area | about 7.97 million ha | `government_of_british_columbia_pg_rationale_2017` | verified |
 | Blocks in the compiled estate | 458,708 | `notes/reference/tsa24-estate.md` | verified |
 | Treatments, curves, accounts | 48, 10,326, 99 | same | verified |
 | Official allowable cut | 6,917,231 m3/yr, effective 2025-08-28 | BC allowable annual cut table, verified 2026-11-21 | verified |
 | Compiled forest area | 5,899,680 ha | `fresh-fuchs-ws4` `notes/reference/tsa24-thlb.md` | verified |
 | Managed land base (model THLB) | 3,060,473 ha | same | verified |
 | Unmanaged forest area | 2,839,207 ha | same | verified |
-| Published THLB, 2017 base case | 3,070,301 ha | BC AAC rationale, October 2017 | verified |
+| Published THLB, 2017 base case | 3,070,301 ha | `government_of_british_columbia_pg_rationale_2017` | verified |
 | Model minus published THLB | -9,828 ha, -0.32 percent | same | verified |
 | Area-weighted maximum MAI, model curves | 2.309 m3/ha/yr | `fresh-fuchs-ws4` `notes/reference/tsa24-yield-reconciliation.md` | verified |
 | Implied perennial yield on managed area | 7.07 million m3/yr | same | verified |
@@ -58,7 +58,7 @@ calibration), `to compute` (not yet produced).
 | Conifer margin | 56.81 to 64.79 CAD/m3 | same | verified |
 | Deciduous margin | -2.25 CAD/m3 | same | verified |
 | Discount rate effect (model schedule) | 5 percent gives 4,769 million CAD; 0 percent gives 62,270 million CAD | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/summary.json` and `scripts/valuation.py` | verified |
-| Deciduous price effect (model schedule) | -26 to +256 million CAD across 35 to 61.74 CAD/m3 | same | verified |
+| Deciduous price effect (model schedule) | -26 to +26 million CAD across 35 to 40 CAD/m3 | same | verified |
 | Haul effect (model schedule) | -184 million CAD from 90 to 117 km | same | verified |
 
 ## Composition
@@ -66,27 +66,20 @@ calibration), `to compute` (not yet produced).
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
 | Aspen supply ceiling | 3.20 million m3/period, 6.2 percent of a 5.18 million m3/yr total | `fresh-fuchs-ws4` `experiments/tsa24-composition/summary.json` | verified (15-minute local search, not converged) |
-| Share response to target | 5.69 percent at weight 200; 5.94 percent at weight 100,000 | same | verified |
-| Composition frontier | 8 percent implies 40.0 million m3/period; 10 percent 32.0; 15 percent 21.3 | derived from the ceiling | verified |
+| Share response to target | 5.69 percent at weight 200; 5.94 percent at weight 100,000 (level 5.16) | same | verified |
+| Target form | absolute aspen volume, 5.19 million m3/period, not a share | same | verified |
+| Composition frontier | 8 percent implies 40.0 million m3/period; 10 percent 32.0; 15 percent 21.3; 6 percent is feasible at the sustained level | derived from the ceiling under constant aspen supply | verified |
 | Cost of a 10 percent share | 38 percent of the sustained level | 1 - (3.20/0.10)/51.9 | verified |
 
 ## Rotation
 
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
-| Realized rotation, baseline | 102.2 years area-weighted (median 100, p10-p90 60-160) | schedule and fragments, 53,071 regeneration intervals | verified |
+| Realized rotation, baseline | 102.2 years area-weighted (median 100, p10-p90 60-160) | `experiments/tsa24-evenflow/rotation.json` | verified |
 | Realized rotation, aspen-maximisation | 101.7 years | same | verified |
+| Median managed age | 92 years area-weighted; 44 percent of managed area older than 100 years | same | verified |
 | Harvested area at a 102-year rotation | about 30,000 ha/yr | 3,060,473 / 102 | derived |
 | Volume per harvested hectare | 173 m3/ha | 5.19 million / 30,000 | derived |
-
-## Composition and rotation
-
-| Claim | Value | Artifact | Status |
-| --- | --- | --- | --- |
-| Sustainable cut ceiling (TSA29 mini) | about 31,990 m3/yr | `REPORT-H-anchor-reconciliation.md` | verified for TSA29 |
-| Sustainable cut ceiling (TSA24 estate) | to compute | — | to compute |
-| Rotation by allowable cut | non-monotonic: 149, 175, 180, 166 years | regulated LP surface | verified for TSA29 |
-| Composition surface | to compute on TSA24 | — | to compute |
 
 ## Fire
 
@@ -100,9 +93,11 @@ calibration), `to compute` (not yet produced).
 | Simulated median, p90, p95 | 23.8, 361.5, 1,100.9 ha | same | verified |
 | Simulated share above 500, 5,000 ha | 8.3 percent, 1.8 percent | same | verified |
 | Simulated maximum | 20,770.4 ha | same | verified |
-| Distribution verdict | median, p90, share above 500 and maximum inside the historical interval; p95 and tail shares below it | same | verified |
+| Distribution verdict | median, p90 and share above 500 inside the historical interval; p95 below; shares above 1,000 and 5,000 at the lower edge | same | verified |
+| Maximum | 20,770.4 ha simulated; historical 25,114.8 ha; interval one-sided and not used as a target | same | verified |
 | Estate fire scenario | 24 ignitions, 1,331 fragments, 16,331 ha grown, 10,444 ha applied, ending volume 1,015.9 million m3 | `experiments/p3-fire/scenario-estate-01.json` | verified |
-| CVaR by policy | to compute | — | to compute |
+| Volume-at-risk by policy | paired ensemble running; 20 percent lower-tail of ending volume, valued at 59.99 CAD/m3 | `fresh-fuchs-ws4` `experiments/p4-risk/` | pending |
+| Historical mean fire size | 512.9 ha | calibration `tsa24-regime24/summary.json` | verified |
 
 ## Notes
 
