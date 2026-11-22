@@ -27,7 +27,7 @@ calibration), `to compute` (not yet produced).
 | Total harvested volume | 1,037.9 million m3 | `experiments/tsa24-evenflow/species_periods.csv` | verified |
 | Gap to official cut | 25 percent | 1 - 5.189/6.917 | verified |
 | MAI above the cut per hectare | 2.5 percent | 2.309/2.253 | verified |
-| Base even-flow weight | 10,000 (non-linear, reference period 1) | benchmark target `evenflow_tsa24.yaml` (`min_weight: 10000`) | verified |
+| Base even-flow weight | 10,000 (non-linear, reference period 1) | `experiments/tsa24-evenflow/evenflow_tsa24.yaml` (`min_weight: 10000`) | verified |
 | Even-flow and level penalties | 1.3 to 2.7; about 515 | same | verified |
 | 2017 transition profile | 8.35 then 7.35 million m3/yr; 6.917 in 2025 | `government_of_british_columbia_pg_rationale_2017`; AAC table | verified |
 | Species composition, managed area | Sx 44.9, Pl 29.4, Bl 16.3, At 5.3, Se 4.0, Ac 0.1 percent | `feature.SpeciesProp.managed.*` at offset 0 | verified |
@@ -106,7 +106,7 @@ calibration), `to compute` (not yet produced).
 | Maximum | 20,770.4 ha simulated; historical 25,114.8 ha; interval one-sided and not used as a target | same | verified |
 | Estate fire scenario | 24 ignitions, 1,331 fragments, 16,331 ha grown, 10,444 ha applied, ending volume 1,015.9 million m3 | `experiments/p3-fire/scenario-estate-01.json` | verified |
 | Burned area per ignition | 680 ha grown, 435 ha applied | same, divided by 24 | verified |
-| Policy risk ranking | not reported in this paper | — | not claimed |
+| Policy risk ranking | not reported | paired ensemble: burned area 650 to 1,609 ha, ending volume varied in the third decimal of a percent | negative result, reported |
 | Historical mean fire size | 512.9 ha | calibration `tsa24-regime24/summary.json` | verified |
 
 ## Notes

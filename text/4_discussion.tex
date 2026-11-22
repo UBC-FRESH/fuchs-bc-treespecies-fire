@@ -67,8 +67,9 @@ estimate.
 \subsection{Rotation is not the constraint}
 
 The implied rotation is \SI{102.2}{\year} in the baseline schedule and \SI{101.7}{\year} under the
-most diversified schedule. Diversification does not require a different age at harvest: the
-trade-off operates through which species are cut, not through when stands are cut. That is a useful
+most diversified schedule. Between these two schedules, diversification does not require a
+different age at harvest: the trade-off operates through which species are cut, not through when
+stands are cut. That is a useful
 negative result, because it removes one of the mechanisms by which composition policy could be
 expected to conflict with timber supply.
 
@@ -78,9 +79,9 @@ silvicultural rotation.
 
 \subsection{The fire regime: calibration and coupling}
 
-The calibrated regime reproduces the historical median, the 90th percentile, and the share above
-\SI{500}{\hectare} inside the sampling interval of the historical record. The 95th percentile and
-the extreme-tail shares remain below it. The maximum is not used as a target, because its
+The calibrated regime places the median and the share above \SI{500}{\hectare} inside the
+sampling interval of the historical record, and the 90th percentile at its lower edge. The 95th
+percentile and the extreme-tail shares remain below it. The maximum is not used as a target, because its
 bootstrap interval is one-sided by construction. The fit is in-sample per tile, with no independent
 holdout, and the tail limitation is a property of the calibration, not of the search.
 
@@ -88,9 +89,12 @@ The fire process is coupled to the full estate in a single 24-ignition run, and 
 applies about \SI{10444}{\hectare} of burned area to the compiled dataset. That run demonstrates
 that the calibration, the layer stack, the regional suppression map, and the estate model can be
 run together. It is not a policy comparison: composition is not varied in the fire run, so the paper
-cannot say whether a more diversified estate burns differently. No policy risk ranking is
-reported; volume-at-risk across paired draws and net-present-value-at-risk are natural extensions,
-and the latter needs species-resolved harvest accounts.
+cannot say whether a more diversified estate burns differently. A paired ensemble across five draws
+was run after the main analysis. Burned area varied by a factor of 2.5 across draws, but ending
+volume varied only in the third decimal of a percent, because the fires cover at most a few
+hundredths of the managed area. Volume-at-risk therefore collapses to the mean and cannot rank
+schedules at this scale, so no policy risk ranking is reported. A metric based on the difference
+from a no-fire counterfactual, or on per-period harvest and value, is the natural next step.
 
 \subsection{Relation to the European evidence}
 
