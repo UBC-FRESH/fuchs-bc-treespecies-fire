@@ -70,6 +70,15 @@ calibration), `to compute` (not yet produced).
 | Composition frontier | 8 percent implies 40.0 million m3/period; 10 percent 32.0; 15 percent 21.3 | derived from the ceiling | verified |
 | Cost of a 10 percent share | 38 percent of the sustained level | 1 - (3.20/0.10)/51.9 | verified |
 
+## Rotation
+
+| Claim | Value | Artifact | Status |
+| --- | --- | --- | --- |
+| Realized rotation, baseline | 102.2 years area-weighted (median 100, p10-p90 60-160) | schedule and fragments, 53,071 regeneration intervals | verified |
+| Realized rotation, aspen-maximisation | 101.7 years | same | verified |
+| Harvested area at a 102-year rotation | about 30,000 ha/yr | 3,060,473 / 102 | derived |
+| Volume per harvested hectare | 173 m3/ha | 5.19 million / 30,000 | derived |
+
 ## Composition and rotation
 
 | Claim | Value | Artifact | Status |

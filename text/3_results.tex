@@ -151,8 +151,21 @@ is the question the fire scenario is built to answer.
 \pending{Fire-regime statistics for the estate run, and the comparison with the historical
 distribution and its bootstrap interval.}
 
-\subsection{Synergies and trade-offs with rotation length}
+\subsection{Rotation length and diversification}
 
-\pending{Implied rotation length by allowable cut on TSA24. The relation is non-monotonic on the
-TSA29 anchor instance, where it is not a paper result; it must be recomputed here before any
-statement is made.}
+We estimate the rotation from the schedule itself. For every block harvested more than once, the
+interval between successive harvests is the realized rotation on that block. Across the baseline
+schedule, \num{53071} such intervals give an area-weighted mean rotation of \SI{102.2}{\year},
+with a median of \SI{100}{\year} and a tenth-to-ninetieth percentile range of
+\SIrange{60}{160}{\year}. Under the aspen-maximisation schedule the mean is
+\SI{101.7}{\year}.
+
+Raising the deciduous share therefore does not require a change in rotation length. The composition
+trade-off operates through which species are cut, not through the age at which stands are cut, and
+the rotation is essentially invariant to the composition target.
+
+The rotation also reconciles the level with the land base. At a 102-year rotation over
+\SI{3.06}{\mega\hectare}, about \SI{30000}{\hectare} are harvested each year; at
+\SI{5.19}{\mega\cubic\meter\per\year} that is \SI{173}{\cubic\meter\per\hectare}, a
+merchantable volume that is about three quarters of the area-weighted maximum mean annual
+increment of \SI{2.31}{\cubic\meter\per\hectare\per\year}.
