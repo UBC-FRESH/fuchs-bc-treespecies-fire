@@ -13,17 +13,28 @@ attribute the shortfall to the flat flow rule rather than to the land base: the 
 curves imply \SI{7.07}{\mega\cubic\meter\per\year} at their maximum mean annual increment. The
 attribution is an interpretation; a declining-profile counterfactual is not run.
 
-Species composition is supply-limited. The deciduous share can rise from \SI{5.4}{\percent} to
-about \SI{6.2}{\percent} of harvest at no cost in level; a ten percent share requires a total near
-\SI{32}{\mega\cubic\meter} per period, \SI{38}{\percent} below the sustained level. The implied
-rotation is unchanged, \SI{102.2}{\year} against \SI{101.7}{\year} under the most diversified
-schedule. The calibrated fire regime places the median and the share above \SI{500}{\hectare} inside the
-historical sampling interval, the 90th percentile at its lower edge, and the 95th percentile and
-the extreme-tail shares below it. A 24-ignition run couples the fire process to the full estate.
-The fire process is a scenario; the paper does not report a policy risk ranking.
+Species composition is a policy choice, not only a harvest outcome. We implement three
+deciduous-forward post-clearcut stocking standards that regenerate 26, 55, or 84 percent
+deciduous stock, and we link the resulting stands to fire behaviour through a composition-aware
+fuel projection and an FBP crown-fire severity model. The projection keeps the operational VRI
+fuel type for unharvested stands, follows the BC post-harvest fuel chronology, and is consistent
+with the operational layer on 529 aspen-dominated stands, 171 mixedwoods, and 357 stands at
+20--30 percent deciduous. The severity gradient is non-linear: under the calibrated 30 percent
+mixedwood threshold the 26 percent standard stays on the conifer side and does not reduce
+severity, the 55 percent standard is roughly neutral, and only the 84 percent standard becomes
+the deciduous fuel type and cuts the severity multiplier to 0.27. On the production side the
+26 percent standard is free volume, adding \SIrange{32}{53}{\mega\cubic\meter} with no loss in
+net present value; the 84 percent standard costs about \SI{1.8}{\percent} of net present value.
+The implied rotation is essentially unchanged for the historical schedule,
+\SI{102.2}{\year} against \SI{101.7}{\year} under the most diversified schedule. We evaluate the
+standards against three harvest levels with the full recorded TSA~24 fire regime
+(\num{1073} fires, 1950--2024, \num{14.31} fires per year) in ten paired 200-year draws. The
+surface reports mean and CVaR fire loss; the ranking is conditional on the recorded regime,
+because composition changes the severity of a fire that reaches a stand, not the number or size
+of fires.
 
-The framework sets a landscape composition aspiration rather than a spatial placement rule, so
-where to put broadleaf fuel breaks remains future work.
+The framework sets a stocking standard and a harvest level rather than a spatial placement rule,
+so where to put broadleaf fuel breaks remains future work.
 
 \vspace{1cm}
 
