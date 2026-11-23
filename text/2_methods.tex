@@ -53,54 +53,62 @@ matches the base-case timber harvesting land base in the 2017 timber supply revi
 
 \subsection{Decision structure}
 
-We analyse two layers of decision. An analyst sets a harvest level and a species-composition
-aspiration as a scenario; an enterprise responds with a harvest and regeneration schedule, and the
-resulting schedule is valued economically. This is a two-layer scenario analysis, not a bilevel
-program: no leader objective is solved, there is no follower best response, and no equilibrium is
-claimed. The composition aspiration is a hypothetical instrument used to trace a trade-off. British
-Columbia sets the allowable annual cut as a maximum and constrains silviculture through
-prescriptions and stocking standards; it does not set a landscape-wide species-composition target
-for TSA~24, and the aspiration here should be read in that light.
+We analyse two layers of decision. A policy layer sets a harvest level and a stocking standard
+for regeneration; an enterprise layer responds with a harvest schedule. The policy variables are
+the allowable cut and the deciduous-forward standard, not a landscape-wide composition target. The
+standard is a real instrument: it specifies the species composition of a plantation. The resulting
+landscape composition is an outcome, not an exogenous aspiration.
 
-\paragraph{Enterprise level} For a given scenario, the enterprise chooses the area to harvest in
-each period from each development type and age class, and the species to replant on harvested area.
-The model is a weighted goal program: it minimizes weighted deviations from the harvest-level
-aspirations and the composition aspiration, plus an even-flow term that holds each period close to
-a reference period, subject to the area balance and the treatment options available on each block.
-WS4's minimum and maximum are the hinges of one-sided penalties, not feasibility bounds: a target
-is an aspiration, and the realized value is an outcome of the weighted compromise
-\citep{ubc_fresh_ws4_2026}. We therefore report the realized cut and composition beside every
-target, and we do not describe a target as a constraint that was met or violated.
+This is a two-layer scenario analysis, not a bilevel program: no leader objective is solved and no
+equilibrium is claimed. We hold the enterprise's harvest schedule at the committed even-flow plan
+and vary the standard. This is a \emph{fixed-plan} evaluation: it measures the direct effect of
+the standard on wood supply and fire risk at a fixed harvest pattern, not the enterprise's full
+re-optimisation. A full response would let the enterprise change which blocks it harvests and how
+much; that is a larger search and is stated as a limitation. The fixed-plan design isolates the
+standard's effect, which is the policy question.
 
-Two further properties bound the claims. The model has no economic objective: net present value is
-computed from the schedule after the search, not optimized inside it, so the enterprise is a
-satisficing scheduler in the sense of minimizing weighted deviations from aspiration levels, not in
-the sense of a behavioural stopping rule. And the analyst's composition aspiration is set at the
-level the estate sustains, not at the official cut, because the estate cannot hold the official cut
-under a flat even flow. The composition results are therefore conditional on the model's sustained
-level, and we say so wherever they are reported.
+\paragraph{Enterprise level} The committed even-flow schedule is the enterprise's baseline plan.
+It was produced by a weighted goal program that minimises weighted deviations from the harvest
+level and even-flow aspirations, subject to area balance and the treatment options on each block
+\citep{ubc_fresh_ws4_2026}. The minimum and maximum are one-sided penalty hinges, not feasibility
+bounds, so the realised cut is an outcome of the weighted compromise. We keep that schedule for
+every standard so that differences between policies are not confounded by a new search. The
+species regenerated on each harvested block are set by the standard.
 
-\paragraph{Scope of the risk analysis} The paper does not report a policy risk ranking. The fire
-process is used as a scenario, and composition is not varied in the fire run. Volume-at-risk and
-net-present-value-at-risk are natural extensions; the latter needs species-resolved harvest
-accounts that the process evaluation does not expose.
+\paragraph{Policy levels and standards} The harvest levels are \SI{100}{\percent},
+\SI{80}{\percent}, and \SI{60}{\percent} of the committed plan, implemented as a deterministic
+block sample that keeps each block's full harvest history. The standards are the historical
+clearcut (\texttt{CC}) and three deciduous-forward prescriptions: \texttt{CC\_D26},
+\texttt{CC\_D55}, and \texttt{CC\_D84}, targeting 26, 55, and 84 percent deciduous. A standard is
+applied only where it increases the deciduous share of the initial analysis unit; aspen blocks
+stay on \texttt{CC}, which is equivalent to the self-target standard. The realised composition is
+reported beside every policy.
+
+\paragraph{Scope of the risk analysis} We report a conditional policy ranking, not a fire-size
+prediction. The fire regime is the recorded 1950--2024 distribution; the standard changes the
+severity of a fire that reaches a stand, not the number or size of fires. Each draw uses one event
+set for every policy, so the comparison is paired. The no-fire net present value is the
+counterfactual; the fire loss is the difference. CVaR is the mean of the worst draws. Tail
+statements are comparative and carry sampling uncertainty (ADR~0002).
 
 \subsection{Forest estate model and estate data}
 
 The model is implemented in \textsc{ws4}, the spatially explicit estate model of the UBC FRESH
-laboratory \citep{ubc_fresh_ws4_2026}. The compiled dataset contains \num{458708} blocks, 48
-treatments, \num{10326} yield curves, and 99 accounts. Growth, treatment, and transition
-information are carried as curves per block, compiled from the provincial inventory and the
-timber supply analysis.
+laboratory \citep{ubc_fresh_ws4_2026}. The baseline compiled dataset contains \num{458708}
+blocks, 48 treatments, \num{10326} yield curves, and 99 accounts. Growth, treatment, and
+transition information are carried as curves per block, compiled from the provincial inventory
+and the timber supply analysis. The policy dataset adds the three prescriptions, for 138
+treatments and 72 tracks. The management process resets the regenerated cohort species to the
+target track's composition; without that step the track changes but the species do not.
 
-We run 20 periods of ten years. The policy scenarios we evaluate are specified by their annual
-cut and their composition aspiration; the enterprise responds with a harvest and regeneration
-schedule. Six independent searches, all starting from a \SI{70}{\mega\cubic\meter} per-period
-aspiration, converged to a realized level of \SI{51.89}{\mega\cubic\meter} to
-\SI{52.06}{\mega\cubic\meter} per period, a mean of \SI{5.19}{\mega\cubic\meter\per\year}. We
-interpret this plateau as the estate's sustained even-flow level; it is not a proven maximum. The
-level is below the official cut, and \autoref{sec:results} attributes the gap to the flow rule
-rather than treating the official cut as a model constraint.
+We run 20 periods of ten years. Six independent searches, all starting from a
+\SI{70}{\mega\cubic\meter} per-period aspiration, converged to a realized level of
+\SI{51.89}{\mega\cubic\meter} to \SI{52.06}{\mega\cubic\meter} per period, a mean of
+\SI{5.19}{\mega\cubic\meter\per\year}. We interpret this plateau as the estate's sustained
+even-flow level; it is not a proven maximum. The level is below the official cut, and
+\autoref{sec:results} attributes the gap to the flow rule rather than treating the official cut
+as a model constraint. The policy surface scales this committed plan to 100, 80, and 60 percent
+of its blocks; the realized level is reported for each policy.
 
 \subsection{Growth and yield}
 
@@ -109,37 +117,53 @@ switch to individual-tree growth through the BC variant of the Forest Vegetation
 planned but not part of the results reported here; the curve representation is therefore a stated
 limitation of the growth side, in the same way that the fire representation is a stated scenario.
 
-\subsection{Fire disturbance as a scenario}
+\subsection{Fire regime and composition-dependent severity}
 
-Fire enters as a scenario, not as a prediction. We use the laboratory's calibrated surface-fire
-model, which couples the Canadian Forest Fire Behaviour Prediction system with a spatially
-explicit spread kernel and an explicit suppression layer. The suppression parameters were
-calibrated on 24 tiles across the TSA~24 extent against 432 historical perimeters from 1950 to
-2024 \citep{ubc_fresh_fire_calibration_2026}.
+The fire regime is the full TSA~24 record: \num{1073} perimeters from 1950 to 2024,
+\num{14.31} fires per year, \SI{10079}{\hectare\per\year}, a mean fire of \SI{704.5}{\hectare},
+and a maximum of \SI{72317}{\hectare}. The record is a mapped-fire history, not a forecast:
+small fires are under-recorded, the record spans changing suppression and climate, and the tail
+rests on a small number of events.
 
-Two properties of that calibration govern how we read the results. First, the central distribution
-is close to the historical record while the extreme tail is thinner, and the tail itself is
-weakly identified: the historical median is \SI{22.97}{\hectare} with a bootstrap interval of
-\SIrange{20.85}{30.16}{\hectare}, but the historical 90th percentile is
-\SI{490.17}{\hectare} with an interval of \SIrange{349}{1051}{\hectare}, and the share of fires
-above \SI{5000}{\hectare} rests on 13 of 432 events. Second, the simulated tail is sensitive to
-the antecedent fire-weather initialisation. We therefore do not interpret an absolute fire size as
-a prediction: absolute values are reported beside the historical sampling interval, and every
-distributional statement is read against that interval.
+The laboratory's calibrated surface-fire model is used for the process validation and the
+disturbance coupling, not as the policy engine. Its per-tile suppression parameters were fitted
+on 24 tiles against 432 historical perimeters; the fit places the median and the share above
+\SI{500}{\hectare} inside the historical sampling interval and the 95th percentile below it
+\citep{ubc_fresh_fire_calibration_2026}. A full-estate coupling run with 24 ignitions
+demonstrates that the process runs end to end. The policy surface uses the recorded size and
+frequency distribution directly, because a fire-by-fire spread run over two centuries is not
+computationally feasible and because the policy question is conditional on the regime.
 
-The calibrated regime places the median and the share above \SI{500}{\hectare} inside the
-historical sampling interval and the 90th percentile at its lower edge; the 95th percentile and the
-extreme-tail shares remain below it (\autoref{sec:results}). The fit is in-sample per tile: there is
-no independent holdout, and the tail limitation is a stated boundary rather than a tuning target.
+\paragraph{Fuel projection} The operational 2025 VRI fuel type is the baseline for every
+unharvested stand. For a harvested stand we follow the BC fuel-typing chronology: slash (S1) for
+0--5 years, open herb/grass (O1B) for 6--24 years, and the species-based forest type from year
+25. The forest type uses the calibrated VRI-to-FBP mapping, with the 30 percent mixedwood
+threshold that the fire calibration used; the BC 2017 algorithm's 20 percent threshold is a
+sensitivity. We do not re-type the whole estate: re-typing every stand from the compiled
+analysis-unit composition reproduces 63.1 percent of the operational grid, because the compiled
+dataset carries one species mix per analysis unit while the VRI grid carries one per polygon.
+The mapping is consistent with the operational layer on real stands: 529 aspen-dominated
+polygons aged 25 or more are D1, 171 polygons at 40--60 percent deciduous are M1 or M2, and 357
+polygons at 20--30 percent deciduous are conifer types.
 
-\paragraph{Estate coupling} The calibrated source is run on the full 250 m estate support through
-the public WS4 estate-fire API at commit \texttt{9918fb17}. The run uses one ignition per
-calibration tile, 24 in total, drawn from the calibration's potential-fire sample and spread across
-the periods; one 2023 weather season with 90-day antecedent spin-up; current fuel and terrain
-layers; and clearcut harvesting only. It is a coupling demonstration, not a Monte Carlo of the
-estate: five schedule blocks are dropped because the compiled dataset has no fragment mapping for
-them. A paired ensemble across draws was run after the main analysis; it found the ending-volume metric
-insensitive to fire at this estate scale (\autoref{sec:discussion}), so no ranking is reported.
+\paragraph{Severity} A fire that reaches a stand kills a fraction of its biomass. We compute the
+FBP crown fraction burned (CFB) for the stand's fuel type under the calibration weather
+(FFMC~93.8, BUI~108.2, wind~\SI{6.8}{\kilo\meter\per\hour}) and map it onto the process severity
+bounds:
+\[
+  \text{raw severity} = 0.2 + 0.8\,\text{CFB}.
+\]
+We normalise by the initial-landscape area-weighted mean (0.7496), so a multiplier of one is the
+calibrated landscape mean. The multiplier scales the burned-area mortality fraction in the
+growth-fire adapter. The gradient is non-linear. Under the calibrated 30 percent threshold, the
+26 percent standard stays on the conifer side (C2/C1, multiplier 1.299 or 0.749), the 55 percent
+standard is M1 (1.011), and only the 84 percent standard is D1 (0.267). Under the BC 20 percent
+threshold, the 26 percent standard becomes M2 (1.203), still only 7 percent below closed spruce.
+
+\paragraph{Design} Ten draws of the full record over 200 years. Each draw generates one event set
+and applies it to every policy, so the comparison is paired. The no-fire net present value is the
+counterfactual; the fire loss is the difference. CVaR is the mean of the worst draws, and the
+tail statements are comparative with sampling uncertainty (ADR~0002).
 
 \subsection{Economic valuation}
 
