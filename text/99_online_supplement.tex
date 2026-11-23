@@ -6,8 +6,9 @@ The compiled dataset is derived from the public FEMIC TSA24 instance of the UBC 
 \citep{femic_tsa24_2026}, built from the BC Vegetation Resources Inventory (2025), the Forest and
 Range Evaluation Program disturbance mapping, and Site Productivity estimates, under the Open
 Government Licence -- British Columbia. The compiled dataset carries the inventory tables.
-The schedule used in this paper is the even-flow schedule that realises 51.9 million m3 per
-period.
+The baseline schedule is the even-flow plan that realises 51.9 million m3 per period. The
+standards are re-optimised from that schedule; the enterprise response is described in the main
+text.
 
 \begin{table}[h]
     \centering
@@ -76,21 +77,23 @@ The even-flow rule sets the level; the realised range is 51.89 to 52.06 million 
         Silviculture             & 10.02 CAD/m3 & BC Interior costs, North Central zone, 2026-10-01 \\
         Conifer stumpage         & 9.92 CAD/m3 & BC tabular rate, North Central, 2026-11-01 \\
         Deciduous stumpage       & 0.50 CAD/m3 & grades 1 and 2 \\
-        Discount rate            & 3 percent real & stated assumption \\
+        Discount rate            & 4 percent real & \citet{bc_mof_silviculture_lesson4} \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Net present value discounts each period's net value at its end. The sensitivity analysis varies the deciduous price over its documented 35 to 40 CAD/m3 range, the
-haul distance from 90 to 117 km, and the discount rate from 3 to 5 percent.
+Net present value discounts each period's net value at its end. The base rate is the BC Ministry
+of Forests 4 percent real rate for public-sector forestry investment analysis; \citet{heaps_pratt_1989} recommend 3 to 5 percent, and the federal social rate for environmental
+analysis is 3 percent \citep{treasury_board_2007}. The sensitivity analysis varies the deciduous price over its
+documented 35 to 40 CAD/m3 range, the haul distance from 90 to 117 km, and the discount rate over
+3, 4, 5, and 8 percent.
 
 \subsection*{S4. Stocking-standard experiments}
 
 The baseline dataset has one treatment, \texttt{CC}, which regenerates the same analysis unit.
 The policy dataset adds three prescriptions: \texttt{CC\_D26}, \texttt{CC\_D55}, and
 \texttt{CC\_D84}. Each targets a different analysis unit whose managed species-proportion curves
-specify the mixture, and the management process resets the regenerated cohorts to the target
-composition. On a conifer block the realised composition and the projected fuel type are:
+specify the mixture, and the regenerated stand takes the species mix of the prescription. On a conifer block the realised composition and the projected fuel type are:
 
 \begin{table}[h]
     \centering
@@ -117,15 +120,19 @@ uses a 5 percent floor, because the VRI value is a sparse or non-forest artefact
 
 The severity multiplier is sensitive to wind and the surface-mortality floor. Across
 \SIrange{6.8}{25}{\kilo\meter\per\hour} and a floor of 0.1 to 0.4, the D84 multiplier ranges
-0.11 to 0.49, the D55 multiplier 1.01 to 1.04, and the D26 (M2) multiplier 1.03 to 1.24. The
-ranking is unchanged.
+0.11 to 0.49, the D55 multiplier 1.01 to 1.04, and the D26 (M2) multiplier 1.03 to 1.24. The D1
+multiplier is the model's 0.2 floor, not an estimate of D1 severity. The CVaR effect of the floor
+and threshold is reported in the main text; the multiplier range alone does not establish that
+the ranking is unchanged.
 
 \subsection*{S5. Rotation estimate}
 
 For every block with more than one harvest in the schedule, the rotation is the interval between
 consecutive harvests. The baseline yields 53,071 intervals, an area-weighted mean of 102.2 years
-(median 100, tenth-to-ninetieth percentile 60 to 160). The estimate is conditional on re-entry within the 200-year horizon and is therefore
-biased toward productive and accessible stands. The summaries are in the archived analysis repository; the area-weighted median managed age is
+(median 100, tenth-to-ninetieth percentile 60 to 160). The estimate is conditional on re-entry
+within the 200-year horizon and is therefore biased toward productive and accessible stands. It
+describes the baseline schedule; the standards are re-optimised and their rotation is an outcome
+of the enterprise response. The summaries are in the archived analysis repository; the area-weighted median managed age is
 92 years, and 44 percent of the managed area is older than 100 years.
 
 \subsection*{S6. Reproduction}

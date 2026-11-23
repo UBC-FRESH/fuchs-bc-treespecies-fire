@@ -53,36 +53,36 @@ matches the base-case timber harvesting land base in the 2017 timber supply revi
 
 \subsection{Decision structure}
 
-We analyse two layers of decision. A policy layer sets a harvest level and a post-clearcut stocking
-standard; an enterprise layer responds with a harvest schedule. The standard specifies the species
-composition of a plantation, and the landscape composition is an outcome.
+We analyse two layers of decision. A policy layer sets a post-clearcut stocking standard; an
+enterprise layer chooses the even-flow harvest schedule under that standard. The standard specifies
+the species composition of a plantation, and the landscape composition is an outcome.
 
-This is a policy evaluation, not a bilevel program: the standard is exogenous and no equilibrium is
-claimed. We hold the enterprise's harvest schedule at the even-flow plan and vary the standard, so
-the comparison isolates the effect of what is planted at a fixed harvest pattern. A full enterprise
-response---changing which blocks are harvested and how much---is outside the scope of this paper.
+This is a policy evaluation with an enterprise response, not a bilevel equilibrium. The standard is
+exogenous and no equilibrium is claimed. The enterprise response is the policy-relevant comparison
+because the standard changes the volume and timing of harvest. We also report a fixed-plan direct
+effect, which holds the baseline schedule and isolates what is planted; the enterprise response makes
+the standards more expensive, so the direct effect is a lower bound on the production cost.
 
-\paragraph{Enterprise level} The even-flow schedule is the enterprise's baseline plan. It was
-produced by a weighted goal program that minimises weighted deviations from the harvest level and
-even-flow aspirations, subject to area balance and the treatment options on each block
-\citep{ubc_fresh_ws4_2026}. The minimum and maximum are one-sided penalty terms, not feasibility
-bounds, so the realised cut is an outcome of the weighted compromise. We keep that schedule for
-every standard. The species regenerated on each block are set by the standard.
+\paragraph{Enterprise response} The baseline even-flow schedule is produced by a weighted goal
+program that minimises weighted deviations from the harvest level and even-flow aspirations, subject
+to area balance and the treatment options on each block \citep{ubc_fresh_ws4_2026}. The minimum and
+maximum are one-sided penalty terms, not feasibility bounds, so the realised cut is an outcome of the
+weighted compromise. For each standard we rebuild the dataset, relabel the baseline schedule with the
+standard where it is available, and re-optimise with the same targets, initial offsets, engine,
+seed, and a ten-minute search budget. The search is not a global optimum; the realised level is
+reported with its period range.
 
-\paragraph{Policy levels and standards} The harvest levels are \SI{100}{\percent},
-\SI{80}{\percent}, and \SI{60}{\percent} of the even-flow plan, implemented as a deterministic block
-sample that keeps each block's full harvest history. The standards are the historical clearcut
-(\texttt{CC}) and three deciduous-forward prescriptions: \texttt{CC\_D26}, \texttt{CC\_D55}, and
-\texttt{CC\_D84}, targeting 26, 55, and 84 percent deciduous. A standard is applied only where it
-increases the deciduous share of the source analysis unit; aspen blocks stay on \texttt{CC}. The
-realised composition is reported beside every policy.
+\paragraph{Standards} The standards are the historical clearcut (\texttt{CC}) and three
+deciduous-forward prescriptions: \texttt{CC\_D26}, \texttt{CC\_D55}, and \texttt{CC\_D84}, targeting
+26, 55, and 84 percent deciduous. A standard is applied only where it increases the deciduous share
+of the source analysis unit; aspen blocks stay on \texttt{CC}. The realised composition is reported
+beside every policy.
 
 \paragraph{Scope of the risk analysis} We report a policy ranking conditional on the recorded fire
 regime, not a fire-size prediction. The standard changes the severity of a fire that reaches a
 stand, not the number or size of fires. Each draw uses one event set for every policy, so the
 comparison is paired. The no-fire net present value is the counterfactual; the fire loss is the
-difference. CVaR20 is the mean loss in the worst 20 percent of draws, and the difference is reported
-with a paired bootstrap interval.
+difference.
 
 \subsection{Forest estate model and estate data}
 
@@ -90,16 +90,14 @@ The model is implemented in \textsc{ws4}, the spatially explicit estate model of
 laboratory \citep{ubc_fresh_ws4_2026}. The baseline compiled dataset contains \num{458708} blocks
 and 48 treatments; the policy dataset adds the three prescriptions. Growth, treatment, and
 transition information are carried as curves per block, compiled from the provincial inventory and
-the timber supply analysis. The management process sets the regenerated cohort species to the
-target track's composition.
+the timber supply analysis. The regenerated stand takes the species mix of the prescription.
 
 We run 20 periods of ten years. The even-flow search converges to a realised level of
 \SI{51.89}{\mega\cubic\meter} to \SI{52.06}{\mega\cubic\meter} per period, a mean of
-\SI{5.19}{\mega\cubic\meter\per\year}. We treat this as the estate's sustained even-flow level, not
-a proven maximum. The level is below the official cut; \autoref{sec:results} attributes the gap to
-the flow rule rather than treating the official cut as a model constraint. The policy surface
-samples 100, 80, and 60 percent of the plan's blocks; the realised level is reported for each
-policy.
+\SI{5.19}{\mega\cubic\meter\per\year}. We treat this as the level realised by this model, not as the
+estate's true sustained yield. A declining-profile search at the official 2017 transition is reported
+in \autoref{sec:results}; it also realises about \SI{5.2}{\mega\cubic\meter\per\year}, so the gap
+from the official cut is not solely the flat-flow rule.
 
 \subsection{Growth and yield}
 
@@ -121,19 +119,25 @@ severity model, which holds the regime fixed and isolates the fuel effect. The c
 surface-fire model \citep{ubc_fresh_fire_calibration_2026} validates the regime and demonstrates
 estate coupling; its per-tile suppression parameters were fitted on 24 tiles against 432 historical
 perimeters. The fit places the median and the share above \SI{500}{\hectare} inside the historical
-sampling interval and the 95th percentile below it. A 24-ignition estate run shows that the
-calibrated model couples to the harvest model.
+sampling interval and the 95th percentile below it. The calibrated spread model is a validation and
+coupling check, not the policy engine.
 
 \paragraph{Fuel projection} The 2025 VRI fuel type is the baseline for every unharvested stand. For
 a harvested stand we follow the BC fuel-typing chronology: slash (S1) for 0--5 years, open
 herb/grass (O1B) for 6--24 years, and the species-based forest type from year 25. The forest type
-uses the calibrated VRI-to-FBP mapping, with the 30 percent mixedwood threshold used in the fire
+uses the operational VRI-to-FBP mapping, with the 30 percent mixedwood threshold used in the fire
 calibration; the BC 2017 algorithm's 20 percent threshold is a sensitivity. The baseline is not
-re-typed: re-typing every stand from the compiled analysis-unit composition reproduces 63.1 percent
-of the operational grid, because the compiled dataset carries one species mix per analysis unit
-while the VRI grid carries one per polygon. The mapping is consistent with the operational layer on
-real stands: 529 aspen-dominated polygons aged 25 or more are D1, 171 polygons at 40--60 percent
-deciduous are M1 or M2, and 357 polygons at 20--30 percent deciduous are conifer types.
+re-typed. Re-typing every stand from the compiled analysis-unit composition reproduces
+\SI{63.1}{\percent} of the operational grid; the operational mapping from VRI conifer share
+reproduces \SI{66.7}{\percent}. The compiled dataset carries one species mix per analysis unit,
+while the VRI grid carries one per polygon, so the disagreement is concentrated in the mixedwood and
+deciduous classes. The post-harvest types have no observational counterpart: they are a rule-based
+scenario, not a validated prediction.
+
+The projection holds the pre-harvest VRI crown closure for the planted stand. A comparison of TIPSY
+and VRI crown closure on \num{272840} polygons gives a mean difference of \SI{17.3}{percentage
+points} and a correlation of 0.004; because crown closure determines the C1/C2 split, the fuel type
+of a 26 percent deciduous stand is correspondingly uncertain.
 
 \paragraph{Severity} A fire that reaches a stand kills a fraction of its biomass. We compute the
 FBP crown fraction burned (CFB) for the stand's fuel type under the calibration weather
@@ -144,15 +148,19 @@ bounds:
 \]
 We normalise by the initial-landscape area-weighted mean (0.7496), so a multiplier of one is the
 calibrated landscape mean. The multiplier scales the burned-area mortality fraction in the fire
-process. The gradient is non-linear: under the calibrated 30 percent threshold, the 26 percent
-standard stays on the conifer side (C2/C1, multiplier 1.299 or 0.749), the 55 percent standard is
-M1 (1.011), and only the 84 percent standard is D1 (0.267). Under the BC 20 percent threshold, the
-26 percent standard becomes M2 (1.203), still only 7 percent below closed spruce.
+process. D1 has near-zero CFB, so its raw severity is the 0.2 surface-mortality floor and its
+multiplier is 0.267; the multiplier is a floor, not an estimate of D1 severity. Across the
+documented floor (0.1 to 0.4) and wind range (6.8 to 25 kilometres per hour), the D84 multiplier
+ranges 0.11 to 0.49. The 26 percent standard is classified as C1 or C2 depending on the pre-harvest
+crown closure, with multipliers 0.749 and 1.299. Under the BC 20 percent threshold it becomes M2
+(1.203), still only 7 percent below closed spruce.
 
-\paragraph{Design} Ten draws of the full record over 200 years. Each draw generates one event set
-and applies it to every policy, so the comparison is paired. The no-fire net present value is the
-counterfactual; the fire loss is the difference. CVaR20 is the mean loss in the worst 20 percent of
-draws, and the difference is reported with a paired bootstrap interval.
+\paragraph{Design} We generate 100 event sets of 200 years. Each draw resamples the recorded fire
+sizes with replacement, draws annual counts from a Poisson process with the historical mean
+(\num{14.31}), and places each fire on a random burnable cell. The same event set is applied to every
+policy, so the comparison is paired. CVaR20 is the mean loss in the worst 20 draws. The paired
+bootstrap interval captures variation in the event set only; it does not include uncertainty in the
+fire-size distribution, the severity model, or the growth curves.
 
 \subsection{Economic valuation}
 
@@ -160,19 +168,25 @@ Harvested volume is valued by species group at BC interior log prices for the th
 30 September 2026: \SI{113.96}{CAD\per\cubic\meter} for spruce and pine,
 \SI{105.98}{CAD\per\cubic\meter} for subalpine fir on the hemlock--balsam series, which is the
 nearest reported grade for that species, and a range of
-\SIrange{35}{40}{CAD\per\cubic\meter} for deciduous species. Costs are a tree-length ground harvest system at
-\SI{21.38}{CAD\per\cubic\meter} from machine rates, haul at \SI{7.85}{CAD\per\cubic\meter} over a
-mean distance of \SI{90}{\kilo\meter} to the nearest sawmill, basic silviculture at
-\SI{10.02}{CAD\per\cubic\meter} for the North Central zone, and stumpage at
-\SI{9.92}{CAD\per\cubic\meter} for conifers and \SI{0.50}{CAD\per\cubic\meter} for deciduous
-timber in grades 1 and 2. Net present value is computed at a \SI{3}{\percent} real discount rate, with each period's
-net value discounted at its end. The net present value is an operating margin: it excludes road
-construction, administration, taxes, and risk premia.
+\SIrange{35}{40}{CAD\per\cubic\meter} for deciduous species. Costs are a tree-length ground harvest
+system at \SI{21.38}{CAD\per\cubic\meter} from machine rates, haul at
+\SI{7.85}{CAD\per\cubic\meter} over a mean distance of \SI{90}{\kilo\meter} to the nearest sawmill,
+basic silviculture at \SI{10.02}{CAD\per\cubic\meter} for the North Central zone, and stumpage at
+\SI{9.92}{CAD\per\cubic\meter} for conifers and \SI{0.50}{CAD\per\cubic\meter} for deciduous timber
+in grades 1 and 2. Net present value is computed at a \SI{4}{\percent} real discount rate, the BC
+Ministry of Forests rate for public-sector forestry investment analysis
+\citep{bc_mof_silviculture_lesson4}; each period's net value is discounted at its end. The rate is a
+normative choice, not an estimate: \SI{3}{\percent} is the federal social rate for environmental
+analysis \citep{treasury_board_2007}, \SI{5}{\percent} the upper end of the silvicultural social-rate
+range \citep{heaps_pratt_1989}, and \SI{8}{\percent} the federal opportunity cost of capital. The net
+present value is an operating margin: it excludes road construction, administration, taxes, and risk
+premia.
 
 \subsection{Sensitivity and reproduction}
 
-Three economic constants are ranges rather than points: the deciduous price, the haul distance, and
-the discount rate. Every economic result is reported with a sensitivity across those ranges. The
-severity model uses the calibration weather; the sensitivity of the multipliers to wind and the
-surface-mortality floor is reported in the online supplement. All constants, their sources, and the
-code that applies them are documented in the archived analysis repository.
+We report the discount rate at \SI{3}{\percent}, \SI{4}{\percent}, \SI{5}{\percent}, and
+\SI{8}{\percent}; the deciduous price at 35, 37.5, and \SI{40}{CAD\per\cubic\meter}; the haul
+distance at 90 and \SI{117}{\kilo\meter}; the surface-mortality floor at 0.1 and 0.4; and the
+mixedwood threshold at 30 and 20 percent. The fire surface is rerun for the floor and threshold
+sensitivities. All constants, their sources, and the code that applies them are documented in the
+archived analysis repository.

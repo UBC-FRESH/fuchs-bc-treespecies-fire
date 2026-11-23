@@ -3,97 +3,97 @@
 
 \subsection{What the two-layer analysis contributes}
 
-The value of separating the two decision layers is that it forces the composition question to be
-asked in the terms an enterprise would answer it. A stocking standard is not an instruction to the
-landscape: the landscape composition is an outcome of which stands are cut and what is planted, and
-its cost is borne in the schedule. Making the layers explicit lets the analysis say what a standard
-costs in harvest volume and value, and whether it changes fire severity, rather than assuming that
-an area share of species translates into an outcome.
+A stocking standard is not an instruction to the landscape. The landscape composition is an outcome
+of which stands are cut and what is planted, and its cost is borne in the schedule. The fixed-plan
+surface isolates the direct effect of what is planted, but an enterprise that must apply the standard
+would also change which blocks it harvests and when. We therefore re-optimise the even-flow schedule
+under each standard. The enterprise response makes the standards more expensive than the fixed-plan
+direct effect: \SI{1.9}{\mega\CAD} more for D26, \SI{7.7}{\mega\CAD} for D55, and
+\SI{10.3}{\mega\CAD} for D84 at \SI{4}{\percent}. The ranking is unchanged, but the cost is not the
+one a fixed schedule implies.
 
-This is a policy evaluation, not a bilevel program. The standard is exogenous and the enterprise's
-schedule is fixed; the enterprise does not re-optimise for each standard. The standard is an existing
-instrument---British Columbia constrains silviculture through prescriptions and stocking
-standards---and the landscape-level composition is an outcome, not a target.
+This is a policy evaluation with an enterprise response, not a bilevel equilibrium. The standard is
+exogenous; the enterprise's objective is the same weighted goal program in every case. We do not
+claim that the realised level is a global optimum. The search is a ten-minute stochastic search from
+the baseline schedule, and the D26 profile is rising rather than flat. The levels are the levels this
+search realises.
 
-\subsection{The sustained level and the official cut}
+\subsection{The realised level and the official transition}
 
-The compiled estate sustains about \SI{5.19}{\mega\cubic\meter\per\year} under a flat even flow from
-the first period, \SI{25}{\percent} below the official cut. The managed area matches the published
-land base to \SI{0.32}{\percent}, and the model's own curves imply
-\SI{7.07}{\mega\cubic\meter\per\year} at their maximum mean annual increment, just above the cut per
-hectare. The shortfall is therefore consistent with the flow rule: a constant level from period 1
-has to survive the trough of a non-regulated age structure, whose area-weighted median age is
-\SI{92}{\year} and in which \SI{44}{\percent} of the managed area is older than a century. The
-official determination is a declining transition profile; a constant profile cannot take the
-transition harvest that a declining profile allows.
+The compiled estate realises about \SI{5.19}{\mega\cubic\meter\per\year} under a flat even flow,
+\SI{25}{\percent} below the official cut. The managed area matches the published land base to
+\SI{0.32}{\percent}. The obvious explanation is the flat-flow rule: a constant level from period 1
+must survive the trough of a non-regulated age structure, and the official determination is a
+declining transition profile.
 
-\subsection{Composition is a policy choice}
+That explanation does not survive the declining-profile test. A search at the official transition
+(83.5 million cubic metres in the first period, 73.5 million thereafter) realises
+\SI{51.83}{\mega\cubic\meter} in the first period and \SIrange{51.0}{52.9}{\mega\cubic\meter}
+thereafter. The model reaches \SI{62}{\percent} of the first-period target. The gap is therefore a
+property of the compiled land base and yield curves, not of the flow rule alone. The model's
+area-weighted maximum mean annual increment is \SI{7.07}{\mega\cubic\meter\per\year}, an upper bound
+that the model does not realise; the official transition starts at \SI{8.35}{\mega\cubic\meter\per
+year}, above that bound. We report \SI{5.19}{\mega\cubic\meter\per\year} as the level realised by
+this model, not as the estate's true sustained yield.
+
+\subsection{Composition is a policy choice, but it is not free}
 
 Under the historical clearcut, the deciduous share of the future forest was limited by the aspen
-already on the land base. The deciduous-forward standards can convert conifer sites, so composition
-is no longer supply-limited in the same way. The D26 standard adds \SIrange{32}{53}{\mega\cubic\meter}
-and does not reduce net present value; the D55 and D84 standards cost about \SI{1.2}{\percent} and
-\SI{1.8}{\percent} of net present value. A substantial composition change therefore costs one to two
-percent of net present value, not the harvest volume that a harvest-mix target would require. The
-difference is the instrument: a stocking standard changes what is planted, while a harvest-mix
-target can only reallocate the aspen already on the land base.
+already on the land base. The standards can convert conifer sites, so composition is no longer
+supply-limited in the same way. The D26 standard adds \SI{52.9}{\mega\cubic\meter}, all aspen; net
+conifer volume is flat. It costs \SI{1.4}{\mega\CAD} at \SI{4}{\percent} after re-optimisation. The
+D55 and D84 standards cost \SI{42.6}{\mega\CAD} and \SI{60.7}{\mega\CAD}, or about
+\SI{0.7}{\percent} and \SI{1.0}{\percent} of CC net present value.
 
-\subsection{Rotation in the historical schedule}
+The phrase ``free volume'' is therefore wrong. D26 adds aspen volume, not conifer volume, and its
+value is a net of a large aspen gain and a conifer loss. At the midpoint 2018 aspen price the net is
+slightly negative; it is within the aspen-price range, so the sign is not identified. The
+composition change is real, but it is a shift in the species mix, not an increase in merchantable
+conifer supply. Under a fixed allowable annual cut the extra aspen would not be additional harvest;
+it would displace conifer volume.
 
-The implied rotation is \SI{102.2}{\year} in the historical schedule, with a median of
-\SI{100}{\year} and a tenth-to-ninetieth percentile range of \SIrange{60}{160}{\year}. The estimate
-uses only blocks re-entered within the 200-year horizon, so it is biased toward productive and
-accessible stands, and it is an observed interval rather than a silvicultural rotation. The new
-standards are evaluated on a fixed schedule, so their rotation is an outcome, not a re-optimised
-choice.
+\subsection{Fire risk: a cost-effectiveness buy, not a tail hedge}
 
-\subsection{Fire risk under alternative standards}
+Net present value with fire is no-fire value minus the fire loss. CVaR is translation-invariant, so
+\begin{equation}
+    \mathrm{CVaR}_{20}(\text{net NPV}) = \text{no-fire NPV} - \mathrm{CVaR}_{20}(\text{loss}).
+\end{equation}
+The 84 percent standard reduces the conditional fire loss, but it reduces certain value by more. At
+\SI{4}{\percent} it costs \SI{60.7}{\mega\CAD} and reduces CVaR20 loss by \pending{X}; the CVaR of
+net present value is \pending{Y} lower. It is not a hedge. The cost per \SI{1}{\mega\CAD} of CVaR
+loss reduction is about \pending{Z} at \SI{4}{\percent} and \SI{19}{\mega\CAD} at
+\SI{3}{\percent}. The ratio is not a welfare trade-off; it is the break-even price of a separate
+loss-reduction objective. A planner who evaluates net present value, including the tail, does not
+choose D84 on timber value alone.
 
-The recorded regime is severe: \num{1073} fires over 75 years, \num{14.31} fires per year, and
-\SI{10079}{\hectare\per\year}. A 200-year draw burns 27 to 41 percent of the compiled forest. The
-calibration reproduces the central historical distribution; the policy surface uses the recorded sizes
-directly, so the result is conditional on the historical distribution rather than on a
-fire-by-fire forecast.
+The D55 standard is an intermediate cost-effectiveness point, not a dominated option. It costs
+\SI{42.6}{\mega\CAD} at \SI{4}{\percent} and reduces CVaR20 loss by \pending{W}. It is not ``only
+D84'' that has a fire effect. The three standards are a three-point sample of a continuous deciduous
+share, and they do not establish a non-linear gradient.
 
-The severity model gives a clear ranking of the fuel types: D1 at 0.267, M1 at 1.011, C2 at
-1.299, and C1 at 0.749. The ranking is non-linear because the calibrated mapping puts a
-26 percent deciduous stand on the conifer side; only the 84 percent standard becomes D1. D26 is a
-production option, not a risk option; D55 and D84 are priced risk options. The BC 20 percent
-threshold sensitivity moves D26 to M2 (1.203), still only 7 percent below closed spruce.
+The D84 severity multiplier is 0.267 because D1 has near-zero crown fraction burned, so the raw
+severity is the model's 0.2 surface-mortality floor. The multiplier is a floor, not an estimate of D1
+severity. Across the documented floor (0.1 to 0.4) and wind range (6.8 to 25 kilometres per hour),
+the D84 multiplier ranges 0.11 to 0.49, and the CVaR benefit and the ratio scale with it. The
+reported benefit is conditional on the 0.2 floor. The 26 percent standard is classified as C1 or C2
+depending on the pre-harvest crown closure, with multipliers 0.749 and 1.299; its near-zero aggregate
+fire effect is a weighted average of a reduction and an increase, not a property of the standard.
 
-The D84 standard costs about \SI{1.8}{\percent} of net present value and cuts CVaR20 by
-\SI{8.1}{\mega\CAD} at the 100 percent level; D55 cuts it by \SI{5.7}{\mega\CAD} at
-\SI{107.6}{\mega\CAD}. The exchange rate is about \textbf{19 M CAD of production cost per
-1 M CAD of CVaR20 reduction}, and it is stable across levels and standards. The stand-level
-severity multiplier is 0.267, but the estate CVaR20 falls only \SI{2.7}{\percent}: the
-unmanaged half of the estate keeps its fuel, the standard converts stands gradually, and the NPV
-loss is dominated by early, discounted fires. A risk-neutral planner chooses D26; a planner who
-values a \SI{1}{\mega\CAD} tail reduction at more than about \SI{19}{\mega\CAD} chooses
-D84. D55 is an intermediate point on the same frontier, not a distinct strategy.
-
-Ten draws give a CVaR20 that is the mean of the two worst draws, and the paired design removes the
-landscape-level sampling noise that would otherwise dominate. The 95 percent bootstrap interval for
-the D84 CVaR20 difference is \SIrange{-8.8}{-5.9}{\mega\CAD} at the 100 percent level, which
-excludes zero; the D26 difference is indistinguishable from zero. The 2024 validation of BC fuel typing warns that mixedwood,
-deciduous, and post-harvest fuels are the weakest part of the map \citep{baron_fuel_2024}; the D1
-severity is a floor, not a prediction.
-
-Composition changes the severity of a fire that reaches a stand, not the number or size of fires.
-The event set treats each fire's footprint as exogenous, so the model cannot represent a deciduous
-stand stopping a fire; fire-break placement remains open.
+The fire regime is a stationary resampling of the 1950--2024 record. Composition changes the severity
+of a fire that reaches a stand, not the number or size of fires. The event set has no spatial
+interaction between stands, so the model cannot represent a deciduous stand stopping a fire. Fire-break
+placement remains open.
 
 \subsection{Relation to the European evidence}
 
 \citet{fuchs_severe_2024} found that diversification raises expected returns and reduces isolated
 risk, but that severe and frequent extreme events undermine the economic gain. Our result qualifies
 that finding rather than contradicting it. The composition lever here is not a free portfolio
-reweighting. Under the historical clearcut, the minority species was limited by the aspen already
-on the land base; the new standards relax that limit but buy the tail reduction at a production
-cost of about 19 to 1. The tail that would justify paying for diversification is also
-the part of the distribution the historical record understates. In the European setting the
-constraint was the correlation of extreme events; here it is the production cost of the standard
-and the thinness of the observed tail. Both point the same way: the case for diversification is
-conditional, and the condition is empirical.
+reweighting. The minority species was limited by the aspen already on the land base; the standards
+relax that limit but buy the tail reduction at a production cost that is high relative to the
+conditional-loss reduction. In the European setting the constraint was the correlation of extreme
+events; here it is the production cost of the standard and the thinness of the observed tail. Both
+point the same way: the case for diversification is conditional, and the condition is empirical.
 
 \subsection{Limitations}
 
@@ -103,50 +103,49 @@ assessment.
 
 Second, growth is represented by fixed, species-resolved yield curves. The curves reproduce the
 inventory's site-specific volume trajectories, but they do not respond to climate, changing site
-productivity, or within-stand species interactions. The production response to the standards is
-therefore a yield-curve response, not a physiological or competition response.
+productivity, or within-stand species interactions. The production response to the standards is a
+yield-curve response, not a physiological or competition response.
 
-Third, the policy layer sets a stocking standard, not a spatial placement rule. The question of
-where to put broadleaf fuel breaks, and how far that can go before production suffers, is not
-answered. This is the most important gap: the literature suggests the composition decision is
-spatial, and this paper quantifies only the landscape-level trade-off.
+Third, the fuel projection is a rule-based scenario. It reproduces \SI{63.1}{\percent} of the 2025
+VRI fuel-type grid at $t=0$, with the disagreement concentrated in the mixedwood and deciduous
+classes. The post-harvest types have no observational counterpart. The pre-harvest VRI crown closure
+is held fixed for the planted stand, and TIPSY and VRI crown closure differ by \SI{17.3}{percentage
+points} with a correlation of 0.004. The D1 multiplier is the 0.2 surface-mortality floor. These are
+scenario assumptions, not validated predictions.
 
 Fourth, the fire regime is the recorded 1950--2024 distribution, not a forecast. Composition changes
 the severity of a fire that reaches a stand, not the number or size of fires; the event set has no
-spatial interaction between stands. The observed tail is also thin, so the tail result is
-comparative rather than a precise estimate.
+spatial interaction between stands. The observed tail is thin, so the tail result is comparative
+rather than a precise estimate. The 100 draws give a CVaR20 that is the mean of the worst 20 draws,
+and the paired bootstrap interval captures event-set variation only; it does not include uncertainty
+in the fire-size distribution, the severity model, or the growth curves.
 
-Fifth, the severity mapping is an assumption. It uses the FBP crown fraction burned at the
-calibration weather, maps it onto the process bounds with $0.2 + 0.8\,\mathrm{CFB}$, and normalises
-by the initial-landscape mean. The 2024 validation of BC fuel typing finds that mixedwood,
-deciduous, and post-harvest fuels are the weakest part of the map \citep{baron_fuel_2024}; the D1
-severity is a floor, not a prediction. The calibrated 30 percent mixedwood threshold is a model
-choice; the BC 20 percent sensitivity moves the 26 percent standard to M2 but still only 7 percent
-below closed spruce.
+Fifth, the enterprise search is a ten-minute stochastic search from the baseline schedule, not a
+global optimum. The D26 profile is rising, and the D55 and D84 profiles are near-flat but not exactly
+even. The production costs are the costs of the schedules this search realises, not a lower bound.
 
-Sixth, the fixed-plan design does not re-optimise the harvest schedule for each standard; the
-enterprise could change which blocks it harvests and how much. The production response is therefore
-the direct effect at a fixed pattern, not the full enterprise response. Harvest is also clearcut
-only, composition is tracked by leading species group, and the price series are of mixed vintages. The net
-present value is an operating margin: it excludes road construction, administration, taxes, and
-risk premia.
+Sixth, the price series are of mixed vintages and the net present value is an operating margin: it
+excludes road construction, administration, taxes, and risk premia. The aspen price is a 2018
+ten-year average, not a forecast, and the D26 value is within its range. The results are conditional
+on the 4 percent base rate; the 3, 5, and 8 percent cases are reported.
 
 \subsection{Implications for policy}
 
-The production cost of a standard is paid in net present value, not only in volume. The 26 percent
-standard is free volume: \SIrange{32}{53}{\mega\cubic\meter} more harvest with no loss in net
-present value. The 55 and 84 percent standards cost about \SI{1.2}{\percent} and
-\SI{1.8}{\percent} of net present value. A policy analyst who evaluates diversification through
-stumpage or log values will miss the yield and species-mix effect.
+The production cost of a standard is paid in net present value, not only in volume. D26 is a
+value-neutral shift to aspen at the midpoint price, not free conifer volume. D55 and D84 cost about
+\SI{0.7}{\percent} and \SI{1.0}{\percent} of net present value at the BC rate. A policy analyst who
+evaluates diversification through stumpage or log values will miss the yield and species-mix effect.
 
 The tail is priced, not free. The 84 percent standard cuts the stand-level severity multiplier to
-0.267, but the estate CVaR20 by only \SI{8.1}{\mega\CAD} at the 100 percent level, against a
-production cost of \SI{153.8}{\mega\CAD}. The exchange rate is about \SI{19}{\mega\CAD} per
-\SI{1}{\mega\CAD} of tail reduction, and it is stable across standards and harvest levels. A
-risk-neutral planner chooses the 26 percent standard; a planner whose marginal value of tail risk
-exceeds about 19 to 1 chooses the 84 percent standard.
+0.267, but the estate CVaR20 by \pending{X} at a production cost of \SI{60.7}{\mega\CAD}, and the
+CVaR of net present value is \pending{Y} lower. The break-even price of conditional-loss reduction
+is about \pending{Z} at \SI{4}{\percent} and 19 at \SI{3}{\percent}. A planner who evaluates net
+present value, including the tail, does not choose D84 on timber value alone. A planner with a
+separate loss-reduction objective, or non-timber benefits, would need to value the reduction above
+that break-even.
 
-The harvest-flow rule deserves as much scrutiny as the silvicultural prescription. We interpret the
-gap between the model's sustained level and the official cut as a flow-rule cost, and the discount
-rate moves the value result more than any market or biological parameter in the model. A policy
-analysis that reports a single net present value at a single rate hides the lever that matters most.
+The harvest-flow rule deserves as much scrutiny as the silvicultural prescription. The gap between
+the model's level and the official cut is not a flow-rule cost; a declining-profile search also
+realises about \SI{5.2}{\mega\cubic\meter\per\year}. The discount rate moves the value result more
+than any market or biological parameter in the model. A policy analysis that reports a single net
+present value at a single rate hides the lever that matters most.

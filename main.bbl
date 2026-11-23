@@ -1,11 +1,12 @@
 \begin{thebibliography}{}
 
-\bibitem[Baron et~al., 2024]{baron_fuel_2024}
-Baron, J.~N., Hessburg, P.~F., Parisien, M.-A., Greene, G.~A., Gergel, S.~E.,
-  and Daniels, L.~D. (2024).
-\newblock Fuel types misrepresent forest structure and composition in interior
-  {British Columbia}: a way forward.
-\newblock {\em Fire Ecology}, 20:15.
+\bibitem[{British Columbia Ministry of Forests},
+  nd]{bc_mof_silviculture_lesson4}
+{British Columbia Ministry of Forests} (n.d.).
+\newblock Lesson 4: Economic principles of timber production.
+\newblock Silviculture Training Modules, Forest Practices Branch.
+\newblock States that the Ministry of Forests uses a 4 percent real rate for
+  public-sector forestry investment analysis. Accessed 23 November 2026.
 
 \bibitem[Chung, 2015]{chung_optimizing_2015}
 Chung, W. (2015).
@@ -36,6 +37,12 @@ Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
 \newblock TSA 24 Prince George, \SI{6917231}{\cubic\meter\per\year}, effective
   28 August 2025. Accessed 21 November 2026.
 
+\bibitem[Heaps and Pratt, 1989]{heaps_pratt_1989}
+Heaps, T. and Pratt, B. (1989).
+\newblock The social discount rate for silvicultural investments.
+\newblock FRDA Report 071, British Columbia Ministry of Forests, Research
+  Branch.
+
 \bibitem[Lagos et~al., 2025]{lagos_bilevel_2025}
 Lagos, T., Choi, J., Segundo, B., Gan, J., Ntaimo, L., and Prokopyev, O.~A.
   (2025).
@@ -55,6 +62,11 @@ Topanotti, L.~R., Fuchs, J.~M., Albert, M., Schick, J., Penanhoat, A., Lu,
 \newblock Enhancing economic multifunctionality without compromising
   multidiversity and ecosystem multifunctionality via forest enrichment.
 \newblock {\em Science Advances}, 10:eadp6566.
+
+\bibitem[{Treasury Board of Canada Secretariat}, 2007]{treasury_board_2007}
+{Treasury Board of Canada Secretariat} (2007).
+\newblock Canadian cost-benefit analysis guide: Regulatory proposals.
+\newblock Technical report, Government of Canada.
 
 \bibitem[{UBC FRESH Laboratory}, 2026a]{femic_tsa24_2026}
 {UBC FRESH Laboratory} (2026a).

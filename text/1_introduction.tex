@@ -32,56 +32,63 @@ A separate literature optimises the spatial arrangement of fuel treatments to re
 \citep{chung_optimizing_2015,wei_optimize_2012}, including a recent bilevel formulation in which a
 planner chooses treatments and nature chooses the fire~\citep{lagos_bilevel_2025}. That work treats
 treatment location as the decision and fire as the adversary. It does not ask how much composition
-change an operating forest can supply under a harvest level, nor what that change costs in volume.
+change an operating forest can supply under a harvest level, nor what that change costs in volume
+and value.
 
 This paper sits between those lines. The policy lever is the post-clearcut stocking standard: what
 is planted after harvest, not where fuel treatments are placed. We quantify, on an operating forest,
-what a deciduous-forward standard costs in harvest volume and value, and whether the resulting
-composition changes fire severity and tail risk. The landscape composition is an outcome of the
-standard, not an exogenous target.
+what a deciduous-forward standard costs in harvest volume and value under an enterprise response,
+and whether the resulting composition changes fire severity and the tail of net present value. The
+landscape composition is an outcome of the standard, not an exogenous target.
 
 We build the analysis on the Prince George Timber Supply Area (TSA~24) in interior British Columbia.
 The estate is the compiled TSA~24 inventory, with its actual blocks, ages, species, and yield
-curves. A weighted goal program produces the even-flow schedule; we hold that schedule fixed and
-vary the standard, so the production and risk differences are not confounded by a new search. Fire
-is represented by the recorded 1950--2024 regime and a composition-dependent severity model: a
-composition-aware fuel projection re-types harvested stands from their new cohorts, and the FBP
-crown fraction burned maps the fuel type to a severity multiplier. The calibrated spread model is
-used to reproduce the central historical distribution and to demonstrate estate coupling.
+curves. A weighted goal program produces the baseline even-flow schedule; we re-optimise it under
+each standard, so the production cost includes the enterprise response rather than only the direct
+effect at a fixed pattern. Fire is represented by the recorded 1950--2024 regime and a
+composition-dependent severity model: a composition-aware fuel projection re-types harvested stands
+from their new cohorts, and the FBP crown fraction burned maps the fuel type to a severity
+multiplier. We use 100 paired 200-year event sets, and value the result at the BC Ministry of
+Forests \SI{4}{\percent} real rate, with \SI{3}{\percent}, \SI{5}{\percent}, and \SI{8}{\percent}
+sensitivities.
 
 We ask three questions:
 
 \begin{enumerate}
     \item[\textit{RQ1}] What does a deciduous-forward stocking standard cost in harvest volume and
-    net present value?
-    \item[\textit{RQ2}] Does the resulting composition change fire severity and the tail of the
-    net-present-value loss distribution, and by how much?
-    \item[\textit{RQ3}] How does the answer depend on risk attitude?
+    net present value under an enterprise response?
+    \item[\textit{RQ2}] Does the resulting composition change fire severity and the tail of net
+    present value, and by how much?
+    \item[\textit{RQ3}] What break-even price of conditional-loss reduction would justify the
+    standard, and how does it depend on the discount rate and the severity assumptions?
 \end{enumerate}
 
 A fourth question---how far broadleaf can be used as fire breaks before production suffers---requires
 a spatial placement rule and is not answered here; the discussion is explicit about that gap.
-Throughout, CVaR20 is the mean loss in the worst 20 percent of draws.
+Throughout, CVaR20 is the mean of the worst 20 percent of draws.
 
-The contribution is fourfold. First, a reconciled estate and harvest level: the compiled managed
-area matches the published land base, and the shortfall from the official cut is consistent with
-the flat-flow rule rather than with a missing land base. Second, a deciduous-forward stocking
-instrument and a composition-aware fuel/severity link, checked against the operational VRI layer
-and the BC fuel-typing rules. Third, a production and tail-risk surface that separates a free-volume
-standard from a priced tail hedge: the 26 percent standard adds \SIrange{32}{53}{\mega\cubic\meter}
-with no loss in net present value and no detectable change in CVaR20; the 55 and 84 percent
-standards reduce CVaR20 by \SIrange{5.7}{8.1}{\mega\CAD} at a production cost of
-\SIrange{108}{154}{\mega\CAD}, an exchange rate of about \SI{19}{\mega\CAD} per
-\SI{1}{\mega\CAD} of tail reduction. Fourth, a calibrated fire regime with its tail uncertainty.
+The contribution is fourfold. First, a reconciled estate and a declining-profile diagnostic: the
+compiled managed area matches the published land base, but the shortfall from the official cut is
+not the flat-flow rule; a search at the official 2017 transition also realises about
+\SI{5.2}{\mega\cubic\meter\per\year}, so the compiled curves and land base cannot reproduce the
+official transition. Second, a deciduous-forward instrument with an enterprise response: the
+fixed-plan direct effect understates the production cost, and the 26 percent standard adds aspen
+volume but not conifer volume. Third, a production and tail-risk surface with a corrected metric:
+D84 reduces the conditional fire loss but lowers the CVaR of net present value, so it is not a tail
+hedge; the 19:1 ratio is a \SI{3}{\percent} break-even, about \pending{Z} at \SI{4}{\percent}.
+Fourth, a fuel projection stated for what it is: a \SI{63.1}{\percent} $t=0$ reproduction of the
+operational grid, a rule-based post-harvest scenario, and a D1 multiplier that is the model's
+0.2 surface-mortality floor.
 
-The result is a trade-off, not a free improvement. The composition-aware fuel model works, and the
-stand-level severity cut is large; the estate-level tail reduction is small relative to the
-production cost because the unmanaged half of the estate keeps its fuel and conversion is gradual.
-The useful policy number is the exchange rate between production cost and tail reduction.
+The result is a trade-off, not a free improvement. The stand-level severity cut is large, but the
+estate-level tail reduction is small relative to the production cost because the unmanaged half of
+the estate keeps its fuel and conversion is gradual. The useful policy number is the break-even
+price of conditional-loss reduction, not an ``exchange rate'' that treats the production cost as a
+hedge.
 
 The paper proceeds as follows. \autoref{sec:methods} describes the study area, the decision
 structure, the estate data, the growth representation, the fire regime and composition-dependent
-severity model, and the economic valuation. \autoref{sec:results} reports the estate, the sustained
-level, the economics, the stocking-standard surface, the fire-risk surface, and the rotation.
+severity model, and the economic valuation. \autoref{sec:results} reports the estate, the realised
+level, the enterprise response, the fuel projection, the fire-risk surface, and the rotation.
 \autoref{sec:discussion} interprets the results, states the limitations, and closes with the policy
 implications.

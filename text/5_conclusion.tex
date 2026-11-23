@@ -1,33 +1,33 @@
-% Draft: rewritten 2026-11-23 for the stocking-standard surface.
+% Draft: rewritten 2026-11-23 for the enterprise response and the corrected CVaR metric.
 \section{Conclusion}
 \label{sec:conclusion}
 
-We analysed forest policy under fire risk as a two-layer problem on a real timber supply area: a
-policy layer sets the harvest level and the stocking standard, and an enterprise responds with a
-harvest schedule. The estate is the compiled TSA~24 inventory; fire is the recorded 1950--2024
-regime, and the standard changes the severity of a fire that reaches a stand.
+We evaluated three deciduous-forward post-clearcut stocking standards on TSA~24 with an enterprise
+response and a recorded fire regime. The enterprise re-optimises the even-flow schedule under each
+standard; the fire regime is the 1950--2024 record, applied as 100 paired 200-year event sets; the
+value base is the BC Ministry of Forests \SI{4}{\percent} real rate, with \SI{3}{\percent},
+\SI{5}{\percent}, and \SI{8}{\percent} sensitivities.
 
-The compiled estate sustains about \SI{51.9}{\mega\cubic\meter} per period, a mean of
-\SI{5.19}{\mega\cubic\meter\per\year}, and that schedule is worth \SI{8779}{million\CAD} of net
-present value at a \SI{3}{\percent} real discount rate. The level sits about \SI{25}{\percent}
-below the official cut; the gap is consistent with a flat harvest profile on a non-regulated age
-structure, not with a missing land base.
+The compiled estate realises \SI{5.19}{\mega\cubic\meter\per\year}, about \SI{25}{\percent} below
+the official cut. A declining-profile search at the official 2017 transition also realises about
+\SI{5.2}{\mega\cubic\meter\per\year}, so the gap is not a flat-flow artifact. The compiled land base
+and yield curves cannot reproduce the official transition. We report the model's level, not the
+estate's true sustained yield.
 
-The stocking standard is a policy lever. The 26 percent standard adds
-\SIrange{32}{53}{\mega\cubic\meter} with no loss in net present value; the 55 and 84 percent
-standards cost about \SI{1.2}{\percent} and \SI{1.8}{\percent} of net present value. The
-composition-aware fuel projection is consistent with the operational VRI layer, and the severity
-gradient is non-linear: under the calibrated mixedwood threshold only the 84 percent standard
-becomes the deciduous fuel type.
+The standards change composition but do not pay for themselves in timber value. D26 adds
+\SI{52.9}{\mega\cubic\meter}, all aspen; net conifer volume is flat; it costs
+\SI{1.4}{\mega\CAD} at \SI{4}{\percent}. D55 and D84 cost \SI{42.6}{\mega\CAD} and
+\SI{60.7}{\mega\CAD}, about \SI{0.7}{\percent} and \SI{1.0}{\percent} of CC net present value. The
+fixed-plan direct effect understates these costs by \SI{1.9}{\mega\CAD}, \SI{7.7}{\mega\CAD}, and
+\SI{10.3}{\mega\CAD}.
 
-The risk result is a priced hedge, not a free improvement. The 84 percent standard cuts CVaR20 by
-\SI{8.1}{\mega\CAD} at a production cost of \SI{153.8}{\mega\CAD}, an exchange rate of about
-\SI{19}{\mega\CAD} per \SI{1}{\mega\CAD} of tail reduction. The stand-level severity multiplier
-is 0.267, but the estate CVaR20 falls only \SI{2.7}{\percent}, because the unmanaged half of the
-estate keeps its fuel, conversion is gradual, and the NPV loss is dominated by early, discounted
-fires. A risk-neutral planner chooses the 26 percent standard; a planner whose marginal value of
-tail risk exceeds about 19 to 1 chooses the 84 percent standard.
+D84 is not a tail hedge. It reduces the conditional fire loss by \pending{X} at a cost of
+\SI{60.7}{\mega\CAD}, and the CVaR of net present value is \pending{Y} lower. The break-even price of
+conditional-loss reduction is about \pending{Z} at \SI{4}{\percent} and \SI{19}{\mega\CAD} at
+\SI{3}{\percent}. A planner who evaluates net present value, including the tail, does not choose D84
+on timber value alone. D55 is an intermediate cost-effectiveness point, not a dominated option. D26
+is a value-neutral aspen shift at the midpoint price, not free conifer volume.
 
-The open question is spatial: where to place broadleaf stands as fire breaks, and how far that can
-go before production suffers. Answering it requires a placement rule and a spread model; this paper
+The open question is spatial: where to place broadleaf stands as fire breaks, and how far that can go
+before production suffers. Answering it requires a placement rule and a spread model; this paper
 provides the production and severity surface that such an analysis would build on.

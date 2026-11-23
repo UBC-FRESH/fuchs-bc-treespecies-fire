@@ -2,36 +2,41 @@
 
 Forest policy in British Columbia sets an allowable annual cut and constrains harvesting, while
 the species composition that determines resilience to fire emerges from thousands of regeneration
-decisions. We study that two-layer problem on the Prince George Timber Supply Area. A policy layer
-sets a harvest level and a post-clearcut stocking standard; an estate model responds with a harvest
-schedule, and the standard sets the regenerated species. The compiled estate matches the published
-timber harvesting land base to \SI{0.32}{\percent}. Under a flat even flow it sustains
-\SI{5.19}{\mega\cubic\meter\per\year}, about \SI{25}{\percent} below the official cut; the gap is
-consistent with the flat flow rule rather than with the land base or the growth potential of the
-curves.
+decisions. We evaluate three deciduous-forward post-clearcut stocking standards on the Prince George
+Timber Supply Area with an estate model that re-optimises the even-flow schedule under each standard.
+The compiled estate matches the published timber harvesting land base to \SI{0.32}{\percent}, but
+its growth curves realise \SI{5.19}{\mega\cubic\meter\per\year}, about \SI{25}{\percent} below the
+official cut. A search at the official 2017 transition profile, which starts at \SI{8.35} and then
+\SI{7.35}{\mega\cubic\meter\per\year}, also realises about \SI{5.2}{\mega\cubic\meter\per\year}, so
+the shortfall is not a flat-flow artifact: the compiled land base and yield curves cannot reproduce
+the official transition.
 
-We implement three deciduous-forward standards that regenerate 26, 55, or 84 percent deciduous
-stock. A composition-aware fuel projection keeps the 2025 VRI fuel type for unharvested stands,
-follows the BC post-harvest fuel chronology, and is consistent with the operational layer on real
-stands. The severity gradient is non-linear: under the calibrated 30 percent mixedwood threshold
-the 26 percent standard remains a conifer type, the 55 percent standard is a mixedwood with a
-severity multiplier of 1.01, and the 84 percent standard becomes the deciduous type with a
-multiplier of 0.27 against a landscape mean of 1.0.
+The standards regenerate 26, 55, or 84 percent deciduous stock. A composition-aware fuel projection
+keeps the 2025 VRI fuel type for unharvested stands and follows the BC post-harvest chronology. At
+$t=0$ it reproduces \SI{63.1}{\percent} of the operational fuel-type grid; the disagreement is
+concentrated in the mixedwood and deciduous classes, and the post-harvest types have no observational
+counterpart. The D1 multiplier is 0.267 because D1 has near-zero crown fraction burned, so it is the
+model's 0.2 surface-mortality floor, not an estimate of D1 severity.
 
-The 26 percent standard is free volume: it adds \SIrange{32}{53}{\mega\cubic\meter} with no loss
-in net present value and no detectable change in conditional value at risk (CVaR20). The 84
-percent standard cuts CVaR20 by \SI{8.1}{\mega\CAD} at the 100 percent level but costs
-\SI{153.8}{\mega\CAD} in net present value, an exchange rate of about \SI{19}{\mega\CAD} of
-production cost per \SI{1}{\mega\CAD} of tail reduction; the 55 percent standard lies on the same
-frontier. The stand-level severity cut is large, but the estate CVaR20 falls only
-\SI{2.7}{\percent}, because the unmanaged half of the estate keeps its fuel and conversion is
-gradual. A risk-neutral planner chooses the 26 percent standard; the 84 percent standard is a
-priced tail hedge. The ranking reflects the recorded 1950--2024 fire regime (\num{1073} fires,
-\num{14.31} per year), which supplies the event set for ten paired 200-year draws.
+At a \SI{4}{\percent} real discount rate, the BC Ministry of Forests rate for public-sector forestry
+investment, the 26 percent standard adds \SI{52.9}{\mega\cubic\meter}, all aspen, at a net present
+value cost of \SI{1.4}{\mega\CAD}; conifer volume is flat. The 55 and 84 percent standards cost
+\SI{42.6}{\mega\CAD} and \SI{60.7}{\mega\CAD}. In 100 paired 200-year draws, the 84 percent standard
+reduces the conditional fire loss by \pending{X} at 4 percent, but the CVaR of net present value is
+\pending{Y} lower, because it lowers certain value by more than it lowers the loss. It is not a tail
+hedge. The cost per \SI{1}{\mega\CAD} of CVaR loss reduction is about \pending{Z} at 4 percent and
+\SI{19}{\mega\CAD} at 3 percent. A planner would need a separate loss-reduction objective, or
+non-timber benefits, worth more than that to choose the 84 percent standard; the recorded fire regime
+alone does not justify it on timber value.
+
+The 26 percent standard is a value-neutral shift to aspen at the midpoint 2018 aspen price, not free
+conifer volume. The ranking is conditional on the discount rate, the aspen price, and the severity
+floor. The fire regime is a scenario, not a forecast; composition changes the severity of a fire that
+reaches a stand, not the number or size of fires.
 
 \vspace{1cm}
 
-\paragraph{Keywords} forest policy, species diversification, harvest scheduling,
+\paragraph{Keywords} forest policy, deciduous-forward silviculture, harvest scheduling,
 fire risk, British Columbia
 
 \newpage
