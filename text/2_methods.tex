@@ -112,10 +112,11 @@ of its blocks; the realized level is reported for each policy.
 
 \subsection{Growth and yield}
 
-Growth is represented by yield curves compiled per block from the TSA~24 inventory bundle. A
-switch to individual-tree growth through the BC variant of the Forest Vegetation Simulator is
-planned but not part of the results reported here; the curve representation is therefore a stated
-limitation of the growth side, in the same way that the fire representation is a stated scenario.
+Growth is represented by species-resolved yield curves compiled per block from the TSA~24
+inventory bundle. The curves are the model's growth engine: they carry the site-specific volume,
+height, and species trajectories on which the harvest and regeneration decisions act. They are
+fixed trajectories, so they do not respond to climate, changing site productivity, or within-stand
+species interactions. That is the substantive limitation of the growth representation.
 
 \subsection{Fire regime and composition-dependent severity}
 
