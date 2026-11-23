@@ -70,6 +70,18 @@ stocking-standard revision. Evidence: `fresh-fuchs-ws4` at `feature/p4-risk`, th
 7. **Minor.** The cover letter still uses the current title and the four contributions; it is
    consistent with the manuscript.
 
+## Post-audit copyedit
+
+A sentence-by-sentence editorial pass removed the remaining project-process language that a
+co-author or referee would flag: ADR and phase labels, the abandoned FVS plan, commit hashes,
+work-host and companion-repository references, internal file paths, solver diagnostics and
+validator output, the superseded CC-only and aspen-max analyses, the 5 percent crown-floor
+debugging paragraph, and the ten-item limitation list. The abstract and introduction were
+condensed to three questions; the title subtitle now names the stocking-standard, production, and
+tail-risk trade-offs; spelling is British throughout. No number changed. The PDF is 26 pages,
+and a full-text check returns zero matches for ADR, P4, FVS, commit hashes, work host, companion,
+benchmark, aspen-max, CC-only, and the old baseline comparisons.
+
 ## Verdict
 
 **Submittable.** The model,

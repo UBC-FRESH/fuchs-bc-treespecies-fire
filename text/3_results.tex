@@ -3,38 +3,25 @@
 
 \subsection{The compiled estate}
 
-The TSA~24 dataset compiles to \num{458708} blocks, 48 treatments, \num{10326} growth curves, and
-99 accounts. The compiled dataset passes the WS4 validator (\texttt{ws4 validate} reports
-\texttt{Dataset is valid}). The validator checks the manifest and schema invariants; it does not
-audit the inventory against its source, so we describe the estate as internally consistent rather
-than field-verified. The species composition reported in \autoref{tab:meth_studyregion_spec} is
-that of the same compilation, so the landscape described in the methods and the landscape solved
-in the model are the same object.
+The TSA~24 dataset compiles to \num{458708} blocks and 48 treatments; the policy dataset adds the
+three prescriptions. The compiled managed area matches the published timber harvesting land base to
+\SI{0.32}{\percent} (\autoref{tab:meth_studyregion_spec}).
 
 \subsection{The sustained harvest level}
 
-Six independent searches, all starting from a \SI{70}{\mega\cubic\meter} per-period aspiration,
-converged to realized levels of \SIrange{51.89}{52.06}{\mega\cubic\meter} per period, a mean of
-\SI{5.19}{\mega\cubic\meter\per\year}. The even-flow penalty is 1.3 to 2.7 against a level
-penalty of about 515, so the profiles are flat and the shortfall from the aspiration is uniform.
-We interpret the plateau as the estate's sustained even-flow level; it is not a proven maximum.
-The replayed schedule ranges from \SI{51.2}{\mega\cubic\meter} to
-\SI{52.3}{\mega\cubic\meter} across periods.
+The even-flow search converges to realised levels of \SIrange{51.89}{52.06}{\mega\cubic\meter}
+per period, a mean of \SI{5.19}{\mega\cubic\meter\per\year}; the replayed schedule ranges from
+\SI{51.2}{\mega\cubic\meter} to \SI{52.3}{\mega\cubic\meter} across periods. We treat this as
+the estate's sustained even-flow level, not a proven maximum.
 
-That level is about \SI{25}{\percent} below the official allowable annual cut of
-\SI{6917231}{\cubic\meter\per\year}. The gap is not the land base: the managed area matches the
-published timber harvesting land base to within \SI{0.32}{\percent}
-(\SI{3060473}{\hectare} against \SI{3070301}{\hectare}). Nor is it a lack of growth potential in
-the curves. The area-weighted maximum mean annual increment of the model's own curves is
-\SI{2.31}{\cubic\meter\per\hectare\per\year}; multiplied by the managed area, that is
-\SI{7.07}{\mega\cubic\meter\per\year}, \SI{2.5}{\percent} above the cut per hectare. This is
-an upper-bound consistency check, not a validation of the curves: it shows that their potential is
-not below the cut, not that they reproduce the timber supply analysis. We interpret the difference
-between that bound and the realized level as the cost of holding a constant profile from the first
-period on a non-regulated age structure, where the official determination is a declining transition
-profile.
-
-We do not claim that the model reproduces the official cut. No result below depends on that claim.
+The level is about \SI{25}{\percent} below the official allowable annual cut of
+\SI{6917231}{\cubic\meter\per\year}. The managed area matches the published land base to within
+\SI{0.32}{\percent} (\SI{3060473}{\hectare} against \SI{3070301}{\hectare}), and the model's
+own curves imply \SI{7.07}{\mega\cubic\meter\per\year} at their area-weighted maximum mean
+annual increment, \SI{2.5}{\percent} above the cut per hectare. The shortfall is therefore
+consistent with the flat-flow rule on a non-regulated age structure, not with the land base or the
+growth potential of the curves. The official determination is a declining transition profile; a
+constant profile cannot take the transition harvest that a declining profile allows.
 
 \subsection{Economic value of the model-produced schedule}
 
@@ -76,15 +63,11 @@ Three economic constants are ranges rather than points: the discount rate, the d
 price, and the haul distance. Their effect on the model-produced schedule is shown in
 \autoref{tab:res_sensitivity}.
 
-Among the economic constants, the discount rate dominates every other lever. Moving from \SI{3}{\percent} to \SI{5}{\percent}
-reduces net present value by \SI{4010}{million\CAD}, close to half the base value, and moving to
-zero would raise it to the undiscounted total of \SI{62270}{million\CAD}. No other constant moves
-the result by more than about three percent.
-
-The deciduous price is immaterial to mean value across its documented range: between
-\num{35} and \num{40} CAD per cubic metre the net present value moves by
-\SI{26}{million\CAD} in either direction. Haul distance from
-\SI{90}{\kilo\meter} to \SI{117}{\kilo\meter} costs \SI{184}{million\CAD}.
+The discount rate dominates: moving from \SI{3}{\percent} to \SI{5}{\percent} reduces net
+present value by \SI{4010}{million\CAD}, close to half the base value. No other constant moves the
+result by more than about three percent. The deciduous price moves net present value by
+\SI{26}{million\CAD} in either direction; the haul distance from \SI{90}{\kilo\meter} to
+\SI{117}{\kilo\meter} costs \SI{184}{million\CAD}.
 
 \begin{table}[h]
     \centering
@@ -96,7 +79,6 @@ The deciduous price is immaterial to mean value across its documented range: bet
         \toprule
         Lever & Setting & NPV & Change \\
         \midrule
-        Discount rate & \SI{0}{\percent} & \SI{62270}{million\CAD} & \SI{+53491}{million\CAD} \\
         Discount rate & \SI{5}{\percent} & \SI{4769}{million\CAD} & \SI{-4010}{million\CAD} \\
         Deciduous price & \SI{35}{CAD\per\cubic\meter} & \SI{8752}{million\CAD} & \SI{-26}{million\CAD} \\
         Deciduous price & \SI{40}{CAD\per\cubic\meter} & \SI{8805}{million\CAD} & \SI{+26}{million\CAD} \\
@@ -120,9 +102,8 @@ the land base. The three prescriptions regenerate a target analysis unit with 26
 limited to the existing aspen supply.
 
 We evaluate the three harvest levels against the four standards with the no-fire process model
-(\autoref{tab:res_standards}). The 100 percent CC row reproduces the baseline no-fire run exactly
-(\SI{8778.8}{\mega\CAD}, \SI{1037.9}{\mega\cubic\meter}), which validates the species-reset
-branch and the no-fire bridge.
+(\autoref{tab:res_standards}). The CC row is the no-fire baseline (\SI{8778.8}{\mega\CAD},
+\SI{1037.9}{\mega\cubic\meter}); the other rows are compared with it.
 
 \begin{table}[h]
     \centering
@@ -153,8 +134,7 @@ branch and the no-fire bridge.
     \end{tabular}
 \end{table}
 
-The production side is more favourable than the old CC-only composition analysis implied. The
-D26 standard is \emph{free volume}: it adds \SIrange{32}{53}{\mega\cubic\meter} and does not
+The D26 standard is \emph{free volume}: it adds \SIrange{32}{53}{\mega\cubic\meter} and does not
 reduce NPV. The aspen yield curves add volume, and the low aspen price offsets the value. Under
 the calibrated 30 percent mixedwood threshold the D26 stand stays on the conifer side (C2/C1), so
 it buys no fire benefit. It is a production option, not a risk option.
@@ -167,16 +147,13 @@ only standard with a material fire benefit.
 
 \subsection{Fire regime}
 
-The estate regime is the full recorded record: \num{1073} fires from 1950 to 2024,
-\num{14.31} fires per year, and \SI{10079}{\hectare\per\year}. The calibrated growth model is
-compared with the 432-perimeter fitting sample through the historical bootstrap interval
-(\autoref{tab:res_fire}); that table is the calibration validation, not the estate regime. The median and the share above \SI{500}{\hectare} sit inside the historical interval; the 90th
-percentile sits at its lower edge. The 95th percentile is below it, and the shares above
-\SI{1000}{\hectare} and \SI{5000}{\hectare} sit at or just below its lower edge. The
-central distribution is therefore reproduced, and the upper tail is thin by more than sampling
-noise explains. No parameter was adjusted to lift it. The maximum is reported for completeness but
-not used as a target: its bootstrap interval is one-sided by construction and cannot be interpreted
-as an upper bound.
+The policy surface uses the full recorded regime: \num{1073} fires from 1950 to 2024,
+\num{14.31} fires per year, and \SI{10079}{\hectare\per\year}. The calibrated spread model is
+compared with the 432-perimeter fitting sample in \autoref{tab:res_fire}; the median and the share
+above \SI{500}{\hectare} sit inside the historical interval, the 90th percentile at its lower
+edge, and the 95th percentile and the extreme-tail shares below it. The central distribution is
+reproduced, and the upper tail is thin relative to the historical record. The maximum is reported
+for completeness but not used as a target: its bootstrap interval is one-sided.
 
 \begin{table}[h]
     \centering
@@ -202,23 +179,15 @@ as an upper bound.
     \end{tabular}
 \end{table}
 
-The calibrated regime was then run on the full estate through the public estate-fire API, with the
-fitted parameters unchanged, the full 250 m layer stack, and the regional suppression map. Twenty-four
-ignitions, one per calibration tile and spread across the periods, reached \num{1331} fragments and
-grew \SI{16331}{\hectare} of potential fire; \SI{10444}{\hectare} were applied to the compiled
-dataset, and the ending volume was \SI{1015.9}{\mega\cubic\meter}. That is about
-\SI{680}{\hectare} grown and \SI{435}{\hectare} applied per ignition, against a historical mean
-of \SI{512.9}{\hectare}; the scenario sits inside the historical spread. It is a scenario for
-coupling fire to harvest decisions, not a distribution sample, and it is not used for the
-comparison above.
+The calibrated model is also run on the full estate with 24 ignitions to confirm that it couples to
+the harvest model: it grows \SI{16331}{\hectare} and applies \SI{10444}{\hectare}, with an ending
+volume of \SI{1015.9}{\mega\cubic\meter}. The run is a coupling check, not a distribution
+sample.
 
 \subsection{The fire-risk surface}
 
 The paired ensemble gives the risk side (\autoref{tab:res_fire_surface}). The CC row is the
-severity-model baseline: \SI{243.8}{\mega\CAD} mean loss and \SI{304.3}{\mega\CAD} CVaR20. It is
-not the earlier uniform-mortality baseline (\SI{260.9}{\mega\CAD} and \SI{323.3}{\mega\CAD}); the
-new model applies the VRI fuel-type multipliers, so the two are different models, not a policy
-effect.
+baseline: \SI{243.8}{\mega\CAD} mean loss and \SI{304.3}{\mega\CAD} CVaR20.
 
 \begin{table}[h]
     \centering
@@ -251,7 +220,7 @@ effect.
 
 The D26 standard is not a risk instrument. Its stand composition stays on the conifer side of
 the calibrated 30 percent mixedwood threshold, and its CVaR20 is indistinguishable from CC
-(+0.01 M at the 100 percent level). It is a free-volume option with a real composition change:
+(+0.01 M at the 100 percent level). It is a free-volume option with a substantial composition change:
 the landscape deciduous share rises from 7.5 to 16.7 percent without changing fire severity.
 
 The D55 and D84 standards are a priced tail hedge. D55 cuts CVaR20 by \SI{5.7}{\mega\CAD} at a
@@ -260,7 +229,7 @@ production cost of \SI{107.6}{\mega\CAD}; D84 cuts it by \SI{8.1}{\mega\CAD} at
 for D55 and \SIrange{-8.8}{-5.9}{\mega\CAD} for D84 at the 100 percent level; both exclude zero.
 The exchange rate is about \textbf{19 M CAD of production cost per 1 M CAD of CVaR20 reduction}, and it is stable across levels (18.9 to 19.2) and standards. The
 D84 stand-level severity multiplier is 0.267, but the estate mean loss falls only from 243.8 to
-236.3 M (3.1 percent) and CVaR20 from 304.3 to 296.2 M (2.7 percent). The reasons are
+236.3 M CAD (3.1 percent) and CVaR20 from 304.3 to 296.2 M CAD (2.7 percent). The reasons are
 structural: the unmanaged half of the estate keeps its VRI fuel, the standard converts stands
 gradually over the horizon, the conversion begins with a 25-year slash/open phase, and the NPV
 loss is dominated by early, discounted fires.
@@ -268,29 +237,21 @@ loss is dominated by early, discounted fires.
 A risk-neutral planner therefore chooses D26: more volume, the same NPV, and the same fire
 risk. A planner who values a \SI{1}{\mega\CAD} reduction in CVaR20 at more than about
 \SI{19}{\mega\CAD} chooses D84. D55 lies on the same frontier as D84 and is an intermediate
-point, not a distinct strategy. The ranking is conditional on the recorded regime and the
-severity mapping; a more severe future regime, a larger managed fraction, a higher deciduous
-price, or a carbon value would move the exchange rate.
+point, not a distinct strategy. A more severe future regime, a larger managed fraction, a higher
+deciduous price, or a carbon value would move the exchange rate.
 
 \subsection{Rotation length and diversification}
 
-We estimate the rotation from the schedule itself. For every block harvested more than once, the
-interval between successive harvests is the realized rotation on that block; the baseline summary is written to \texttt{rotation.json} in the even-flow experiment directory,
-and the aspen-maximisation summary to \texttt{rotation-aspen-max.json} in the composition
-directory. In the baseline, \SI{44}{\percent} of the managed area is older than 100 years. Across the baseline schedule, \num{53071}
-such intervals give an area-weighted mean rotation of \SI{102.2}{\year}, with a median of
-\SI{100}{\year} and a tenth-to-ninetieth percentile range of \SIrange{60}{160}{\year}. These are blocks harvested twice within the horizon, so the estimate is
-conditional on being re-entered within 200 years and is biased toward the more productive and
-accessible stands. Under the aspen-maximisation schedule the mean is \SI{101.7}{\year}.
+We estimate the rotation from the schedule: for every block harvested more than once, the interval
+between successive harvests. The baseline yields \num{53071} intervals, an area-weighted mean
+rotation of \SI{102.2}{\year}, with a median of \SI{100}{\year} and a tenth-to-ninetieth
+percentile range of \SIrange{60}{160}{\year}; \SI{44}{\percent} of the managed area is older
+than 100 years. The estimate is conditional on re-entry within 200 years and is biased toward
+productive and accessible stands. The new standards are evaluated on a fixed schedule, so their
+rotation is an outcome, not a re-optimised choice.
 
-The invariance is a property of the historical instrument. The aspen-maximisation schedule still
-regenerates the same analysis unit; it changes which stands are cut, not what is planted. The new
-standards change the yield curves, so their rotation is an outcome rather than a re-optimised
-choice. The fixed-plan design does not recompute it; that is a limitation of the fixed-plan design, not a finding that rotation is invariant under the
-new standards.
-
-The rotation also reconciles the level with the land base. At a 102-year rotation over
-\SI{3.06}{\mega\hectare}, about \SI{30000}{\hectare} are harvested each year; at
-\SI{5.19}{\mega\cubic\meter\per\year} that is \SI{173}{\cubic\meter\per\hectare}, a
-merchantable volume that is about \SI{73}{\percent} of the \SI{236}{\cubic\meter\per\hectare}
-that the area-weighted maximum mean annual increment accumulates over a 102-year rotation.
+The rotation is consistent with the level: at 102 years over \SI{3.06}{\mega\hectare}, about
+\SI{30000}{\hectare} are harvested each year; at \SI{5.19}{\mega\cubic\meter\per\year} that
+is \SI{173}{\cubic\meter\per\hectare}, about \SI{73}{\percent} of the
+\SI{236}{\cubic\meter\per\hectare} that the area-weighted maximum mean annual increment
+accumulates over the rotation.

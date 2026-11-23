@@ -12,14 +12,14 @@ Status: draft, 2026-11-22. Before submission:
 Dear Editor,
 
 We submit for consideration in *[Journal]* the manuscript **"Tree-species diversification under
-forest fire risks: composition--production trade-offs and a calibrated fire scenario for the Prince
-George Timber Supply Area"**.
+forest fire risks: stocking-standard, production, and tail-risk trade-offs in the Prince George
+Timber Supply Area"**.
 
 The paper asks what deciduous-forward post-clearcut stocking standards cost in wood supply and
 value, and whether the resulting composition changes fire severity and tail risk on a real
 management unit. It makes four contributions.
 
-First, it validates the estate and reconciles the harvest level. The compiled TSA~24 managed area
+First, it reconciles the estate and the harvest level. The compiled TSA~24 managed area
 matches the published timber harvesting land base to within 0.32 percent, and the model sustains
 5.19 million m3/yr under a flat even flow, about 25 percent below the official cut. We attribute the
 gap to the flow rule rather than to the land base, and we say that the attribution is an

@@ -150,6 +150,7 @@ conifer sites to aspen; see the next section.
 | Burned area per ignition | 680 ha grown, 435 ha applied | same, divided by 24 | verified |
 | Policy risk ranking, uniform-severity baseline | superseded; the P4 exposure result was 260.9 M mean / 323.3 M CVaR20 under uniform mortality | `fresh-fuchs-ws4` `experiments/p4-risk/npv-ensemble.json` | superseded by the severity-model surface |
 | Historical mean fire size | 512.9 ha | calibration `tsa24-regime24/summary.json` | verified |
+| Burned area per 200-year draw | 1.61 to 2.41 M ha, 53 to 79 percent of the managed estate | `fresh-fuchs-ws4` `experiments/plantation/surface-ensemble.json` | verified |
 
 ## Notes
 
