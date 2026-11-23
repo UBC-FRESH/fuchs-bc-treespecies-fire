@@ -26,7 +26,7 @@ type uses the calibrated VRI-to-FBP mapping, with the 30 percent mixedwood thres
 fire calibration used. The BC 2017 algorithm's 20 percent threshold is a sensitivity.
 
 We do not re-type the whole estate. Re-typing every stand from the compiled analysis-unit
-composition reproduces only 67.7 percent of the operational grid, because the compiled dataset
+composition reproduces only 63.1 percent of the operational grid, because the compiled dataset
 carries one species mix per analysis unit while the VRI grid carries one per polygon. The
 baseline grid therefore stays operational; only the states the policy creates are projected.
 

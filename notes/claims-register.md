@@ -94,8 +94,8 @@ conifer sites to aspen; see the next section.
 | Fuel mapping, mixedwood VRI stands | 171 polygons 40-60 percent deciduous: M1 54 percent, M2 46 percent | same | verified |
 | Fuel mapping, 20-30 percent deciduous | 357 polygons: C1 49, C2 28, C3 11, C4 10 percent; no M type | same | verified |
 | Calibrated mixedwood threshold | 30 percent on both sides; BC 2017 uses 20 percent (sensitivity) | `scripts/fuel_projection.py` | verified |
-| t=0 reproduction from AU composition | 67.7 percent agreement with the operational grid (VRI conifer: 67.3) | `notes/reports/p4-dynamic-fuel.md` | verified |
-| TIPSY vs VRI crown closure | mean difference +18.3 percentage points, MAE 22.2, correlation 0.21, n=285,415 | same | verified |
+| t=0 reproduction from AU composition | 63.1 percent agreement with the operational grid (VRI conifer: 66.7) | `fresh-fuchs-ws4` `experiments/plantation/t0-fuel-validation.json` | verified |
+| TIPSY vs VRI crown closure | mean difference +17.3 percentage points, MAE 23.0, correlation 0.004, n=272,840 | same | verified |
 | Severity normalizer, initial landscape | 0.7496 | same | verified |
 | Severity multiplier, D84 (D1, 16 percent conifer) | 0.267 at the calibration weather | same; `experiments/plantation/severity-sensitivity.csv` | verified |
 | Severity multiplier, D55 (M1, 45 percent conifer) | 1.011 | same | verified |
