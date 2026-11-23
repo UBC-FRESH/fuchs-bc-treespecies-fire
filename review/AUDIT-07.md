@@ -80,7 +80,10 @@ debugging paragraph, and the ten-item limitation list. The abstract and introduc
 condensed to three questions; the title subtitle now names the stocking-standard, production, and
 tail-risk trade-offs; spelling is British throughout. No number changed. The PDF is 26 pages,
 and a full-text check returns zero matches for ADR, P4, FVS, commit hashes, work host, companion,
-benchmark, aspen-max, CC-only, and the old baseline comparisons.
+benchmark, aspen-max, CC-only, and the old baseline comparisons. A final numerical check corrected
+two denominators: the burned-area share is 27 to 41 percent of the compiled forest, not of the
+managed estate, and the D55 volume loss is about 2.1 percent at every harvest level, not a
+1.3-to-2.1 range.
 
 ## Verdict
 
