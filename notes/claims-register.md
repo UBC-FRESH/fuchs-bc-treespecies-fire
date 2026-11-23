@@ -106,10 +106,10 @@ conifer sites to aspen; see the next section.
 | Fire loss, D26 100 percent | mean 243.8 M CAD, CVaR20 304.3 M CAD; no risk change | same | verified |
 | Fire loss, D55 100 percent | mean 238.5 M CAD, CVaR20 298.6 M CAD | same | verified |
 | Fire loss, D84 100 percent | mean 236.3 M CAD, CVaR20 296.2 M CAD | same | verified |
-| D84 CVaR20 reduction, 100 percent level | -8.1 M CAD at a production cost of -153.8 M CAD; exchange rate 19.0 | same | verified |
+| D84 CVaR20 reduction, 100 percent level | -8.1 M CAD (95 percent bootstrap interval -8.8 to -5.9) at a production cost of -153.8 M CAD; exchange rate 19.0 | same | verified |
 | D84 CVaR20 reduction, 80 percent level | -6.4 M CAD at -123.0 M CAD; exchange rate 19.2 | same | verified |
 | D84 CVaR20 reduction, 60 percent level | -4.9 M CAD at -93.4 M CAD; exchange rate 18.9 | same | verified |
-| D55 CVaR20 reduction, 100 percent level | -5.7 M CAD at -107.6 M CAD; exchange rate 19.0 | same | verified |
+| D55 CVaR20 reduction, 100 percent level | -5.7 M CAD (95 percent bootstrap interval -6.2 to -4.1) at -107.6 M CAD; exchange rate 19.0 | same | verified |
 | Landscape deciduous share, 100 percent | CC 7.5, D26 16.7, D55 28.8, D84 39.7 percent | same | verified |
 | Stand-level severity multiplier | D1 0.267, M1 1.011, C2 1.299, C1 0.749 | same | verified |
 | No-fire baseline, CC 100 percent | 8,778.8 M CAD, 1,037.9 M m3; reproduces the P4 baseline exactly | `experiments/plantation/no-fire/no-fire.json` | verified |

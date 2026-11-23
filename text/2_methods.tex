@@ -144,7 +144,10 @@ analysis-unit composition reproduces 63.1 percent of the operational grid, becau
 dataset carries one species mix per analysis unit while the VRI grid carries one per polygon.
 The mapping is consistent with the operational layer on real stands: 529 aspen-dominated
 polygons aged 25 or more are D1, 171 polygons at 40--60 percent deciduous are M1 or M2, and 357
-polygons at 20--30 percent deciduous are conifer types.
+polygons at 20--30 percent deciduous are conifer types. A planted stand on a fragment whose
+pre-harvest VRI crown closure is below 5 percent uses a 5 percent floor: the VRI value is a
+sparse or non-forest artifact, and the floor avoids treating a plantation as non-fuel. The first
+pass applied a uniform fallback on 2,590 projection calls; the corrected surface has none.
 
 \paragraph{Severity} A fire that reaches a stand kills a fraction of its biomass. We compute the
 FBP crown fraction burned (CFB) for the stand's fuel type under the calibration weather

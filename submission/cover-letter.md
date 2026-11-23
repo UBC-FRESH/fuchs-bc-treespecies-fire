@@ -30,7 +30,7 @@ composition-aware fuel projection that keeps the operational VRI fuel type for u
 and re-types harvested stands from their new cohorts. The projection is consistent with the
 operational layer on 529 aspen-dominated stands, 171 mixedwoods, and 357 stands at 20–30 percent
 deciduous. The 26 percent standard is free volume: 32–53 million m3 more harvest with no loss in net
-present value and no change in CVaR20. The 55 and 84 percent standards cost about 1.2 and 1.8
+present value and no detectable change in CVaR20. The 55 and 84 percent standards cost about 1.2 and 1.8
 percent of net present value.
 
 Third, it reports the production and tail-risk surface. The 84 percent standard cuts the stand-level
