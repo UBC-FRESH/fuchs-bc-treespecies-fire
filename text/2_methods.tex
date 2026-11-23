@@ -89,7 +89,7 @@ prediction. The fire regime is the recorded 1950--2024 distribution; the standar
 severity of a fire that reaches a stand, not the number or size of fires. Each draw uses one event
 set for every policy, so the comparison is paired. The no-fire net present value is the
 counterfactual; the fire loss is the difference. CVaR is the mean of the worst draws. Tail
-statements are comparative and carry sampling uncertainty (ADR~0002).
+statements are comparative and carry sampling uncertainty from the ten paired draws.
 
 \subsection{Forest estate model and estate data}
 
@@ -125,7 +125,7 @@ and a maximum of \SI{72317}{\hectare}. The record is a mapped-fire history, not 
 small fires are under-recorded, the record spans changing suppression and climate, and the tail
 rests on a small number of events.
 
-The laboratory's calibrated surface-fire model is used for the process validation and the
+The calibrated surface-fire model \citep{ubc_fresh_fire_calibration_2026} is used for the process validation and the
 disturbance coupling, not as the policy engine. Its per-tile suppression parameters were fitted
 on 24 tiles against 432 historical perimeters; the fit places the median and the share above
 \SI{500}{\hectare} inside the historical sampling interval and the 95th percentile below it
@@ -166,7 +166,7 @@ threshold, the 26 percent standard becomes M2 (1.203), still only 7 percent belo
 \paragraph{Design} Ten draws of the full record over 200 years. Each draw generates one event set
 and applies it to every policy, so the comparison is paired. The no-fire net present value is the
 counterfactual; the fire loss is the difference. CVaR is the mean of the worst draws, and the
-tail statements are comparative with sampling uncertainty (ADR~0002).
+tail statements are comparative and reported with bootstrap intervals.
 
 \subsection{Economic valuation}
 
@@ -188,4 +188,4 @@ construction, administration, taxes, and risk premia.
 Three economic constants are ranges rather than points: the deciduous price, the haul distance,
 and the discount rate. Every economic result is reported with a sensitivity across those ranges.
 The fire scenario uses one weather season and is not treated as a sensitivity axis. All constants,
-their sources, and the code that applies them are recorded in the companion repository.
+their sources, and the code that applies them are documented in the archived analysis repository.
