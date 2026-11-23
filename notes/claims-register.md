@@ -110,7 +110,7 @@ conifer sites to aspen; see the next section.
 | D84 CVaR20 reduction, 80 percent level | -6.4 M CAD at -123.0 M CAD; exchange rate 19.2 | same | verified |
 | D84 CVaR20 reduction, 60 percent level | -4.9 M CAD at -93.4 M CAD; exchange rate 18.9 | same | verified |
 | D55 CVaR20 reduction, 100 percent level | -5.7 M CAD (95 percent bootstrap interval -6.2 to -4.1) at -107.6 M CAD; exchange rate 19.0 | same | verified |
-| Landscape deciduous share, 100 percent | CC 7.5, D26 16.7, D55 28.8, D84 39.7 percent | same | verified |
+| Landscape deciduous share, 100 percent | CC 7.5, D26 16.7, D55 28.8, D84 39.7 percent | `fresh-fuchs-ws4` `experiments/plantation/no-fire/no-fire.json` | verified |
 | Stand-level severity multiplier | D1 0.267, M1 1.011, C2 1.299, C1 0.749 | same | verified |
 | No-fire baseline, CC 100 percent | 8,778.8 M CAD, 1,037.9 M m3; reproduces the P4 baseline exactly | `experiments/plantation/no-fire/no-fire.json` | verified |
 | D26 minus CC, 100 percent level | +1.0 M CAD, +53.3 M m3; the standard is free volume under the calibrated mapping | same | verified |

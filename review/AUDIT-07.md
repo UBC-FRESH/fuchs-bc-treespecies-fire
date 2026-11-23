@@ -50,10 +50,10 @@ stocking-standard revision. Evidence: `fresh-fuchs-ws4` at `feature/p4-risk`, th
 
 1. **No blocking error.** The central exchange rate is robust to the low-crown correction: the
    corrected four-draw values are unchanged at the reported precision.
-2. **Major, pending provenance.** The landscape composition values (7.5, 16.7, 28.8, 39.7
-   percent) in the draft were averaged over the four resumed draws, not the deterministic no-fire
-   state. A no-fire rerun with the composition record is in progress; the final table must use
-   that record. If the values differ, update the D26 landscape sentence and the claims register.
+2. **Resolved provenance.** The landscape composition values (7.5, 16.7, 28.8, 39.7 percent)
+   were checked against a deterministic no-fire rerun with the composition record. The values
+   match at the reported precision, and the no-fire net present value and volume reproduce
+   exactly. The claims register now cites `no-fire.json`.
 3. **Major, correctly scoped.** The fixed-plan design does not re-optimise the enterprise
    schedule. The D84 production cost may change under a full response; the paper states this as
    the main production-side limitation. Do not describe the surface as a partial-equilibrium
@@ -72,7 +72,7 @@ stocking-standard revision. Evidence: `fresh-fuchs-ws4` at `feature/p4-risk`, th
 
 ## Verdict
 
-**Submittable after the no-fire composition provenance check and a final read.** The model,
+**Submittable.** The model,
 the numbers, the tail interval, and the limitations are in place. The paper's claim is narrow and
 supported: the composition-aware severity mechanism works, D26 is free volume, D84 is a priced
 tail hedge at about 19 to 1, and the fire-break placement question remains open.
