@@ -101,7 +101,13 @@ conifer sites to aspen; see the next section.
 | Severity multiplier, D55 (M1, 45 percent conifer) | 1.011 | same | verified |
 | Severity multiplier, D26 (C2/C1 under the calibrated rule) | 1.299 / 0.749 | same | verified |
 | BC 20 percent threshold, D26 | M2, 1.203 | same | verified (sensitivity) |
-| Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `experiments/plantation/run_surface_ensemble.sh` | to compute |
+| Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `fresh-fuchs-ws4` `experiments/plantation/run_surface.py` | running |
+| No-fire baseline, CC 100 percent | 8,778.8 M CAD, 1,037.9 M m3; reproduces the P4 baseline exactly | `experiments/plantation/no-fire/no-fire.json` | verified |
+| D26 minus CC, 100 percent level | +1.0 M CAD, +53.3 M m3; the standard is free volume under the calibrated mapping | same | verified |
+| D55 minus CC, 100 percent level | -107.6 M CAD, -21.9 M m3 | same | verified |
+| D84 minus CC, 100 percent level | -153.8 M CAD, -23.8 M m3 | same | verified |
+| D84 minus CC, 80 percent level | -123.0 M CAD, -19.0 M m3 | same | verified |
+| D84 minus CC, 60 percent level | -93.4 M CAD, -14.4 M m3 | same | verified |
 
 ## Rotation
 
