@@ -4,17 +4,18 @@
 \subsection{What the two-layer analysis contributes}
 
 The value of separating the two decision layers is that it forces the composition question to be
-asked in the terms an enterprise would answer it. A composition aspiration is not an instruction to
-the landscape: it is an outcome of which stands are cut and what is planted, and its cost is borne
-in the schedule. Making the layers explicit lets the analysis say what a composition aspiration
-costs in harvest volume and whether it requires a different rotation, rather than assuming that an
-area share of species translates into an outcome.
+asked in the terms an enterprise would answer it. A stocking standard is not an instruction to the
+landscape: the landscape composition is an outcome of which stands are cut and what is planted, and
+its cost is borne in the schedule. Making the layers explicit lets the analysis say what a standard
+costs in harvest volume and value, and whether it changes fire severity, rather than assuming that
+an area share of species translates into an outcome.
 
-This is a scenario analysis, not a bilevel program. The composition aspiration is exogenous and
-hypothetical; British Columbia sets the allowable annual cut as a maximum and constrains
-silviculture through prescriptions and stocking standards, not through a landscape composition
-target. The results should be read as the response of a real estate to a hypothetical composition
-aspiration, not as an evaluation of an existing policy instrument.
+This is a fixed-plan policy analysis, not a bilevel program. The standard is exogenous and the
+enterprise's schedule is the committed even-flow plan; the enterprise does not re-optimise for each
+standard. The standard is a real instrument---British Columbia constrains silviculture through
+prescriptions and stocking standards---but the landscape-level composition is not a policy target.
+The results should be read as the direct effect of the standard at a fixed harvest pattern, not as
+a full partial-equilibrium response.
 
 \subsection{The sustained level and the official cut}
 
@@ -60,17 +61,15 @@ The old frontier remains a valid statement about the historical clearcut. It is 
 about the policy space once the standard is a decision variable. The production side is no longer
 the binding constraint; the fire benefit is.
 
-\subsection{Rotation is not the constraint}
+\subsection{Rotation in the historical schedule}
 
-The implied rotation is \SI{102.2}{\year} in the baseline schedule and \SI{101.7}{\year} under the
-most diversified schedule. Between these two schedules, diversification does not require a
-different age at harvest: the trade-off operates through which species are cut, not through when
-stands are cut. That is a useful
-negative result, because it removes one of the mechanisms by which composition policy could be
-expected to conflict with timber supply.
-
-The estimate is conditional. It uses only blocks re-entered within the 200-year horizon, so it is
-biased toward productive and accessible stands, and it is an observed interval rather than a
+The implied rotation is \SI{102.2}{\year} in the historical schedule and \SI{101.7}{\year} under
+the old aspen-maximisation schedule. Both schedules use the historical clearcut, which regenerates
+the same analysis unit; the invariance is therefore a property of the instrument, not evidence that
+the new standards leave rotation unchanged. The new standards change the yield curves, and their
+rotation is an outcome of the fixed schedule rather than a re-optimised choice. The estimate is
+also conditional: it uses only blocks re-entered within the 200-year horizon, so it is biased
+toward productive and accessible stands, and it is an observed interval rather than a
 silvicultural rotation.
 
 \subsection{Fire risk under alternative standards}
@@ -122,7 +121,7 @@ diversification is conditional, and the condition is empirical.
 
 \subsection{Limitations}
 
-Nine limitations bound what the paper can claim.
+Ten limitations bound what the paper can claim.
 
 First, the analysis covers one timber supply area. TSA~24 is large and fire-prone, but it is one
 landscape with one inventory and one administrative history; the results are not a provincial
@@ -131,47 +130,65 @@ assessment.
 Second, growth is represented by compiled yield curves rather than by individual-tree simulation,
 so the response of growth to composition and climate is not modelled.
 
-Third, the policy layer sets a landscape-wide composition aspiration rather than a spatial
-placement rule. The question of where to put broadleaf fuel breaks, and how far that can go before
-production suffers, is not answered. This is the most important gap: the literature suggests the
-composition decision is spatial, and this paper quantifies only the landscape-level trade-off.
+Third, the policy layer sets a stocking standard, not a spatial placement rule. The question of
+where to put broadleaf fuel breaks, and how far that can go before production suffers, is not
+answered. This is the most important gap: the literature suggests the composition decision is
+spatial, and this paper quantifies only the landscape-level trade-off.
 
-Fourth, the fire process is run on one schedule and one ignition set. Composition is not varied in
-the fire run, so the paper does not estimate whether diversification reduces fire risk. That is the
-natural next experiment, and it is not this one.
+Fourth, the fire regime is the recorded 1950--2024 distribution, not a forecast. Composition
+changes the severity of a fire that reaches a stand, not the number or size of fires; the event set
+has no spatial interaction between stands, so the model cannot represent a deciduous stand stopping
+a fire.
 
-Fifth, no policy risk metric is computed. The paper reports neither volume-at-risk nor
-net-present-value-at-risk across policy alternatives; the latter would need species-resolved
-harvest accounts that the process evaluation does not expose.
+Fifth, the severity mapping is an assumption. It uses the FBP crown fraction burned at the
+calibration weather, maps it onto the process bounds with $0.2 + 0.8\,\mathrm{CFB}$, and normalises
+by the initial-landscape mean. The 2024 validation of BC fuel typing finds that mixedwood,
+deciduous, and post-harvest fuels are the weakest part of the map \citep{baron_fuel_2024}; the D1
+severity is a floor, not a prediction. The calibrated 30 percent mixedwood threshold is a model
+choice; the BC 20 percent sensitivity moves the 26 percent standard to M2 but still only 7 percent
+below closed spruce.
 
-Sixth, prices mix vintages: conifer prices are from the quarter ending 30 September 2026, the
+Sixth, the fixed-plan design does not re-optimise the harvest schedule for each standard. The
+enterprise could change which blocks it harvests and how much; the surface measures the direct
+effect at a fixed pattern, not the full response. That is the main modelling limitation of the
+production side.
+
+Seventh, prices mix vintages: conifer prices are from the quarter ending 30 September 2026, the
 deciduous price is a 2018 ten-year average, and stumpage is a 2026 tabular rate. The deciduous price
 is reported as a range, and the sensitivity shows that the economic conclusion does not depend on
 it. The net present value is an operating margin: it excludes road construction, administration,
 taxes, and risk premia.
 
-Seventh, harvest is represented by clearcut with regeneration. Partial cutting and selection
+Eighth, harvest is represented by clearcut with regeneration. Partial cutting and selection
 systems, which are the obvious way to manage composition at finer scales, are not in the model.
 
-Eighth, composition is tracked by leading species group, so a mixed stand is assigned to its
-leading species and the within-stand mix is not represented.
+Ninth, composition is tracked by leading species group, so a mixed stand is assigned to its leading
+species and the within-stand mix is not represented. The fuel projection uses the calibrated VRI
+mapping, not the full BC fuel-typing algorithm; the mapping's 30 percent threshold makes a
+26 percent deciduous stand a conifer type.
 
-Ninth, the fire calibration is in-sample, the tail is thin, the estate run uses one 2023 weather
-season with current fuels, and five schedule blocks are dropped because the compiled dataset has no
-fragment mapping for them. The scenario is a comparative instrument, not a forecast.
+Tenth, the fire calibration is in-sample, the tail is thin, the policy surface uses the recorded
+size distribution directly, and five schedule blocks are dropped because the compiled dataset has
+no fragment mapping for them. The scenario is a comparative instrument, not a forecast.
 
 \subsection{Implications for policy}
 
 Three implications follow, each conditional on the results above.
 
-The cost of a composition aspiration is paid in harvest volume, not in log price. A policy analyst
-who evaluates diversification through stumpage or log values will miss the binding constraint,
-which is the physical supply of the minority species.
+The production cost of a standard is paid in net present value, not only in volume. The 26 percent
+standard is free volume: \SIrange{32}{53}{\mega\cubic\meter} more harvest with no loss in net
+present value. The 55 and 84 percent standards cost about \SI{1.2}{\percent} and
+\SI{1.8}{\percent} of net present value. A policy analyst who evaluates diversification through
+stumpage or log values will miss the yield and species-mix effect.
 
-Between the two schedules, rotation length is not a barrier to diversification. The composition
-trade-off operates through species choice, and an appeal to rotation age would be misplaced here.
+The tail is priced, not free. The 84 percent standard cuts the stand-level severity multiplier to
+0.267, but the estate CVaR20 by only \SI{8.1}{\mega\CAD} at the 100 percent level, against a
+production cost of \SI{153.8}{\mega\CAD}. The exchange rate is about \SI{19}{\mega\CAD} per
+\SI{1}{\mega\CAD} of tail reduction, and it is stable across standards and harvest levels. A
+risk-neutral planner chooses the 26 percent standard; a planner whose marginal value of tail risk
+exceeds about 19 to 1 chooses the 84 percent standard.
 
-The harvest-flow rule deserves as much scrutiny as the silvicultural prescription. We interpret the gap between
-the model's sustained level and the official cut as a flow-rule cost, and the discount rate moves
-the value result more than any market or biological parameter in the model. A policy analysis that
-reports a single net present value at a single rate hides the lever that matters most.
+The harvest-flow rule deserves as much scrutiny as the silvicultural prescription. We interpret the
+gap between the model's sustained level and the official cut as a flow-rule cost, and the discount
+rate moves the value result more than any market or biological parameter in the model. A policy
+analysis that reports a single net present value at a single rate hides the lever that matters most.

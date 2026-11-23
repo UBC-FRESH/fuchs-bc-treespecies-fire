@@ -43,7 +43,10 @@ supply.
 
 ## Fire surface
 
-Ten paired draws of the full 1,073-fire regime, 200 years, composition-aware severity.
+Ten paired draws of the full 1,073-fire regime, 200 years, composition-aware severity. The
+four-draw correction (a 5 percent crown floor for planted stands, after 2,590 fallback events in
+the first pass) has **zero** fuel-projection errors; the surface values are unchanged at the
+reported precision.
 
 | Harvest level | Standard | Mean loss (M CAD) | CVaR20 (M CAD) | Mean loss (%) | CVaR20 (%) |
 | ---: | --- | ---: | ---: | ---: | ---: |

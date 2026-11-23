@@ -15,8 +15,9 @@ We submit for consideration in *[Journal]* the manuscript **"Tree-species divers
 forest fire risks: composition--production trade-offs and a calibrated fire scenario for the Prince
 George Timber Supply Area"**.
 
-The paper asks what a species-composition aspiration costs on a real forest management unit, and
-whether a calibrated fire process can be run on the same estate. It makes four contributions.
+The paper asks what deciduous-forward post-clearcut stocking standards cost in wood supply and
+value, and whether the resulting composition changes fire severity and tail risk on a real
+management unit. It makes four contributions.
 
 First, it validates the estate and reconciles the harvest level. The compiled TSA~24 managed area
 matches the published timber harvesting land base to within 0.32 percent, and the model sustains
@@ -24,20 +25,27 @@ matches the published timber harvesting land base to within 0.32 percent, and th
 gap to the flow rule rather than to the land base, and we say that the attribution is an
 interpretation, not a counterfactual test.
 
-Second, it measures a composition--production frontier. At the sustained level the deciduous share
-can rise from 5.4 to about 6.2 percent at no cost in volume; a ten percent share requires a total
-about 38 percent below the sustained level. The binding constraint is the physical supply of aspen,
-not its price: the deciduous log price moves mean net present value by less than one percent.
+Second, it implements three deciduous-forward standards (26, 55, and 84 percent deciduous) and a
+composition-aware fuel projection that keeps the operational VRI fuel type for unharvested stands
+and re-types harvested stands from their new cohorts. The projection is consistent with the
+operational layer on 529 aspen-dominated stands, 171 mixedwoods, and 357 stands at 20–30 percent
+deciduous. The 26 percent standard is free volume: 32–53 million m3 more harvest with no loss in net
+present value and no change in CVaR20. The 55 and 84 percent standards cost about 1.2 and 1.8
+percent of net present value.
 
-Third, it shows that the implied rotation is invariant between the two schedules, 102.2 years
-against 101.7 years under the most diversified one. Diversification does not require a different age at
-harvest.
+Third, it reports the production and tail-risk surface. The 84 percent standard cuts the stand-level
+severity multiplier to 0.27, but the estate CVaR20 by only 8.1 million CAD at the 100 percent level,
+against a production cost of 153.8 million CAD. The exchange rate is about 19 million CAD of
+production cost per 1 million CAD of tail reduction, and it is stable across standards and harvest
+levels. The result is conditional on the recorded 1,073-fire regime; composition changes the
+severity of a fire that reaches a stand, not the number or size of fires.
 
-Fourth, it compares a calibrated, spatially explicit fire regime with the 432-perimeter historical
-record. The median and the share of fires above 500 ha sit inside the historical sampling interval,
-the 90th percentile at its lower edge, and the 95th percentile and extreme-tail shares below it. A
-24-ignition run couples the fire process to the full estate. We do not report a policy ranking under
-fire, and we do not claim net-present-value-at-risk; both need experiments this paper does not run.
+Fourth, it compares a calibrated, spatially explicit fire regime with the 432-perimeter calibration
+sample, runs the full estate with 24 ignitions, and uses the full 1,073-fire record for the policy
+surface. The median and the share of fires above 500 ha sit inside the historical sampling
+interval, the 90th percentile at its lower edge, and the 95th percentile and extreme-tail shares
+below it. The paper reports a conditional policy surface, not a fire-size forecast. The fire-break
+placement question remains open.
 
 The work continues the line of research on diversification under disturbance risk in European
 forests (Fuchs et al., 2024, *Scientific Reports*), with two differences that matter for policy: the
