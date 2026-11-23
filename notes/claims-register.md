@@ -101,7 +101,17 @@ conifer sites to aspen; see the next section.
 | Severity multiplier, D55 (M1, 45 percent conifer) | 1.011 | same | verified |
 | Severity multiplier, D26 (C2/C1 under the calibrated rule) | 1.299 / 0.749 | same | verified |
 | BC 20 percent threshold, D26 | M2, 1.203 | same | verified (sensitivity) |
-| Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `fresh-fuchs-ws4` `experiments/plantation/run_surface.py` | running |
+| Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `fresh-fuchs-ws4` `experiments/plantation/surface-ensemble.json` | verified |
+| Fire loss, CC 100 percent | mean 243.8 M CAD (2.78 percent), CVaR20 304.3 M CAD (3.47 percent) | same | verified |
+| Fire loss, D26 100 percent | mean 243.8 M CAD, CVaR20 304.3 M CAD; no risk change | same | verified |
+| Fire loss, D55 100 percent | mean 238.5 M CAD, CVaR20 298.6 M CAD | same | verified |
+| Fire loss, D84 100 percent | mean 236.3 M CAD, CVaR20 296.2 M CAD | same | verified |
+| D84 CVaR20 reduction, 100 percent level | -8.1 M CAD at a production cost of -153.8 M CAD; exchange rate 19.0 | same | verified |
+| D84 CVaR20 reduction, 80 percent level | -6.4 M CAD at -123.0 M CAD; exchange rate 19.2 | same | verified |
+| D84 CVaR20 reduction, 60 percent level | -4.9 M CAD at -93.4 M CAD; exchange rate 18.9 | same | verified |
+| D55 CVaR20 reduction, 100 percent level | -5.7 M CAD at -107.6 M CAD; exchange rate 19.0 | same | verified |
+| Landscape deciduous share, 100 percent | CC 7.5, D26 16.7, D55 28.8, D84 39.7 percent | same | verified |
+| Stand-level severity multiplier | D1 0.267, M1 1.011, C2 1.299, C1 0.749 | same | verified |
 | No-fire baseline, CC 100 percent | 8,778.8 M CAD, 1,037.9 M m3; reproduces the P4 baseline exactly | `experiments/plantation/no-fire/no-fire.json` | verified |
 | D26 minus CC, 100 percent level | +1.0 M CAD, +53.3 M m3; the standard is free volume under the calibrated mapping | same | verified |
 | D55 minus CC, 100 percent level | -107.6 M CAD, -21.9 M m3 | same | verified |
@@ -138,7 +148,7 @@ conifer sites to aspen; see the next section.
 | Maximum | 20,770.4 ha simulated; historical 25,114.8 ha; interval one-sided and not used as a target | same | verified |
 | Estate fire scenario | 24 ignitions, 1,331 fragments, 16,331 ha grown, 10,444 ha applied, ending volume 1,015.9 million m3 | `experiments/p3-fire/scenario-estate-01.json` | verified |
 | Burned area per ignition | 680 ha grown, 435 ha applied | same, divided by 24 | verified |
-| Policy risk ranking | not reported | paired ensemble: burned area 650 to 1,609 ha, ending volume varied in the third decimal of a percent | negative result, reported |
+| Policy risk ranking, uniform-severity baseline | superseded; the P4 exposure result was 260.9 M mean / 323.3 M CVaR20 under uniform mortality | `fresh-fuchs-ws4` `experiments/p4-risk/npv-ensemble.json` | superseded by the severity-model surface |
 | Historical mean fire size | 512.9 ha | calibration `tsa24-regime24/summary.json` | verified |
 
 ## Notes

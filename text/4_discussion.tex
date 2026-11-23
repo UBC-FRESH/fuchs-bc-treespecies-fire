@@ -83,16 +83,25 @@ fire-by-fire forecast.
 
 The severity model gives a clear ranking of the fuel types: D1 at 0.267, M1 at 1.011, C2 at
 1.299, and C1 at 0.749. The ranking is non-linear because the calibrated mapping puts a
-26 percent deciduous stand on the conifer side; only the 84 percent standard becomes D1. The D26
-and D55 standards are production options, not risk options. The BC 20 percent threshold
-sensitivity moves D26 to M2 (1.203), still only 7 percent below closed spruce.
+26 percent deciduous stand on the conifer side; only the 84 percent standard becomes D1. D26 is a
+production option, not a risk option; D55 and D84 are priced risk options. The BC 20 percent
+threshold sensitivity moves D26 to M2 (1.203), still only 7 percent below closed spruce.
 
-The D84 standard costs about \SI{1.8}{\percent} of net present value. Whether it pays depends on
-the paired CVaR reduction reported in \autoref{sec:results}. The comparison is comparative rather
-than a precise tail estimate: ten draws give a CVaR20 that is the mean of the two worst draws, and
-the paired design removes the landscape-level sampling noise that would otherwise dominate. The
-2024 validation of BC fuel typing warns that mixedwood, deciduous, and post-harvest fuels are the
-weakest part of the map \citep{baron_fuel_2024}; the D1 severity is a floor, not a prediction.
+The D84 standard costs about \SI{1.8}{\percent} of net present value and cuts CVaR20 by
+\SI{8.1}{\mega\CAD} at the 100 percent level; D55 cuts it by \SI{5.7}{\mega\CAD} at
+\SI{107.6}{\mega\CAD}. The exchange rate is about \textbf{19 M CAD of production cost per
+1 M CAD of CVaR20 reduction}, and it is stable across levels and standards. The stand-level
+severity multiplier is 0.267, but the estate CVaR20 falls only \SI{2.7}{\percent}: the
+unmanaged half of the estate keeps its fuel, the standard converts stands gradually, and the NPV
+loss is dominated by early, discounted fires. A risk-neutral planner chooses D26; a planner who
+values a \SI{1}{\mega\CAD} tail reduction at more than about \SI{19}{\mega\CAD} chooses
+D84. D55 is an intermediate point on the same frontier, not a distinct strategy.
+
+The comparison is comparative rather than a precise tail estimate: ten draws give a CVaR20 that
+is the mean of the two worst draws, and the paired design removes the landscape-level sampling
+noise that would otherwise dominate. The 2024 validation of BC fuel typing warns that mixedwood,
+deciduous, and post-harvest fuels are the weakest part of the map \citep{baron_fuel_2024}; the D1
+severity is a floor, not a prediction.
 
 Composition changes the severity of a fire that reaches a stand, not the number or size of fires.
 The event set has no spatial interaction between stands, so the model cannot represent a

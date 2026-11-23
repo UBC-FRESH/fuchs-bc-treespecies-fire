@@ -2,9 +2,10 @@
 
 Forest policy in British Columbia sets an allowable annual cut and constrains harvesting, while
 the species composition that determines resilience to fire emerges from thousands of regeneration
-decisions. We study that two-layer problem on the Prince George Timber Supply Area. An analyst sets
-a harvest level and a species-composition aspiration; a spatially explicit estate model responds
-with a harvest and regeneration schedule. The model is a weighted goal program, so the enterprise
+decisions. We study that two-layer problem on the Prince George Timber Supply Area. A policy
+layer sets a harvest level and a stocking standard; a spatially explicit estate model responds
+with a harvest schedule, and the standard sets the regenerated species. The model is a weighted
+goal program, so the enterprise
 is a satisficing scheduler and net present value is computed from the resulting schedule rather
 than optimized inside it. The compiled estate matches the published timber harvesting land base to
 \SI{0.32}{\percent}. Under a flat even flow from the first period it sustains
@@ -29,9 +30,15 @@ The implied rotation is essentially unchanged for the historical schedule,
 \SI{102.2}{\year} against \SI{101.7}{\year} under the most diversified schedule. We evaluate the
 standards against three harvest levels with the full recorded TSA~24 fire regime
 (\num{1073} fires, 1950--2024, \num{14.31} fires per year) in ten paired 200-year draws. The
-surface reports mean and CVaR fire loss; the ranking is conditional on the recorded regime,
-because composition changes the severity of a fire that reaches a stand, not the number or size
-of fires.
+26 percent standard adds \SIrange{32}{53}{\mega\cubic\meter} with no loss in net present value
+and no change in CVaR20. The 84 percent standard cuts CVaR20 by \SI{8.1}{\mega\CAD} at the
+100 percent level but costs \SI{153.8}{\mega\CAD} in net present value, an exchange rate of
+about \SI{19}{\mega\CAD} of production cost per \SI{1}{\mega\CAD} of tail reduction; the
+55 percent standard is an intermediate point on the same frontier. The stand-level severity
+multiplier is 0.27, but the estate CVaR20 falls only \SI{2.7}{\percent}, because the unmanaged
+half of the estate keeps its fuel, conversion is gradual, and the NPV loss is dominated by early
+fires. A risk-neutral planner chooses the 26 percent standard; the 84 percent standard is a
+priced tail hedge, not a free risk reduction.
 
 The framework sets a stocking standard and a harvest level rather than a spatial placement rule,
 so where to put broadleaf fuel breaks remains future work.

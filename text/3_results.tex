@@ -212,6 +212,65 @@ of \SI{512.9}{\hectare}; the scenario sits inside the historical spread. It is a
 coupling fire to harvest decisions, not a distribution sample, and it is not used for the
 comparison above.
 
+\subsection{The fire-risk surface}
+
+The paired ensemble gives the risk side (\autoref{tab:res_fire_surface}). The CC row is the
+severity-model baseline: \SI{243.8}{\mega\CAD} mean loss and \SI{304.3}{\mega\CAD} CVaR20. It is
+not the uniform-mortality P4 baseline (\SI{260.9}{\mega\CAD} and \SI{323.3}{\mega\CAD}); the
+new model applies the VRI fuel-type multipliers, so the two are different models, not a policy
+effect.
+
+\begin{table}[h]
+    \centering
+    \small
+    \caption{Fire loss by harvest level and stocking standard. Ten paired draws of the full
+    \num{1073}-fire regime, 200 years, composition-aware severity. CVaR20 is the mean of the
+    two worst draws; the percentage is relative to the no-fire net present value.}
+    \label{tab:res_fire_surface}
+    \begin{tabular}{lrrrr}
+        \toprule
+        Level & Standard & Mean loss [M CAD] & CVaR20 [M CAD] & CVaR20 [\%] \\
+        \midrule
+        100\% & CC  & 243.8 & 304.3 & 3.47 \\
+        100\% & D26 & 243.8 & 304.3 & 3.47 \\
+        100\% & D55 & 238.5 & 298.6 & 3.44 \\
+        100\% & D84 & 236.3 & 296.2 & 3.43 \\
+        \midrule
+        80\%  & CC  & 193.2 & 239.7 & 3.42 \\
+        80\%  & D26 & 193.3 & 239.7 & 3.42 \\
+        80\%  & D55 & 189.1 & 235.2 & 3.39 \\
+        80\%  & D84 & 187.3 & 233.2 & 3.38 \\
+        \midrule
+        60\%  & CC  & 144.7 & 179.3 & 3.42 \\
+        60\%  & D26 & 144.7 & 179.4 & 3.42 \\
+        60\%  & D55 & 141.5 & 175.9 & 3.39 \\
+        60\%  & D84 & 140.2 & 174.4 & 3.38 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The D26 standard is not a risk instrument. Its stand composition stays on the conifer side of
+the calibrated 30 percent mixedwood threshold, and its CVaR20 is indistinguishable from CC
+(+0.01 M at the 100 percent level). It is a free-volume option with a real composition change:
+the landscape deciduous share rises from 7.5 to 16.7 percent without changing fire severity.
+
+The D55 and D84 standards are a priced tail hedge. D55 cuts CVaR20 by \SI{5.7}{\mega\CAD} at a
+production cost of \SI{107.6}{\mega\CAD}; D84 cuts it by \SI{8.1}{\mega\CAD} at
+\SI{153.8}{\mega\CAD}. The exchange rate is about \textbf{19 M CAD of production cost per
+1 M CAD of CVaR20 reduction}, and it is stable across levels (18.9 to 19.2) and standards. The
+D84 stand-level severity multiplier is 0.267, but the estate mean loss falls only from 243.8 to
+236.3 M (3.1 percent) and CVaR20 from 304.3 to 296.2 M (2.7 percent). The reasons are
+structural: the unmanaged half of the estate keeps its VRI fuel, the standard converts stands
+gradually over the horizon, the conversion begins with a 25-year slash/open phase, and the NPV
+loss is dominated by early, discounted fires.
+
+A risk-neutral planner therefore chooses D26: more volume, the same NPV, and the same fire
+risk. A planner who values a \SI{1}{\mega\CAD} reduction in CVaR20 at more than about
+\SI{19}{\mega\CAD} chooses D84. D55 lies on the same frontier as D84 and is an intermediate
+point, not a distinct strategy. The ranking is conditional on the recorded regime and the
+severity mapping; a more severe future regime, a larger managed fraction, a higher deciduous
+price, or a carbon value would move the exchange rate.
+
 \subsection{Rotation length and diversification}
 
 We estimate the rotation from the schedule itself. For every block harvested more than once, the

@@ -43,22 +43,54 @@ supply.
 
 ## Fire surface
 
-Filled from `experiments/plantation/surface-ensemble.json`:
+Ten paired draws of the full 1,073-fire regime, 200 years, composition-aware severity.
 
 | Harvest level | Standard | Mean loss (M CAD) | CVaR20 (M CAD) | Mean loss (%) | CVaR20 (%) |
 | ---: | --- | ---: | ---: | ---: | ---: |
-| 100 % | CC | TBD | TBD | TBD | TBD |
-| 100 % | D26 | TBD | TBD | TBD | TBD |
-| 100 % | D55 | TBD | TBD | TBD | TBD |
-| 100 % | D84 | TBD | TBD | TBD | TBD |
-| 80 % | CC | TBD | TBD | TBD | TBD |
-| 80 % | D26 | TBD | TBD | TBD | TBD |
-| 80 % | D55 | TBD | TBD | TBD | TBD |
-| 80 % | D84 | TBD | TBD | TBD | TBD |
-| 60 % | CC | TBD | TBD | TBD | TBD |
-| 60 % | D26 | TBD | TBD | TBD | TBD |
-| 60 % | D55 | TBD | TBD | TBD | TBD |
-| 60 % | D84 | TBD | TBD | TBD | TBD |
+| 100 % | CC | 243.8 | 304.3 | 2.78 | 3.47 |
+| 100 % | D26 | 243.8 | 304.3 | 2.78 | 3.47 |
+| 100 % | D55 | 238.5 | 298.6 | 2.75 | 3.44 |
+| 100 % | D84 | 236.3 | 296.2 | 2.74 | 3.43 |
+| 80 % | CC | 193.2 | 239.7 | 2.75 | 3.42 |
+| 80 % | D26 | 193.3 | 239.7 | 2.76 | 3.42 |
+| 80 % | D55 | 189.1 | 235.2 | 2.73 | 3.39 |
+| 80 % | D84 | 187.3 | 233.2 | 2.72 | 3.38 |
+| 60 % | CC | 144.7 | 179.3 | 2.76 | 3.42 |
+| 60 % | D26 | 144.7 | 179.4 | 2.76 | 3.42 |
+| 60 % | D55 | 141.5 | 175.9 | 2.73 | 3.39 |
+| 60 % | D84 | 140.2 | 174.4 | 2.72 | 3.38 |
+
+## Reading the fire side
+
+- **D26 is not a risk instrument.** Its fuel type is C2/C1 under the calibrated 30 percent
+  threshold, and its CVaR20 is indistinguishable from CC (+0.01 M at 100 percent). It is a
+  free-volume option with a real composition change: landscape deciduous share rises from
+  7.5 to 16.7 percent without changing fire severity.
+- **D55 and D84 are a priced tail hedge.** D55 cuts CVaR20 by 5.7 M at a production cost of
+  107.6 M; D84 cuts it by 8.1 M at 153.8 M. The exchange rate is about **19 M CAD of
+  production cost per 1 M CAD of CVaR20 reduction**, and it is remarkably stable across
+  levels (18.9 to 19.2) and standards.
+- The stand-level severity cut is large (D1 0.267), but the estate-level mean loss falls only
+  from 243.8 to 236.3 M (3.1 percent) and CVaR20 from 304.3 to 296.2 M (2.7 percent). The
+  reasons are structural: the unmanaged half of the estate keeps its VRI fuel, the standard
+  converts stands gradually over the horizon, the conversion starts with a 25-year slash/open
+  phase, and the NPV loss is dominated by early, discounted fires.
+- The old P4 exposure baseline (260.9 M mean, 323.3 M CVaR20) is not the new CC baseline. The
+  new model applies the VRI fuel-type severity multipliers; the new CC baseline is 243.8 M /
+  304.3 M. The two are different models, not a policy effect.
+
+## Policy reading
+
+- A risk-neutral planner chooses **D26**: more volume, same NPV, same fire risk.
+- A planner who values a 1 M CAD reduction in CVaR20 at more than about **19 M CAD** chooses
+  D84. That is a very high marginal value of tail risk; the historical regime alone does not
+  justify it.
+- D55 lies on the same frontier as D84; it is not dominated, but it is an intermediate point,
+  not a distinct strategy.
+- The result is conditional on the recorded regime and the severity mapping. A more severe
+  future regime, a larger managed fraction, a higher deciduous price, or a carbon value would
+  move the exchange rate. The paper should state the conditions, not claim a universal
+  ranking.
 
 ## What the manuscript should claim
 
