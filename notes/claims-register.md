@@ -69,6 +69,11 @@ calibration), `to compute` (not yet produced).
 
 ## Composition
 
+**Superseded 2026-11-23.** These runs used a dataset with one treatment, `CC`, which
+regenerates the same analysis unit. The 6.2 percent ceiling is a supply limit of that
+instrument, not a biophysical limit. The deciduous-forward stocking standards can regenerate
+conifer sites to aspen; see the next section.
+
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
 | Aspen supply ceiling | 3.20 million m3/period, 6.2 percent of a 5.18 million m3/yr total | `fresh-fuchs-ws4` `experiments/tsa24-composition/summary.json` | verified (15-minute local search, not converged) |
@@ -76,6 +81,27 @@ calibration), `to compute` (not yet produced).
 | Target form | absolute aspen volume, 5.19 million m3/period, not a share | same | verified |
 | Composition frontier | 8 percent implies 40.0 million m3/period; 10 percent 32.0; 15 percent 21.3; 6 percent is feasible at the sustained level | derived from the ceiling under constant aspen supply | verified |
 | Cost of a 10 percent share | 38 percent of the sustained level | 1 - (3.20/0.10)/51.9 | verified |
+
+## Stocking standards and fuel projection
+
+| Claim | Value | Artifact | Status |
+| --- | --- | --- | --- |
+| New plantation prescriptions | `CC_D26`, `CC_D55`, `CC_D84`: 26, 55, 84 percent deciduous targets | `fresh-fuchs-ws4` `experiments/plantation/stocking-summary.json` | verified |
+| Compiled treatments, policy dataset | 138 (48 CC, 30 each D26/D55/D84) | same | verified |
+| Regenerated composition, conifer block | CC SX 83 / BL 17; D26 AT 26 / SX 74; D55 AT 55 / SX 45; D84 AT 84 / SX 16 | `experiments/plantation/build_stocking_recipe.py`; block 451 evaluation | verified |
+| Species reset | regenerated cohorts take the target track's composition | WS4 `feature/species-harvest-account` commit `cc4dd8d6`; 14 management tests | verified |
+| Fuel mapping, aspen VRI stands | 529 polygons at least 80 percent deciduous, 25+ years: 100 percent D1 | `fresh-fuchs-ws4` `experiments/plantation/vri-fuel-types.json` | verified |
+| Fuel mapping, mixedwood VRI stands | 171 polygons 40-60 percent deciduous: M1 54 percent, M2 46 percent | same | verified |
+| Fuel mapping, 20-30 percent deciduous | 357 polygons: C1 49, C2 28, C3 11, C4 10 percent; no M type | same | verified |
+| Calibrated mixedwood threshold | 30 percent on both sides; BC 2017 uses 20 percent (sensitivity) | `scripts/fuel_projection.py` | verified |
+| t=0 reproduction from AU composition | 67.7 percent agreement with the operational grid (VRI conifer: 67.3) | `notes/reports/p4-dynamic-fuel.md` | verified |
+| TIPSY vs VRI crown closure | mean difference +18.3 percentage points, MAE 22.2, correlation 0.21, n=285,415 | same | verified |
+| Severity normalizer, initial landscape | 0.7496 | same | verified |
+| Severity multiplier, D84 (D1, 16 percent conifer) | 0.267 at the calibration weather | same; `experiments/plantation/severity-sensitivity.csv` | verified |
+| Severity multiplier, D55 (M1, 45 percent conifer) | 1.011 | same | verified |
+| Severity multiplier, D26 (C2/C1 under the calibrated rule) | 1.299 / 0.749 | same | verified |
+| BC 20 percent threshold, D26 | M2, 1.203 | same | verified (sensitivity) |
+| Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `experiments/plantation/run_surface_ensemble.sh` | to compute |
 
 ## Rotation
 
