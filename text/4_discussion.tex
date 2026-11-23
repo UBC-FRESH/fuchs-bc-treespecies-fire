@@ -73,24 +73,31 @@ The estimate is conditional. It uses only blocks re-entered within the 200-year 
 biased toward productive and accessible stands, and it is an observed interval rather than a
 silvicultural rotation.
 
-\subsection{The fire regime: calibration and coupling}
+\subsection{Fire risk under alternative standards}
 
-The calibrated regime places the median and the share above \SI{500}{\hectare} inside the
-sampling interval of the historical record, and the 90th percentile at its lower edge. The 95th
-percentile and the extreme-tail shares remain below it. The maximum is not used as a target, because its
-bootstrap interval is one-sided by construction. The fit is in-sample per tile, with no independent
-holdout, and the tail limitation is a property of the calibration, not of the search.
+The recorded regime is severe: \num{1073} fires over 75 years, \num{14.31} fires per year, and
+\SI{10079}{\hectare\per\year}. A 200-year draw burns 53 to 79 percent of the managed estate. The
+calibration fit is a validation of the growth model; the policy surface uses the recorded sizes
+directly, so the result is conditional on the historical distribution rather than on a
+fire-by-fire forecast.
 
-The fire process is coupled to the full estate in a single 24-ignition run, and the coupled run
-applies about \SI{10444}{\hectare} of burned area to the compiled dataset. That run demonstrates
-that the calibration, the layer stack, the regional suppression map, and the estate model can be
-run together. It is not a policy comparison: composition is not varied in the fire run, so the paper
-cannot say whether a more diversified estate burns differently. A paired ensemble across five draws
-was run after the main analysis. Burned area varied by a factor of 2.5 across draws, but ending
-volume varied only in the third decimal of a percent, because the fires cover at most a few
-hundredths of the managed area. Volume-at-risk therefore collapses to the mean and cannot rank
-schedules at this scale, so no policy risk ranking is reported. A metric based on the difference
-from a no-fire counterfactual, or on per-period harvest and value, is the natural next step.
+The severity model gives a clear ranking of the fuel types: D1 at 0.267, M1 at 1.011, C2 at
+1.299, and C1 at 0.749. The ranking is non-linear because the calibrated mapping puts a
+26 percent deciduous stand on the conifer side; only the 84 percent standard becomes D1. The D26
+and D55 standards are production options, not risk options. The BC 20 percent threshold
+sensitivity moves D26 to M2 (1.203), still only 7 percent below closed spruce.
+
+The D84 standard costs about \SI{1.8}{\percent} of net present value. Whether it pays depends on
+the paired CVaR reduction reported in \autoref{sec:results}. The comparison is comparative rather
+than a precise tail estimate: ten draws give a CVaR20 that is the mean of the two worst draws, and
+the paired design removes the landscape-level sampling noise that would otherwise dominate. The
+2024 validation of BC fuel typing warns that mixedwood, deciduous, and post-harvest fuels are the
+weakest part of the map \citep{baron_fuel_2024}; the D1 severity is a floor, not a prediction.
+
+Composition changes the severity of a fire that reaches a stand, not the number or size of fires.
+The event set has no spatial interaction between stands, so the model cannot represent a
+deciduous stand stopping a fire. The fire-break placement question (RQ2) therefore remains open.
+That is a boundary of the design, not a result about fire breaks.
 
 \subsection{Relation to the European evidence}
 
