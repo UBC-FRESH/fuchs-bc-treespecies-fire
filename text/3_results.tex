@@ -159,9 +159,49 @@ aggregate change at 100 percent masks offsetting stand-level effects.
 
 \subsection{The fire-risk surface}
 
-\pending{The 100-draw fire surface and its corrected economic interpretation are being recomputed.
-Insert the mean-loss, CVaR20, CVaR-of-net-NPV, and cost-per-unit-of-loss-reduction table here. Do not
-use the superseded ten-draw numbers.}
+We report two fire-size scenarios. The observed record is the main scenario: the full 1,073-fire
+TSA history, resampled with replacement, with the recorded fire count and random placement. The
+calibrated retention sample is the lower bound: the same fire count and placement, but the sizes
+are drawn from the 3,450 retained sizes of the companion multi-year calibration. The calibrated
+sample has a higher median but a lower upper tail, so it understates the tail relative to the
+observed record.
+
+\begin{table}[h]
+    \centering
+    \small
+    \caption{Fire loss under the observed record and the calibrated-retention lower bound, 20 paired
+    draws, at \SI{4}{\percent}. Mean and CVaR20 are in million CAD; the percentage is relative to the
+    no-fire net present value. CVaR20 of net NPV is no-fire NPV minus CVaR20 loss.}
+    \label{tab:res_fire_surface}
+    \begin{tabular}{llrrr}
+        \toprule
+        Scenario & Standard & Mean loss & CVaR20 loss & CVaR20 net NPV \\
+        \midrule
+        Observed & CC  & \pending{} & \pending{} & \pending{} \\
+        Observed & D26 & \pending{} & \pending{} & \pending{} \\
+        Observed & D55 & \pending{} & \pending{} & \pending{} \\
+        Observed & D84 & \pending{} & \pending{} & \pending{} \\
+        \midrule
+        Calibrated & CC  & \pending{} & \pending{} & \pending{} \\
+        Calibrated & D26 & \pending{} & \pending{} & \pending{} \\
+        Calibrated & D55 & \pending{} & \pending{} & \pending{} \\
+        Calibrated & D84 & \pending{} & \pending{} & \pending{} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The observed-record scenario is the upper bound on the conditional-loss reduction. If D84 is not
+justified there, it is not justified under the calibrated lower bound. \pending{Insert the observed
+and calibrated D84/D55 differences, the paired intervals, and the cost per unit of CVaR20 loss
+reduction. State the CVaR-of-net-NPV difference explicitly: D84 lowers certainty by more than it
+lowers the conditional loss, so it is not a hedge.}
+
+The severity result is weather-robust for D84 and weather-sensitive for D26. Over the 720
+potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier is the 0.267
+floor at every state. The C1 multiplier has a median of 1.112 and a 10th-to-90th percentile range of
+0.817 to 1.312; the single-state value of 0.749 is at the 10th percentile. The M1 median is 1.033,
+and the C2 median is 1.312. The 26 percent standard's C1/C2 mix therefore shifts with weather, and
+its near-zero aggregate fire effect is not a stable property of the standard.
 
 \subsection{Rotation length}
 

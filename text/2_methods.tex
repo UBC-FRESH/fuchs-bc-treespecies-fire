@@ -155,12 +155,29 @@ ranges 0.11 to 0.49. The 26 percent standard is classified as C1 or C2 depending
 crown closure, with multipliers 0.749 and 1.299. Under the BC 20 percent threshold it becomes M2
 (1.203), still only 7 percent below closed spruce.
 
-\paragraph{Design} We generate 100 event sets of 200 years. Each draw resamples the recorded fire
+The single weather state is not the centre of the multi-year weather record. Over the 720
+potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier is the 0.267
+floor at every state, while the C1 multiplier has a median of 1.112 and a 10th-to-90th percentile
+range of 0.817 to 1.312; the single-state value of 0.749 is at the 10th percentile. The M1 median is
+1.033 (range 0.376 to 1.253), and the C2 median is 1.312 (range 1.245 to 1.331). The D84 result is
+therefore weather-robust because it is the floor; the 26 percent standard's C1/C2 mix is not, and
+its near-zero aggregate fire effect is a weighted average that shifts with weather.
+
+\paragraph{Design} We generate 20 event sets of 200 years. Each draw resamples the recorded fire
 sizes with replacement, draws annual counts from a Poisson process with the historical mean
 (\num{14.31}), and places each fire on a random burnable cell. The same event set is applied to every
-policy, so the comparison is paired. CVaR20 is the mean loss in the worst 20 draws. The paired
+policy, so the comparison is paired. CVaR20 is the mean loss in the worst four draws. The paired
 bootstrap interval captures variation in the event set only; it does not include uncertainty in the
 fire-size distribution, the severity model, or the growth curves.
+
+The main event set uses the full 1,073-fire observed record. A second event set replaces the observed
+sizes with the \num{3450} retained sizes from the companion multi-year retention calibration (690
+potential fires, 1950--2024 weather), holding the fire count and random placement fixed. The
+calibrated sample has a higher median (29.9 against 23.0 hectares) but a lower 95th percentile (833
+against 1,919 hectares) and a lower over-5,000-hectare fraction (1.0 against 3.0 percent). It is
+therefore a lower bound on the tail, not a replacement for the observed record. If the D84
+conclusion holds under the observed (larger-tail) event set, it holds under the calibrated
+(smaller-tail) lower bound.
 
 \subsection{Economic valuation}
 

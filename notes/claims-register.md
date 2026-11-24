@@ -145,17 +145,33 @@ conifer sites to aspen; see the next section.
 | Share above 100 ha | 26.2 percent, interval 22.7 to 29.6 | `fresh-fuchs-ws4:notes/reports/p3-3-distribution-comparison.md` | verified |
 | Share above 1,000 ha | 7.9 percent, interval 5.8 to 10.2 | same | verified |
 | p95 | 1,918.88 ha, interval 1,415.35 to 2,955.33 | same | verified |
-| Simulated regime | regional fit, 24 tiles plus median default; 3,450 fires | `fresh-fuchs-ws4` `notes/reports/p3-3-distribution-comparison.md`, WS4 commit `9918fb17` | verified |
-| Simulated median, p90, p95 | 23.8, 361.5, 1,100.9 ha | same | verified |
-| Simulated shares | above 100: 23.6 percent; above 500: 8.3; above 1,000: 5.5; above 5,000: 1.8 | same | verified |
-| Simulated maximum | 20,770.4 ha | same | verified |
-| Distribution verdict | median, p90 and share above 500 inside the historical interval; p95 below; shares above 1,000 and 5,000 at the lower edge | same | verified |
-| Maximum | 20,770.4 ha simulated; historical 25,114.8 ha; interval one-sided and not used as a target | same | verified |
+| Simulated regime | regional fit, 24 tiles plus median default; 3,450 fires | `fresh-fuchs-ws4` `notes/reports/p3-3-distribution-comparison.md`, WS4 commit `9918fb17` | superseded by P164.9 multi-year retention |
+| Simulated median, p90, p95 | 23.8, 361.5, 1,100.9 ha | same | superseded by P164.9 multi-year retention |
+| Simulated shares | above 100: 23.6 percent; above 500: 8.3; above 1,000: 5.5; above 5,000: 1.8 | same | superseded by P164.9 multi-year retention |
+| Simulated maximum | 20,770.4 ha | same | superseded by P164.9 multi-year retention |
+| Distribution verdict | median, p90 and share above 500 inside the historical interval; p95 below; shares above 1,000 and 5,000 at the lower edge | same | superseded by P164.9 multi-year retention |
+| Maximum | 20,770.4 ha simulated; historical 25,114.8 ha; interval one-sided and not used as a target | same | superseded by P164.9 multi-year retention |
 | Estate fire scenario | 24 ignitions, 1,331 fragments, 16,331 ha grown, 10,444 ha applied, ending volume 1,015.9 million m3 | `experiments/p3-fire/scenario-estate-01.json` | verified |
 | Burned area per ignition | 680 ha grown, 435 ha applied | same, divided by 24 | verified |
 | Policy risk ranking, uniform-severity baseline | superseded; the P4 exposure result was 260.9 M mean / 323.3 M CVaR20 under uniform mortality | `fresh-fuchs-ws4` `experiments/p4-risk/npv-ensemble.json` | superseded by the severity-model surface |
 | Historical mean fire size | 512.9 ha | calibration `tsa24-regime24/summary.json` | verified |
 | Burned area per 200-year draw | 1.61 to 2.41 M ha, 27 to 41 percent of the compiled forest | `fresh-fuchs-ws4` `experiments/plantation/surface-ensemble.json` | verified |
+
+### Multi-year calibration and the fire-model bound (2026-11-24)
+
+| Claim | Value | Artifact | Status |
+| --- | --- | --- | --- |
+| Multi-year calibration | 1950--2024 weather; 690 potential fires, 3,450 retained sizes; median 29.9, p90 370.1, p95 833.4, over-5,000 1.0 percent, max 24,147.1 ha | `fresh_ws4_fire_regime_repro:results/region-retention-summary.json` | verified |
+| Calibration transfer | in-sample 1.337; potential/weather analogue 4.456; training median 5.873; temporal event median absolute bias 89.3 percent | `region-retention-multiyear-all.json`, `event-simulations-retention-pre2018.json` | verified |
+| Full TSA fire record | 1,073 fires, 14.31 per year, 10,079 ha/yr, mean 704.5 ha, max 72,317 ha | `fresh-fuchs-ws4:experiments/fire-regime/tsa24-fire-history.json` | verified |
+| Record versus calibration | the full record includes fires outside the 24 calibration tiles; the calibration is a 24-tile subset, max 25,114.8 ha | same; `region-retention-summary.json` | verified |
+| Calibrated size sample replay | 3,450 sizes; median 29.3, p95 892.6, over-5,000 1.10 percent, max 23,356.9 ha | `fresh-fuchs-ws4:experiments/plantation/fire/calibrated-retention-sizes.json` | verified |
+| Weather range, D1 | 0.267 at all 720 potential-fire weather states | `fresh-fuchs-ws4:experiments/plantation/fire/severity-weather-range.json` | verified |
+| Weather range, C1 | median 1.112, 10th--90th 0.817--1.312; single state 0.749 (10th percentile) | same | verified |
+| Weather range, M1 | median 1.033, 10th--90th 0.376--1.253; single state 1.011 | same | verified |
+| Weather range, C2 | median 1.312, 10th--90th 1.245--1.331; single state 1.299 | same | verified |
+| Observed-record 20-draw surface | pending | `fresh-fuchs-ws4:experiments/plantation/surface-20.json` | to compute |
+| Calibrated-retention 20-draw surface | pending | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated.json` | to compute |
 
 ## Notes
 

@@ -71,18 +71,29 @@ The D55 standard is an intermediate cost-effectiveness point, not a dominated op
 D84'' that has a fire effect. The three standards are a three-point sample of a continuous deciduous
 share, and they do not establish a non-linear gradient.
 
+The observed record and the calibrated retention sample bracket the fire-size distribution. The
+observed record is the upper bound on the conditional-loss reduction because it preserves the full
+1,073-fire tail. The calibrated sample has a higher median (29.9 against 23.0 hectares) but a lower
+95th percentile (833 against 1,919 hectares) and a lower over-5,000-hectare fraction (1.0 against 3.0
+percent), so it understates the tail. If D84 is not justified under the observed record, it is not
+justified under the calibrated lower bound. The comparison is a model-uncertainty bound, not a
+validation of either distribution.
+
 The D84 severity multiplier is 0.267 because D1 has near-zero crown fraction burned, so the raw
 severity is the model's 0.2 surface-mortality floor. The multiplier is a floor, not an estimate of D1
-severity. Across the documented floor (0.1 to 0.4) and wind range (6.8 to 25 kilometres per hour),
-the D84 multiplier ranges 0.11 to 0.49, and the CVaR benefit and the ratio scale with it. The
-reported benefit is conditional on the 0.2 floor. The 26 percent standard is classified as C1 or C2
-depending on the pre-harvest crown closure, with multipliers 0.749 and 1.299; its near-zero aggregate
-fire effect is a weighted average of a reduction and an increase, not a property of the standard.
+severity, and it is 0.267 at every one of the 720 multi-year weather states. Across the documented
+floor (0.1 to 0.4) and wind range (6.8 to 25 kilometres per hour), the D84 multiplier ranges 0.11 to
+0.49, and the CVaR benefit and the ratio scale with it. The 26 percent standard is classified as C1
+or C2 depending on the pre-harvest crown closure. Its single-state C1 multiplier of 0.749 is the
+10th percentile of the multi-year weather distribution, whose median is 1.112. The D26 aggregate fire
+effect is therefore weather-sensitive, and its near-zero single-state value is not a stable property
+of the standard.
 
 The fire regime is a stationary resampling of the 1950--2024 record. Composition changes the severity
 of a fire that reaches a stand, not the number or size of fires. The event set has no spatial
-interaction between stands, so the model cannot represent a deciduous stand stopping a fire. Fire-break
-placement remains open.
+interaction between stands, and the random placement assumes uniform exposure; a burn-probability
+weighting would require a transferable spatial layer, which the companion calibration does not yet
+provide. Fire-break placement remains open.
 
 \subsection{Relation to the European evidence}
 
@@ -113,12 +124,13 @@ is held fixed for the planted stand, and TIPSY and VRI crown closure differ by \
 points} with a correlation of 0.004. The D1 multiplier is the 0.2 surface-mortality floor. These are
 scenario assumptions, not validated predictions.
 
-Fourth, the fire regime is the recorded 1950--2024 distribution, not a forecast. Composition changes
-the severity of a fire that reaches a stand, not the number or size of fires; the event set has no
-spatial interaction between stands. The observed tail is thin, so the tail result is comparative
-rather than a precise estimate. The 100 draws give a CVaR20 that is the mean of the worst 20 draws,
-and the paired bootstrap interval captures event-set variation only; it does not include uncertainty
-in the fire-size distribution, the severity model, or the growth curves.
+Fourth, the fire regime is a scenario, not a forecast. The main event set uses the observed
+1,073-fire record; the lower bound uses the calibrated retention sample. The observed record
+preserves the tail but places fires randomly, so it does not represent spatial exposure. The
+calibrated sample has a central fit but underproduces the tail and fails transfer to unseen tiles.
+Neither is a validated 200-year forecast. The 20 draws give a CVaR20 that is the mean of the worst
+four draws, and the paired bootstrap interval captures event-set variation only; it does not include
+uncertainty in the fire-size distribution, the severity model, or the growth curves.
 
 Fifth, the enterprise search is a ten-minute stochastic search from the baseline schedule, not a
 global optimum. The D26 profile is rising, and the D55 and D84 profiles are near-flat but not exactly
