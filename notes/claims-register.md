@@ -172,6 +172,8 @@ conifer sites to aspen; see the next section.
 | Weather range, C2 | median 1.312, 10th--90th 1.245--1.331; single state 1.299 | same | verified |
 | Observed-record 20-draw surface, 4 percent | CC mean 135.1, CVaR20 175.4; D84 mean 132.8, CVaR20 173.0; D84 difference -2.4 M CVaR at -50.3 M fixed-plan, ratio 20.9 (18.6--24.8); CVaR of net NPV -47.9 M | `fresh-fuchs-ws4:experiments/plantation/surface-20-summary.json`, `fire-surface-bounds.json` | verified |
 | Calibrated-retention 20-draw surface, 4 percent | CC mean 62.8, CVaR20 89.2; D84 mean 61.8, CVaR20 88.2; D84 difference -1.0 M CVaR at -50.3 M fixed-plan, ratio 52.4 (43.7--56.7); CVaR of net NPV -49.4 M | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated-summary.json`, `fire-surface-bounds.json` | verified |
+| Observed D84 break-even by rate | 20.3 at 3 percent, 20.9 at 4, 24.2 at 5, 28.2 at 8 | `fresh-fuchs-ws4:experiments/plantation/surface-20-summary.json` | verified |
+| Calibrated D84 break-even by rate | 49.9 at 3 percent, 52.4 at 4, 54.8 at 5, 61.7 at 8 | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated-summary.json` | verified |
 | Enterprise D84 cost and break-even | 60.7 M CAD at 4 percent; 25.2 per 1 M CVaR reduction if the fixed-plan fire benefit is held | `fresh-fuchs-ws4:experiments/plantation/enterprise/no-fire-enterprise.json` | verified |
 
 ## Notes
