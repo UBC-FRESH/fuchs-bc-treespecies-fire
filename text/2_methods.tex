@@ -116,11 +116,12 @@ a small number of events.
 
 The policy surface uses the recorded size and frequency distribution with a composition-dependent
 severity model, which holds the regime fixed and isolates the fuel effect. The calibrated
-surface-fire model \citep{ubc_fresh_fire_calibration_2026} validates the regime and demonstrates
-estate coupling; its per-tile suppression parameters were fitted on 24 tiles against 432 historical
-perimeters. The fit places the median and the share above \SI{500}{\hectare} inside the historical
-sampling interval and the 95th percentile below it. The calibrated spread model is a validation and
-coupling check, not the policy engine.
+surface-fire model \citep{ubc_fresh_fire_calibration_2026} reproduces the central historical
+distribution and demonstrates estate coupling; its per-tile suppression parameters were fitted on 24
+tiles against 432 historical perimeters. The fit places the median and the share above
+\SI{500}{\hectare} inside the historical sampling interval and the 95th percentile below it. The
+calibrated spread model is an in-sample diagnostic and coupling check, not a validation or the policy
+engine.
 
 \paragraph{Fuel projection} The 2025 VRI fuel type is the baseline for every unharvested stand. For
 a harvested stand we follow the BC fuel-typing chronology: slash (S1) for 0--5 years, open
