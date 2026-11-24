@@ -43,8 +43,8 @@ landscape composition is an outcome of the standard, not an exogenous target.
 
 We build the analysis on the Prince George Timber Supply Area (TSA~24) in interior British Columbia.
 The estate is the compiled TSA~24 inventory, with its actual blocks, ages, species, and yield
-curves. A weighted goal program produces the baseline even-flow schedule; we re-optimise it under
-each standard, so the production cost includes the enterprise response rather than only the direct
+curves. A weighted goal program produces the baseline even-flow schedule; we re-optimise the harvest
+schedule under each standard, so the production cost includes the enterprise response rather than only the direct
 effect at a fixed pattern. Fire is represented by the recorded 1950--2024 regime and a
 composition-dependent severity model: a composition-aware fuel projection re-types harvested stands
 from their new cohorts, and the FBP crown fraction burned maps the fuel type to a severity
@@ -70,14 +70,14 @@ Throughout, CVaR20 is the mean of the worst 20 percent of draws.
 The contribution is fourfold. First, a reconciled estate and a declining-profile diagnostic: the
 compiled managed area matches the published land base, but the shortfall from the official cut is
 not the flat-flow rule; a search at the official 2017 transition also realises about
-\SI{5.2}{\mega\cubic\meter\per\year}, so the compiled curves and land base cannot reproduce the
-official transition. Second, a deciduous-forward instrument with an enterprise response: the
+\SI{5.2}{\mega\cubic\meter\per\year}, so the compiled curves and land base are the leading
+explanation; a 300-iteration SA search did not reproduce the official transition. Second, a deciduous-forward instrument with an enterprise response: the
 fixed-plan direct effect understates the production cost, and the 26 percent standard adds aspen
 volume but not conifer volume. Third, a production and tail-risk surface with a corrected metric:
 D84 reduces the conditional fire loss but lowers the CVaR of net present value, so it is not a tail
 hedge; the break-even is about \SI{20}{\mega\CAD} at \SI{3}{\percent} and
 \SI{21}{\mega\CAD} at \SI{4}{\percent} at the fixed-plan cost, and about \SI{52}{\mega\CAD} under
-the calibrated lower bound.
+the calibrated-retention scenario.
 Fourth, a fuel projection stated for what it is: a \SI{63.1}{\percent} $t=0$ reproduction of the
 operational grid, a rule-based post-harvest scenario, and a D1 multiplier that is the model's
 0.2 surface-mortality floor.

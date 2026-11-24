@@ -113,6 +113,28 @@ specify the mixture, and the regenerated stand takes the species mix of the pres
     \end{tabular}
 \end{table}
 
+
+\begin{table}[h]
+    \centering
+    \small
+    \caption{Largest $t=0$ fuel-type disagreements between the compiled-composition projection and
+    the operational VRI grid. Counts are fragments. The projection never produces C7, M2, or M4.}
+    \label{tab:supp_fuel_confusion}
+    \begin{tabular}{lrrl}
+        \toprule
+        Actual class & Fragments & Correct & Largest predicted (n) \\
+        \midrule
+        C4 & 47,275  & 4,265   & C3 (21,439) \\
+        C2 & 146,547 & 117,594 & C1 (18,208) \\
+        M2 & 23,077  & 0       & C2 (7,960) \\
+        C3 & 39,598  & 19,861  & C1 (8,987) \\
+        C1 & 134,997 & 117,910 & C3 (7,937) \\
+        C7 & 8,811   & 0       & C3 (5,329) \\
+        D1 & 21,197  & 11,104  & C2 (4,274) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 A standard is applied only where it increases the deciduous share of the source analysis unit;
 aspen blocks stay on \texttt{CC}. The no-fire net present value and volume by standard are in the main text. A planted stand on a pre-harvest fragment with a VRI crown closure below 5 percent
 uses a 5 percent floor, because the VRI value is a sparse or non-forest artefact.
@@ -126,9 +148,10 @@ the ranking is unchanged.
 
 Over the 720 potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier
 is the 0.267 floor at every state. The C1 multiplier has a median of 1.112 and a 10th-to-90th
-percentile range of 0.817 to 1.312; the single-state value of 0.749 is the 10th percentile. The M1
+percentile range of 0.817 to 1.312; the single-state value of 0.749 is below the 10th percentile (p10 0.817). The M1
 median is 1.033 (range 0.376 to 1.253) and the C2 median is 1.312 (range 1.245 to 1.331). The D84
-severity result is therefore weather-robust because it is the floor; the 26 percent standard's
+multiplier is constant by construction because the 0.2 floor binds at every state; this is an
+assumption, not a robustness result; the 26 percent standard's
 C1/C2 mix is not, and its single-state near-zero aggregate effect is not stable.
 
 \subsection*{S5. Rotation estimate}

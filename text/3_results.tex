@@ -17,12 +17,13 @@ area-weighted maximum mean annual increment is \SI{7.07}{\mega\cubic\meter\per\y
 that the model does not realise, and the official 2017 transition profile starts at
 \SI{8.35}{\mega\cubic\meter\per\year}, above that bound.
 
-A declining-profile search at the official transition (83.5 million cubic metres in the first
+A 300-iteration SA search at the official transition (83.5 million cubic metres in the first
 period, 73.5 million thereafter) realises \SI{51.83}{\mega\cubic\meter} in the first period and
 \SIrange{51.0}{52.9}{\mega\cubic\meter} in the remaining periods, a mean of
 \SI{51.92}{\mega\cubic\meter} per period. The model reaches \SI{62}{\percent} of the first-period
 target. The flat-flow rule is therefore not the sole explanation of the gap: the compiled land base
-and yield curves cannot reproduce the official transition. We report \SI{5.19}{\mega\cubic\meter}
+and yield curves did not reproduce the official transition; this is a model result, not a
+feasibility proof. We report \SI{5.19}{\mega\cubic\meter}
 per year as the level realised by this model, not as a statement about the estate's true sustained
 yield.
 
@@ -65,8 +66,8 @@ share will enlarge.
 
 \subsection{The enterprise response}
 
-We re-optimise the even-flow schedule under each standard with the same targets, the same initial
-schedule, and the same search budget. \autoref{tab:res_standards} reports the realised level, the
+We search for a harvest schedule under the same even-flow targets for each standard, with the same
+initial schedule and the same search budget. \autoref{tab:res_standards} reports the realised level, the
 harvested volume, and the net present value at the three rates.
 
 \begin{table}[h]
@@ -75,7 +76,7 @@ harvested volume, and the net present value at the three rates.
     \caption{Enterprise response to the stocking standards, 200 years. Level is the realised mean
     per ten-year period; the range is the minimum and maximum period. Volume is in million cubic
     metres; value and cost are in million CAD. The cost column is relative to CC at
-    \SI{4}{\percent}.}
+    \SI{4}{\percent} and is computed from unrounded net present values.}
     \label{tab:res_standards}
     \begin{tabular}{lrrrrrrr}
         \toprule
@@ -83,8 +84,8 @@ harvested volume, and the net present value at the three rates.
         \midrule
         CC  & 51.89 & 51.89--51.89 & 1,037.9 & 8,778.8 & 6,267.6 & 4,768.9 & 0.0 \\
         D26 & 54.54 & 51.11--62.80 & 1,090.8 & 8,776.6 & 6,266.2 & 4,768.1 & -1.4 \\
-        D55 & 50.84 & 49.08--51.68 & 1,016.8 & 8,661.5 & 6,225.0 & 4,750.5 & -42.6 \\
-        D84 & 50.74 & 48.27--51.77 & 1,014.8 & 8,611.6 & 6,206.9 & 4,742.9 & -60.7 \\
+        D55 & 50.84 & 49.08--51.68 & 1,016.8 & 8,661.5 & 6,225.0 & 4,750.5 & -42.5 \\
+        D84 & 50.74 & 48.27--51.77 & 1,014.8 & 8,611.6 & 6,206.9 & 4,742.9 & -60.6 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -93,8 +94,8 @@ The D26 search does not find a flat profile: the realised level rises from
 \SI{51.11}{\mega\cubic\meter} to \SI{62.80}{\mega\cubic\meter} per period. The mean is not an
 even-flow level, and we report the range rather than call it a sustained level. D55 and D84 are close
 to flat; the last period is 4 to 6 percent below the first, and the even-flow target is not perfectly
-met. The levels are conditional on a ten-minute stochastic search from the baseline schedule, not a
-global optimum.
+met. The levels are conditional on a 300-iteration SA search from the baseline schedule (ten-minute
+cap, stopped on iteration count), not a global optimum.
 
 The volume gain under D26 is aspen. At the 100 percent level the schedule harvests
 \SI{52.9}{\mega\cubic\meter} more than CC: aspen rises from 54.5 to \SI{108.0}{\mega\cubic\meter},
@@ -125,20 +126,29 @@ to 446.8 and \SI{404.5}{\mega\cubic\meter}.
     \end{tabular}
 \end{table}
 
-The fixed-plan direct effect at \SI{4}{\percent} is a cost of \SI{0.5}{\mega\CAD} for D26,
-\SI{34.9}{\mega\CAD} for D55, and \SI{50.4}{\mega\CAD} for D84. Re-optimisation adds
-\SI{1.9}{\mega\CAD}, \SI{7.7}{\mega\CAD}, and \SI{10.3}{\mega\CAD} to those costs. The enterprise
-response therefore makes the standards more expensive, not less, because the schedule must be
-smoothed and the harvest shifted later. The ranking is unchanged.
+The targets apply to eligible treated stands, not the whole landscape. The realised landscape
+deciduous shares are \SI{7.5}{\percent} under CC, \SI{16.7}{\percent} under D26,
+\SI{28.8}{\percent} under D55, and \SI{39.7}{\percent} under D84. The unmanaged half of the
+estate keeps its VRI fuel, which is why the estate-level severity effect is much smaller than the
+stand-level multiplier.
+
+At the fixed plan D26 is a gain of \SI{0.5}{\mega\CAD}; D55 and D84 cost
+\SI{34.9}{\mega\CAD} and \SI{50.3}{\mega\CAD}. The enterprise search changes D26 to a cost of
+\SI{1.4}{\mega\CAD}, a deterioration of \SI{1.9}{\mega\CAD}, and raises the D55 and D84 costs to
+\SI{42.5}{\mega\CAD} and \SI{60.6}{\mega\CAD}, additions of \SI{7.7}{\mega\CAD} and
+\SI{10.3}{\mega\CAD}. The enterprise response shifts harvest later and changes the level; it makes
+D55 and D84 more expensive and turns the D26 gain into a small cost. The ranking of the production
+costs is unchanged.
 
 \subsection{The fuel projection}
 
 At $t=0$, re-typing every stand from the compiled analysis-unit composition reproduces
 \SI{63.1}{\percent} of the 2025 VRI fuel-type grid. The operational mapping from VRI conifer share
-reproduces \SI{66.7}{\percent}. The disagreement is concentrated in the mixedwood and deciduous
-classes: the compiled composition is one species mix per analysis unit, while the VRI grid is one
-per polygon. The post-harvest fuel types have no observational counterpart. They are a rule-based
-scenario, not a validated prediction.
+reproduces \SI{66.7}{\percent}. The largest disagreements are in the C4/C7 conifer classes and the
+M2/M4 mixedwood classes, which the projection never produces; the conifer classes account for about
+\SI{73}{\percent} of the disagreements. The compiled composition is one species mix per analysis
+unit, while the VRI grid is one per polygon. The post-harvest fuel types have no observational
+counterpart. They are a rule-based scenario, not a validated prediction.
 
 The projection holds the pre-harvest VRI crown closure for the planted stand. A comparison of TIPSY
 and VRI crown closure on \num{272840} polygons gives a mean difference of \SI{17.3}{percentage
@@ -170,8 +180,9 @@ observed record.
 \begin{table}[h]
     \centering
     \small
-    \caption{Fire loss under the observed record and the calibrated-retention lower bound, 20 paired
-    draws, at \SI{4}{\percent}. Mean and CVaR20 are in million CAD. CVaR20 of net NPV is no-fire NPV minus CVaR20 loss.}
+    \caption{Fire loss under the observed record and the calibrated-retention scenario on the fixed-plan
+    schedules, 20 paired draws, at \SI{4}{\percent}. Mean and CVaR20 are in million CAD. CVaR20 of net
+    NPV is no-fire NPV minus CVaR20 loss.}
     \label{tab:res_fire_surface}
     \begin{tabular}{llrrr}
         \toprule
@@ -190,35 +201,38 @@ observed record.
     \end{tabular}
 \end{table}
 
-The observed-record scenario is the upper bound on the conditional-loss reduction. If D84 is not
-justified there, it is not justified under the calibrated lower bound. The observed D84 difference is
+The observed record gives the larger tail reduction and the lower break-even; it is the more
+favourable of the two scenarios. The calibrated-retention scenario gives the smaller tail reduction
+and the higher break-even. If D84 is not justified under the observed record, it is not justified
+under the calibrated scenario. The observed D84 difference is
 a \SI{2.4}{\mega\CAD} reduction in CVaR20 loss (95 percent paired bootstrap 2.0 to 2.7) at a
 fixed-plan cost of \SI{50.3}{\mega\CAD}, a break-even of about 20.9 million CAD per 1 million CAD
 of loss reduction (interval 18.6 to 24.8). The CVaR of net present value is
-\SI{47.9}{\mega\CAD} lower. D55 reduces CVaR20 loss by \SI{1.7}{\mega\CAD} (1.4 to 1.9) at
+\SI{47.9}{\mega\CAD} lower (paired event-set bootstrap 47.6 to 48.3). D55 reduces CVaR20 loss by \SI{1.7}{\mega\CAD} (1.4 to 1.9) at
 \SI{34.9}{\mega\CAD} (break-even 20.8, 18.5 to 24.9) and lowers the net CVaR by
-\SI{33.2}{\mega\CAD}. D26 has no fire effect (\SI{0.03}{\mega\CAD}). Under the calibrated lower
-bound, the D84 reduction is \SI{1.0}{\mega\CAD} (0.89 to 1.15) at the same fixed-plan cost
+\SI{33.2}{\mega\CAD}. D26 has a negligible fire effect (\SI{0.03}{\mega\CAD}; interval 0.01 to 0.07). Under the calibrated scenario,
+the D84 reduction is \SI{1.0}{\mega\CAD} (0.89 to 1.15) at the same fixed-plan cost
 (break-even 52.4, 43.7 to 56.7) and the net CVaR is \SI{49.4}{\mega\CAD} lower; D55 is
 \SI{0.7}{\mega\CAD} at a break-even of 52.3. The observed break-even rises from 20.3 at
-\SI{3}{\percent} to 24.2 at \SI{5}{\percent} and 28.2 at \SI{8}{\percent}; the calibrated lower
-bound rises from 49.9 to 61.7. The tail benefit shrinks faster than the certain cost as the rate
+\SI{3}{\percent} to 24.2 at \SI{5}{\percent} and 28.2 at \SI{8}{\percent}; the calibrated scenario rises from 49.9 to 61.7. The tail benefit shrinks faster than the certain cost as the rate
 rises. D84 lowers certainty by more than it lowers the conditional loss under both scenarios, so it
 is not a hedge.
 
 The enterprise response raises the D84 cost from \SI{50.3}{\mega\CAD} to
-\SI{60.7}{\mega\CAD} (\autoref{tab:res_standards}). Holding the fixed-plan fire benefit, the
-break-even at the enterprise cost is about 25 million CAD per 1 million CAD; the D55 enterprise cost
-is \SI{42.6}{\mega\CAD}. The fire surface is the fixed-plan surface; the enterprise fire exposure
-is not simulated. The ranking and the sign of the net-CVaR difference are unchanged.
+\SI{60.6}{\mega\CAD} (\autoref{tab:res_standards}). Holding the fixed-plan fire benefit, the net
+CVaR is \SI{58.2}{\mega\CAD} lower and the break-even at the enterprise cost is about 25.1; the
+D55 enterprise cost is \SI{42.5}{\mega\CAD}. The fire surface is the fixed-plan surface; the
+enterprise fire exposure is not simulated, so the enterprise net is an extrapolation. The sign of
+the net-CVaR difference is unchanged; the enterprise ranking is not a simulated result.
 
 The fixed-plan D26 row carries the fixed-plan no-fire value (+0.5 million CAD); the enterprise
 response makes it -1.4 million CAD. The fire effect is +0.03 million CAD in both cases.
 
-The severity result is weather-robust for D84 and weather-sensitive for D26. Over the 720
+The D84 multiplier is constant by construction because the 0.2 floor binds at every state; this is
+an assumption, not weather robustness. The D26 C1/C2 mix is weather-sensitive. Over the 720
 potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier is the 0.267
 floor at every state. The C1 multiplier has a median of 1.112 and a 10th-to-90th percentile range of
-0.817 to 1.312; the single-state value of 0.749 is at the 10th percentile. The M1 median is 1.033,
+0.817 to 1.312; the single-state value of 0.749 is below the 10th percentile (p10 0.817). The M1 median is 1.033,
 and the C2 median is 1.312. The 26 percent standard's C1/C2 mix therefore shifts with weather, and
 its near-zero aggregate fire effect is not a stable property of the standard.
 

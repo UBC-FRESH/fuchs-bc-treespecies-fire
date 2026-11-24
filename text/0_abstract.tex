@@ -3,30 +3,34 @@
 Forest policy in British Columbia sets an allowable annual cut and constrains harvesting, while
 the species composition that determines resilience to fire emerges from thousands of regeneration
 decisions. We evaluate three deciduous-forward post-clearcut stocking standards on the Prince George
-Timber Supply Area with an estate model that re-optimises the even-flow schedule under each standard.
+Timber Supply Area with an estate model that re-optimises the harvest schedule under an even-flow target for each
+standard.
 The compiled estate matches the published timber harvesting land base to \SI{0.32}{\percent}, but
 its growth curves realise \SI{5.19}{\mega\cubic\meter\per\year}, about \SI{25}{\percent} below the
-\SI{6917231}{\cubic\meter\per\year} 2025 allowable annual cut. A search at the official 2017 transition profile, which starts at \SI{8.35} and then
+\SI{6917231}{\cubic\meter\per\year} 2025 allowable annual cut. A 300-iteration SA search at the official 2017 transition profile, which starts at \SI{8.35} and then
 \SI{7.35}{\mega\cubic\meter\per\year}, also realises about \SI{5.2}{\mega\cubic\meter\per\year}, so
-the shortfall is not a flat-flow artifact: the compiled land base and yield curves cannot reproduce
-the official transition.
+the shortfall is not a flat-flow artifact: the search did not reproduce the official transition, and
+the compiled land base and yield curves are the leading explanation. This is a model result, not a
+feasibility proof.
 
-The standards regenerate 26, 55, or 84 percent deciduous stock. A composition-aware fuel projection
+The standards target 26, 55, or 84 percent deciduous stock on eligible treated stands. A composition-aware fuel projection
 keeps the 2025 VRI fuel type for unharvested stands and follows the BC post-harvest chronology. At
-$t=0$ it reproduces \SI{63.1}{\percent} of the operational fuel-type grid; the disagreement is
-concentrated in the mixedwood and deciduous classes, and the post-harvest types have no observational
-counterpart. The D1 multiplier is 0.267 because D1 has near-zero crown fraction burned, so it is the
+$t=0$ it reproduces \SI{63.1}{\percent} of the operational fuel-type grid; the largest
+disagreements are in the C4/C7 conifer classes and the M2/M4 mixedwood classes, which the projection
+never produces, and the post-harvest types have no observational counterpart. The D1 multiplier is 0.267 because D1 has near-zero crown fraction burned, so it is the
 model's 0.2 surface-mortality floor, not an estimate of D1 severity.
 
 At a \SI{4}{\percent} real discount rate, the BC Ministry of Forests rate for public-sector forestry
 investment, the 26 percent standard adds \SI{52.9}{\mega\cubic\meter}, all aspen, at a net present
 value cost of \SI{1.4}{\mega\CAD}; conifer volume is flat. The 55 and 84 percent standards cost
-\SI{42.6}{\mega\CAD} and \SI{60.7}{\mega\CAD}. On the fixed-plan fire surface, using 20 paired 200-year
-draws, the 84 percent standard reduces the conditional fire loss by \SI{2.4}{\mega\CAD} at
-\SI{4}{\percent}, but the CVaR of net present value is \SI{47.9}{\mega\CAD} lower, because it lowers
-certain value by more than it lowers the loss. It is not a tail hedge. The break-even is about
-\SI{21}{\mega\CAD} per \SI{1}{\mega\CAD} at the fixed-plan cost and about \SI{25}{\mega\CAD} at the
-enterprise cost; at \SI{3}{\percent} the fixed-plan break-even is about \SI{20}{\mega\CAD}. A planner would need a separate
+\SI{42.5}{\mega\CAD} and \SI{60.6}{\mega\CAD}. On the fixed-plan fire surface, using 20 paired 200-year
+draws, the 84 percent standard reduces the conditional fire loss by \SI{2.4}{\mega\CAD} (paired
+event-set bootstrap 2.0--2.7) at \SI{4}{\percent}, but the CVaR of net present value is
+\SI{47.9}{\mega\CAD} lower (47.6--48.3), because it lowers
+the no-fire value by more than it lowers the loss. At the enterprise cost, holding the fixed-plan
+fire benefit, the net CVaR is \SI{58.2}{\mega\CAD} lower. It is not a tail hedge. The break-even is
+about \SI{21}{\mega\CAD} at the fixed-plan cost, \SI{25}{\mega\CAD} at the enterprise cost, and
+\SI{20}{\mega\CAD} at \SI{3}{\percent} at the fixed-plan cost. A planner would need a separate
 loss-reduction objective, or non-timber benefits, worth more than that to choose the 84 percent
 standard; the recorded fire regime alone does not justify it on timber value.
 

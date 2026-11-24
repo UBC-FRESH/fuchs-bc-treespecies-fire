@@ -1,9 +1,9 @@
 # Claims register
 
-> Status note (2026-11-23): the ten-draw fire surface is superseded by a 100-draw rerun
-> with decade-by-species valuation. Rows marked `superseded` below are retained for the
-> record; the manuscript must use the 100-draw artifact once committed. No 10-draw fire
-> number may ship.
+> Status note (2026-11-24): the ten-draw fire surface is superseded by the 20-draw
+> observed-record and calibrated-retention surfaces at 4 percent. Rows marked `superseded`
+> below are retained for the record; no 10-draw fire number may ship. The manuscript's
+> current fire numbers are in the 20-draw rows below.
 
 Rule: every number in the manuscript appears here with the artifact that produces it. A sentence
 whose number is not in this table does not ship.
@@ -107,21 +107,21 @@ conifer sites to aspen; see the next section.
 | Severity multiplier, D26 (C2/C1 under the calibrated rule) | 1.299 / 0.749 | same | verified |
 | BC 20 percent threshold, D26 | M2, 1.203 | same | verified (sensitivity) |
 | Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `fresh-fuchs-ws4` `experiments/plantation/surface-ensemble.json` | verified |
-| Fire loss, CC 100 percent | mean 243.8 M CAD (2.78 percent), CVaR20 304.3 M CAD (3.47 percent) | same | superseded; 100-draw pending |
-| Fire loss, D26 100 percent | mean 243.8 M CAD, CVaR20 304.3 M CAD; no risk change | same | superseded; 100-draw pending |
+| Fire loss, CC 100 percent | mean 243.8 M CAD (2.78 percent), CVaR20 304.3 M CAD (3.47 percent) | same | superseded; 20-draw surface below |
+| Fire loss, D26 100 percent | mean 243.8 M CAD, CVaR20 304.3 M CAD; no risk change | same | superseded; 20-draw surface below |
 | Fire loss, D55 100 percent | mean 238.5 M CAD, CVaR20 298.6 M CAD | same | verified |
 | Fire loss, D84 100 percent | mean 236.3 M CAD, CVaR20 296.2 M CAD | same | verified |
-| D84 CVaR20 reduction, 100 percent level | -8.1 M CAD (95 percent bootstrap interval -8.8 to -5.9) at a production cost of -153.8 M CAD; exchange rate 19.0 | same | superseded; 100-draw pending |
-| D84 CVaR20 reduction, 80 percent level | -6.4 M CAD at -123.0 M CAD; exchange rate 19.2 | same | superseded; 100-draw pending |
+| D84 CVaR20 reduction, 100 percent level | -8.1 M CAD (95 percent bootstrap interval -8.8 to -5.9) at a production cost of -153.8 M CAD; exchange rate 19.0 | same | superseded; 20-draw surface below |
+| D84 CVaR20 reduction, 80 percent level | -6.4 M CAD at -123.0 M CAD; exchange rate 19.2 | same | superseded; 20-draw surface below |
 | D84 CVaR20 reduction, 60 percent level | -4.9 M CAD at -93.4 M CAD; exchange rate 18.9 | same | verified |
-| D55 CVaR20 reduction, 100 percent level | -5.7 M CAD (95 percent bootstrap interval -6.2 to -4.1) at -107.6 M CAD; exchange rate 19.0 | same | superseded; 100-draw pending |
+| D55 CVaR20 reduction, 100 percent level | -5.7 M CAD (95 percent bootstrap interval -6.2 to -4.1) at -107.6 M CAD; exchange rate 19.0 | same | superseded; 20-draw surface below |
 | Landscape deciduous share, 100 percent | CC 7.5, D26 16.7, D55 28.8, D84 39.7 percent | `fresh-fuchs-ws4` `experiments/plantation/no-fire/no-fire.json` | verified |
 | Stand-level severity multiplier | D1 0.267, M1 1.011, C2 1.299, C1 0.749 | same | verified |
 | No-fire baseline, CC 100 percent | 8,778.8 M CAD, 1,037.9 M m3; reproduces the P4 baseline exactly | `experiments/plantation/no-fire/no-fire.json` | verified |
-| D26 minus CC, 100 percent level | +1.0 M CAD, +53.3 M m3; the standard is free volume under the calibrated mapping | same | superseded; 100-draw pending |
+| D26 minus CC, 100 percent level | +1.0 M CAD, +53.3 M m3; the standard is free volume under the calibrated mapping | same | superseded; 20-draw surface below |
 | D55 minus CC, 100 percent level | -107.6 M CAD, -21.9 M m3 | same | verified |
-| D84 minus CC, 100 percent level | -153.8 M CAD, -23.8 M m3 | same | superseded; 100-draw pending |
-| D84 minus CC, 80 percent level | -123.0 M CAD, -19.0 M m3 | same | superseded; 100-draw pending |
+| D84 minus CC, 100 percent level | -153.8 M CAD, -23.8 M m3 | same | superseded; 20-draw surface below |
+| D84 minus CC, 80 percent level | -123.0 M CAD, -19.0 M m3 | same | superseded; 20-draw surface below |
 | D84 minus CC, 60 percent level | -93.4 M CAD, -14.4 M m3 | same | verified |
 
 ## Rotation
@@ -174,7 +174,7 @@ conifer sites to aspen; see the next section.
 | Calibrated-retention 20-draw surface, 4 percent | CC mean 62.8, CVaR20 89.2; D84 mean 61.8, CVaR20 88.2; D84 difference -1.0 M CVaR at -50.3 M fixed-plan, ratio 52.4 (43.7--56.7); CVaR of net NPV -49.4 M | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated-summary.json`, `fire-surface-bounds.json` | verified |
 | Observed D84 break-even by rate | 20.3 at 3 percent, 20.9 at 4, 24.2 at 5, 28.2 at 8 | `fresh-fuchs-ws4:experiments/plantation/surface-20-summary.json` | verified |
 | Calibrated D84 break-even by rate | 49.9 at 3 percent, 52.4 at 4, 54.8 at 5, 61.7 at 8 | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated-summary.json` | verified |
-| Enterprise D84 cost and break-even | 60.7 M CAD at 4 percent; 25.2 per 1 M CVaR reduction if the fixed-plan fire benefit is held | `fresh-fuchs-ws4:experiments/plantation/enterprise/no-fire-enterprise.json` | verified |
+| Enterprise D84 cost and break-even | 60.6 M CAD at 4 percent; 25.1 per 1 M CVaR reduction if the fixed-plan fire benefit is held | `fresh-fuchs-ws4:experiments/plantation/enterprise/no-fire-enterprise.json` | verified |
 
 ## Notes
 

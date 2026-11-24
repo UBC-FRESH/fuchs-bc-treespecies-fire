@@ -61,7 +61,7 @@ This is a policy evaluation with an enterprise response, not a bilevel equilibri
 exogenous and no equilibrium is claimed. The enterprise response is the policy-relevant comparison
 because the standard changes the volume and timing of harvest. We also report a fixed-plan direct
 effect, which holds the baseline schedule and isolates what is planted; the enterprise response makes
-the standards more expensive, so the direct effect is a lower bound on the production cost.
+the standards more expensive, so the direct effect understates the magnitude of the production cost.
 
 \paragraph{Enterprise response} The baseline even-flow schedule is produced by a weighted goal
 program that minimises weighted deviations from the harvest level and even-flow aspirations, subject
@@ -69,14 +69,14 @@ to area balance and the treatment options on each block \citep{ubc_fresh_ws4_202
 maximum are one-sided penalty terms, not feasibility bounds, so the realised cut is an outcome of the
 weighted compromise. For each standard we rebuild the dataset, relabel the baseline schedule with the
 standard where it is available, and re-optimise with the same targets, initial offsets, engine,
-seed, and a ten-minute search budget. The search is not a global optimum; the realised level is
-reported with its period range.
+seed, and a 300-iteration SA budget with a ten-minute cap. The reported runs stopped on iteration
+count, not the time limit. The search is not a global optimum; the realised level is reported with
+its period range.
 
 \paragraph{Standards} The standards are the historical clearcut (\texttt{CC}) and three
 deciduous-forward prescriptions: \texttt{CC\_D26}, \texttt{CC\_D55}, and \texttt{CC\_D84}, targeting
 26, 55, and 84 percent deciduous. A standard is applied only where it increases the deciduous share
-of the source analysis unit; aspen blocks stay on \texttt{CC}. The realised composition is reported
-beside every policy.
+of the source analysis unit; aspen blocks stay on \texttt{CC}. The realised landscape composition is reported in the results.
 
 \paragraph{Scope of the risk analysis} We report a policy ranking conditional on the recorded fire
 regime, not a fire-size prediction. The standard changes the severity of a fire that reaches a
@@ -131,9 +131,10 @@ calibration; the BC 2017 algorithm's 20 percent threshold is a sensitivity. The 
 re-typed. Re-typing every stand from the compiled analysis-unit composition reproduces
 \SI{63.1}{\percent} of the operational grid; the operational mapping from VRI conifer share
 reproduces \SI{66.7}{\percent}. The compiled dataset carries one species mix per analysis unit,
-while the VRI grid carries one per polygon, so the disagreement is concentrated in the mixedwood and
-deciduous classes. The post-harvest types have no observational counterpart: they are a rule-based
-scenario, not a validated prediction.
+while the VRI grid carries one per polygon. The largest disagreements are in the C4/C7 conifer classes
+and the M2/M4 mixedwood classes, which the projection never produces; the conifer classes account for
+about \SI{73}{\percent} of the disagreements. The post-harvest types have no observational
+counterpart: they are a rule-based scenario, not a validated prediction.
 
 The projection holds the pre-harvest VRI crown closure for the planted stand. A comparison of TIPSY
 and VRI crown closure on \num{272840} polygons gives a mean difference of \SI{17.3}{percentage
@@ -159,9 +160,9 @@ crown closure, with multipliers 0.749 and 1.299. Under the BC 20 percent thresho
 The single weather state is not the centre of the multi-year weather record. Over the 720
 potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier is the 0.267
 floor at every state, while the C1 multiplier has a median of 1.112 and a 10th-to-90th percentile
-range of 0.817 to 1.312; the single-state value of 0.749 is at the 10th percentile. The M1 median is
-1.033 (range 0.376 to 1.253), and the C2 median is 1.312 (range 1.245 to 1.331). The D84 result is
-therefore weather-robust because it is the floor; the 26 percent standard's C1/C2 mix is not, and
+range of 0.817 to 1.312; the single-state value of 0.749 is below the 10th percentile (p10 0.817). The M1 median is
+1.033 (range 0.376 to 1.253), and the C2 median is 1.312 (range 1.245 to 1.331). The D84 multiplier is constant by construction because the 0.2 floor binds at every state; this is
+an assumption, not a robustness result; the 26 percent standard's C1/C2 mix is not, and
 its near-zero aggregate fire effect is a weighted average that shifts with weather.
 
 \paragraph{Design} We generate 20 event sets of 200 years. Each draw resamples the recorded fire
@@ -179,7 +180,7 @@ against 1,919 hectares) and a lower over-5,000-hectare fraction (1.10 against 3.
 432-perimeter calibration history. It is
 therefore a lower bound on the upper tail, not a replacement for the observed record. If the D84
 conclusion holds under the observed (larger-tail) event set, it holds under the calibrated
-(smaller-tail) lower bound.
+(smaller-tail) scenario.
 
 \subsection{Economic valuation}
 

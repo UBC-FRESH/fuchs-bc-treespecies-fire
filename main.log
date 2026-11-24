@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  24 NOV 2026 14:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  24 NOV 2026 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,11 +565,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-] [12]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13]) [14] [15]
+] [12] [13] [14]) [15]
 \openout2 = `text/4_discussion.aux'.
 
  (./text/4_discussion.tex [16
@@ -637,13 +633,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 22C0D03AF5F4648C87BA45C58F8C86CD;4891.
  ) 
 Here is how much of TeX's memory you used:
- 15122 strings out of 476106
- 296080 string characters out of 5793934
+ 15124 strings out of 476106
+ 296113 string characters out of 5793934
  1940975 words of memory out of 5000000
- 36795 multiletter control sequences out of 15000+600000
+ 36796 multiletter control sequences out of 15000+600000
  568939 words of font info for 78 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 75i,10n,79p,447b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,497b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -662,10 +658,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (27 pages, 1933205 bytes).
+Output written on main.pdf (27 pages, 1936403 bytes).
 PDF statistics:
- 536 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
- 102 named destinations out of 1000 (max. 500000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 434 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
  214 words of extra memory for PDF output out of 10000 (max. 10000000)
 
