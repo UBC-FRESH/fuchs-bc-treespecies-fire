@@ -160,8 +160,8 @@ aggregate change at 100 percent masks offsetting stand-level effects.
 \subsection{The fire-risk surface}
 
 We report two fire-size scenarios. The observed record is the main scenario: the full 1,073-fire
-TSA history, resampled with replacement, with the recorded fire count and random placement. The
-calibrated retention sample is the lower bound: the same fire count and placement, but the sizes
+TSA history, resampled with replacement, with the historical annual count and random placement.
+The calibrated retention sample is the lower bound: the same annual count and random placement, but the sizes
 are drawn from the 3,450 retained sizes of the companion multi-year calibration. The calibrated
 sample has a higher median but a lower upper tail, so it understates the tail relative to the
 observed record.
@@ -170,31 +170,46 @@ observed record.
     \centering
     \small
     \caption{Fire loss under the observed record and the calibrated-retention lower bound, 20 paired
-    draws, at \SI{4}{\percent}. Mean and CVaR20 are in million CAD; the percentage is relative to the
-    no-fire net present value. CVaR20 of net NPV is no-fire NPV minus CVaR20 loss.}
+    draws, at \SI{4}{\percent}. Mean and CVaR20 are in million CAD. CVaR20 of net NPV is no-fire NPV minus CVaR20 loss.}
     \label{tab:res_fire_surface}
     \begin{tabular}{llrrr}
         \toprule
         Scenario & Standard & Mean loss & CVaR20 loss & CVaR20 net NPV \\
         \midrule
-        Observed & CC  & \pending{} & \pending{} & \pending{} \\
-        Observed & D26 & \pending{} & \pending{} & \pending{} \\
-        Observed & D55 & \pending{} & \pending{} & \pending{} \\
-        Observed & D84 & \pending{} & \pending{} & \pending{} \\
+        Observed & CC  & 135.1 & 175.4 & 6,092.1 \\
+        Observed & D26 & 135.1 & 175.4 & 6,092.6 \\
+        Observed & D55 & 133.5 & 173.7 & 6,058.9 \\
+        Observed & D84 & 132.8 & 173.0 & 6,044.2 \\
         \midrule
-        Calibrated & CC  & \pending{} & \pending{} & \pending{} \\
-        Calibrated & D26 & \pending{} & \pending{} & \pending{} \\
-        Calibrated & D55 & \pending{} & \pending{} & \pending{} \\
-        Calibrated & D84 & \pending{} & \pending{} & \pending{} \\
+        Calibrated & CC  & 62.8 & 89.2 & 6,178.3 \\
+        Calibrated & D26 & 62.8 & 89.2 & 6,178.8 \\
+        Calibrated & D55 & 62.1 & 88.5 & 6,144.1 \\
+        Calibrated & D84 & 61.8 & 88.2 & 6,129.0 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 The observed-record scenario is the upper bound on the conditional-loss reduction. If D84 is not
-justified there, it is not justified under the calibrated lower bound. \pending{Insert the observed
-and calibrated D84/D55 differences, the paired intervals, and the cost per unit of CVaR20 loss
-reduction. State the CVaR-of-net-NPV difference explicitly: D84 lowers certainty by more than it
-lowers the conditional loss, so it is not a hedge.}
+justified there, it is not justified under the calibrated lower bound. The observed D84 difference is
+a \SI{2.4}{\mega\CAD} reduction in CVaR20 loss (95 percent paired bootstrap 2.0 to 2.7) at a
+fixed-plan cost of \SI{50.3}{\mega\CAD}, a break-even of about 20.9 million CAD per 1 million CAD
+of loss reduction (interval 18.6 to 24.8). The CVaR of net present value is
+\SI{47.9}{\mega\CAD} lower. D55 reduces CVaR20 loss by \SI{1.7}{\mega\CAD} (1.4 to 1.9) at
+\SI{34.9}{\mega\CAD} (break-even 20.8, 18.5 to 24.9) and lowers the net CVaR by
+\SI{33.2}{\mega\CAD}. D26 has no fire effect (\SI{0.03}{\mega\CAD}). Under the calibrated lower
+bound, the D84 reduction is \SI{1.0}{\mega\CAD} (0.89 to 1.15) at the same fixed-plan cost
+(break-even 52.4, 43.7 to 56.7) and the net CVaR is \SI{49.4}{\mega\CAD} lower; D55 is
+\SI{0.7}{\mega\CAD} at a break-even of 52.3. D84 lowers certainty by more than it lowers the
+conditional loss under both scenarios, so it is not a hedge.
+
+The enterprise response raises the D84 cost from \SI{50.3}{\mega\CAD} to
+\SI{60.7}{\mega\CAD} (\autoref{tab:res_standards}). Holding the fixed-plan fire benefit, the
+break-even at the enterprise cost is about 25 million CAD per 1 million CAD; the D55 enterprise cost
+is \SI{42.6}{\mega\CAD}. The fire surface is the fixed-plan surface; the enterprise fire exposure
+is not simulated. The ranking and the sign of the net-CVaR difference are unchanged.
+
+The fixed-plan D26 row carries the fixed-plan no-fire value (+0.5 million CAD); the enterprise
+response makes it -1.4 million CAD. The fire effect is +0.03 million CAD in both cases.
 
 The severity result is weather-robust for D84 and weather-sensitive for D26. Over the 720
 potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier is the 0.267

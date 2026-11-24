@@ -45,7 +45,7 @@ conifer volume is flat. It costs \SI{1.4}{\mega\CAD} at \SI{4}{\percent} after r
 D55 and D84 standards cost \SI{42.6}{\mega\CAD} and \SI{60.7}{\mega\CAD}, or about
 \SI{0.7}{\percent} and \SI{1.0}{\percent} of CC net present value.
 
-The phrase ``free volume'' is therefore wrong. D26 adds aspen volume, not conifer volume, and its
+D26 is therefore not a free-volume policy. It adds aspen volume, not conifer volume, and its
 value is a net of a large aspen gain and a conifer loss. At the midpoint 2018 aspen price the net is
 slightly negative; it is within the aspen-price range, so the sign is not identified. The
 composition change is real, but it is a shift in the species mix, not an increase in merchantable
@@ -58,23 +58,25 @@ Net present value with fire is no-fire value minus the fire loss. CVaR is transl
 \begin{equation}
     \mathrm{CVaR}_{20}(\text{net NPV}) = \text{no-fire NPV} - \mathrm{CVaR}_{20}(\text{loss}).
 \end{equation}
-The 84 percent standard reduces the conditional fire loss, but it reduces certain value by more. At
-\SI{4}{\percent} it costs \SI{60.7}{\mega\CAD} and reduces CVaR20 loss by \pending{X}; the CVaR of
-net present value is \pending{Y} lower. It is not a hedge. The cost per \SI{1}{\mega\CAD} of CVaR
-loss reduction is about \pending{Z} at \SI{4}{\percent} and \SI{19}{\mega\CAD} at
-\SI{3}{\percent}. The ratio is not a welfare trade-off; it is the break-even price of a separate
-loss-reduction objective. A planner who evaluates net present value, including the tail, does not
-choose D84 on timber value alone.
+The 84 percent standard reduces the conditional fire loss, but it reduces certain value by more. On
+the fixed-plan fire surface at \SI{4}{\percent} it costs \SI{50.3}{\mega\CAD} and reduces CVaR20
+loss by \SI{2.4}{\mega\CAD}; the CVaR of net present value is \SI{47.9}{\mega\CAD} lower. The
+break-even is about 20.9 million CAD per 1 million CAD at the fixed-plan cost and about 25.2 at the
+enterprise cost of \SI{60.7}{\mega\CAD}. At \SI{3}{\percent} the fixed-plan break-even is 20.3.
+The ratio is not a welfare trade-off; it is the break-even price of a separate loss-reduction
+objective. A planner who evaluates net present value, including the tail, does not choose D84 on
+timber value alone.
 
-The D55 standard is an intermediate cost-effectiveness point, not a dominated option. It costs
-\SI{42.6}{\mega\CAD} at \SI{4}{\percent} and reduces CVaR20 loss by \pending{W}. It is not ``only
-D84'' that has a fire effect. The three standards are a three-point sample of a continuous deciduous
-share, and they do not establish a non-linear gradient.
+The D55 standard is an intermediate cost-effectiveness point, not a dominated option. On the
+fixed-plan fire surface at \SI{4}{\percent} it costs \SI{34.9}{\mega\CAD} and reduces CVaR20 loss
+by \SI{1.7}{\mega\CAD} (break-even 20.8); the enterprise cost is \SI{42.6}{\mega\CAD}. D84 is not
+the only standard with a fire effect. The three standards are a three-point sample of a continuous
+deciduous share, and they do not establish a non-linear gradient.
 
 The observed record and the calibrated retention sample bracket the fire-size distribution. The
 observed record is the upper bound on the conditional-loss reduction because it preserves the full
-1,073-fire tail. The calibrated sample has a higher median (29.9 against 23.0 hectares) but a lower
-95th percentile (833 against 1,919 hectares) and a lower over-5,000-hectare fraction (1.0 against 3.0
+1,073-fire tail. The calibrated sample has a higher median (29.3 against 23.0 hectares) but a lower
+95th percentile (893 against 1,919 hectares) and a lower over-5,000-hectare fraction (1.10 against 3.0
 percent), so it understates the tail. If D84 is not justified under the observed record, it is not
 justified under the calibrated lower bound. The comparison is a model-uncertainty bound, not a
 validation of either distribution.
@@ -149,12 +151,13 @@ value-neutral shift to aspen at the midpoint price, not free conifer volume. D55
 evaluates diversification through stumpage or log values will miss the yield and species-mix effect.
 
 The tail is priced, not free. The 84 percent standard cuts the stand-level severity multiplier to
-0.267, but the estate CVaR20 by \pending{X} at a production cost of \SI{60.7}{\mega\CAD}, and the
-CVaR of net present value is \pending{Y} lower. The break-even price of conditional-loss reduction
-is about \pending{Z} at \SI{4}{\percent} and 19 at \SI{3}{\percent}. A planner who evaluates net
-present value, including the tail, does not choose D84 on timber value alone. A planner with a
-separate loss-reduction objective, or non-timber benefits, would need to value the reduction above
-that break-even.
+0.267, but it reduces the estate CVaR20 by only \SI{2.4}{\mega\CAD} at a fixed-plan cost of
+\SI{50.3}{\mega\CAD} (\SI{60.7}{\mega\CAD} enterprise), and the CVaR of net present value is
+\SI{47.9}{\mega\CAD} lower. The break-even is about 20.9 at \SI{4}{\percent} and 20.3 at
+\SI{3}{\percent} at the fixed-plan cost, and about 52 under the calibrated lower bound. A planner
+who evaluates net present value, including the tail, does not choose D84 on timber value alone. A
+planner with a separate loss-reduction objective, or non-timber benefits, would need to value the
+reduction above that break-even.
 
 The harvest-flow rule deserves as much scrutiny as the silvicultural prescription. The gap between
 the model's level and the official cut is not a flow-rule cost; a declining-profile search also
