@@ -140,6 +140,14 @@ At the fixed plan D26 is a gain of \SI{0.5}{\mega\CAD}; D55 and D84 cost
 D55 and D84 more expensive and turns the D26 gain into a small cost. The ranking of the production
 costs is unchanged.
 
+The aspen price and haul distance are the other economic ranges. At 35 and
+\SI{40}{CAD\per\cubic\meter}, the fixed-plan D84 cost moves from 52.0 to \SI{48.7}{\mega\CAD}
+and the D55 cost from 35.9 to \SI{33.9}{\mega\CAD}; the D84 break-even is 21.4 to 20.3 and the D55
+break-even 20.9 to 20.6. D26 moves from a \SI{0.2}{\mega\CAD} cost at 35 to a
+\SI{1.2}{\mega\CAD} gain at 40, so its sign is not identified. The fire surface is valued at the
+\SI{90}{\kilo\meter} haul distance; at \SI{117}{\kilo\meter} the CC no-fire net present value
+falls by \SI{184}{\mega\CAD}, and the ranking is not revalued for haul.
+
 \subsection{The fuel projection}
 
 At $t=0$, re-typing every stand from the compiled analysis-unit composition reproduces
@@ -235,6 +243,36 @@ floor at every state. The C1 multiplier has a median of 1.112 and a 10th-to-90th
 0.817 to 1.312; the single-state value of 0.749 is below the 10th percentile (p10 0.817). The M1 median is 1.033,
 and the C2 median is 1.312. The 26 percent standard's C1/C2 mix therefore shifts with weather, and
 its near-zero aggregate fire effect is not a stable property of the standard.
+
+
+\begin{table}[h]
+    \centering
+    \small
+    \caption{Sensitivity of the 4 percent fire result to the severity assumptions. $\Delta$CVaR20 is
+    relative to CC; negative is a reduction and positive is a penalty. $\Delta$net is the CVaR of net
+    present value. The break-even is the fixed-plan cost per 1 million CAD of CVaR20 reduction. All
+    rows use 20 paired draws.}
+    \label{tab:res_fire_sensitivity}
+    \begin{tabular}{lrrrrr}
+        \toprule
+        Scenario & D84 $\Delta$CVaR & D84 $\Delta$net & D84 break-even & D55 $\Delta$CVaR & D26 $\Delta$CVaR \\
+        \midrule
+        Floor 0.1          & -2.33 & -47.99 & 21.6 & -1.59 & +0.06 \\
+        Floor 0.2 (main)   & -2.41 & -47.91 & 20.9 & -1.68 & +0.03 \\
+        Floor 0.4          & -2.56 & -47.76 & 19.7 & -1.85 & -0.02 \\
+        Threshold 20\%     & -2.43 & -47.89 & 20.7 & -1.70 & +0.42 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The severity floor is a weak estate-level lever. Across floor 0.1, 0.2, and 0.4, the D84 CVaR
+benefit is 2.33, 2.41, and \SI{2.56}{\mega\CAD}; the break-even is 21.6, 20.9, and 19.7. The D55
+benefit is 1.59 to \SI{1.85}{\mega\CAD}. The 20 percent mixedwood threshold leaves D84 and D55
+essentially unchanged (2.43 and \SI{1.70}{\mega\CAD}) but turns D26 from negligible
+(+\SI{0.03}{\mega\CAD}) into a small penalty (+\SI{0.42}{\mega\CAD}), because the 26 percent stand
+becomes M2. The absolute CC loss moves with the floor (\SI{172.9}{\mega\CAD} to
+\SI{179.6}{\mega\CAD}), but the D84 difference does not. The D84 conclusion is therefore robust to
+the severity floor and the mixedwood threshold.
 
 \subsection{Rotation length}
 
