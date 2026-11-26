@@ -5,6 +5,28 @@ Artzner, P., Delbaen, F., Eber, J.-M., and Heath, D. (1999).
 \newblock Coherent measures of risk.
 \newblock {\em Mathematical Finance}, 9(3):203--228.
 
+\bibitem[{British Columbia Ministry of Forests}, 2026a]{bc_mof_log_market_2026}
+{British Columbia Ministry of Forests} (2026a).
+\newblock {B.C. Interior Log Market Report}, three months ending 30 september
+  2026.
+\newblock Timber Pricing Branch, Victoria, BC.
+\newblock Average price rows. Accessed 21 November 2026.
+
+\bibitem[{British Columbia Ministry of Forests},
+  2026b]{bc_mof_tabular_stumpage_2026}
+{British Columbia Ministry of Forests} (2026b).
+\newblock Interior non-appraised tabular stumpage rates.
+\newblock Victoria, BC.
+\newblock Table 6-1, North Central average sawlog rate, effective 1 November
+  2026.
+
+\bibitem[{British Columbia Ministry of Forests},
+  2026c]{bc_mof_silviculture_costs_2026}
+{British Columbia Ministry of Forests} (2026c).
+\newblock Interior silviculture costs (\$/m3).
+\newblock Timber Pricing Branch, Victoria, BC.
+\newblock North Central zone, effective 1 October 2026.
+
 \bibitem[{British Columbia Ministry of Forests},
   nd]{bc_mof_silviculture_lesson4}
 {British Columbia Ministry of Forests} (n.d.).
@@ -60,6 +82,13 @@ Heaps, T. and Pratt, B. (1989).
 \newblock The social discount rate for silvicultural investments.
 \newblock FRDA Report 071, British Columbia Ministry of Forests, Research
   Branch.
+
+\bibitem[{Industrial Forestry Service Ltd.}, 2018]{ifs_aspen_2018}
+{Industrial Forestry Service Ltd.} (2018).
+\newblock A review of aspen/hardwood resources in northeast british columbia.
+\newblock Technical report, Industrial Forestry Service Ltd.
+\newblock Interior hardwood log price 35--40 CAD/m3 (ten-year average) and
+  deciduous stumpage 0.50 CAD/m3 for grades 1 and 2.
 
 \bibitem[Lagos et~al., 2025]{lagos_bilevel_2025}
 Lagos, T., Choi, J., Segundo, B., Gan, J., Ntaimo, L., and Prokopyev, O.~A.
