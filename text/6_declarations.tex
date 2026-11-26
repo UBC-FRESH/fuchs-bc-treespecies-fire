@@ -6,18 +6,25 @@ Inventory, the Forest and Range Evaluation Program disturbance mapping, and Site
 estimates, under the Open Government Licence (British Columbia). The instance carries the source licences.
 
 The estate model is WS4~\citep{ubc_fresh_ws4_2026}, released under the Apache License 2.0; the
-fire run uses the public estate-fire API. Harvest costing uses the FHOPS forest harvest and
-operations planning library~\citep{fhops_2026}. The fire calibration, the historical perimeter set, the calibrated suppression
+fire run uses the public estate-fire API. Harvest costing uses the Forest Harvest and Operations
+Planning System (FHOPS)~\citep{fhops_2026}. The fire calibration, the historical perimeter set, the calibrated suppression
 configurations, and the regional calibration JSON are documented in the calibration study
-\citep{ubc_fresh_fire_calibration_2026}. They are archived with that study on acceptance; the raw
-perimeter data are not redistributed here.
+\citep{ubc_fresh_fire_calibration_2026}. They are archived with that study; the raw perimeter data
+are not redistributed here.
 
-The state-based convergence schedules, the scripts that build the candidate and simulator caches,
-the derived species-period table, the rotation summaries, the stocking-standard surface, the fuel
-projection checks, the observed and calibrated-retention fire surfaces, the aspen-price and haul
-sensitivities, and the valuation and rotation code are archived in a public repository with a DOI on
-acceptance. The sensitivity values
-are reproducible from the valuation code and the recorded constants.
+All results are reproducible from the analysis repository at
+\url{https://github.com/UBC-FRESH/fresh-fuchs-ws4} (commit \texttt{c9975f9}):
+\begin{itemize}
+\item state-based convergence: \path{experiments/plantation/enterprise/state/*/result.json};
+\item production and value: \path{experiments/plantation/enterprise/prod-converged.json};
+\item fire surfaces: \path{experiments/plantation/enterprise/surface-converged-observed-summary.json}
+and \path{surface-converged-calibrated-summary.json};
+\item fuel projection: \path{experiments/plantation/t0-fuel-validation.json};
+\item rotation: \path{experiments/plantation/enterprise/rotation-converged.json};
+\item sensitivities: \path{experiments/plantation/enterprise/sensitivity-converged.json}.
+\end{itemize}
+The manuscript source is at \url{https://github.com/UBC-FRESH/fuchs-bc-treespecies-fire}. The
+sensitivity values are reproducible from the valuation code and the recorded constants.
 
 \section*{Author contributions}
 

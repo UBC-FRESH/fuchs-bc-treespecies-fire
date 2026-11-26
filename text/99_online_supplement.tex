@@ -64,7 +64,8 @@ unmanaged area is the complement.
 The stage-1 result is a warm start; the stage-2 result is the reported schedule. All four standards
 converged to a 20-period mean of 6.935 to 6.938 million m3/yr in 700,000 to 1,000,000 stage-2
 iterations, 0.26 to 0.31 percent above the ceiling. The final period is the even-flow reference and
-reaches 7.28 million m3/yr, 5.3 percent above the ceiling; the other 19 periods sit at the AAC.
+reaches 7.28 million m3/yr, 5.2 to 5.3 percent above the ceiling; the other periods are at or just
+above the AAC.
 
 \subsection*{S3. Economic constants}
 
@@ -86,7 +87,7 @@ reaches 7.28 million m3/yr, 5.3 percent above the ceiling; the other 19 periods 
         Silviculture             & 10.02 CAD/m3 & BC Interior costs, North Central zone, 2026-10-01 \\
         Conifer stumpage         & 9.92 CAD/m3 & BC tabular rate, North Central, 2026-11-01 \\
         Deciduous stumpage       & 0.50 CAD/m3 & grades 1 and 2 \\
-        Discount rate            & 4 percent real & \citet{bc_mof_silviculture_lesson4} \\
+        Discount rate            & 4 percent real & British Columbia Ministry of Forests (n.d.)\nocite{bc_mof_silviculture_lesson4} \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -94,13 +95,13 @@ reaches 7.28 million m3/yr, 5.3 percent above the ceiling; the other 19 periods 
 Sources: log prices \citep{bc_mof_log_market_2026}; deciduous price and stumpage
 \citep{ifs_aspen_2018}; machine rates and haul \citep{fhops_2026}; silviculture
 \citep{bc_mof_silviculture_costs_2026}; conifer stumpage
-\citep{bc_mof_tabular_stumpage_2026}. FHOPS is the forest harvest and operations planning library.
+\citep{bc_mof_tabular_stumpage_2026}. FHOPS is the Forest Harvest and Operations Planning System.
 Net present value discounts each period's net value at its end. The base rate is the BC Ministry
 of Forests 4 percent real rate for public-sector forestry investment analysis; \citet{heaps_pratt_1989}
 recommend 3 to 5 percent, and the federal social rate for environmental analysis is 3 percent
 \citep{treasury_board_2007}. The sensitivity analysis varies the deciduous price over its documented
 35 to 40 CAD/m3 range, the haul distance from 90 to 117 km, and the discount rate over 3, 4, 5, and
-8 percent.
+8 percent; the last is an upper-bound opportunity-cost sensitivity, not a published social rate.
 
 \subsection*{S4. Stocking-standard experiments}
 
@@ -174,12 +175,13 @@ and is biased toward productive and accessible stands.
 \subsection*{S6. Reproduction}
 
 The state-based convergence uses a compact index of candidate moves and the resident stand state,
-with the two-stage target and the harvest-plateau stop. The scripts that build the candidate and simulator
-caches, the converged schedules, the observed and calibrated-retention fire surfaces, the fuel
-projection checks, the aspen-price and haul sensitivities, and the valuation and rotation code are
-archived in a public repository with a DOI on acceptance. The
-sensitivity values are reproducible from the valuation code and the recorded constants. The policy
-dataset, the schedules, the no-fire baseline, and the paired fire ensembles are rebuilt by the
-scripts in that repository. The estate model is WS4~\citep{ubc_fresh_ws4_2026}; harvest costing uses
+with the two-stage target and the harvest-plateau stop. All results are reproducible from the analysis
+repository at \url{https://github.com/UBC-FRESH/fresh-fuchs-ws4} (commit \texttt{c9975f9}); the
+state schedules, the production and value table, the observed and calibrated-retention fire surfaces,
+the fuel-projection check, the rotation summary, and the sensitivities are in
+\texttt{experiments/plantation/enterprise} and \texttt{experiments/plantation}. The policy dataset,
+the schedules, the no-fire baseline, and the paired fire ensembles are rebuilt by the scripts in that
+repository. The manuscript source is at
+\url{https://github.com/UBC-FRESH/fuchs-bc-treespecies-fire}. The estate model is WS4~\citep{ubc_fresh_ws4_2026}; harvest costing uses
 FHOPS~\citep{fhops_2026}. The fire calibration and its perimeter set are documented in
 \citet{ubc_fresh_fire_calibration_2026}.

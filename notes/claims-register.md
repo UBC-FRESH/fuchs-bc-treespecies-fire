@@ -3,8 +3,9 @@
 > Status note (2026-11-26): the AAC-level state convergence is the only production result cited
 > in the manuscript. The earlier fixed-flow and fixed-plan rows below are retained as a historical
 > archive and are not cited. No 60.7, 19:1, or ten-draw fire number may ship. The 6.935-6.938 mean
-> includes the final reference period; the other 19 periods sit at the AAC, and the final period is
-> 5.3 percent above the ceiling.
+> includes the final reference period; most periods sit at the AAC, D26 has one non-final period
+> 0.74 percent above and D55 one 0.01 percent above, and the final period is 5.2-5.3 percent above
+> the ceiling.
 
 Rule: every number in the manuscript appears here with the artifact that produces it. A sentence
 whose number is not in this table does not ship.
@@ -23,7 +24,7 @@ calibration), `to compute` (not yet produced).
 | D55 level | 6.9356 Mm3/yr; 750,000 stage-2 iterations; converged | `.../state/cc_d55/result.json` | verified |
 | D84 level | 6.9355 Mm3/yr; 750,000 stage-2 iterations; converged | `.../state/cc_d84/result.json` | verified |
 | Stage-1 harvest | CC 6.994, D26 7.359, D55 7.164, D84 7.183 Mm3/yr; all stage-1 lower-bound warm starts overshoot the AAC and did not converge | `.../state/*/result.json` stages | verified |
-| Period profile | 19 periods at 6.91723 Mm3/yr (the AAC); final reference period 7.28 Mm3/yr (5.3 percent above the ceiling); 20-period mean 6.935-6.938 | `.../enterprise/prod-converged.json` period-species tables | verified |
+| Period profile | Most periods at 6.91723 Mm3/yr (the AAC); D26 has one non-final period 0.74 percent above, D55 one 0.01 percent above; final reference period 7.28 Mm3/yr (5.2-5.3 percent above the ceiling); 20-period mean 6.935-6.938 | `.../enterprise/prod-converged.json` period-species tables | verified |
 | Total volume, 200 years | CC 1,387.1; D26 1,387.7; D55 1,387.1; D84 1,387.1 Mm3 | `.../enterprise/prod-converged.json` | verified |
 | NPV3/NPV4/NPV5 | CC 11,628.4/8,295.7/6,306.5; D26 11,582.8/8,331.6/6,361.5; D55 11,329.9/8,256.4/6,349.9; D84 11,053.0/8,149.2/6,305.7 MCAD | same | verified |
 | Delta NPV4 | D26 +36.0; D55 -39.3; D84 -146.5 MCAD | same | verified |
@@ -40,16 +41,17 @@ calibration), `to compute` (not yet produced).
 | Rate table | D26 obs/cal: 3% -4.1/-9.6, 4% +59.4/+59.7, 5% +70.6/+72.1, 8% +54.6/+56.1; D55: -221.6/-241.3, +7.9/-0.5, +76.5/+72.2, +86.2/+85.6; D84: -489.3/-514.6, -99.0/-107.2, +30.8/+27.6, +83.6/+82.8 MCAD | both summaries | verified |
 | Rotation and treated area | 153,190 intervals; area-weighted mean 92.8 years, median 90, 10th-90th 60-140; treated area 5.56 Mha over 200 years, 27,797 ha/yr | `.../enterprise/rotation-converged.json` | verified |
 | Volume per treated hectare | 249.5 m3/ha | `.../enterprise/rotation-converged.json` | verified |
-| D55 ahead of D84 on net CVaR | at 3, 4, 5, 8 percent in both observed and calibrated scenarios; the 8 percent margin is 2.6 MCAD observed and 2.8 calibrated, a point estimate; D84's gross CVaR reduction is 0.5 MCAD larger calibrated and 0.3 larger observed | both summaries | verified |
+| D55 ahead of D84 on net CVaR | at 3, 4, 5, 8 percent in both observed and calibrated scenarios; the 8 percent margin is 2.6 MCAD observed and 2.8 calibrated, a point estimate; D84's gross CVaR reduction is 0.6 MCAD larger calibrated and 0.4 larger observed | both summaries | verified |
 | Paired bootstrap | 10,000 resamples, 95 percent intervals | `.../plantation/analyze_surface.py`; both summaries | verified |
 | Paired bootstrap, 4 percent | D26 net +59.4 [55.9, 63.3] obs, +59.7 [57.8, 61.6] cal; D55 +7.9 [3.1, 13.7] obs, -0.5 [-2.9, 2.7] cal; D84 -99.0 [-102.7, -89.7] obs, -107.2 [-110.1, -102.0] cal MCAD | both summaries | verified |
 | Aspen price, 4 percent | no-fire D26 +37.6/+36.0/+34.3; D55 -40.6/-39.3/-37.9; D84 -151.8/-146.5/-141.2 MCAD at 35/37.5/40 CAD/m3. Net CVaR D26 +57.8 to +61.1; D55 -2.2 to +9.5; D84 -112.8 to -93.4 | `.../enterprise/sensitivity-converged.json`; both fire summaries | verified |
+| Aspen operating margin, mid price | 37.5 - 21.38 harvest - 7.85 haul - 10.02 silviculture - 0.50 stumpage = -2.25 CAD/m3 | `scripts/valuation.py` constants; methods section 2.7 | verified |
 | Haul, 4 percent | CC NPV4 8,295.7 at 90 km and 7,956.6 at 117 km (-339.1); standard differences unchanged at +36.0/-39.3/-146.5 MCAD | same | verified |
 | Terminal period | excluding the final even-flow reference period: D26 +36.3, D55 -38.4, D84 -145.1 MCAD vs CC, within 1.4 MCAD of the full-horizon deltas | same | verified |
 | Fragments with VRI fuel type | 438,601 | `.../t0-fuel-validation.json` | verified |
 | Post-fire succession | burned stand re-typed from surviving cohorts; post-fire succession not modelled | `notes/reports/p4-dynamic-fuel.md` | verified |
 | Calibrated fractional reduction | D55/D84 34 percent calibrated vs 21 percent observed, relative to CC CVaR20 loss (112.8 vs 221.1) | both summaries | derived |
-| Fuel projection, t=0 | 63.1 percent from compiled AU composition; 66.7 percent from VRI conifer share; conifer classes 86 percent of disagreements; projection never produces C7/M2/M4 while the VRI grid carries all three; S1/O1B have no VRI counterpart | `.../t0-fuel-validation.json`; `notes/reports/p4-dynamic-fuel.md` | verified |
+| Fuel projection, t=0 | 63.1 percent from compiled AU composition; 66.7 percent from VRI conifer share; compiled-AU conifer classes 86 percent of disagreements; compiled-AU re-typing never produces C7/M2/M4 while the VRI grid carries all three; the operational VRI-conifer mapping does produce M2/M4; S1/O1B have no VRI counterpart | `.../t0-fuel-validation.json`; `notes/reports/p4-dynamic-fuel.md` | verified |
 | Observed fire sizes | mean 704.5, median 23.7, p90 695.9, p95 2,047, max 72,317 ha; over-5,000 3.0 percent | `.../fire-regime/summary.json` | verified |
 | Calibrated retention sizes | 3,450 sizes; mean 278.9, median 29.3, p90 379.5, p95 892.6, max 23,356.9 ha; over-5,000 1.10 percent | `.../fire/calibrated-retention-sizes.json` | verified |
 | Severity range, D84 | 0.10-0.49 across floor 0.1-0.4 and wind 6.8-25 km/h | `.../severity-sensitivity.csv` | verified |
@@ -213,7 +215,7 @@ conifer sites to aspen; see the next section.
 | Multi-year calibration | 1950--2024 weather; 690 retained records (3,450 sizes at five draws each) from 720 potential-weather states; reference median 29.9, p90 370.1, p95 833.4, over-5,000 1.0 percent, max 24,147.1 ha | `fresh_ws4_fire_regime_repro:results/region-retention-summary.json` | verified |
 | Calibration transfer | in-sample 1.337; potential/weather analogue 4.456; training median 5.873; temporal event median absolute bias 89.3 percent | `region-retention-multiyear-all.json`, `event-simulations-retention-pre2018.json` | verified |
 | Full TSA fire record | 1,073 fires, 14.31 per year, 10,079 ha/yr, mean 704.5 ha, max 72,317 ha | `fresh-fuchs-ws4:experiments/fire-regime/tsa24-fire-history.json` | verified |
-| Record versus calibration | the full record includes fires outside the 24 calibration tiles; the calibration is a 24-tile subset, max 25,114.8 ha | same; `region-retention-summary.json` | verified |
+| Record versus calibration | the full record includes fires outside the calibration tiles; the calibrated-retention sample is a 23-tile subset (24 calibration tiles, t24 has no historical fires), max 25,114.8 ha | same; `region-retention-summary.json` | verified |
 | Calibrated size sample replay | 3,450 sizes; median 29.3, p95 892.6, over-5,000 1.10 percent, max 23,356.9 ha | `fresh-fuchs-ws4:experiments/plantation/fire/calibrated-retention-sizes.json` | verified |
 | Weather range, D1 | 0.267 at all 720 potential-fire weather states | `fresh-fuchs-ws4:experiments/plantation/fire/severity-weather-range.json` | verified |
 | Weather range, C1 | median 1.112, 10th--90th 0.817--1.312; single state 0.749 (10th percentile) | same | verified |

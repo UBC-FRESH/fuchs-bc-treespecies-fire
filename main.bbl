@@ -5,6 +5,20 @@ Artzner, P., Delbaen, F., Eber, J.-M., and Heath, D. (1999).
 \newblock Coherent measures of risk.
 \newblock {\em Mathematical Finance}, 9(3):203--228.
 
+\bibitem[{BC Timber Sales}, 2026]{bc_timber_sales_facilities_2026}
+{BC Timber Sales} (2026).
+\newblock Facility locations for the {Prince George} timber supply area.
+\newblock Compiled sawmill coordinates; 11 high- or medium-confidence mills;
+  accessed 21 November 2026.
+
+\bibitem[{BC Wildfire Service}, 2026]{bc_wildfire_perimeters_2026}
+{BC Wildfire Service} (2026).
+\newblock Historical fire perimeters.
+\newblock
+  \url{https://maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_land_and_natural_resource/MapServer/5}.
+\newblock BC Geographic Warehouse, layer 5; perimeters clipped to TSA 24,
+  1950--2024. Accessed 22 November 2026.
+
 \bibitem[{British Columbia Ministry of Forests}, 2026a]{bc_mof_log_market_2026}
 {British Columbia Ministry of Forests} (2026a).
 \newblock {B.C. Interior Log Market Report}, three months ending 30 september
@@ -32,8 +46,7 @@ Artzner, P., Delbaen, F., Eber, J.-M., and Heath, D. (1999).
 {British Columbia Ministry of Forests} (n.d.).
 \newblock Lesson 4: Economic principles of timber production.
 \newblock Silviculture Training Modules, Forest Practices Branch.
-\newblock States that the Ministry of Forests uses a 4 percent real rate for
-  public-sector forestry investment analysis. Accessed 23 November 2026.
+\newblock Accessed 23 November 2026.
 
 \bibitem[Chung, 2015]{chung_optimizing_2015}
 Chung, W. (2015).
@@ -106,7 +119,6 @@ Seidl, R., Schelhaas, M.-J., Rammer, W., and Verkerk, P.~J. (2014).
 \newblock Increasing forest disturbances in {Europe} and their impact on carbon
   storage.
 \newblock {\em Nature Climate Change}, 4(9):806--810.
-\newblock Num Pages: 7.
 
 \bibitem[Topanotti et~al., 2024]{topanotti_enhancing_2024}
 Topanotti, L.~R., Fuchs, J.~M., Albert, M., Schick, J., Penanhoat, A., Lu,
@@ -136,15 +148,22 @@ Topanotti, L.~R., Fuchs, J.~M., Albert, M., Schick, J., Penanhoat, A., Lu,
 \newblock Machine rates for the tree-length ground harvest system and highway
   haul. Accessed 21 November 2026.
 
-\bibitem[{UBC FRESH Laboratory}, 2026c]{ubc_fresh_fire_calibration_2026}
+\bibitem[{UBC FRESH Laboratory}, 2026c]{ubc_fresh_fire_regime_repro_2026}
 {UBC FRESH Laboratory} (2026c).
+\newblock Multi-year fire regime retention calibration ({P164.9}).
+\newblock \url{https://github.com/UBC-FRESH/ws4}.
+\newblock Region-retention multi-year results; 23-tile global retention fit;
+  accessed 22 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026d]{ubc_fresh_fire_calibration_2026}
+{UBC FRESH Laboratory} (2026d).
 \newblock {TSA24} fire regime calibration: 24-tile real-layer ensemble and
   region-level suppression.
 \newblock \url{https://github.com/UBC-FRESH/ws4}.
 \newblock Calibration index and reports. Accessed 21 November 2026.
 
-\bibitem[{UBC FRESH Laboratory}, 2026d]{ubc_fresh_ws4_2026}
-{UBC FRESH Laboratory} (2026d).
+\bibitem[{UBC FRESH Laboratory}, 2026e]{ubc_fresh_ws4_2026}
+{UBC FRESH Laboratory} (2026e).
 \newblock {WS4}: spatially explicit wood supply simulation system.
 \newblock \url{https://github.com/UBC-FRESH/ws4}.
 \newblock Accessed 21 November 2026.

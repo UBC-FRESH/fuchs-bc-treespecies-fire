@@ -32,7 +32,7 @@ matches the base-case timber harvesting land base (THLB) in the 2017 timber supp
 \begin{table}[h]
     \centering
     \caption{Species composition of the managed land base (\SI{3.06}{\mega\hectare}) and of
-    harvested volume in the converged CC schedule.}
+    harvested volume in the historical-clearcut (CC) schedule.}
     \label{tab:meth_studyregion_spec}
     \begin{tabular}{lrr}
         \toprule
@@ -100,10 +100,11 @@ transition information are carried as curves per block, compiled from the provin
 the timber supply analysis. The regenerated stand takes the species mix of the prescription.
 
 We run 20 periods of ten years. Every period of the converged schedules is at or above the allowable annual cut. The final period is the even-flow reference and reaches
-\SI{7.28}{\mega\cubic\meter\per\year}, \SI{5.3}{\percent} above the ceiling; the other 19
-periods sit at the AAC. The 20-period mean is \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year},
-\SIrange{0.26}{0.31}{\percent} above the ceiling. The final period is the even-flow reference, so its higher harvest raises the mean; it is not an
-unconstrained terminal period. The minimum period does not
+\SI{7.28}{\mega\cubic\meter\per\year}, \SIrange{5.2}{5.3}{\percent} above the ceiling; the
+other periods are at the AAC or within \SI{0.75}{\percent} above it. The 20-period mean is
+\SIrange{6.935}{6.938}{\mega\cubic\meter\per\year}, \SIrange{0.26}{0.31}{\percent} above the
+ceiling. The final period is the reference and carries no even-flow penalty; it is only lower-bounded
+at the AAC, so its excess is a design feature. The minimum period does not
 fall under any standard; the standards change
 composition and value, not the minimum sustainable cut.
 
@@ -116,7 +117,8 @@ changing site productivity, or within-stand species interactions; the discussion
 
 \subsection{Fire regime and composition-dependent severity}
 
-The fire regime is the full TSA~24 record: 1,073 mapped fire perimeters from 1950 to 2024,
+The fire regime is the full TSA~24 record: 1,073 mapped fire perimeters from 1950 to 2024
+\citep{bc_wildfire_perimeters_2026},
 \num{14.31} fires per year, \SI{10079}{\hectare\per\year}, a mean fire of \SI{704.5}{\hectare},
 and a maximum of \SI{72317}{\hectare}. The record is a mapped-fire history, not a forecast: small
 fires are under-recorded, the record spans changing suppression and climate, and the tail rests on
@@ -125,8 +127,9 @@ a small number of events.
 The fire-risk surface uses the recorded size and frequency distribution with a
 composition-dependent severity model, which holds the regime fixed and isolates the fuel effect. The
 calibrated surface-fire model~\citep{ubc_fresh_fire_calibration_2026} couples fire to the estate
-state; its fire-spread suppression parameters were fitted on 24 map tiles against 432 historical
-perimeters. The calibrated sample has a higher median but lower mean, p90, p95, and maximum than the
+state; its fire-spread suppression parameters were fitted on 24 calibration tiles against 432
+historical perimeters. The retention fit uses 23 of those tiles because tile t24 has no historical
+fires. The calibrated sample has a higher median but lower mean, p90, p95, and maximum than the
 observed record; it is a lower-severity in-sample scenario, not a central fit, and not a validation
 or the policy engine.
 
@@ -140,19 +143,20 @@ mixedwood threshold (a stand is mixedwood when deciduous share is at least 30 pe
 algorithm's 20 percent threshold is a sensitivity. The baseline is not
 re-typed. Re-typing every stand from the compiled analysis-unit composition reproduces
 \SI{63.1}{\percent} of the operational grid; the operational mapping from VRI conifer share
-reproduces \SI{66.7}{\percent}. The projection never produces C7, M2, or M4, although the VRI grid
-carries all three; the conifer classes account for \SI{86}{\percent} of the disagreements. The
-compiled dataset carries one species mix per analysis unit, while the VRI grid carries one per
-polygon. The post-harvest S1 and O1B types have no observational counterpart: they are a rule-based scenario, not a validated prediction. Post-fire fuel succession is
+reproduces \SI{66.7}{\percent}. The compiled-AU re-typing never produces C7, M2, or M4, although the
+VRI grid carries all three; its conifer classes account for \SI{86}{\percent} of the disagreements.
+The operational VRI-conifer mapping does produce M2 and M4. The compiled dataset carries one species
+mix per analysis unit, while the VRI grid carries one per polygon. The post-harvest S1 and O1B types have no observational counterpart: they are a rule-based scenario, not a validated prediction. Post-fire fuel succession is
 not modelled; a burned stand is re-typed from its surviving cohorts in the next period. The
 projection holds the pre-harvest VRI crown closure for the planted stand, with a 5 percent floor for
-sparse pre-harvest fragments; the TIPSY stand-yield model and VRI crown closure differ by 17.3
+sparse pre-harvest fragments; the Table Interpolation Program for Stand Yields (TIPSY) model and VRI
+crown closure differ by 17.3
 percentage points with a correlation of 0.004
 \citep{government_of_british_columbia_tipsy_2026}.
 
 \paragraph{Severity} A fire that reaches a stand kills a fraction of its biomass. We compute the
 FBP crown fraction burned (CFB) for the stand's fuel type under the calibration weather (Fine Fuel
-Moisture Code 93.8, Buildup Index 108.2, wind~\SI{6.8}{\kilo\meter\per\hour}) and map it onto the
+Moisture Code (FFMC) 93.8, Buildup Index (BUI) 108.2, wind~\SI{6.8}{\kilo\meter\per\hour}) and map it onto the
 process severity bounds:
 \[
   \text{raw severity} = 0.2 + 0.8\,\text{CFB}.
@@ -181,27 +185,30 @@ standard, so the comparison is paired. The paired bootstrap uses 10,000 resample
 uncertainty in the fire-size distribution, the severity model, or the growth curves.
 
 The main event set uses the full 1,073-fire observed record. A second event set replaces the observed
-sizes with the 3,450 fire sizes retained by the companion multi-year calibration (690
-retained records at five draws each, from the 1950--2024 potential-weather sample of 720 states),
-holding the Poisson count process and random placement fixed.
+sizes with the 3,450 fire sizes retained by the companion multi-year calibration
+\citep{ubc_fresh_fire_regime_repro_2026} (690 retained records at five draws each, from the
+1950--2024 potential-weather sample of 720 states), holding the Poisson count process and random
+placement fixed.
 The calibrated sample has a higher median (29.3 against 23.7 hectares) but a lower mean (278.9
 against 704.5 hectares), p90 (379 against 696 hectares), 95th percentile (893 against 2,047
 hectares), maximum (23,357 against 72,317 hectares), and over-5,000-hectare fraction (1.10 against
-3.0 percent) than the observed TSA record. It is a lower-severity case, not a replacement for the
-observed record. The observed record gives the larger absolute benefit for D55 and D84; for D26 the two are nearly
-identical. The two scenarios span the fire-size range we consider.
+3.0 percent) than the observed TSA record. The calibrated sample is a 23-tile subset, not the full
+TSA; the comparison with the full record is not spatially matched, so its lower mean, p90, and p95
+may reflect spatial extent as well as severity. It is a lower-severity case, not a replacement for
+the observed record. The observed record gives the larger absolute benefit for D55 and D84; for D26 the two are nearly
+identical. We consider these two fire-size cases.
 
 \subsection{Risk measure and decision criterion}
 
 Policy evaluation under fire is a decision under risk, not a point forecast. Let $X_p$ be the net
-present value of policy $p$ under one fire draw, and let the loss be $-X_p$. Value at risk at level
-$\alpha$ is the $\alpha$ quantile of the loss distribution. Conditional value at risk (CVaR) at level $\alpha$ is the mean
-loss in the worst $\alpha$ fraction of draws, the expected shortfall conditional on being in the
-tail. CVaR is a coherent risk measure: it is monotone, subadditive, positively homogeneous, and
-translation invariant~\citep{artzner_coherent_1999}, and it can be represented as a convex
-optimization problem~\citep{rockafellar_optimization_2000}. Subadditivity means that combining two
-portfolios cannot create more measured risk than the sum of their separate risks; value at risk does
-not guarantee this, which is one reason we do not use it. Unlike value at risk, it reflects the
+present value of policy $p$ under one fire draw, and let the loss be $-X_p$. Value at risk (VaR) at
+level $\alpha$ is the $\alpha$ quantile of the loss distribution. Conditional value at risk (CVaR) at
+level $\alpha$ is the mean loss in the worst $\alpha$ fraction of draws, the expected shortfall
+conditional on being in the tail. CVaR is a coherent risk measure: it is monotone, subadditive,
+positively homogeneous, and translation invariant~\citep{artzner_coherent_1999}, and it can be
+represented as a convex optimization problem~\citep{rockafellar_optimization_2000}. Subadditivity
+means that combining two portfolios cannot create more measured risk than the sum of their separate
+risks; VaR does not guarantee this, which is one reason we do not use it. Unlike VaR, it reflects the
 size of losses beyond the threshold, so it does not treat a large loss just beyond the quantile as
 equivalent to a small one. Intuitively, CVaR measures how severe the tail outcomes are, not merely
 how often they occur.
@@ -217,7 +224,7 @@ so a risk-neutral reader can separate frequency from severity.
 
 For each standard we compute CVaR20 of net present value (no-fire net present value minus fire loss)
 and compare it with the clearcut on the same draws. The decision metric is the change in CVaR20 net
-present value; the no-fire net present value difference is the cost side. We report the ratio of
+present value (the net CVaR); the no-fire net present value difference is the cost side. We report the ratio of
 no-fire cost to CVaR20 reduction, where a ratio below one is a net gain. CVaR20 is a comparative
 metric on the modeled draws, not an absolute forecast, and the paired bootstrap reports its sampling
 variation.
@@ -229,19 +236,22 @@ Harvested volume is valued by species group at BC Interior log prices for the th
 pine, \SI{105.98}{CAD\per\cubic\meter} for subalpine fir on the hemlock--balsam series (the nearest
 reported grade for that species), and \SIrange{35}{40}{CAD\per\cubic\meter} for deciduous species
 from the 2018 ten-year average \citep{ifs_aspen_2018}. Costs are a tree-length ground harvest system
-at \SI{21.38}{CAD\per\cubic\meter} and haul at \SI{7.85}{CAD\per\cubic\meter} over a mean
-distance of \SI{90}{\kilo\meter} to the nearest sawmill, using the FHOPS machine-rate and
-highway-truck tables \citep{fhops_2026}; basic silviculture at
+at \SI{21.38}{CAD\per\cubic\meter} and haul at \SI{7.85}{CAD\per\cubic\meter} over an
+area-weighted mean distance of \SI{90}{\kilo\meter} (median \SI{61}{\kilo\meter}) to the nearest
+sawmill, from compiled BC Timber Sales facility coordinates
+\citep{bc_timber_sales_facilities_2026}, using the Forest Harvest and Operations Planning System
+(FHOPS) machine-rate and highway-truck tables \citep{fhops_2026}; basic silviculture at
 \SI{10.02}{CAD\per\cubic\meter} for the North Central zone
 \citep{bc_mof_silviculture_costs_2026}; and stumpage (the charge for standing timber) at
 \SI{9.92}{CAD\per\cubic\meter} for conifers from the Interior tabular rates
 \citep{bc_mof_tabular_stumpage_2026} and \SI{0.50}{CAD\per\cubic\meter} for deciduous timber in
 grades 1 and 2 \citep{ifs_aspen_2018}. Net present value is computed at a \SI{4}{\percent} real discount rate, the BC
 Ministry of Forests rate for public-sector forestry investment analysis
-\citep{bc_mof_silviculture_lesson4}; each period's net value is discounted at its end. The rate is a
+(British Columbia Ministry of Forests, n.d.)\nocite{bc_mof_silviculture_lesson4}; each period's
+net value is discounted at its end. The rate is a
 normative choice, not an estimate: \SI{3}{\percent} is the federal social rate for environmental
 analysis~\citep{treasury_board_2007}, \SI{5}{\percent} the upper end of the silvicultural social-rate
-range~\citep{heaps_pratt_1989}, and \SI{8}{\percent} the federal opportunity cost of capital. The net
+range~\citep{heaps_pratt_1989}, and \SI{8}{\percent} an upper-bound opportunity-cost sensitivity, not a published social rate. The net
 present value is an operating margin: it excludes road construction, administration, taxes, and risk
 premia.
 

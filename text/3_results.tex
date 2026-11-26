@@ -15,11 +15,12 @@ The enterprise schedule is found with the state-based convergence described in
 adds the even-flow target and stops on a harvest plateau. All four standards converge to essentially the same
 level (\autoref{tab:res_convergence}): \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year} on
 average over the 200-year horizon, or \SIrange{0.26}{0.31}{\percent} above the ceiling. The
-reported level is the 20-period mean. The period profile is at or above the AAC in every period:
-19 periods sit at the AAC (\SI{6.91723}{\mega\cubic\meter\per\year}), and the final period,
-which is the even-flow reference, reaches \SI{7.28}{\mega\cubic\meter\per\year},
-\SI{5.3}{\percent} above the ceiling. The final period is the even-flow reference, so its higher harvest raises the mean; it is not an
-unconstrained terminal period. Excluding the final period changes the no-fire net present value at 4\% by
+reported level is the 20-period mean. The period profile is at or above the AAC in every period.
+Most periods sit at the AAC; D26 has one non-final period \SI{0.74}{\percent} above, and D55 has
+one \SI{0.01}{\percent} above. The final period, which is the even-flow reference, reaches
+\SI{7.28}{\mega\cubic\meter\per\year}, \SIrange{5.2}{5.3}{\percent} above the ceiling. The final
+period carries no even-flow penalty and is only lower-bounded at the AAC, so its excess is a design
+feature. Excluding the final period changes the no-fire net present value at 4\% by
 at most \SI{1.4}{\millionCAD} (D26 +\SI{36.3}{\millionCAD}, D55 -\SI{38.4}{\millionCAD}, D84
 -\SI{145.1}{\millionCAD}), so the value ranking is not a terminal-period artifact. The stage-2
 search used 700,000 to 1,000,000 iterations. The stage-1 warm start was not run to convergence
@@ -44,8 +45,8 @@ within its 1,000,000-iteration budget; the stage-2 even-flow search converged.
     \end{tabular}
     \par\smallskip\footnotesize The stage-2 harvest is the 20-period mean. The final period is
     the even-flow reference and reaches \SI{7.28}{\mega\cubic\meter\per\year},
-    \SI{5.3}{\percent} above the ceiling; the other 19 periods sit at the AAC
-    (\SI{6.91723}{\mega\cubic\meter\per\year}).
+    \SIrange{5.2}{5.3}{\percent} above the ceiling. The other periods are at the AAC or within
+    \SI{0.75}{\percent} above it.
 \end{table}
 
 \subsection{Production and value}
@@ -96,11 +97,11 @@ not the whole landscape, and unmanaged and untreated stands keep their VRI fuel.
         Species & CC & D26 & D55 & D84 \\
         \midrule
         Spruce (SX)       & 621.9 & 773.6 & 592.8 & 437.7 \\
-        Pine (PLI)        & 446.2 & 241.4 & 248.8 & 247.0 \\
-        Balsam (BL)       & 189.7 & 123.2 & 127.0 & 126.1 \\
-        Aspen (AT)        & 87.8  & 213.4 & 380.7 & 506.1 \\
-        Fir (SE)          & 38.9  & 33.9  & 35.6  & 35.2 \\
-        Cottonwood (ACT)  & 2.6   & 2.3   & 2.2   & 34.9 \\
+        Lodgepole pine (PLI) & 446.2 & 241.4 & 248.8 & 247.0 \\
+        Subalpine fir (BL) & 189.7 & 123.2 & 127.0 & 126.1 \\
+        Trembling aspen (AT) & 87.8  & 213.4 & 380.7 & 506.1 \\
+        Engelmann spruce (SE) & 38.9  & 33.9  & 35.6  & 35.2 \\
+        Black cottonwood (ACT) & 2.6   & 2.3   & 2.2   & 34.9 \\
         \midrule
         Total             & 1,387.1 & 1,387.7 & 1,387.1 & 1,387.1 \\
         \bottomrule
@@ -124,8 +125,9 @@ nearly identical discounted volume. Across the aspen price range, the net CVaR d
 We report two fire-size scenarios. The observed record is the full 1,073-fire TSA history, resampled
 with replacement, with Poisson annual counts at the historical mean (14.31 fires per year) and
 random placement. The calibrated retention sample is the lower-severity case: it uses the same
-Poisson count process and random placement as the observed record, with the sizes drawn from the 3,450 retained sizes of the
-companion multi-year calibration. The calibrated sample has a higher median (29.3 against 23.7
+Poisson count process and random placement as the observed record, with the sizes drawn from the
+3,450 retained sizes of the companion multi-year calibration. The calibrated sample is a 23-tile
+subset, not the full TSA; the comparison with the full record is not spatially matched. The calibrated sample has a higher median (29.3 against 23.7
 hectares) but a lower mean (278.9 against 704.5 hectares), p90 (379 against 696 hectares), 95th
 percentile (893 against 2,047 hectares), maximum (23,357 against 72,317 hectares), and
 over-5,000-hectare fraction (1.10 against 3.0 percent). It is a lower-severity scenario, not a
@@ -140,7 +142,7 @@ the converged schedules, one dataset and one schedule per standard.
     CC; $\Delta$CVaR20 is the change in conditional loss, negative for a reduction; $\Delta$net is
     the change in the CVaR of net present value relative to CC. Cost/CVaR is the no-fire cost per
     million CAD of CVaR20 reduction; 1 is break-even, values below 1 are net gains, and D26 is a gain because
-    its no-fire value rises.}
+    its no-fire value rises. Cells are rounded; differences are computed from unrounded values.}
     \label{tab:res_fire_observed}
     \begin{tabular}{lrrrrrrr}
         \toprule
@@ -194,7 +196,8 @@ calibrated, approximately break-even. D55 is the tail option: it reduces CVaR20
 loss more than D26 does, at a lower net value than D26.
 
 D84 is dominated by D55 on net CVaR. It reduces CVaR20 loss by \SI{39.3}{\millionCAD} under the calibrated
-scenario, only \SI{0.5}{\millionCAD} more than D55, at a no-fire cost of \SI{146.5}{\millionCAD}
+scenario, only \SI{0.6}{\millionCAD} more than D55 (\SI{0.4}{\millionCAD} under the observed
+record), at a no-fire cost of \SI{146.5}{\millionCAD}
 against \SI{39.3}{\millionCAD}. Its net CVaR is \SI{-107.2}{\millionCAD} under the calibrated scenario
 and \SI{-99.0}{\millionCAD} under the observed record. D55 dominates D84 on net CVaR in both scenarios; the observed record gives a larger D84 benefit but the
 same ranking.
@@ -217,7 +220,7 @@ same ranking.
     \end{tabular}
 \end{table}
 
-At \SI{3}{\percent}, no standard is net-positive. D26 is nearly neutral, at \SI{-9.6}{\millionCAD} under
+At \SI{3}{\percent}, no standard improves net CVaR. D26 is nearly neutral, at \SI{-9.6}{\millionCAD} under
 the calibrated scenario, and D84 has the largest loss, at \SI{-514.6}{\millionCAD}. At \SI{5}{\percent} to \SI{8}{\percent}, all three standards improve
 net CVaR; D55 is best at \SI{8}{\percent}, and at \SI{5}{\percent} it is essentially tied with D26
 under the calibrated scenario. At \SI{8}{\percent} the D55 margin over D84 is \SI{2.6}{\millionCAD}
@@ -229,8 +232,9 @@ the BC rate, D55 the tail option, and D84 is behind D55 on net CVaR at every rat
 
 At $t=0$, re-typing every stand from the compiled analysis-unit composition reproduces
 \SI{63.1}{\percent} of the 2025 VRI fuel-type grid; the operational mapping from VRI conifer share
-reproduces \SI{66.7}{\percent}. The projection never produces C7, M2, or M4, although the VRI grid
-carries all three; the conifer classes account for \SI{86}{\percent} of the disagreements. The
+reproduces \SI{66.7}{\percent}. The compiled-AU re-typing never produces C7, M2, or M4, although
+the VRI grid carries all three; its conifer classes account for \SI{86}{\percent} of the
+disagreements. The operational VRI-conifer mapping does produce M2 and M4. The
 post-harvest S1 and O1B types have no observational counterpart; they are a rule-based scenario, not a validated prediction. The pre-harvest VRI crown
 closure is held for the planted stand; TIPSY and VRI crown closure differ by
 17.3 percentage points with a correlation of 0.004.

@@ -14,8 +14,9 @@ solve the lower-level response for each standard and compare the upper-level out
 tail risk. The Prince George Timber Supply Area is the application, not the contribution.
 
 First, we report the production result. A state-based two-stage convergence is at or above the 2025
-AAC of 6.917 million m3/yr in every period under all four standards: 19 periods sit at the cut, and
-the final even-flow reference period is 5.3 percent above the ceiling. The 200-year mean is 6.935 to
+AAC of 6.917 million m3/yr in every period under all four standards. Most periods sit at the cut;
+D26 has one non-final period 0.74 percent above, and the final even-flow reference period is 5.2 to
+5.3 percent above the ceiling. The 200-year mean is 6.935 to
 6.938 million m3/yr, 0.26 to 0.31 percent above the ceiling. The estate can sustain the cut, and the
 standards do not reduce it.
 
@@ -28,12 +29,12 @@ million CAD. D84 costs 146.5 million CAD for a similar reduction and is dominate
 CVaR. The observed fire record gives the larger absolute benefit for D55 and D84; for D26 the two
 scenarios are nearly identical.
 
-Third, we report the rate dependence. At 3 percent no standard is net-positive; at 4 percent D26 is
-the value option and D55 the tail option; at 5 to 8 percent all three are net-positive, and D55 is
+Third, we report the rate dependence. At 3 percent no standard improves net CVaR; at 4 percent D26 is
+the value option and D55 the tail option; at 5 to 8 percent all three improve net CVaR, and D55 is
 best at 8 percent. D84 is behind D55 on net CVaR at every rate in both fire-size scenarios.
 
 Fourth, we state the fire-model boundary. The observed 1,073-fire record and a lower-severity
-calibrated-retention sample span the fire-size range we consider. The composition-aware fuel
+calibrated-retention sample are the two cases we consider. The compiled-AU re-typing in the composition-aware fuel
 projection reproduces 63.1 percent of the 2025 VRI fuel-type grid at t=0; the post-harvest slash and
 open herb/grass types have no observational counterpart, and the D84 standard's deciduous (D1)
 severity multiplier is the model's 0.2 severity floor, not an estimate of D1 severity.
