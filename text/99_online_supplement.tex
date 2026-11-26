@@ -60,8 +60,9 @@ unmanaged area is the complement.
 \end{table}
 
 The stage-1 result is a warm start; the stage-2 result is the reported schedule. All four standards
-converged to 6.935 to 6.938 million m3/yr in 700,000 to 1,000,000 stage-2 iterations, 0.26 to 0.31
-percent above the cut.
+converged to a 20-period mean of 6.935 to 6.938 million m3/yr in 700,000 to 1,000,000 stage-2
+iterations, 0.26 to 0.31 percent above the cut. The minimum period is the AAC and the final decade
+reaches 7.28 million m3/yr, 5.3 percent above it.
 
 \subsection*{S3. Economic constants}
 
@@ -96,9 +97,10 @@ recommend 3 to 5 percent, and the federal social rate for environmental analysis
 
 \subsection*{S4. Stocking-standard experiments}
 
-The baseline dataset has one treatment, \texttt{CC}, which regenerates the same analysis unit.
-The policy dataset adds three prescriptions: \texttt{CC\_D26}, \texttt{CC\_D55}, and
-\texttt{CC\_D84}. Each targets a different analysis unit whose managed species-proportion curves
+The baseline dataset carries the clearcut treatment, which regenerates the same analysis unit. For
+each standard we build a single-standard dataset that replaces the treatment on eligible stands with
+one of \texttt{CC\_D26}, \texttt{CC\_D55}, or \texttt{CC\_D84}; the three datasets carry 39, 36,
+and 33 treatments, respectively. Each targets a different analysis unit whose managed species-proportion curves
 specify the mixture, and the regenerated stand takes the species mix of the prescription. The
 stand-level composition and projected fuel type are:
 
@@ -128,42 +130,41 @@ the VRI value is a sparse or non-forest artefact.
 
 The severity multiplier is sensitive to wind and the surface-mortality floor. Across
 \SIrange{6.8}{25}{\kilo\meter\per\hour} and a floor of 0.1 to 0.4, the D84 multiplier ranges
-0.11 to 0.49, the D55 multiplier 1.01 to 1.04, and the D26 (M2) multiplier 1.03 to 1.24. The D1
+0.10 to 0.49, the D55 multiplier 1.01 to 1.04, and the D26 (M2) multiplier 1.03 to 1.24. The D1
 multiplier is the model's 0.2 floor, not an estimate of D1 severity.
 
 Over the 720 potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier
 is the 0.267 floor at every state. The C1 multiplier has a median of 1.112 and a 10th-to-90th
 percentile range of 0.817 to 1.312; the single-state value of 0.749 is below the 10th percentile
-(p10 0.817). The M1 median is 1.033 (range 0.376 to 1.253) and the C2 median is 1.312 (range 1.245 to
-1.331). The D84 multiplier is constant by construction because the 0.2 floor binds; this is an
-assumption, not a robustness result. The 26 percent standard's C1/C2 mix is not stable across
+(p10 0.817). The M1 median is 1.033 (10th to 90th percentile 0.376 to 1.253) and the C2 median is 1.312 (10th
+to 90th percentile 1.245 to 1.331). At the base floor, the D84 multiplier is constant across weather states because the 0.2 floor
+binds; this is an assumption, not a robustness result. The 26 percent standard's C1/C2 mix is not stable across
 weather.
 
-The observed-record fire surface is the larger-tail scenario; the calibrated-retention sample is the
-lower bound on the upper tail. The calibrated sample has a higher median (29.3 against 23.0
-hectares) but a lower 95th percentile (893 against 1,919 hectares) and a lower over-5,000-hectare
-fraction (1.10 against 3.0 percent) than the 432-perimeter calibration history. The observed record
-gives the larger fire benefit; the calibrated sample the smaller. D26 dominates the clearcut under
-both; D55 dominates D84 under both. The D84 dominance is conservative with respect to the D1 floor:
-a lower floor reduces the D84 benefit, and the benefit would need to nearly quadruple to close the
-cost gap to D55.
+The observed-record fire surface is the larger-benefit case; the calibrated-retention sample is the
+lower bound on the upper tail. The calibrated sample has a higher median (29.3 against 23.7
+hectares) but a lower 95th percentile (893 against 2,047 hectares) and a lower over-5,000-hectare
+fraction (1.10 against 3.0 percent) than the observed record. The observed record gives the larger
+benefit for D55 and D84; for D26 the two are nearly identical. D26 dominates the clearcut under
+both; D55 dominates D84 on net CVaR under both. The D84 dominance is conditional on the D1 floor: a lower floor
+increases the D84 benefit and a higher floor reduces it; the benefit would need to nearly quadruple
+to close the cost gap to D55.
 
 \subsection*{S5. Rotation estimate}
 
 For every block with more than one harvest in the converged CC schedule, the rotation is the interval
 between consecutive harvests. The schedule yields 153,190 intervals, an area-weighted mean of 92.8
 years (median 90, tenth-to-ninetieth percentile 60 to 140). At 6.935 million m3/yr over 3.06 million
-ha, about 33,000 ha are harvested each year; that is 210 m3/ha, about 89 percent of the 236 m3/ha
-that the area-weighted maximum mean annual increment accumulates over the rotation. The estimate is
-conditional on re-entry within the 200-year horizon and is biased toward productive and accessible
-stands.
+ha, about 33,000 ha are harvested each year, or 210 m3/ha. The estimate is conditional on re-entry
+within the 200-year horizon and is biased toward productive and accessible stands.
 
 \subsection*{S6. Reproduction}
 
 The state-based convergence uses the compact candidate index and the resident Model II state, with
-the two-stage target and the harvest-plateau stop. The candidate and simulator caches, the converged
-schedules, the observed and calibrated-retention fire surfaces, the fuel projection checks, and the
-valuation and rotation code are archived in a public repository with a DOI on acceptance. The
+the two-stage target and the harvest-plateau stop. The scripts that build the candidate and simulator
+caches, the converged schedules, the observed and calibrated-retention fire surfaces, the fuel
+projection checks, the aspen-price and haul sensitivities, and the valuation and rotation code are
+archived in a public repository with a DOI on acceptance. The
 sensitivity values are reproducible from the valuation code and the recorded constants. The policy
 dataset, the schedules, the no-fire baseline, and the paired fire ensembles are rebuilt by the
 scripts in that repository. The estate model is WS4 \citep{ubc_fresh_ws4_2026}; harvest costing uses

@@ -2,8 +2,10 @@
 
 > Status note (2026-11-26): the AAC-level state convergence supersedes the earlier 5.19
 > fixed-flow production and fire rows, and the 20-draw fixed-plan surface. The manuscript uses
-> the AAC-level rows below. Rows marked `superseded` are retained for the record; no 5.19,
-> 60.7, 19:1, or ten-draw fire number may ship.
+> the AAC-level rows below. Rows marked `superseded` are retained for the record. The 5.19
+> number may appear only as the explicitly superseded foil; no 60.7, 19:1, or ten-draw fire
+> number may ship. The 6.935-6.938 mean includes the final decade, which has no terminal constraint; the minimum
+> period is the AAC.
 
 Rule: every number in the manuscript appears here with the artifact that produces it. A sentence
 whose number is not in this table does not ship.
@@ -21,20 +23,39 @@ calibration), `to compute` (not yet produced).
 | D26 level | 6.9384 Mm3/yr; 1,000,000 stage-2 iterations; converged | `.../state/cc_d26/result.json` | verified |
 | D55 level | 6.9356 Mm3/yr; 750,000 stage-2 iterations; converged | `.../state/cc_d55/result.json` | verified |
 | D84 level | 6.9355 Mm3/yr; 750,000 stage-2 iterations; converged | `.../state/cc_d84/result.json` | verified |
+| Stage-1 harvest | CC 6.994, D26 7.359, D55 7.164, D84 7.183 Mm3/yr; all stage-1 warm starts did not converge | `.../state/*/result.json` stages | verified |
+| Period profile | minimum 6.91723 Mm3/yr (the AAC) in every standard; maximum 7.28 Mm3/yr in the final decade (5.3 percent above); the 20-period mean is 6.935-6.938 | `.../enterprise/prod-converged.json` period-species tables | verified |
 | Total volume, 200 years | CC 1,387.1; D26 1,387.7; D55 1,387.1; D84 1,387.1 Mm3 | `.../enterprise/prod-converged.json` | verified |
 | NPV3/NPV4/NPV5 | CC 11,628.4/8,295.7/6,306.5; D26 11,582.8/8,331.6/6,361.5; D55 11,329.9/8,256.4/6,349.9; D84 11,053.0/8,149.2/6,305.7 MCAD | same | verified |
 | Delta NPV4 | D26 +36.0; D55 -39.3; D84 -146.5 MCAD | same | verified |
-| Species volumes | CC SX 621.9, PLI 446.2, BL 189.7, AT 87.8; D26 SX 773.6, PLI 241.4, AT 213.4; D55 AT 380.7; D84 AT 506.1, ACT 34.9 Mm3 | same | verified |
+| Delta NPV by rate | D26 -45.6 at 3 percent, +55.0 at 5; D55 -298.5 at 3, +43.4 at 5; D84 -575.4 at 3, -0.8 at 5 | same | verified |
+| Species volumes | CC SX 621.9, PLI 446.2, BL 189.7, AT 87.8, SE 38.9, ACT 2.6; D26 SX 773.6, PLI 241.4, BL 123.2, AT 213.4, SE 33.9, ACT 2.3; D55 SX 592.8, PLI 248.8, BL 127.0, AT 380.7, SE 35.6, ACT 2.2; D84 SX 437.7, PLI 247.0, BL 126.1, AT 506.1, SE 35.2, ACT 34.9 Mm3 | same | verified |
 | Landscape deciduous share | CC 7.5; D26 15.7; D55 26.9; D84 36.6 percent | `.../enterprise/surface-converged-observed.json` | verified |
+| Fire draws | 20 paired 200-year draws per scenario, seeds 101-120, same event sets across standards | `.../enterprise/surface-converged-observed.json`; `-calibrated.json` | verified |
 | Observed fire, 4 percent | CC mean/CVaR20 172.5/221.1, net 8,074.6; D26 146.1/197.7, net 8,134.0; D55 126.6/173.9, net 8,082.5; D84 122.1/173.6, net 7,975.6 MCAD | `.../enterprise/surface-converged-observed-summary.json` | verified |
 | Calibrated fire, 4 percent | CC 80.3/112.8, net 8,182.8; D26 55.0/89.1, net 8,242.5; D55 40.8/74.1, net 8,182.3; D84 37.7/73.5, net 8,075.7 MCAD | `.../enterprise/surface-converged-calibrated-summary.json` | verified |
 | D26 CVaR difference | observed -23.4, calibrated -23.7; net +59.4/+59.7 MCAD | both summaries | verified |
 | D55 CVaR difference | observed -47.2, calibrated -38.8; net +7.9/-0.5 MCAD | both summaries | verified |
 | D84 CVaR difference | observed -47.5, calibrated -39.3; net -99.0/-107.2 MCAD | both summaries | verified |
-| Rate table | D26/D55/D84 net CVaR at 3/4/5/8 percent, observed and calibrated | both summaries | verified |
+| Break-even ratios | D55 0.83 observed, 1.01 calibrated; D84 3.08 observed, 3.73 calibrated | both summaries | verified |
+| Rate table | D26 obs/cal: 3% -4.1/-9.6, 4% +59.4/+59.7, 5% +70.6/+72.1, 8% +54.6/+56.1; D55: -221.6/-241.3, +7.9/-0.5, +76.5/+72.2, +86.2/+85.6; D84: -489.3/-514.6, -99.0/-107.2, +30.8/+27.6, +83.6/+82.8 MCAD | both summaries | verified |
 | Rotation | 153,190 intervals; area-weighted mean 92.8 years, median 90, 10th-90th 60-140 | `.../state/cc/schedule-evenflow.csv`; `.../derived/enterprise/compiled-cc/blocks.parquet` | verified |
-| Volume per harvested hectare | 210 m3/ha; 89 percent of the 236 m3/ha maximum MAI | 6.935 Mm3/yr, 33,000 ha/yr | derived |
-| D55 dominates D84 | at 3, 4, 5, 8 percent in both observed and calibrated scenarios | both summaries | verified |
+| Volume per harvested hectare | 210 m3/ha; about 33,000 ha/yr | 6.935 Mm3/yr over 3.06 Mha and a 92.8-year mean rotation; `state/cc/schedule-evenflow.csv`; `derived/enterprise/compiled-cc/blocks.parquet` | derived |
+| D55 dominates D84 on net CVaR | at 3, 4, 5, 8 percent in both observed and calibrated scenarios; D84's gross CVaR reduction is 0.5 MCAD larger calibrated and 0.3 larger observed | both summaries | verified |
+| Paired bootstrap | 10,000 resamples, 95 percent intervals | `.../plantation/analyze_surface.py`; both summaries | verified |
+| Paired bootstrap, 4 percent | D26 net +59.4 [55.9, 63.3] obs, +59.7 [57.8, 61.6] cal; D55 +7.9 [3.1, 13.7] obs, -0.5 [-2.9, 2.7] cal; D84 -99.0 [-102.7, -89.7] obs, -107.2 [-110.1, -102.0] cal MCAD | both summaries | verified |
+| Aspen price, 4 percent | no-fire D26 +37.6/+36.0/+34.3; D55 -40.6/-39.3/-37.9; D84 -151.8/-146.5/-141.2 MCAD at 35/37.5/40 CAD/m3. Net CVaR D26 +57.8 to +61.1; D55 -2.2 to +9.5; D84 -112.8 to -93.4 | `.../enterprise/sensitivity-converged.json`; both fire summaries | verified |
+| Haul, 4 percent | CC NPV4 8,295.7 at 90 km and 7,956.6 at 117 km (-339.1); standard differences unchanged at +36.0/-39.3/-146.5 MCAD | same | verified |
+| Terminal decade | excluding the final decade (no terminal constraint): D26 +36.3, D55 -38.4, D84 -145.1 MCAD vs CC, within 1.4 MCAD of the full-horizon deltas | same | verified |
+| Fuel projection, t=0 | 63.1 percent from compiled AU composition; 66.7 percent from VRI conifer share; conifer classes 86 percent of disagreements; VRI grid has no C7/M2/M4 | `.../t0-fuel-validation.json`; `notes/reports/p4-dynamic-fuel.md` | verified |
+| Observed fire sizes | median 23.7 ha, p95 2,047 ha, over-5,000 3.0 percent | `.../fire-regime/summary.json` | verified |
+| Calibrated retention sizes | 3,450 sizes; median 29.3 ha, p95 892.6 ha, over-5,000 1.10 percent | `.../fire/calibrated-retention-sizes.json` | verified |
+| Severity range, D84 | 0.10-0.49 across floor 0.1-0.4 and wind 6.8-25 km/h | `.../severity-sensitivity.csv` | verified |
+| Severity range, D55 | 1.01-1.04 | same | verified |
+| Severity range, D26 (M2) | 1.03-1.24 | same | verified |
+| Multi-year weather | 720 states; C1 median 1.112 (p10-p90 0.817-1.312), M1 1.033, C2 1.312; D1 0.267 at all states | `.../fire/severity-weather-range.json` | verified |
+| Crown-closure floor | 5 percent for planted stands on pre-harvest fragments with VRI crown closure below 5 percent | `scripts/fuel_state.py` | verified |
+| 5.19 provenance | fixed-flow GPU-GA schedule (`ws4-tsa24-gpu-ga-100000-r1`), not the state-based convergence; retained only as the superseded foil | `experiments/tsa24-evenflow/summary.json`; README | superseded |
 
 ## Landscape and estate
 
@@ -52,27 +73,27 @@ calibration), `to compute` (not yet produced).
 | Model minus published THLB | -9,828 ha, -0.32 percent | `fresh-fuchs-ws4:notes/reference/tsa24-thlb.md` | verified |
 | Area-weighted maximum MAI, model curves | 2.309 m3/ha/yr | `fresh-fuchs-ws4:notes/reference/tsa24-yield-reconciliation.md` | verified |
 | Implied perennial yield on managed area | 7.07 million m3/yr | `fresh-fuchs-ws4:notes/reference/tsa24-yield-reconciliation.md` | verified |
-| Model flat even flow | 5.19 million m3/yr | `experiments/tsa24-evenflow/summary.json` | verified |
-| Cost of the flat-profile constraint | 1.88 million m3/yr | difference of the two above | verified |
-| Total harvested volume | 1,037.9 million m3 | `experiments/tsa24-evenflow/species_periods.csv` | verified |
-| Gap to official cut | 25 percent | 1 - 5.189/6.917 | verified |
+| Model flat even flow | 5.19 million m3/yr | `experiments/tsa24-evenflow/summary.json` | superseded: the state-based convergence reaches 6.935-6.938; 5.19 was a fixed-flow GA search |
+| Cost of the flat-profile constraint | 1.88 million m3/yr | difference of the two above | superseded |
+| Total harvested volume | 1,037.9 million m3 | `experiments/tsa24-evenflow/species_periods.csv` | superseded; converged CC is 1,387.1 |
+| Gap to official cut | 25 percent | 1 - 5.189/6.917 | superseded; retained only as the foil for the corrected search |
 | MAI above the cut per hectare | 2.5 percent | 2.309/2.253 | verified |
 | Base even-flow weight | 10,000 (non-linear, reference period 1) | `experiments/tsa24-evenflow/evenflow_tsa24.yaml` (`min_weight: 10000`) | verified |
 | Even-flow and level penalties | 1.3 to 2.7; about 515 | same | verified |
 | 2017 transition profile | 8.35 then 7.35 million m3/yr; 6.917 in 2025 | `government_of_british_columbia_pg_rationale_2017`; AAC table | verified |
 | Species composition, managed area | Sx 44.9, Pl 29.4, Bl 16.3, At 5.3, Se 4.0, Ac 0.1 percent | `feature.SpeciesProp.managed.*` at offset 0 | verified |
 | Deciduous share, managed area | 5.4 percent | same | verified |
-| Harvested composition, model schedule | Sx 45.2, Pl 31.3, Bl 14.7, At 5.3, Se 3.4, Ac 0.1 percent of harvested volume | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/species_periods.csv` | verified |
-| Deciduous share, harvested volume | 5.4 percent | same (`AT` + `ACT`) | verified |
+| Harvested composition, model schedule | Sx 45.2, Pl 31.3, Bl 14.7, At 5.3, Se 3.4, Ac 0.1 percent of harvested volume | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/species_periods.csv` | superseded by the converged species table |
+| Deciduous share, harvested volume | 5.4 percent | same (`AT` + `ACT`) | superseded; converged CC is 6.5 |
 
 ## Even flow
 
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
-| Model-produced even flow | 51.89 to 52.06 million m3/period across six seeds; replayed schedule 51.2 to 52.3 | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/summary.json` | verified |
-| Model-produced mean annual volume | 5.19 million m3/yr | same | verified |
-| Model-produced deciduous share | 5.4 percent | same | verified |
-| Model-produced revenue, net, NPV | 112,776 / 62,270 / 8,779 million CAD | same | verified |
+| Model-produced even flow | 51.89 to 52.06 million m3/period across six seeds; replayed schedule 51.2 to 52.3 | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/summary.json` | superseded; fixed-flow GA search |
+| Model-produced mean annual volume | 5.19 million m3/yr | same | superseded |
+| Model-produced deciduous share | 5.4 percent | same | superseded |
+| Model-produced revenue, net, NPV | 112,776 / 62,270 / 8,779 million CAD | same | superseded |
 | Periods | 20 periods of 10 years | `tests/data/tsa24_evenflow_periods.csv` | verified as a fixture |
 | Volume per period (benchmark fixture) | 70,000,000 m3 | same | **superseded**: fixture matches the target to 0.04 m3; the model sustains about 52M per period (`experiments/tsa24-evenflow/`) |
 | Mean annual volume | 7,000,000 m3/yr | same | provenance unverified |
@@ -93,9 +114,9 @@ calibration), `to compute` (not yet produced).
 | NPV at 3 percent (benchmark fixture) | 12,248 million CAD | same | superseded by the model-produced schedule |
 | Conifer margin | 56.81 to 64.79 CAD/m3 | same | verified |
 | Deciduous margin | -2.25 CAD/m3 | same | verified |
-| Discount rate effect (model schedule) | 5 percent gives 4,769 million CAD; 0 percent gives 62,270 million CAD | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/summary.json` and `scripts/valuation.py` | verified |
-| Deciduous price effect (model schedule) | -26 to +26 million CAD across 35 to 40 CAD/m3 | same | verified |
-| Haul effect (model schedule) | -184 million CAD from 90 to 117 km | same | verified |
+| Discount rate effect (model schedule) | 5 percent gives 4,769 million CAD; 0 percent gives 62,270 million CAD | `fresh-fuchs-ws4` `experiments/tsa24-evenflow/summary.json` and `scripts/valuation.py` | superseded; see the converged NPV table |
+| Deciduous price effect (model schedule) | -26 to +26 million CAD across 35 to 40 CAD/m3 | same | superseded; see `sensitivity-converged.json` |
+| Haul effect (model schedule) | -184 million CAD from 90 to 117 km | same | superseded; converged schedule is -339.1 |
 
 ## Composition
 
@@ -117,7 +138,7 @@ conifer sites to aspen; see the next section.
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
 | New plantation prescriptions | `CC_D26`, `CC_D55`, `CC_D84`: 26, 55, 84 percent deciduous targets | `fresh-fuchs-ws4` `experiments/plantation/stocking-summary.json` | verified |
-| Compiled treatments, policy dataset | 138 (48 CC, 30 each D26/D55/D84) | same | verified |
+| Compiled treatments, policy datasets | D26 39 (30 CC + 9 D26), D55 36 (24 CC + 12 D55), D84 33 (18 CC + 15 D84); CC baseline 48 | `.../derived/enterprise/compiled-cc_d26-summary.json` etc. | verified |
 | Regenerated composition, conifer block | CC SX 83 / BL 17; D26 AT 26 / SX 74; D55 AT 55 / SX 45; D84 AT 84 / SX 16 | `experiments/plantation/build_stocking_recipe.py`; block 451 evaluation | verified |
 | Species reset | regenerated cohorts take the target track's composition | WS4 `feature/species-harvest-account` commit `cc4dd8d6`; 14 management tests | verified |
 | Fuel mapping, aspen VRI stands | 529 polygons at least 80 percent deciduous, 25+ years: 100 percent D1 | `fresh-fuchs-ws4` `experiments/plantation/vri-fuel-types.json` | verified |
@@ -131,7 +152,7 @@ conifer sites to aspen; see the next section.
 | Severity multiplier, D55 (M1, 45 percent conifer) | 1.011 | same | verified |
 | Severity multiplier, D26 (C2/C1 under the calibrated rule) | 1.299 / 0.749 | same | verified |
 | BC 20 percent threshold, D26 | M2, 1.203 | same | verified (sensitivity) |
-| Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `fresh-fuchs-ws4` `experiments/plantation/surface-ensemble.json` | verified |
+| Policy surface | 3 harvest levels x 4 standards, 10 draws, 200 years, paired historical regime | `fresh-fuchs-ws4` `experiments/plantation/surface-ensemble.json` | superseded; see the AAC-level 20-draw surface |
 | Fire loss, CC 100 percent | mean 243.8 M CAD (2.78 percent), CVaR20 304.3 M CAD (3.47 percent) | same | superseded; 20-draw surface below |
 | Fire loss, D26 100 percent | mean 243.8 M CAD, CVaR20 304.3 M CAD; no risk change | same | superseded; 20-draw surface below |
 | Fire loss, D55 100 percent | mean 238.5 M CAD, CVaR20 298.6 M CAD | same | verified |
@@ -153,11 +174,11 @@ conifer sites to aspen; see the next section.
 
 | Claim | Value | Artifact | Status |
 | --- | --- | --- | --- |
-| Realized rotation, baseline | 102.2 years area-weighted (median 100, p10-p90 60-160) | `experiments/tsa24-evenflow/rotation.json` | verified |
+| Realized rotation, baseline | 102.2 years area-weighted (median 100, p10-p90 60-160) | `experiments/tsa24-evenflow/rotation.json` | superseded; converged is 92.8 |
 | Realized rotation, aspen-maximisation | 101.7 years | `experiments/tsa24-composition/rotation-aspen-max.json` | verified |
 | Median managed age | 92 years area-weighted; 44 percent of managed area older than 100 years | both rotation artifacts | verified |
-| Harvested area at a 102-year rotation | about 30,000 ha/yr | 3,060,473 / 102 | derived |
-| Volume per harvested hectare | 173 m3/ha | 5.19 million / 30,000 | derived |
+| Harvested area at a 102-year rotation | about 30,000 ha/yr | 3,060,473 / 102 | superseded; converged is about 33,000 |
+| Volume per harvested hectare | 173 m3/ha | 5.19 million / 30,000 | superseded; converged is 210 |
 
 ## Fire
 
@@ -195,14 +216,14 @@ conifer sites to aspen; see the next section.
 | Weather range, C1 | median 1.112, 10th--90th 0.817--1.312; single state 0.749 (10th percentile) | same | verified |
 | Weather range, M1 | median 1.033, 10th--90th 0.376--1.253; single state 1.011 | same | verified |
 | Weather range, C2 | median 1.312, 10th--90th 1.245--1.331; single state 1.299 | same | verified |
-| Observed-record 20-draw surface, 4 percent | CC mean 135.1, CVaR20 175.4; D84 mean 132.8, CVaR20 173.0; D84 difference -2.4 M CVaR at -50.3 M fixed-plan, ratio 20.9 (18.6--24.8); CVaR of net NPV -47.9 M | `fresh-fuchs-ws4:experiments/plantation/surface-20-summary.json`, `fire-surface-bounds.json` | verified |
-| Calibrated-retention 20-draw surface, 4 percent | CC mean 62.8, CVaR20 89.2; D84 mean 61.8, CVaR20 88.2; D84 difference -1.0 M CVaR at -50.3 M fixed-plan, ratio 52.4 (43.7--56.7); CVaR of net NPV -49.4 M | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated-summary.json`, `fire-surface-bounds.json` | verified |
+| Observed-record 20-draw surface, 4 percent | CC mean 135.1, CVaR20 175.4; D84 mean 132.8, CVaR20 173.0; D84 difference -2.4 M CVaR at -50.3 M fixed-plan, ratio 20.9 (18.6--24.8); CVaR of net NPV -47.9 M | `fresh-fuchs-ws4:experiments/plantation/surface-20-summary.json`, `fire-surface-bounds.json` | superseded; see the AAC-level surface |
+| Calibrated-retention 20-draw surface, 4 percent | CC mean 62.8, CVaR20 89.2; D84 mean 61.8, CVaR20 88.2; D84 difference -1.0 M CVaR at -50.3 M fixed-plan, ratio 52.4 (43.7--56.7); CVaR of net NPV -49.4 M | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated-summary.json`, `fire-surface-bounds.json` | superseded; see the AAC-level surface |
 | Floor 0.1 surface, 4 percent | D84 ΔCVaR -2.33, break-even 21.6; D55 -1.59/22.0; D26 +0.06 | `fresh-fuchs-ws4:experiments/plantation/surface-20-floor010-summary.json` | verified |
 | Floor 0.4 surface, 4 percent | D84 ΔCVaR -2.56, break-even 19.7; D55 -1.85/18.9; D26 -0.02 | `fresh-fuchs-ws4:experiments/plantation/surface-20-floor040-summary.json` | verified |
 | Threshold 20 percent surface, 4 percent | D84 ΔCVaR -2.43, break-even 20.7; D55 -1.70/20.5; D26 +0.42 penalty | `fresh-fuchs-ws4:experiments/plantation/surface-20-mixed020-summary.json` | verified |
 | Observed D84 break-even by rate | 20.3 at 3 percent, 20.9 at 4, 24.2 at 5, 28.2 at 8 | `fresh-fuchs-ws4:experiments/plantation/surface-20-summary.json` | verified |
 | Calibrated D84 break-even by rate | 49.9 at 3 percent, 52.4 at 4, 54.8 at 5, 61.7 at 8 | `fresh-fuchs-ws4:experiments/plantation/surface-20-calibrated-summary.json` | verified |
-| Enterprise D84 cost and break-even | 60.6 M CAD at 4 percent; 25.1 per 1 M CVaR reduction if the fixed-plan fire benefit is held | `fresh-fuchs-ws4:experiments/plantation/enterprise/no-fire-enterprise.json` | verified |
+| Enterprise D84 cost and break-even | 60.6 M CAD at 4 percent; 25.1 per 1 M CVaR reduction if the fixed-plan fire benefit is held | `fresh-fuchs-ws4:experiments/plantation/enterprise/no-fire-enterprise.json` | superseded; converged D84 is -146.5 and 3.7 |
 
 ## Notes
 

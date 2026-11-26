@@ -5,43 +5,46 @@
 
 The compiled estate sustains the 2025 allowable annual cut. Under the state-based two-stage
 convergence, every standard reaches \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year},
-\SIrange{0.26}{0.31}{\percent} above the \SI{6.917231}{\mega\cubic\meter\per\year} cut. The earlier
-fixed-flow search realised \SI{5.19}{\mega\cubic\meter\per\year}; that result used 300 proposed
-moves and a one-sided level penalty. It was a search artifact, not a land-base or yield limit. The
-state-based search uses the compact candidate index, the resident Model II state, a level-pull warm
-start, and an even-flow target with a harvest-plateau stop. The stage-2 runs converged in 700,000 to
+\SIrange{0.26}{0.31}{\percent} above the \SI{6.917231}{\mega\cubic\meter\per\year} cut. An earlier
+fixed-flow search of this estate realised \SI{5.19}{\mega\cubic\meter\per\year}; that schedule came
+from a fixed-flow genetic-algorithm search. It was a search artifact, not a land-base or yield limit;
+the six-seed agreement in that search was agreement within the fixed-flow formulation, not evidence
+about the land base. The state-based search uses the compact candidate index, the resident Model II
+state, a level-pull warm start, and an even-flow target with a harvest-plateau stop. The stage-2 runs converged in 700,000 to
 1,000,000 iterations.
 
 The correction matters for policy. The earlier claim that the compiled curves could not reproduce
-the official transition is withdrawn. The estate can meet the cut, and the standards do not reduce
+the official cut is withdrawn. The estate can meet the cut, and the standards do not reduce
 it. The policy question is not whether there is enough timber; it is what composition costs in value
 and tail risk at the cut.
 
 \subsection{The value and tail frontier}
 
 At the \SI{4}{\percent} BC Ministry of Forests rate, the standards are not a production-versus-risk
-trade-off. D26 raises net present value by \SI{36.0}{\mega\CAD} and reduces CVaR20 loss by about
-\SI{23.5}{\mega\CAD}, a net CVaR gain of about \SI{59.5}{\mega\CAD}. It dominates the clearcut under
-both fire-size scenarios. The value gain is larger at the lower aspen price (+\SI{37.6}{\mega\CAD}
-at 35 against +\SI{34.3}{\mega\CAD} at 40), because aspen carries a small negative margin; the fire
-benefit is stable. D26 is the value option.
+trade-off. D26 raises net present value by \SI{36.0}{\mega\CAD} and reduces CVaR20 loss by
+\SI{23.4}{\mega\CAD} observed and \SI{23.7}{\mega\CAD} calibrated, a net CVaR gain of
+\SIrange{59.4}{59.7}{\mega\CAD}. It dominates the clearcut under both fire-size scenarios. The value
+gain is larger at the lower aspen price (+\SI{37.6}{\mega\CAD} at 35 against
++\SI{34.3}{\mega\CAD} at 40), because D26's discounted aspen volume is slightly lower than CC's even
+though its total aspen volume is higher; the price mainly shifts the level, and the fire benefit is
+stable. D26 is the value option.
 
 D55 is the tail option. It costs \SI{39.3}{\mega\CAD} and reduces CVaR20 loss by
 \SI{38.8}{\mega\CAD} under the calibrated retention scenario and \SI{47.2}{\mega\CAD} under the
 observed record. The net is \SI{-0.5}{\mega\CAD} calibrated and a gain of \SI{7.9}{\mega\CAD} observed;
 the sign is not resolved between the two fire-size scenarios. D55 is approximately break-even at the
 BC rate, with a break-even of 0.8 to 1.0. It buys a larger tail reduction than D26 at a lower net
-value; a planner with a separate tail-loss objective should prefer it.
+value; a planner with a separate tail-loss objective and a cost constraint should prefer it.
 
-D84 is dominated by D55. It reduces CVaR20 loss by \SI{39.3}{\mega\CAD} calibrated, only
+D84 is dominated by D55 on net CVaR. It reduces CVaR20 loss by \SI{39.3}{\mega\CAD} calibrated, only
 \SI{0.5}{\mega\CAD} more than D55, at a no-fire cost of \SI{146.5}{\mega\CAD} against
 \SI{39.3}{\mega\CAD}. Its net CVaR is \SI{-107.2}{\mega\CAD} calibrated and
 \SI{-99.0}{\mega\CAD} observed. The D84 ratio is 3.1 to 3.7; the standard is not a hedge in net terms at the BC rate. D55 delivers
-the same tail reduction at less than a third of the cost; D84 is not justified on either objective.
+almost the same tail reduction at less than a third of the cost; D84 is not cost-effective.
 
 The rate determines the ranking. At \SI{3}{\percent}, no standard pays; D26 is nearly neutral
 (\SI{-9.6}{\mega\CAD} calibrated) and D84 is worst (\SI{-514.6}{\mega\CAD}). At \SI{5}{\percent} to
-\SI{8}{\percent}, all three standards improve net CVaR, and D55 is best. D55 dominates D84 at every
+\SI{8}{\percent}, all three standards improve net CVaR, and D55 is best at \SI{8}{\percent}. D55 dominates D84 on net CVaR at every
 rate in both scenarios. The base rate is a policy choice, not an estimate; we report the range.
 
 \subsection{Why the standards differ}
@@ -49,24 +52,28 @@ rate in both scenarios. The base rate is a policy choice, not an estimate; we re
 The D26 result is an enterprise-response effect, not a stand-level severity cut. The 26 percent
 stand maps to C1 or C2, with multipliers 0.749 and 1.299; its stand-level aggregate is a weighted
 average, not a D1-type reduction. The D26 enterprise schedule nevertheless reduces the fire loss by
-about \SI{23.5}{\mega\CAD}, because the converged schedule, the 26 percent mix, and the spatial
+\SIrange{23.4}{23.7}{\mega\CAD}, because the converged schedule, the 26 percent mix, and the spatial
 placement move together. The value gain of \SI{36.0}{\mega\CAD} alone is enough to dominate the
-clearcut; the fire benefit adds to it. D26 is not a free-volume policy: the volume is essentially
+clearcut; the fire benefit adds to it. D26 is not a volume play: the volume is essentially
 unchanged, the species mix is not, and the gain is a value and tail effect.
 
-D55 is M1 (multiplier 1.011) and D84 is D1 (0.267). The D84 severity multiplier is the 0.2
-surface-mortality floor, not an estimate of D1 severity; a lower floor reduces the D84 benefit, a
-higher floor raises it. The D84 benefit would need to nearly quadruple to close the cost gap to D55,
-so the D55 dominance is conservative with respect to the floor. The D84 result is also dominated by
-D55 in the observed and calibrated fire-size scenarios; the fire-size uncertainty does not rescue
+D55 is M1 (1.011), roughly neutral at the stand level; its larger CVaR reduction than D26 is an
+enterprise-response effect of the 55 percent mix and the converged schedule, not a stand-level
+severity cut. D84 is D1 (0.267). The D84 standard applies only to eligible treated stands; the
+unmanaged half keeps its VRI fuel, so the landscape severity effect is diluted. The D84 severity
+multiplier is the 0.2 surface-mortality floor, not an estimate of D1 severity; a lower floor increases the D84 benefit and
+a higher floor reduces it, with the multiplier ranging from 0.10 to 0.49 over the documented floor
+and wind range. The D84 benefit would need to nearly quadruple to close the cost gap to D55, so the
+ranking holds at the base floor but is not a proof outside it. The D84 result is also dominated by
+D55 on net CVaR in the observed and calibrated fire-size scenarios; the fire-size uncertainty does not rescue
 it.
 
 The observed record is the larger-tail scenario; the calibrated retention sample is the lower bound
-on the upper tail. The calibrated sample has a higher median (29.3 against 23.0 hectares) but a lower
-95th percentile (893 against 1,919 hectares) and a lower over-5,000-hectare fraction (1.10 against
-3.0 percent) than the 432-perimeter calibration history. The observed record gives the larger fire
-benefit; the calibrated sample gives the smaller. D26 and D55 dominate their comparators under both;
-the D55 sign is the only result that is not resolved.
+on the upper tail. The calibrated sample has a higher median (29.3 against 23.7 hectares) but a lower
+95th percentile (893 against 2,047 hectares) and a lower over-5,000-hectare fraction (1.10 against
+3.0 percent) than the observed record. The observed record gives the larger benefit for D55 and D84;
+for D26 the two are nearly identical. D26 dominates CC and D55 dominates D84 on net CVaR under both; the D55
+sign is the only result that is not resolved.
 
 \subsection{Relation to the European evidence}
 
@@ -90,26 +97,29 @@ productivity, or within-stand species interactions. The production response is a
 response, not a physiological or competition response.
 
 Third, the fuel projection is a rule-based scenario. It reproduces \SI{63.1}{\percent} of the 2025
-VRI fuel-type grid at $t=0$, with the largest disagreements in the C4/C7 conifer classes and the
-M2/M4 mixedwood classes, which the projection never produces; the conifer classes account for about
-\SI{73}{\percent} of the disagreements. The post-harvest types have no observational counterpart.
+VRI fuel-type grid at $t=0$. The projection assigns C4 and C7 conifer types and M2/M4 mixedwood
+types; the VRI grid does not carry C7, M2, or M4 at all. The conifer classes account for
+\SI{86}{\percent} of the disagreements. The post-harvest types have no observational counterpart.
 The projection holds the pre-harvest VRI crown closure for the planted stand; TIPSY and VRI crown
-closure differ by \SI{17.3}{percentage points} with a correlation of 0.004. The D1 multiplier is the
+closure differ by 17.3 percentage points with a correlation of 0.004. The D1 multiplier is the
 0.2 surface-mortality floor. These are scenario assumptions, not validated predictions.
 
 Fourth, the fire regime is a scenario, not a forecast. The main event set uses the observed
 1,073-fire record; the lower bound uses the calibrated retention sample. The observed record
 preserves the tail but places fires randomly, so it does not represent spatial exposure. The
-calibrated sample has a central fit but underproduces the tail and fails transfer to unseen tiles.
-Neither is a validated 200-year forecast. The 20 draws give a CVaR20 that is the mean of the worst
+calibrated sample has a central fit but underproduces the tail. Neither is a validated 200-year
+forecast. The 20 draws give a CVaR20 that is the mean of the worst
 four draws, and the paired bootstrap interval captures event-set variation only; it does not include
 uncertainty in the fire-size distribution, the severity model, or the growth curves.
 
-Fifth, the enterprise search is a stochastic heuristic, not a global optimum. The stage-1 warm start
-did not meet the plateau criterion within its 1,000,000-iteration budget; the stage-2 even-flow
-search did, in 700,000 to 1,000,000 iterations. The realised level is \SIrange{0.26}{0.31}{\percent}
-above the cut, within the one-sided target's tolerance but above the statutory ceiling. The
-production costs are the costs of the converged schedules, not a lower bound.
+Fifth, the enterprise search is a stochastic heuristic, not a global optimum. The stage-1 level pull
+did not meet its convergence criterion within the 1,000,000-iteration budget; the stage-2 even-flow
+search did, in 700,000 to 1,000,000 iterations. The realised mean is \SIrange{0.26}{0.31}{\percent}
+above the cut, within the one-sided target's tolerance but above the statutory ceiling. The excess
+is concentrated in the final decade, which reaches \SI{7.28}{\mega\cubic\meter\per\year}; the
+minimum period is the AAC. A terminal constraint would lower the mean toward the cut and
+change the value and fire surfaces. The production costs are the costs of the converged schedules, not a lower
+bound.
 
 Sixth, the price series are of mixed vintages and the net present value is an operating margin: it
 excludes road construction, administration, taxes, and risk premia. The aspen price is a 2018
@@ -120,12 +130,14 @@ and 8 percent cases are reported.
 
 The allowable annual cut is feasible on this estate, and the deciduous-forward standards need not
 reduce it. The choice is between value and tail: D26 is the value option, D55 the tail option, and
-D84 is dominated by D55. At the BC rate, D26 is the clear choice for a value-oriented planner; a
-planner with a separate tail-loss objective should choose D55. D84 is not justified at the BC rate;
-it becomes net-positive only at high discount rates, where D55 is still better.
+D84 is dominated by D55 on net CVaR. At the BC rate, D26 is the clear choice for a value-oriented
+planner; a planner with a separate tail-loss objective and a cost constraint should choose D55. D84
+is not cost-effective at the BC rate: it buys a marginally larger gross tail reduction at a much
+higher cost, and it becomes net-positive only at \SI{5}{\percent} and above, where D55 is still
+better.
 
 The harvest-flow rule deserves as much scrutiny as the silvicultural prescription. The 25 percent
 shortfall in earlier searches was a search problem, not a land-base problem. A policy analysis that
-uses a fixed-flow penalty without a convergence check can understate the feasible cut by a third and
-misprice every standard. The state-based convergence, the even-flow target, and the harvest-plateau
+uses a fixed-flow penalty without a convergence check can understate the feasible cut by a quarter
+and misprice every standard. The state-based convergence, the even-flow target, and the harvest-plateau
 stop are part of the result, not a technical detail.

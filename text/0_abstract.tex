@@ -4,34 +4,38 @@ Forest policy in British Columbia sets an allowable annual cut and constrains ha
 the species composition that determines resilience to fire emerges from thousands of regeneration
 decisions. We evaluate three deciduous-forward post-clearcut stocking standards on the Prince George
 Timber Supply Area with an estate model that searches for an even-flow schedule at the allowable cut.
-The state-based convergence reaches \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year} under all
-four standards, \SIrange{0.26}{0.31}{\percent} above the 2025 allowable annual cut of
-\SI{6.917231}{\mega\cubic\meter\per\year}. The 25 percent shortfall reported by earlier fixed-flow
-searches was a search artifact, not a land-base or yield limit: the compiled estate can sustain the
+The state-based convergence meets the 2025 allowable annual cut of
+\SI{6.917231}{\mega\cubic\meter\per\year} in every period under all four standards; the 200-year
+mean is \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year}, \SIrange{0.26}{0.31}{\percent}
+above the cut because the final decade carries no terminal constraint and reaches
+\SI{7.28}{\mega\cubic\meter\per\year}. The 25 percent shortfall of an earlier fixed-flow search of this
+estate was a search artifact, not a land-base or yield limit: the compiled estate can sustain the
 cut.
 
 The standards target 26, 55, or 84 percent deciduous stock on eligible treated stands. A
 composition-aware fuel projection keeps the 2025 VRI fuel type for unharvested stands and follows the
 BC post-harvest chronology. At $t=0$ it reproduces \SI{63.1}{\percent} of the operational fuel-type
-grid; the largest disagreements are in the C4/C7 conifer classes and the M2/M4 mixedwood classes,
-which the projection never produces, and the post-harvest types have no observational counterpart.
-The D1 multiplier is 0.267 because D1 has near-zero crown fraction burned, so it is the model's 0.2
-surface-mortality floor, not an estimate of D1 severity. Realised landscape deciduous shares are 7.5,
+grid. The projection assigns C4 and C7 conifer types and M2/M4 mixedwood types; the VRI grid does
+not carry C7, M2, or M4 at all. The conifer classes account for \SI{86}{\percent} of the
+disagreements, and the post-harvest types have no observational counterpart.
+The D84 standard's D1 multiplier is 0.267: D1 has near-zero crown fraction burned, so its raw
+severity is the model's 0.2 surface-mortality floor, not an estimate of D1 severity. Realised landscape deciduous shares are 7.5,
 15.7, 26.9, and \SI{36.6}{\percent}.
 
 At the \SI{4}{\percent} BC Ministry of Forests rate, D26 raises net present value by
-\SI{36.0}{\mega\CAD} and reduces CVaR20 loss by \SI{23.7}{\mega\CAD}, a net CVaR gain of
-\SI{59.7}{\mega\CAD}. D55 costs \SI{39.3}{\mega\CAD} and reduces CVaR20 loss by
-\SI{38.8}{\mega\CAD}, approximately break-even (a net \SI{-0.5}{\mega\CAD} under the calibrated
-retention scenario, a net gain of \SI{7.9}{\mega\CAD} under the observed record). D84 costs
-\SI{146.5}{\mega\CAD} and reduces CVaR20 loss by \SI{39.3}{\mega\CAD}; it is dominated by D55, which
-delivers a similar reduction at less than a third of the cost. The observed record gives the larger
-fire benefit and the calibrated retention sample the smaller; D26 dominates the clearcut under both,
-and D55 dominates D84 under both. At \SI{3}{\percent} no standard pays (D26 is
-\SI{-9.6}{\mega\CAD}); at \SI{5}{\percent} to \SI{8}{\percent} all pay, and D55 is best.
+\SI{36.0}{\mega\CAD} and reduces CVaR20 loss by \SIrange{23.4}{23.7}{\mega\CAD}, a net CVaR gain
+of \SIrange{59.4}{59.7}{\mega\CAD}. D55 costs \SI{39.3}{\mega\CAD} and reduces CVaR20 loss by
+\SIrange{38.8}{47.2}{\mega\CAD}, approximately break-even (a net \SI{-0.5}{\mega\CAD} under the
+calibrated retention scenario, a net gain of \SI{7.9}{\mega\CAD} under the observed record). D84
+costs \SI{146.5}{\mega\CAD} and reduces CVaR20 loss by \SIrange{39.3}{47.5}{\mega\CAD}; it is
+dominated by D55 on net CVaR, which delivers a similar reduction at less than a third of the cost. The observed
+record gives the larger benefit for D55 and D84; for D26 the two scenarios are nearly identical.
+D26 dominates the clearcut under both, and D55 dominates D84 on net CVaR under both. At \SI{3}{\percent} no
+standard pays; at \SI{5}{\percent} to \SI{8}{\percent} all pay, and D55 is best at
+\SI{8}{\percent}.
 
-The allowable cut need not be traded for risk. D26 is the value option, D55 the tail option, and D84
-is dominated. The ranking is conditional on the discount rate and the fire-size scenario; the fire
+At the BC rate, the allowable cut need not be traded for risk. D26 is the value option, D55 the tail
+option, and D84 is dominated on net CVaR. The ranking is conditional on the discount rate and the fire-size scenario; the fire
 regime is a scenario, not a forecast, and composition changes the severity of a fire that reaches a
 stand, not the number or size of fires. Spatial fire-break placement remains open.
 
