@@ -1,4 +1,4 @@
-The estate can sustain the AAC; the final period is 5.2-5.3% above the ceiling.
+The estate sustains at least the AAC; the final period is 5.2-5.3% above the ceiling.
 D26 raises value and reduces tail risk at the 4 percent BC rate.
 D55 is approximately break-even as a tail hedge.
 D84 is dominated by D55 on net CVaR.
