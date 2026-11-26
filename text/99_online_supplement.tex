@@ -2,7 +2,8 @@
 
 \subsection*{S1. Data provenance and land base}
 
-The compiled dataset is derived from the public FEMIC TSA24 instance of the UBC FRESH laboratory
+The compiled dataset is derived from the public TSA~24 instance maintained by the UBC FRESH
+laboratory
 \citep{femic_tsa24_2026}, built from the BC Vegetation Resources Inventory (2025), the Forest and
 Range Evaluation Program disturbance mapping, and Site Productivity estimates, under the Open
 Government Licence -- British Columbia. The compiled dataset carries the inventory tables.
@@ -33,7 +34,7 @@ even-flow convergences at the 2025 allowable annual cut.
     \end{tabular}
 \end{table}
 
-The managed area is the sum of block areas whose track carries \texttt{IFM(managed)}; the
+The managed area is the sum of block areas whose track carries the managed-area account; the
 unmanaged area is the complement.
 
 \subsection*{S2. Model configuration}
@@ -49,7 +50,7 @@ unmanaged area is the complement.
         \midrule
         Horizon                     & 20 periods of 10 years \\
         Harvest treatment           & clearcut with regeneration \\
-        Enterprise search           & two-stage state-based SA, compact candidate index \\
+        Enterprise search           & two-stage state-based search, compact candidate index \\
         Stage 1                      & lower-bound level at 69,172,310 m3/period, nonlinear, weight 1, 1,000,000 iterations \\
         Stage 2                      & even-flow vs final period within $\pm 5$ percent, weight 10,000, harvest-plateau stop \\
         Stage-2 safety limit         & 20,000,000 iterations \\
@@ -70,7 +71,8 @@ reaches 7.28 million m3/yr, 5.3 percent above the ceiling; the other 19 periods 
 \begin{table}[h]
     \centering
     \small
-    \caption{Economic constants and their sources.}
+    \caption{Economic constants and their sources. FHOPS is the forest harvest and operations
+    planning library; SPF is spruce-pine-fir; Hem-Bal is hemlock-balsam.}
     \label{tab:supp_constants}
     \begin{tabular}{lll}
         \toprule
@@ -89,7 +91,8 @@ reaches 7.28 million m3/yr, 5.3 percent above the ceiling; the other 19 periods 
     \end{tabular}
 \end{table}
 
-Net present value discounts each period's net value at its end. The base rate is the BC Ministry
+FHOPS is the forest harvest and operations planning library \citep{fhops_2026}. Net present value
+discounts each period's net value at its end. The base rate is the BC Ministry
 of Forests 4 percent real rate for public-sector forestry investment analysis; \citet{heaps_pratt_1989}
 recommend 3 to 5 percent, and the federal social rate for environmental analysis is 3 percent
 \citep{treasury_board_2007}. The sensitivity analysis varies the deciduous price over its documented
@@ -129,9 +132,9 @@ A standard is applied only where it increases the deciduous share of the source 
 aspen blocks stay on \texttt{CC}. The realised landscape deciduous shares are 7.5, 15.7, 26.9, and
 36.6 percent; the targets apply to eligible treated stands, not the whole landscape. A planted stand
 on a pre-harvest fragment with a VRI crown closure below 5 percent uses a 5 percent floor, because
-the VRI value is a sparse or non-forest artefact.
+the VRI value is a sparse or non-forest artifact.
 
-The severity multiplier is sensitive to wind and the surface-mortality floor. Across
+The severity multiplier is sensitive to wind and the severity floor. Across
 \SIrange{6.8}{25}{\kilo\meter\per\hour} and a floor of 0.1 to 0.4, the D84 multiplier ranges
 0.10 to 0.49, the D55 multiplier 1.01 to 1.04, and the D26 (M2) multiplier 1.03 to 1.24. The D1
 multiplier is the model's 0.2 floor, not an estimate of D1 severity.
@@ -167,8 +170,8 @@ and is biased toward productive and accessible stands.
 
 \subsection*{S6. Reproduction}
 
-The state-based convergence uses the compact candidate index and the resident Model II state, with
-the two-stage target and the harvest-plateau stop. The scripts that build the candidate and simulator
+The state-based convergence uses a compact index of candidate moves and the resident stand state,
+with the two-stage target and the harvest-plateau stop. The scripts that build the candidate and simulator
 caches, the converged schedules, the observed and calibrated-retention fire surfaces, the fuel
 projection checks, the aspen-price and haul sensitivities, and the valuation and rotation code are
 archived in a public repository with a DOI on acceptance. The

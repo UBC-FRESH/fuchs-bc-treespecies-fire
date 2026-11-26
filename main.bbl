@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Artzner et~al., 1999]{artzner_coherent_1999}
+Artzner, P., Delbaen, F., Eber, J.-M., and Heath, D. (1999).
+\newblock Coherent measures of risk.
+\newblock {\em Mathematical Finance}, 9(3):203--228.
+
 \bibitem[{British Columbia Ministry of Forests},
   nd]{bc_mof_silviculture_lesson4}
 {British Columbia Ministry of Forests} (n.d.).
@@ -12,6 +17,12 @@
 Chung, W. (2015).
 \newblock Optimizing fuel treatments to reduce wildland fire risk.
 \newblock {\em Current Forestry Reports}, 1:44--51.
+
+\bibitem[{Forestry Canada Fire Danger Group}, 1992]{forestry_canada_fbp_1992}
+{Forestry Canada Fire Danger Group} (1992).
+\newblock Development and structure of the canadian forest fire behavior
+  prediction system.
+\newblock Information Report ST-X-3, Forestry Canada, Ottawa, ON.
 
 \bibitem[Fuchs et~al., 2024]{fuchs_severe_2024}
 Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
@@ -29,13 +40,20 @@ Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
   Operations and Rural Development.
 
 \bibitem[{Government of British Columbia},
-  2026]{government_of_british_columbia_aac_2026}
-{Government of British Columbia} (2026).
+  2026a]{government_of_british_columbia_aac_2026}
+{Government of British Columbia} (2026a).
 \newblock Allowable annual cut --- timber supply areas.
 \newblock
   \url{https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/timber-supply-review-and-allowable-annual-cut/allowable-annual-cut-timber-supply-areas}.
 \newblock TSA 24 Prince George, \SI{6917231}{\cubic\meter\per\year}, effective
   28 August 2025. Accessed 21 November 2026.
+
+\bibitem[{Government of British Columbia},
+  2026b]{government_of_british_columbia_tipsy_2026}
+{Government of British Columbia} (2026b).
+\newblock {TIPSY}: Table interpolation program for stand yields.
+\newblock Growth-model documentation, Ministry of Forests, Victoria, BC.
+  Accessed 26 November 2026.
 
 \bibitem[Heaps and Pratt, 1989]{heaps_pratt_1989}
 Heaps, T. and Pratt, B. (1989).
@@ -48,6 +66,11 @@ Lagos, T., Choi, J., Segundo, B., Gan, J., Ntaimo, L., and Prokopyev, O.~A.
   (2025).
 \newblock Bilevel optimization approach for fuel treatment planning.
 \newblock {\em European Journal of Operational Research}, 320:205--218.
+
+\bibitem[Rockafellar and Uryasev, 2000]{rockafellar_optimization_2000}
+Rockafellar, R.~T. and Uryasev, S. (2000).
+\newblock Optimization of conditional value-at-risk.
+\newblock {\em Journal of Risk}, 2(3):21--41.
 
 \bibitem[Seidl et~al., 2014]{seidl_increasing_2014}
 Seidl, R., Schelhaas, M.-J., Rammer, W., and Verkerk, P.~J. (2014).

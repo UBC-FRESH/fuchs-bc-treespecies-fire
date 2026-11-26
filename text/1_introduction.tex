@@ -1,8 +1,8 @@
 \section{Introduction}
 
 Forest management in British Columbia is organised around two decisions that are made by
-different actors. The Chief Forester sets an allowable annual cut for each timber supply area, a
-maximum rather than a target, after a timber supply review that projects growth, operability, and
+different actors. The Chief Forester sets an allowable annual cut (AAC) for each timber supply area,
+a maximum rather than a target, after a timber supply review that projects growth, operability, and
 land-base constraints~\citep{government_of_british_columbia_aac_2026}. The enterprises that hold
 harvesting rights then decide where, when, and with which species to harvest and regenerate, inside
 the silviculture prescriptions and stocking standards that apply to their tenures. The species
@@ -23,7 +23,7 @@ production and risk. The economic case was tested at scale for European forests 
 small-scale disturbances and spatially correlated extreme weather events. Diversification raised
 expected returns and reduced risk from isolated disturbances, but severe and frequent extreme
 events undermined the economic gain, and the optimal response shifted toward homogenisation and
-low-investment species. Two further results bound the question: enrichment of production forests
+low-investment species. Two further results frame the question: enrichment of production forests
 can serve economic and ecological multifunctionality at the same time
 \citep{topanotti_enhancing_2024}, and managing for heterogeneity in stand size and conifer--deciduous
 composition reduces fire risk at the landscape scale~\citep{zelnik_managing_2025}.
@@ -32,34 +32,35 @@ A separate literature optimises the spatial arrangement of fuel treatments to re
 \citep{chung_optimizing_2015,wei_optimize_2012}, including a recent bilevel formulation in which a
 planner chooses treatments and nature chooses the fire~\citep{lagos_bilevel_2025}. That work treats
 treatment location as the decision and fire as the adversary. It does not ask what composition an
-operating forest can supply at the allowable cut, nor what that composition costs in value and tail
-risk.
+operating forest can supply at the AAC, nor what that composition costs in value and tail risk.
 
-This paper asks that question. The policy lever is the post-clearcut stocking standard: what is
-planted after harvest, not where fuel treatments are placed. The enterprise chooses the even-flow
-schedule at the allowable annual cut; the standard changes the species mix, and the landscape
-composition is an outcome. The central finding is that the cut is feasible: a state-based
-convergence reaches a 20-period mean of \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year},
-\SIrange{0.26}{0.31}{\percent} above the 2025 cut, with 19 periods at the cut and the final
-even-flow reference period \SI{5.3}{\percent} above it, under all four standards. At that level, the
-standards do not trade production for risk: D26 improves both value and tail, D55 is approximately
-break-even as a tail hedge, and D84 is dominated by D55 on net CVaR.
+This paper asks whether a regional composition policy can be delivered through the decisions of the
+enterprises that actually manage the forest. The policy lever is the post-clearcut stocking standard: what is planted
+after harvest, not where fuel treatments are placed. A standard sets the species composition of
+regeneration; the enterprise chooses the harvest schedule, and the landscape composition is an
+outcome. The question is whether the AAC can be sustained under such standards, and what the
+standards cost in value and tail risk at that cut.
 
-We build the analysis on the Prince George Timber Supply Area (TSA~24) in interior British Columbia.
-The estate is the compiled TSA~24 inventory, with its actual blocks, ages, species, and yield
-curves. The enterprise search uses the compact candidate index and the resident state of the WS4
-Model II search: a level-pull warm start at the cut, then an even-flow target with a harvest-plateau
-stop. The converged schedules are evaluated under the observed 1950--2024 fire-size record and under
-a calibrated-retention lower-severity case, with a composition-aware fuel projection and the FBP crown
-fraction burned mapped to a severity multiplier. The value base is the BC Ministry of Forests
-\SI{4}{\percent} real rate, with \SI{3}{\percent}, \SI{5}{\percent}, and \SI{8}{\percent}
-sensitivities.
+We study the Prince George Timber Supply Area (TSA~24) in interior British Columbia. We assemble the
+TSA~24 inventory into an estate model with its actual blocks, ages, species, and yield curves, and we
+search for an even-flow schedule under each of four post-clearcut standards: the historical clearcut
+and three deciduous-forward prescriptions. The search uses WS4, a spatially explicit forest estate
+model developed at UBC FRESH~\citep{ubc_fresh_ws4_2026}. WS4 represents each stand with its age,
+species, and treatment history, simulates harvest and regeneration over time, and evaluates
+alternative harvest and regeneration moves. We use its state-based search in two stages: a first pass with a
+lower-bound harvest target at the AAC, and a second pass that imposes an even-flow target with a
+harvest-plateau stop. The converged schedules are
+evaluated under the observed 1950--2024 fire-size record and under a lower-severity fire-size
+scenario, with a composition-aware fuel projection and a severity multiplier
+derived from the crown fraction burned. Monetary values use the BC Ministry of Forests
+\SI{4}{\percent} real rate, with
+\SI{3}{\percent}, \SI{5}{\percent}, and \SI{8}{\percent} sensitivities.
 
 We ask three questions:
 
 \begin{enumerate}
-    \item[\textit{RQ1}] Can the compiled estate sustain the allowable annual cut under even-flow
-    convergence, and do the standards change the level?
+    \item[\textit{RQ1}] Can the compiled estate sustain the AAC under even-flow convergence, and do
+    the standards change the level?
     \item[\textit{RQ2}] What do the standards cost in net present value and in the tail of net
     present value at that level?
     \item[\textit{RQ3}] Which standard is preferred, and how does the answer depend on the discount
@@ -68,21 +69,16 @@ We ask three questions:
 
 A fourth question---how far broadleaf can be used as fire breaks before production suffers---requires
 a spatial placement rule and is not answered here; the discussion is explicit about that gap.
-Throughout, CVaR20 is the mean of the worst 20 percent of draws.
+Throughout, we use conditional value at risk at the 20 percent level (CVaR20), the mean of the
+worst 20 percent of draws, as the tail-risk metric; the methods define the measure and justify the
+choice.
 
-The contribution is fourfold. First, a production result: the state-based convergence reaches
-the AAC under every standard, with 19 periods at the cut and the final reference period 5.3 percent
-above it. Second, an
-enterprise value-and-tail surface at that level: D26 dominates the clearcut at the BC rate, D55 is
-the tail option, and D84 is dominated by D55 on net CVaR. Third, a fire-size range: the observed record gives the
-larger absolute benefit for D55 and D84, while D26 is nearly unchanged; D26 dominates CC and D55 dominates D84 on net CVaR
-under both, while the D55 net benefit is positive under the observed record and indistinguishable
-from zero under the calibrated scenario. Fourth, a fuel projection stated for what
-it is: a \SI{63.1}{\percent} $t=0$ reproduction of the operational grid, a rule-based post-harvest
-scenario, and a D1 multiplier that is the model's 0.2 surface-mortality floor.
-
-The result is not a production-versus-risk trade-off. The allowable cut is feasible, and the
-standards can improve value or tail at that cut. The useful policy number is the value and CVaR difference at the AAC.
+The contribution is fourfold. First, we test whether the compiled estate can sustain the AAC under
+state-based convergence and whether the standards change the level. Second, we compare the standards
+in net present value and in the tail of net present value at that level. Third, we bound the
+fire-size uncertainty with the observed record and a lower-severity calibrated fire-size scenario. Fourth, we report
+the fuel projection for what it is: a $t=0$ reproduction of the operational grid, a rule-based
+post-harvest scenario, and a severity multiplier with a documented floor.
 
 The paper proceeds as follows. \autoref{sec:methods} describes the study area, the decision
 structure, the state-based convergence, the estate data, the growth representation, the fire regime
