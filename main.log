@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  26 NOV 2026 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  26 NOV 2026 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -532,19 +532,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  (./text/0_abstract.tex [2
 
-] [3])
+])
 \openout2 = `text/1_introduction.aux'.
 
 
-(./text/1_introduction.tex [4
+(./text/1_introduction.tex [3
 
 
 
-]) [5] [6]
+]) [4] [5]
 \openout2 = `text/2_methods.aux'.
 
  (./text/2_methods.tex
-<figures/studyArea_map.pdf, id=176, 415.67802pt x 398.81085pt>
+<figures/studyArea_map.pdf, id=172, 415.67802pt x 398.81085pt>
 File: figures/studyArea_map.pdf Graphic file (type pdf)
 <use figures/studyArea_map.pdf>
 Package pdftex.def Info: figures/studyArea_map.pdf  used on input line 25.
@@ -553,55 +553,59 @@ Package pdftex.def Info: figures/studyArea_map.pdf  used on input line 25.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7
+[6
 
 
 
- <./figures/studyArea_map.pdf>] [8] [9] [10]) [11] [12]
+ <./figures/studyArea_map.pdf>] [7] [8] [9]) [10] [11]
 \openout2 = `text/3_results.aux'.
 
- (./text/3_results.tex [13
+ (./text/3_results.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12
 
 
 
-] [14] [15] [16]) [17]
+] [13] [14]) [15] [16]
 \openout2 = `text/4_discussion.aux'.
 
- (./text/4_discussion.tex [18
+ (./text/4_discussion.tex [17
 
 
 
-] [19] [20]) [21]
+] [18] [19]) [20]
 \openout2 = `text/5_conclusion.aux'.
 
 
-(./text/5_conclusion.tex) [22
+(./text/5_conclusion.tex) [21
 
 
 
 ]
 \openout2 = `text/6_declarations.aux'.
 
- (./text/6_declarations.tex) [23
+ (./text/6_declarations.tex) [22
 
 
 
-] [24]
+] [23]
 \openout2 = `text/9_acknowledgements.aux'.
 
 
 (./text/9_acknowledgements.tex)
 \openout2 = `text/99_online_supplement.aux'.
 
- (./text/99_online_supplement.tex [25
+ (./text/99_online_supplement.tex [24
 
 
 
 
 
 
-] [26])
-[27] [28] (./main.bbl
+] [25])
+[26] [27] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 33--39
 \OT1/cmtt/m/n/10 www2 [] .gov [] .bc [] .ca / gov / content / industry / forest
 ry / managing [] -our [] -forest [] -resources / timber []
@@ -614,10 +618,10 @@ allowable [] -annual [] -cut [] -timber [] -supply [] -areas$[]\OT1/cmr/m/n/10
 .  TSA
  []
 
-[29
+[28
 
 
-]) [30] (./main.aux (./text/0_abstract.aux) (./text/1_introduction.aux)
+]) [29] (./main.aux (./text/0_abstract.aux) (./text/1_introduction.aux)
 (./text/2_methods.aux) (./text/3_results.aux) (./text/4_discussion.aux)
 (./text/5_conclusion.aux) (./text/6_declarations.aux)
 (./text/9_acknowledgements.aux) (./text/99_online_supplement.aux))
@@ -626,12 +630,12 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0AD7FF0FCC5AEE9868DE3DE39E97A7A5;3943.
+(rerunfilecheck)             Checksum: 2FE65585AB18EE8D80E0CD912B9FE4D0;3702.
  ) 
 Here is how much of TeX's memory you used:
- 15120 strings out of 476106
- 295998 string characters out of 5793934
- 1941975 words of memory out of 5000000
+ 15119 strings out of 476106
+ 295991 string characters out of 5793934
+ 1942975 words of memory out of 5000000
  36792 multiletter control sequences out of 15000+600000
  568939 words of font info for 78 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -656,10 +660,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
 public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt10.pfb>
-Output written on main.pdf (30 pages, 1964485 bytes).
+Output written on main.pdf (29 pages, 1962584 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 500000)
+ 550 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 102 named destinations out of 1000 (max. 500000)
  190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

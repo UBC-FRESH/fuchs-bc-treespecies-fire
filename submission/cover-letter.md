@@ -21,9 +21,8 @@ It makes four contributions.
 First, it corrects the production result. A state-based two-stage convergence meets or exceeds the
 2025 cut of 6.917 million m3/yr in every period under all four standards: 19 periods sit at the AAC,
 and the final even-flow reference period is 5.3 percent above the ceiling. The 200-year mean is 6.935
-to 6.938 million m3/yr, 0.26 to 0.31 percent above the ceiling. An earlier fixed-flow search of this
-estate did not find a feasible schedule; its 25 percent shortfall is not a land-base or yield limit.
-The estate can sustain the cut, and the standards do not reduce it.
+to 6.938 million m3/yr, 0.26 to 0.31 percent above the ceiling. The estate can sustain the cut, and
+the standards do not reduce it.
 
 Second, it reports an enterprise value-and-tail surface at that level. At the BC Ministry of Forests
 4 percent real rate, D26 raises net present value by 36.0 million CAD and reduces CVaR20 loss by

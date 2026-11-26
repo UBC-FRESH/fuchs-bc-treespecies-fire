@@ -1,11 +1,10 @@
 # Claims register
 
-> Status note (2026-11-26): the AAC-level state convergence supersedes the earlier 5.19
-> fixed-flow production and fire rows, and the 20-draw fixed-plan surface. The manuscript uses
-> the AAC-level rows below. Rows marked `superseded` are retained for the record. The 5.19
-> number may appear only as the explicitly superseded foil; no 60.7, 19:1, or ten-draw fire
-> number may ship. The 6.935-6.938 mean includes the final reference period; the other 19 periods
-> sit at the AAC, and the final period is 5.3 percent above the ceiling.
+> Status note (2026-11-26): the AAC-level state convergence is the only production result cited
+> in the manuscript. The earlier fixed-flow and fixed-plan rows below are retained as a historical
+> archive and are not cited. No 60.7, 19:1, or ten-draw fire number may ship. The 6.935-6.938 mean
+> includes the final reference period; the other 19 periods sit at the AAC, and the final period is
+> 5.3 percent above the ceiling.
 
 Rule: every number in the manuscript appears here with the artifact that produces it. A sentence
 whose number is not in this table does not ship.
@@ -58,7 +57,8 @@ calibration), `to compute` (not yet produced).
 | Severity range, D26 (M2) | 1.03-1.24 | same | verified |
 | Multi-year weather | 720 states; C1 median 1.112 (p10-p90 0.817-1.312), M1 1.033, C2 1.312; D1 0.267 at all states | `.../fire/severity-weather-range.json` | verified |
 | Crown-closure floor | 5 percent for planted stands on pre-harvest fragments with VRI crown closure below 5 percent | `scripts/fuel_state.py` | verified |
-| 5.19 provenance | fixed-flow GPU-GA schedule (`ws4-tsa24-gpu-ga-100000-r1`), not the state-based convergence; retained only as the superseded foil | `experiments/tsa24-evenflow/summary.json`; README | superseded |
+
+> **Historical archive (not cited).** Everything below this line predates the AAC-level convergence and is retained for audit only. The manuscript uses only the AAC-level rows above.
 
 ## Landscape and estate
 
