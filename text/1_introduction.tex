@@ -39,9 +39,10 @@ This paper asks that question. The policy lever is the post-clearcut stocking st
 planted after harvest, not where fuel treatments are placed. The enterprise chooses the even-flow
 schedule at the allowable annual cut; the standard changes the species mix, and the landscape
 composition is an outcome. The central finding is that the cut is feasible: a state-based
-convergence reaches \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year}, \SIrange{0.26}{0.31}
-{\percent} above the 2025 cut, under all four standards. The 25 percent shortfall of an earlier
-fixed-flow search of this estate was a search artifact, not a land-base or yield limit. At that level, the
+convergence reaches a 20-period mean of \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year},
+\SIrange{0.26}{0.31}{\percent} above the 2025 cut, with 19 periods at the cut and the final
+even-flow reference period \SI{5.3}{\percent} above it, under all four standards. An earlier fixed-flow search of this estate
+did not find a feasible schedule; its 25 percent shortfall is not a land-base or yield limit. At that level, the
 standards do not trade production for risk: D26 improves both value and tail, D55 is approximately
 break-even as a tail hedge, and D84 is dominated by D55 on net CVaR.
 
@@ -50,7 +51,7 @@ The estate is the compiled TSA~24 inventory, with its actual blocks, ages, speci
 curves. The enterprise search uses the compact candidate index and the resident state of the WS4
 Model II search: a level-pull warm start at the cut, then an even-flow target with a harvest-plateau
 stop. The converged schedules are evaluated under the observed 1950--2024 fire-size record and under
-a calibrated-retention lower bound, with a composition-aware fuel projection and the FBP crown
+a calibrated-retention lower-severity case, with a composition-aware fuel projection and the FBP crown
 fraction burned mapped to a severity multiplier. The value base is the BC Ministry of Forests
 \SI{4}{\percent} real rate, with \SI{3}{\percent}, \SI{5}{\percent}, and \SI{8}{\percent}
 sensitivities.
@@ -71,11 +72,12 @@ a spatial placement rule and is not answered here; the discussion is explicit ab
 Throughout, CVaR20 is the mean of the worst 20 percent of draws.
 
 The contribution is fourfold. First, a corrected production result: the state-based convergence
-reaches the cut under every standard; the earlier 25 percent gap was a search artifact. Second, an
+reaches the cut under every standard; the earlier 25 percent gap reflected that search, not the land base. Second, an
 enterprise value-and-tail surface at that level: D26 dominates the clearcut at the BC rate, D55 is
 the tail option, and D84 is dominated by D55 on net CVaR. Third, a fire-size range: the observed record gives the
-larger benefit for D55 and D84, while D26 is nearly unchanged; D26 dominates CC and D55 dominates D84 on net CVaR
-under both, while the D55 sign is not resolved. Fourth, a fuel projection stated for what
+larger absolute benefit for D55 and D84, while D26 is nearly unchanged; D26 dominates CC and D55 dominates D84 on net CVaR
+under both, while the D55 net benefit is positive under the observed record and indistinguishable
+from zero under the calibrated scenario. Fourth, a fuel projection stated for what
 it is: a \SI{63.1}{\percent} $t=0$ reproduction of the operational grid, a rule-based post-harvest
 scenario, and a D1 multiplier that is the model's 0.2 surface-mortality floor.
 

@@ -64,12 +64,14 @@ because the standard changes the volume, timing, and value of harvest.
 standard we build a single-standard dataset and search for an even-flow schedule with the compact
 candidate index and the resident state of the WS4 Model II search
 \citep{ubc_fresh_ws4_2026}. The search uses the same two-stage target as the companion fire-regime
-workflow. Stage 1 is a level-only pull at the 2025 allowable annual cut
-(\SI{69172310}{\cubic\meter} per ten-year period) with a nonlinear penalty and a 1,000,000-iteration
-budget. Stage 2 adds an even-flow target within \SI{5}{\percent} of the period-1 level, with a
-nonlinear weight of 10,000, and stops when the realised harvest plateaus over a ten-chunk window
-(0.1 percent relative tolerance) or at a 20,000,000-iteration safety limit. The stage-1 result is a
-warm start; the stage-2 result is the reported schedule. The search is a stochastic heuristic, not a
+workflow. Stage 1 is a lower-bound level target at the 2025 allowable annual cut
+(minimum \SI{69172310}{\cubic\meter} per ten-year period, nonlinear penalty, weight 1) with a
+1,000,000-iteration budget; because it is a lower bound, its realised harvests overshoot the AAC and
+are used only as a warm start. Stage 2 adds an even-flow target that compares each period to the
+final period (the WS4 default reference), within \SI{5}{\percent}, with a nonlinear weight of
+10,000, and stops when the realised harvest plateaus over ten chunks of 50,000 iterations (0.1
+percent relative tolerance) or at a 20,000,000-iteration safety limit. The stage-2 result is the
+reported schedule. The search is a stochastic heuristic, not a
 global optimum; we report the convergence status, the iteration count, and the realised level. A
 converged stage-2 schedule is the evidence that the estate can sustain the cut under the target, not
 a proof that no other schedule could do better.
@@ -95,11 +97,13 @@ eligible stands; the D26, D55, and D84 datasets carry 39, 36, and 33 treatments,
 transition information are carried as curves per block, compiled from the provincial inventory and
 the timber supply analysis. The regenerated stand takes the species mix of the prescription.
 
-We run 20 periods of ten years. The converged schedules meet the allowable annual cut in every
-period; the 20-period mean is \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year},
-\SIrange{0.26}{0.31}{\percent} above the cut because the final decade carries no terminal constraint. The level
-does not fall under any standard; the standards change composition and value, not the sustainable
-cut.
+We run 20 periods of ten years. The converged schedules meet or exceed the allowable annual cut in
+every period. The final period is the even-flow reference and reaches
+\SI{7.28}{\mega\cubic\meter\per\year}, \SI{5.3}{\percent} above the ceiling; the other 19
+periods sit at the AAC. The 20-period mean is \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year},
+\SIrange{0.26}{0.31}{\percent} above the ceiling. The final-period excess is a reference effect,
+not a free terminal period. The level does not fall under any standard; the standards change
+composition and value, not the minimum sustainable cut.
 
 \subsection{Growth and yield}
 
@@ -119,9 +123,9 @@ a small number of events.
 The policy surface uses the recorded size and frequency distribution with a composition-dependent
 severity model, which holds the regime fixed and isolates the fuel effect. The calibrated
 surface-fire model \citep{ubc_fresh_fire_calibration_2026} demonstrates estate coupling; its
-per-tile suppression parameters were fitted on 24 tiles against 432 historical perimeters. It
-reproduces the central distribution but underproduces the upper tail; it is an in-sample diagnostic
-and coupling check, not a validation or the policy engine.
+per-tile suppression parameters were fitted on 24 tiles against 432 historical perimeters. It has
+a higher median but lower mean, p90, p95, and maximum than the observed record; it is a
+lower-severity in-sample scenario, not a central fit, and not a validation or the policy engine.
 
 \paragraph{Fuel projection} The 2025 VRI fuel type is the baseline for every unharvested stand. For
 a harvested stand we follow the BC fuel-typing chronology: slash (S1) for 0--5 years, open
@@ -130,13 +134,14 @@ uses the operational VRI-to-FBP mapping, with the 30 percent mixedwood threshold
 calibration; the BC 2017 algorithm's 20 percent threshold is a sensitivity. The baseline is not
 re-typed. Re-typing every stand from the compiled analysis-unit composition reproduces
 \SI{63.1}{\percent} of the operational grid; the operational mapping from VRI conifer share
-reproduces \SI{66.7}{\percent}. The projection assigns C4 and C7 conifer types and M2/M4 mixedwood
-types; the VRI grid does not carry C7, M2, or M4 at all. The conifer classes account for
-\SI{86}{\percent} of the disagreements. The compiled dataset carries one species mix per analysis
-unit, while the VRI grid carries one per polygon. The post-harvest types have no observational
-counterpart: they are a rule-based scenario, not a validated prediction. The projection holds the
-pre-harvest VRI crown closure for the planted stand; TIPSY and VRI crown closure differ by
-17.3 percentage points with a correlation of 0.004.
+reproduces \SI{66.7}{\percent}. The projection never produces C7, M2, or M4, although the VRI grid
+carries all three; the conifer classes account for \SI{86}{\percent} of the disagreements. The
+compiled dataset carries one species mix per analysis unit, while the VRI grid carries one per
+polygon. The post-harvest S1 and O1B types have no observational counterpart: they are a rule-based scenario, not a validated prediction. Post-fire fuel succession is
+not modelled; a burned stand is re-typed from its surviving cohorts in the next period. The
+projection holds the pre-harvest VRI crown closure for the planted stand, with a 5 percent floor for
+sparse pre-harvest fragments; TIPSY and VRI crown closure differ by 17.3 percentage points with a
+correlation of 0.004.
 
 \paragraph{Severity} A fire that reaches a stand kills a fraction of its biomass. We compute the
 FBP crown fraction burned (CFB) for the stand's fuel type under the calibration weather
@@ -171,11 +176,13 @@ uncertainty in the fire-size distribution, the severity model, or the growth cur
 
 The main event set uses the full 1,073-fire observed record. A second event set replaces the observed
 sizes with the \num{3450} retained sizes from the companion multi-year retention calibration (690
-potential fires, 1950--2024 weather), holding the Poisson count process and random placement fixed.
-The calibrated sample has a higher median (29.3 against 23.7 hectares) but a lower 95th percentile
-(893 against 2,047 hectares) and a lower over-5,000-hectare fraction (1.10 against 3.0 percent) than
-the observed TSA record. It is a lower bound on the upper tail, not a replacement for the observed
-record. The observed record gives the larger benefit for D55 and D84; for D26 the two are nearly
+retained records at five draws each, from the 1950--2024 potential-weather sample of 720 states),
+holding the Poisson count process and random placement fixed.
+The calibrated sample has a higher median (29.3 against 23.7 hectares) but a lower mean (278.9
+against 704.5 hectares), p90 (379 against 696 hectares), 95th percentile (893 against 2,047
+hectares), maximum (23,357 against 72,317 hectares), and over-5,000-hectare fraction (1.10 against
+3.0 percent) than the observed TSA record. It is a lower-severity case, not a replacement for the
+observed record. The observed record gives the larger absolute benefit for D55 and D84; for D26 the two are nearly
 identical. The two scenarios span the fire-size range we consider.
 
 \subsection{Economic valuation}

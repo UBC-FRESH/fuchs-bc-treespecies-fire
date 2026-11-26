@@ -18,7 +18,8 @@ even-flow convergences at the 2025 allowable annual cut.
         \toprule
         Item & Value \\
         \midrule
-        Blocks and fragments                          & 458,708 \\
+        Blocks                                        & 458,708 \\
+        Fragments with VRI fuel type                  & 438,601 \\
         Treatments                                    & 48 \\
         Growth curves                                 & 10,326 \\
         Accounts                                      & 99 \\
@@ -49,11 +50,11 @@ unmanaged area is the complement.
         Horizon                     & 20 periods of 10 years \\
         Harvest treatment           & clearcut with regeneration \\
         Enterprise search           & two-stage state-based SA, compact candidate index \\
-        Stage 1                      & level pull at 69,172,310 m3/period, nonlinear, 1,000,000 iterations \\
-        Stage 2                      & even-flow within $\pm 5$ percent, weight 10,000, harvest-plateau stop \\
+        Stage 1                      & lower-bound level at 69,172,310 m3/period, nonlinear, weight 1, 1,000,000 iterations \\
+        Stage 2                      & even-flow vs final period within $\pm 5$ percent, weight 10,000, harvest-plateau stop \\
         Stage-2 safety limit         & 20,000,000 iterations \\
         Fire                        & recorded regime; composition-dependent severity \\
-        Fire-size scenarios          & observed 1,073-fire record; calibrated-retention lower bound \\
+        Fire-size scenarios          & observed 1,073-fire record; calibrated-retention lower-severity case \\
         Paired draws                 & 20 \\
         \bottomrule
     \end{tabular}
@@ -61,8 +62,8 @@ unmanaged area is the complement.
 
 The stage-1 result is a warm start; the stage-2 result is the reported schedule. All four standards
 converged to a 20-period mean of 6.935 to 6.938 million m3/yr in 700,000 to 1,000,000 stage-2
-iterations, 0.26 to 0.31 percent above the cut. The minimum period is the AAC and the final decade
-reaches 7.28 million m3/yr, 5.3 percent above it.
+iterations, 0.26 to 0.31 percent above the ceiling. The final period is the even-flow reference and
+reaches 7.28 million m3/yr, 5.3 percent above the ceiling; the other 19 periods sit at the AAC.
 
 \subsection*{S3. Economic constants}
 
@@ -107,12 +108,12 @@ stand-level composition and projected fuel type are:
 \begin{table}[h]
     \centering
     \small
-    \caption{Stocking standards, realised composition on a conifer block, and the projected fuel
-    type and severity multiplier. The multiplier is relative to the initial-landscape mean.}
+    \caption{Stocking standards, prescribed or evaluated composition, and the projected fuel type
+    and severity multiplier. The multiplier is relative to the initial-landscape mean.}
     \label{tab:supp_standards}
     \begin{tabular}{lrrrr}
         \toprule
-        Standard & Target deciduous [\%] & Realised composition & Fuel type & Multiplier \\
+        Standard & Target deciduous [\%] & Composition & Fuel type & Multiplier \\
         \midrule
         CC  & source & SX 83 / BL 17 & C2/C1 & 1.299 / 0.749 \\
         D26 & 26     & AT 26 / SX 74 & C2/C1 & 1.299 / 0.749 \\
@@ -120,6 +121,8 @@ stand-level composition and projected fuel type are:
         D84 & 84     & AT 84 / SX 16 & D1    & 0.267 \\
         \bottomrule
     \end{tabular}
+    \par\smallskip\footnotesize CC and D84 were evaluated on block 451; D26 and D55 are the prescribed
+    target compositions.
 \end{table}
 
 A standard is applied only where it increases the deciduous share of the source analysis unit;
@@ -142,10 +145,12 @@ binds; this is an assumption, not a robustness result. The 26 percent standard's
 weather.
 
 The observed-record fire surface is the larger-benefit case; the calibrated-retention sample is the
-lower bound on the upper tail. The calibrated sample has a higher median (29.3 against 23.7
-hectares) but a lower 95th percentile (893 against 2,047 hectares) and a lower over-5,000-hectare
-fraction (1.10 against 3.0 percent) than the observed record. The observed record gives the larger
-benefit for D55 and D84; for D26 the two are nearly identical. D26 dominates the clearcut under
+lower-severity case. The calibrated sample has a higher median (29.3 against 23.7 hectares) but a
+lower mean (278.9 against 704.5 hectares), p90 (379 against 696 hectares), 95th percentile (893
+against 2,047 hectares), maximum (23,357 against 72,317 hectares), and over-5,000-hectare fraction
+(1.10 against 3.0 percent) than the observed record. It is a lower-severity scenario, not merely a
+truncated tail. The observed record gives the larger absolute benefit for D55 and D84; for D26 the
+two are nearly identical. D26 dominates the clearcut under
 both; D55 dominates D84 on net CVaR under both. The D84 dominance is conditional on the D1 floor: a lower floor
 increases the D84 benefit and a higher floor reduces it; the benefit would need to nearly quadruple
 to close the cost gap to D55.
@@ -154,9 +159,11 @@ to close the cost gap to D55.
 
 For every block with more than one harvest in the converged CC schedule, the rotation is the interval
 between consecutive harvests. The schedule yields 153,190 intervals, an area-weighted mean of 92.8
-years (median 90, tenth-to-ninetieth percentile 60 to 140). At 6.935 million m3/yr over 3.06 million
-ha, about 33,000 ha are harvested each year, or 210 m3/ha. The estimate is conditional on re-entry
-within the 200-year horizon and is biased toward productive and accessible stands.
+years (median 90, tenth-to-ninetieth percentile 60 to 140). The schedule treats 5.56 million ha over
+200 years, about 27,800 ha each year, and harvests 249.5 m3 per treated hectare; the treated area is
+smaller than managed area divided by the mean rotation because not every managed hectare is
+re-entered within the horizon. The estimate is conditional on re-entry within the 200-year horizon
+and is biased toward productive and accessible stands.
 
 \subsection*{S6. Reproduction}
 
