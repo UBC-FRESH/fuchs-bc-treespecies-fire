@@ -3,47 +3,41 @@
 Forest policy in British Columbia sets an allowable annual cut and constrains harvesting, while
 the species composition that determines resilience to fire emerges from thousands of regeneration
 decisions. We evaluate three deciduous-forward post-clearcut stocking standards on the Prince George
-Timber Supply Area with an estate model that re-optimises the harvest schedule under an even-flow target for each
-standard.
-The compiled estate matches the published timber harvesting land base to \SI{0.32}{\percent}, but
-its growth curves realise \SI{5.19}{\mega\cubic\meter\per\year}, about \SI{25}{\percent} below the
-\SI{6917231}{\cubic\meter\per\year} 2025 allowable annual cut. A 300-iteration SA search at the official 2017 transition profile, which starts at \SI{8.35} and then
-\SI{7.35}{\mega\cubic\meter\per\year}, also realises about \SI{5.2}{\mega\cubic\meter\per\year}, so
-the shortfall is not a flat-flow artifact: the search did not reproduce the official transition, and
-the compiled land base and yield curves are the leading explanation. This is a model result, not a
-feasibility proof.
+Timber Supply Area with an estate model that searches for an even-flow schedule at the allowable cut.
+The state-based convergence reaches \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year} under all
+four standards, \SIrange{0.26}{0.31}{\percent} above the 2025 allowable annual cut of
+\SI{6.917231}{\mega\cubic\meter\per\year}. The 25 percent shortfall reported by earlier fixed-flow
+searches was a search artifact, not a land-base or yield limit: the compiled estate can sustain the
+cut.
 
-The standards target 26, 55, or 84 percent deciduous stock on eligible treated stands. A composition-aware fuel projection
-keeps the 2025 VRI fuel type for unharvested stands and follows the BC post-harvest chronology. At
-$t=0$ it reproduces \SI{63.1}{\percent} of the operational fuel-type grid; the largest
-disagreements are in the C4/C7 conifer classes and the M2/M4 mixedwood classes, which the projection
-never produces, and the post-harvest types have no observational counterpart. The D1 multiplier is 0.267 because D1 has near-zero crown fraction burned, so it is the
-model's 0.2 surface-mortality floor, not an estimate of D1 severity.
+The standards target 26, 55, or 84 percent deciduous stock on eligible treated stands. A
+composition-aware fuel projection keeps the 2025 VRI fuel type for unharvested stands and follows the
+BC post-harvest chronology. At $t=0$ it reproduces \SI{63.1}{\percent} of the operational fuel-type
+grid; the largest disagreements are in the C4/C7 conifer classes and the M2/M4 mixedwood classes,
+which the projection never produces, and the post-harvest types have no observational counterpart.
+The D1 multiplier is 0.267 because D1 has near-zero crown fraction burned, so it is the model's 0.2
+surface-mortality floor, not an estimate of D1 severity. Realised landscape deciduous shares are 7.5,
+15.7, 26.9, and \SI{36.6}{\percent}.
 
-At a \SI{4}{\percent} real discount rate, the BC Ministry of Forests rate for public-sector forestry
-investment, the 26 percent standard adds \SI{52.9}{\mega\cubic\meter}, all aspen, at a net present
-value cost of \SI{1.4}{\mega\CAD}; conifer volume is flat. The 55 and 84 percent standards cost
-\SI{42.5}{\mega\CAD} and \SI{60.6}{\mega\CAD}. On the fixed-plan fire surface, using 20 paired 200-year
-draws, the 84 percent standard reduces the conditional fire loss by \SI{2.4}{\mega\CAD} (paired
-event-set bootstrap 2.0--2.7) at \SI{4}{\percent}, but the CVaR of net present value is
-\SI{47.9}{\mega\CAD} lower (47.6--48.3), because it lowers
-the no-fire value by more than it lowers the loss. At the enterprise cost, holding the fixed-plan
-fire benefit, the net CVaR is \SI{58.2}{\mega\CAD} lower. It is not a tail hedge. The break-even is
-about \SI{21}{\mega\CAD} at the fixed-plan cost, \SI{25}{\mega\CAD} at the enterprise cost, and
-\SI{20}{\mega\CAD} at \SI{3}{\percent} at the fixed-plan cost. A planner would need a separate
-loss-reduction objective, or non-timber benefits, worth more than that to choose the 84 percent
-standard; the recorded fire regime alone does not justify it on timber value.
+At the \SI{4}{\percent} BC Ministry of Forests rate, D26 raises net present value by
+\SI{36.0}{\mega\CAD} and reduces CVaR20 loss by \SI{23.7}{\mega\CAD}, a net CVaR gain of
+\SI{59.7}{\mega\CAD}. D55 costs \SI{39.3}{\mega\CAD} and reduces CVaR20 loss by
+\SI{38.8}{\mega\CAD}, approximately break-even (a net \SI{-0.5}{\mega\CAD} under the calibrated
+retention scenario, a net gain of \SI{7.9}{\mega\CAD} under the observed record). D84 costs
+\SI{146.5}{\mega\CAD} and reduces CVaR20 loss by \SI{39.3}{\mega\CAD}; it is dominated by D55, which
+delivers a similar reduction at less than a third of the cost. The observed record gives the larger
+fire benefit and the calibrated retention sample the smaller; D26 dominates the clearcut under both,
+and D55 dominates D84 under both. At \SI{3}{\percent} no standard pays (D26 is
+\SI{-9.6}{\mega\CAD}); at \SI{5}{\percent} to \SI{8}{\percent} all pay, and D55 is best.
 
-The 26 percent standard is a value-neutral shift to aspen at the midpoint 2018 aspen price, not free
-conifer volume. The D84 result is robust to the severity floor (2.3 to 2.6 million CAD across 0.1 to
-0.4) and to the 20 percent mixedwood threshold; under that threshold the 26 percent standard becomes a
-small fire penalty. The ranking remains conditional on the discount rate and the aspen price. The fire
-regime is a scenario, not a forecast; composition changes the severity of a fire that reaches a stand,
-not the number or size of fires.
+The allowable cut need not be traded for risk. D26 is the value option, D55 the tail option, and D84
+is dominated. The ranking is conditional on the discount rate and the fire-size scenario; the fire
+regime is a scenario, not a forecast, and composition changes the severity of a fire that reaches a
+stand, not the number or size of fires. Spatial fire-break placement remains open.
 
 \vspace{1cm}
 
 \paragraph{Keywords} forest policy, deciduous-forward silviculture, harvest scheduling,
-fire risk, British Columbia
+fire risk, allowable annual cut, British Columbia
 
 \newpage

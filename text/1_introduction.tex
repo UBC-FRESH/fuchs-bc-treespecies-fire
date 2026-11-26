@@ -31,66 +31,61 @@ composition reduces fire risk at the landscape scale~\citep{zelnik_managing_2025
 A separate literature optimises the spatial arrangement of fuel treatments to reduce fire risk
 \citep{chung_optimizing_2015,wei_optimize_2012}, including a recent bilevel formulation in which a
 planner chooses treatments and nature chooses the fire~\citep{lagos_bilevel_2025}. That work treats
-treatment location as the decision and fire as the adversary. It does not ask how much composition
-change an operating forest can supply under a harvest level, nor what that change costs in volume
-and value.
+treatment location as the decision and fire as the adversary. It does not ask what composition an
+operating forest can supply at the allowable cut, nor what that composition costs in value and tail
+risk.
 
-This paper sits between those lines. The policy lever is the post-clearcut stocking standard: what
-is planted after harvest, not where fuel treatments are placed. We quantify, on an operating forest,
-what a deciduous-forward standard costs in harvest volume and value under an enterprise response,
-and whether the resulting composition changes fire severity and the tail of net present value. The
-landscape composition is an outcome of the standard, not an exogenous target.
+This paper asks that question. The policy lever is the post-clearcut stocking standard: what is
+planted after harvest, not where fuel treatments are placed. The enterprise chooses the even-flow
+schedule at the allowable annual cut; the standard changes the species mix, and the landscape
+composition is an outcome. The central finding is that the cut is feasible: a state-based
+convergence reaches \SIrange{6.935}{6.938}{\mega\cubic\meter\per\year}, \SIrange{0.26}{0.31}
+{\percent} above the 2025 cut, under all four standards. The 25 percent shortfall reported by earlier
+fixed-flow searches was a search artifact, not a land-base or yield limit. At that level, the
+standards do not trade production for risk: D26 improves both value and tail, D55 is approximately
+break-even as a tail hedge, and D84 is dominated by D55.
 
 We build the analysis on the Prince George Timber Supply Area (TSA~24) in interior British Columbia.
 The estate is the compiled TSA~24 inventory, with its actual blocks, ages, species, and yield
-curves. A weighted goal program produces the baseline even-flow schedule; we re-optimise the harvest
-schedule under each standard, so the production cost includes the enterprise response rather than only the direct
-effect at a fixed pattern. Fire is represented by the recorded 1950--2024 regime and a
-composition-dependent severity model: a composition-aware fuel projection re-types harvested stands
-from their new cohorts, and the FBP crown fraction burned maps the fuel type to a severity
-multiplier. We use 20 paired 200-year event sets, and value the result at the BC Ministry of
-Forests \SI{4}{\percent} real rate, with \SI{3}{\percent}, \SI{5}{\percent}, and \SI{8}{\percent}
+curves. The enterprise search uses the compact candidate index and the resident state of the WS4
+Model II search: a level-pull warm start at the cut, then an even-flow target with a harvest-plateau
+stop. The converged schedules are evaluated under the observed 1950--2024 fire-size record and under
+a calibrated-retention lower bound, with a composition-aware fuel projection and the FBP crown
+fraction burned mapped to a severity multiplier. The value base is the BC Ministry of Forests
+\SI{4}{\percent} real rate, with \SI{3}{\percent}, \SI{5}{\percent}, and \SI{8}{\percent}
 sensitivities.
 
 We ask three questions:
 
 \begin{enumerate}
-    \item[\textit{RQ1}] What does a deciduous-forward stocking standard cost in harvest volume and
-    net present value under an enterprise response?
-    \item[\textit{RQ2}] Does the resulting composition change fire severity and the tail of net
-    present value, and by how much?
-    \item[\textit{RQ3}] What break-even price of conditional-loss reduction would justify the
-    standard, and how does it depend on the discount rate and the severity assumptions?
+    \item[\textit{RQ1}] Can the compiled estate sustain the allowable annual cut under even-flow
+    convergence, and do the standards change the level?
+    \item[\textit{RQ2}] What do the standards cost in net present value and in the tail of net
+    present value at that level?
+    \item[\textit{RQ3}] Which standard is preferred, and how does the answer depend on the discount
+    rate and the fire-size scenario?
 \end{enumerate}
 
 A fourth question---how far broadleaf can be used as fire breaks before production suffers---requires
 a spatial placement rule and is not answered here; the discussion is explicit about that gap.
 Throughout, CVaR20 is the mean of the worst 20 percent of draws.
 
-The contribution is fourfold. First, a reconciled estate and a declining-profile diagnostic: the
-compiled managed area matches the published land base, but the shortfall from the official cut is
-not the flat-flow rule; a search at the official 2017 transition also realises about
-\SI{5.2}{\mega\cubic\meter\per\year}, so the compiled curves and land base are the leading
-explanation; a 300-iteration SA search did not reproduce the official transition. Second, a deciduous-forward instrument with an enterprise response: the
-fixed-plan direct effect understates the production cost, and the 26 percent standard adds aspen
-volume but not conifer volume. Third, a production and tail-risk surface with a corrected metric:
-D84 reduces the conditional fire loss but lowers the CVaR of net present value, so it is not a tail
-hedge; the break-even is about \SI{20}{\mega\CAD} at \SI{3}{\percent} and
-\SI{21}{\mega\CAD} at \SI{4}{\percent} at the fixed-plan cost, and about \SI{52}{\mega\CAD} under
-the calibrated-retention scenario.
-Fourth, a fuel projection stated for what it is: a \SI{63.1}{\percent} $t=0$ reproduction of the
-operational grid, a rule-based post-harvest scenario, and a D1 multiplier that is the model's
-0.2 surface-mortality floor.
+The contribution is fourfold. First, a corrected production result: the state-based convergence
+reaches the cut under every standard; the earlier 25 percent gap was a search artifact. Second, an
+enterprise value-and-tail surface at that level: D26 dominates the clearcut at the BC rate, D55 is
+the tail option, and D84 is dominated by D55. Third, a fire-size bound: the observed record gives the
+larger fire benefit and the calibrated retention sample the smaller; D26 and D55 dominate their
+comparators under both, while the D55 sign is not resolved. Fourth, a fuel projection stated for what
+it is: a \SI{63.1}{\percent} $t=0$ reproduction of the operational grid, a rule-based post-harvest
+scenario, and a D1 multiplier that is the model's 0.2 surface-mortality floor.
 
-The result is a trade-off, not a free improvement. The stand-level severity cut is large, but the
-estate-level tail reduction is small relative to the production cost because the unmanaged half of
-the estate keeps its fuel and conversion is gradual. The useful policy number is the break-even
-price of conditional-loss reduction, not an ``exchange rate'' that treats the production cost as a
-hedge.
+The result is not a production-versus-risk trade-off. The allowable cut is feasible, and the
+standards can improve value or tail at that cut. The useful policy number is the value and CVaR
+difference at the AAC, not the volume shortfall of an underpowered search.
 
 The paper proceeds as follows. \autoref{sec:methods} describes the study area, the decision
-structure, the estate data, the growth representation, the fire regime and composition-dependent
-severity model, and the economic valuation. \autoref{sec:results} reports the estate, the realised
-level, the enterprise response, the fuel projection, the fire-risk surface, and the rotation.
-\autoref{sec:discussion} interprets the results, states the limitations, and closes with the policy
-implications.
+structure, the state-based convergence, the estate data, the growth representation, the fire regime
+and composition-dependent severity model, and the economic valuation. \autoref{sec:results} reports
+the convergence, the production and value surface, the fire-risk surface, the fuel projection, and
+the rotation. \autoref{sec:discussion} interprets the results, states the limitations, and closes
+with the policy implications.

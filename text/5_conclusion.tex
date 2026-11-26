@@ -1,37 +1,32 @@
-% Draft: rewritten 2026-11-23 for the enterprise response and the corrected CVaR metric.
+% Draft: rewritten 2026-11-26 for the AAC-level state convergence.
 \section{Conclusion}
 \label{sec:conclusion}
 
-We evaluated three deciduous-forward post-clearcut stocking standards on TSA~24 with an enterprise
-response and a recorded fire regime. The enterprise re-optimises the harvest schedule under an even-flow target for each
-standard; the fire regime is the 1950--2024 record, applied as 20 paired 200-year event sets; the
-value base is the BC Ministry of Forests \SI{4}{\percent} real rate, with \SI{3}{\percent},
-\SI{5}{\percent}, and \SI{8}{\percent} sensitivities.
+We evaluated three deciduous-forward post-clearcut stocking standards on TSA~24 with a state-based
+even-flow convergence at the allowable annual cut. The converged schedules reach
+\SIrange{6.935}{6.938}{\mega\cubic\meter\per\year} under all four standards, \SIrange{0.26}{0.31}
+{\percent} above the 2025 cut of \SI{6.917231}{\mega\cubic\meter\per\year}. The 25 percent shortfall
+reported by earlier fixed-flow searches was a search artifact, not a land-base or yield limit. The
+compiled estate can sustain the cut.
 
-The compiled estate realises \SI{5.19}{\mega\cubic\meter\per\year}, about \SI{25}{\percent} below
-the \SI{6917231}{\cubic\meter\per\year} 2025 allowable annual cut. A 300-iteration SA search at the official 2017 transition also realises about
-\SI{5.2}{\mega\cubic\meter\per\year}, so the gap is not a flat-flow artifact. The compiled land base
-and yield curves did not reproduce the official transition; the search is 300 SA iterations, not a
-convergence proof. We report the model's level, not the
-estate's true sustained yield.
+The standards do not reduce the level. They change composition and value. At the \SI{4}{\percent} BC
+Ministry of Forests rate, D26 raises net present value by \SI{36.0}{\mega\CAD} and reduces CVaR20
+loss by \SI{23.7}{\mega\CAD}, a net CVaR gain of \SI{59.7}{\mega\CAD}. D55 costs
+\SI{39.3}{\mega\CAD} and reduces CVaR20 loss by \SI{38.8}{\mega\CAD}, approximately break-even (a net
+\SI{-0.5}{\mega\CAD} under the calibrated retention scenario, a gain of \SI{7.9}{\mega\CAD} under the
+observed record). D84 costs \SI{146.5}{\mega\CAD} for a \SI{39.3}{\mega\CAD} reduction; it is dominated by
+D55, which delivers a similar reduction at less than a third of the cost. The observed record gives
+the larger fire benefit and the calibrated retention sample the smaller; D26 dominates the clearcut
+under both, and D55 dominates D84 under both.
 
-The standards change composition but do not pay for themselves in timber value. D26 adds
-\SI{52.9}{\mega\cubic\meter}, all aspen; net conifer volume is flat; it costs
-\SI{1.4}{\mega\CAD} at \SI{4}{\percent}. D55 and D84 cost \SI{42.5}{\mega\CAD} and
-\SI{60.6}{\mega\CAD}, about \SI{0.7}{\percent} and \SI{1.0}{\percent} of CC net present value. The
-fixed-plan direct effect is a \SI{0.5}{\mega\CAD} gain for D26, and costs of
-\SI{34.9}{\mega\CAD} and \SI{50.3}{\mega\CAD} for D55 and D84; the enterprise search changes D26 to a
-\SI{1.4}{\mega\CAD} cost and adds \SI{7.7}{\mega\CAD} and \SI{10.3}{\mega\CAD} to D55 and D84.
+The ranking is rate-dependent. At \SI{3}{\percent} no standard pays; D26 is nearly neutral and D84 is
+worst. At \SI{5}{\percent} to \SI{8}{\percent} all three improve net CVaR, and D55 is best. A planner who
+evaluates timber value at the BC rate should prefer D26. A planner with a separate tail-loss
+objective should prefer D55. D84 is not justified on either objective at the BC rate; it is dominated
+by D55 and only becomes attractive at high discount rates, where D55 is still better.
 
-D84 is not a tail hedge. On the fixed-plan fire surface it reduces the conditional fire loss by
-\SI{2.4}{\mega\CAD} at a fixed-plan cost of \SI{50.3}{\mega\CAD}, and the CVaR of net present value
-is \SI{47.9}{\mega\CAD} lower. At the enterprise cost of \SI{60.6}{\mega\CAD}, holding the
-fixed-plan fire benefit, the net CVaR is \SI{58.2}{\mega\CAD} lower and the break-even is 25.1. The
-fixed-plan break-even is 20.9 at \SI{4}{\percent} and 20.3 at \SI{3}{\percent}; the
-calibrated-retention scenario gives 52.4. A planner who evaluates net present value, including the tail, does not
-choose D84 on timber value alone. D55 is an intermediate cost-effectiveness point, not a dominated
-option. D26 is a value-neutral aspen shift at the midpoint price, not free conifer volume.
-
-The open question is spatial: where to place broadleaf stands as fire breaks, and how far that can go
-before production suffers. Answering it requires a placement rule and a spread model; this paper
-provides the production and severity surface that such an analysis would build on.
+The fire regime is a scenario, not a forecast. Composition changes the severity of a fire that
+reaches a stand, not the number or size of fires. The observed record and the calibrated retention
+sample bracket the fire-size uncertainty; the spatial placement of broadleaf stands as fire breaks
+remains open. The paper provides the AAC-level production and severity surface that such an analysis
+would build on.

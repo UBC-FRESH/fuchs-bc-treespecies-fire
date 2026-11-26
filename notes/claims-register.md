@@ -1,15 +1,40 @@
 # Claims register
 
-> Status note (2026-11-24): the ten-draw fire surface is superseded by the 20-draw
-> observed-record and calibrated-retention surfaces at 4 percent. Rows marked `superseded`
-> below are retained for the record; no 10-draw fire number may ship. The manuscript's
-> current fire numbers are in the 20-draw rows below.
+> Status note (2026-11-26): the AAC-level state convergence supersedes the earlier 5.19
+> fixed-flow production and fire rows, and the 20-draw fixed-plan surface. The manuscript uses
+> the AAC-level rows below. Rows marked `superseded` are retained for the record; no 5.19,
+> 60.7, 19:1, or ten-draw fire number may ship.
 
 Rule: every number in the manuscript appears here with the artifact that produces it. A sentence
 whose number is not in this table does not ship.
 
 Status values: `verified` (reproduced from a committed artifact), `pending` (awaiting the fire
 calibration), `to compute` (not yet produced).
+
+## AAC-level revision (2026-11-26)
+
+| Claim | Value | Artifact | Status |
+| --- | --- | --- | --- |
+| 2025 allowable annual cut | 6,917,231 m3/yr | BC AAC table; `government_of_british_columbia_aac_2026` | verified |
+| State convergence | stage 1 level pull 1M; stage 2 even-flow ±5 percent, weight 10,000, harvest plateau, 20M safety | `fresh-fuchs-ws4:experiments/plantation/enterprise/state/*/result.json` | verified |
+| CC level | 6.9354 Mm3/yr; 700,000 stage-2 iterations; converged | `.../state/cc/result.json` | verified |
+| D26 level | 6.9384 Mm3/yr; 1,000,000 stage-2 iterations; converged | `.../state/cc_d26/result.json` | verified |
+| D55 level | 6.9356 Mm3/yr; 750,000 stage-2 iterations; converged | `.../state/cc_d55/result.json` | verified |
+| D84 level | 6.9355 Mm3/yr; 750,000 stage-2 iterations; converged | `.../state/cc_d84/result.json` | verified |
+| Total volume, 200 years | CC 1,387.1; D26 1,387.7; D55 1,387.1; D84 1,387.1 Mm3 | `.../enterprise/prod-converged.json` | verified |
+| NPV3/NPV4/NPV5 | CC 11,628.4/8,295.7/6,306.5; D26 11,582.8/8,331.6/6,361.5; D55 11,329.9/8,256.4/6,349.9; D84 11,053.0/8,149.2/6,305.7 MCAD | same | verified |
+| Delta NPV4 | D26 +36.0; D55 -39.3; D84 -146.5 MCAD | same | verified |
+| Species volumes | CC SX 621.9, PLI 446.2, BL 189.7, AT 87.8; D26 SX 773.6, PLI 241.4, AT 213.4; D55 AT 380.7; D84 AT 506.1, ACT 34.9 Mm3 | same | verified |
+| Landscape deciduous share | CC 7.5; D26 15.7; D55 26.9; D84 36.6 percent | `.../enterprise/surface-converged-observed.json` | verified |
+| Observed fire, 4 percent | CC mean/CVaR20 172.5/221.1, net 8,074.6; D26 146.1/197.7, net 8,134.0; D55 126.6/173.9, net 8,082.5; D84 122.1/173.6, net 7,975.6 MCAD | `.../enterprise/surface-converged-observed-summary.json` | verified |
+| Calibrated fire, 4 percent | CC 80.3/112.8, net 8,182.8; D26 55.0/89.1, net 8,242.5; D55 40.8/74.1, net 8,182.3; D84 37.7/73.5, net 8,075.7 MCAD | `.../enterprise/surface-converged-calibrated-summary.json` | verified |
+| D26 CVaR difference | observed -23.4, calibrated -23.7; net +59.4/+59.7 MCAD | both summaries | verified |
+| D55 CVaR difference | observed -47.2, calibrated -38.8; net +7.9/-0.5 MCAD | both summaries | verified |
+| D84 CVaR difference | observed -47.5, calibrated -39.3; net -99.0/-107.2 MCAD | both summaries | verified |
+| Rate table | D26/D55/D84 net CVaR at 3/4/5/8 percent, observed and calibrated | both summaries | verified |
+| Rotation | 153,190 intervals; area-weighted mean 92.8 years, median 90, 10th-90th 60-140 | `.../state/cc/schedule-evenflow.csv`; `.../derived/enterprise/compiled-cc/blocks.parquet` | verified |
+| Volume per harvested hectare | 210 m3/ha; 89 percent of the 236 m3/ha maximum MAI | 6.935 Mm3/yr, 33,000 ha/yr | derived |
+| D55 dominates D84 | at 3, 4, 5, 8 percent in both observed and calibrated scenarios | both summaries | verified |
 
 ## Landscape and estate
 

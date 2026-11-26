@@ -6,9 +6,8 @@ The compiled dataset is derived from the public FEMIC TSA24 instance of the UBC 
 \citep{femic_tsa24_2026}, built from the BC Vegetation Resources Inventory (2025), the Forest and
 Range Evaluation Program disturbance mapping, and Site Productivity estimates, under the Open
 Government Licence -- British Columbia. The compiled dataset carries the inventory tables.
-The baseline schedule is the even-flow plan that realises 51.9 million m3 per period. The
-standards are re-optimised from that schedule; the enterprise response is described in the main
-text.
+The baseline schedule is the mapped historical clearcut; the reported schedules are the state-based
+even-flow convergences at the 2025 allowable annual cut.
 
 \begin{table}[h]
     \centering
@@ -49,14 +48,20 @@ unmanaged area is the complement.
         \midrule
         Horizon                     & 20 periods of 10 years \\
         Harvest treatment           & clearcut with regeneration \\
-        Even-flow target            & within 1 percent of period 1, non-linear, weight 10,000 \\
-        Level aspiration            & 70,000,000 m3/period; 51.9 million realised here \\
+        Enterprise search           & two-stage state-based SA, compact candidate index \\
+        Stage 1                      & level pull at 69,172,310 m3/period, nonlinear, 1,000,000 iterations \\
+        Stage 2                      & even-flow within $\pm 5$ percent, weight 10,000, harvest-plateau stop \\
+        Stage-2 safety limit         & 20,000,000 iterations \\
         Fire                        & recorded regime; composition-dependent severity \\
+        Fire-size scenarios          & observed 1,073-fire record; calibrated-retention lower bound \\
+        Paired draws                 & 20 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-The even-flow rule sets the level; the realised range is 51.89 to 52.06 million m3 per period.
+The stage-1 result is a warm start; the stage-2 result is the reported schedule. All four standards
+converged to 6.935 to 6.938 million m3/yr in 700,000 to 1,000,000 stage-2 iterations, 0.26 to 0.31
+percent above the cut.
 
 \subsection*{S3. Economic constants}
 
@@ -83,17 +88,19 @@ The even-flow rule sets the level; the realised range is 51.89 to 52.06 million 
 \end{table}
 
 Net present value discounts each period's net value at its end. The base rate is the BC Ministry
-of Forests 4 percent real rate for public-sector forestry investment analysis; \citet{heaps_pratt_1989} recommend 3 to 5 percent, and the federal social rate for environmental
-analysis is 3 percent \citep{treasury_board_2007}. The sensitivity analysis varies the deciduous price over its
-documented 35 to 40 CAD/m3 range, the haul distance from 90 to 117 km, and the discount rate over
-3, 4, 5, and 8 percent.
+of Forests 4 percent real rate for public-sector forestry investment analysis; \citet{heaps_pratt_1989}
+recommend 3 to 5 percent, and the federal social rate for environmental analysis is 3 percent
+\citep{treasury_board_2007}. The sensitivity analysis varies the deciduous price over its documented
+35 to 40 CAD/m3 range, the haul distance from 90 to 117 km, and the discount rate over 3, 4, 5, and
+8 percent.
 
 \subsection*{S4. Stocking-standard experiments}
 
 The baseline dataset has one treatment, \texttt{CC}, which regenerates the same analysis unit.
 The policy dataset adds three prescriptions: \texttt{CC\_D26}, \texttt{CC\_D55}, and
 \texttt{CC\_D84}. Each targets a different analysis unit whose managed species-proportion curves
-specify the mixture, and the regenerated stand takes the species mix of the prescription. On a conifer block the realised composition and the projected fuel type are:
+specify the mixture, and the regenerated stand takes the species mix of the prescription. The
+stand-level composition and projected fuel type are:
 
 \begin{table}[h]
     \centering
@@ -113,64 +120,52 @@ specify the mixture, and the regenerated stand takes the species mix of the pres
     \end{tabular}
 \end{table}
 
-
-\begin{table}[h]
-    \centering
-    \small
-    \caption{Largest $t=0$ fuel-type disagreements between the compiled-composition projection and
-    the operational VRI grid. Counts are fragments. The projection never produces C7, M2, or M4.}
-    \label{tab:supp_fuel_confusion}
-    \begin{tabular}{lrrl}
-        \toprule
-        Actual class & Fragments & Correct & Largest predicted (n) \\
-        \midrule
-        C4 & 47,275  & 4,265   & C3 (21,439) \\
-        C2 & 146,547 & 117,594 & C1 (18,208) \\
-        M2 & 23,077  & 0       & C2 (7,960) \\
-        C3 & 39,598  & 19,861  & C1 (8,987) \\
-        C1 & 134,997 & 117,910 & C3 (7,937) \\
-        C7 & 8,811   & 0       & C3 (5,329) \\
-        D1 & 21,197  & 11,104  & C2 (4,274) \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
 A standard is applied only where it increases the deciduous share of the source analysis unit;
-aspen blocks stay on \texttt{CC}. The no-fire net present value and volume by standard are in the main text. A planted stand on a pre-harvest fragment with a VRI crown closure below 5 percent
-uses a 5 percent floor, because the VRI value is a sparse or non-forest artefact.
+aspen blocks stay on \texttt{CC}. The realised landscape deciduous shares are 7.5, 15.7, 26.9, and
+36.6 percent; the targets apply to eligible treated stands, not the whole landscape. A planted stand
+on a pre-harvest fragment with a VRI crown closure below 5 percent uses a 5 percent floor, because
+the VRI value is a sparse or non-forest artefact.
 
 The severity multiplier is sensitive to wind and the surface-mortality floor. Across
 \SIrange{6.8}{25}{\kilo\meter\per\hour} and a floor of 0.1 to 0.4, the D84 multiplier ranges
 0.11 to 0.49, the D55 multiplier 1.01 to 1.04, and the D26 (M2) multiplier 1.03 to 1.24. The D1
-multiplier is the model's 0.2 floor, not an estimate of D1 severity. The D84 CVaR benefit is 2.3 to 2.6 million CAD across the 0.1--0.4 floor, with a break-even of 19.7
-to 21.6; the 20 percent threshold leaves D84 and D55 essentially unchanged and makes D26 a small
-penalty. The multiplier range alone would overstate the estate-level sensitivity.
+multiplier is the model's 0.2 floor, not an estimate of D1 severity.
 
 Over the 720 potential-fire weather states in the 1950--2024 calibration sample, the D1 multiplier
 is the 0.267 floor at every state. The C1 multiplier has a median of 1.112 and a 10th-to-90th
-percentile range of 0.817 to 1.312; the single-state value of 0.749 is below the 10th percentile (p10 0.817). The M1
-median is 1.033 (range 0.376 to 1.253) and the C2 median is 1.312 (range 1.245 to 1.331). The D84
-multiplier is constant by construction because the 0.2 floor binds at every state; this is an
-assumption, not a robustness result; the 26 percent standard's
-C1/C2 mix is not, and its single-state near-zero aggregate effect is not stable.
+percentile range of 0.817 to 1.312; the single-state value of 0.749 is below the 10th percentile
+(p10 0.817). The M1 median is 1.033 (range 0.376 to 1.253) and the C2 median is 1.312 (range 1.245 to
+1.331). The D84 multiplier is constant by construction because the 0.2 floor binds; this is an
+assumption, not a robustness result. The 26 percent standard's C1/C2 mix is not stable across
+weather.
+
+The observed-record fire surface is the larger-tail scenario; the calibrated-retention sample is the
+lower bound on the upper tail. The calibrated sample has a higher median (29.3 against 23.0
+hectares) but a lower 95th percentile (893 against 1,919 hectares) and a lower over-5,000-hectare
+fraction (1.10 against 3.0 percent) than the 432-perimeter calibration history. The observed record
+gives the larger fire benefit; the calibrated sample the smaller. D26 dominates the clearcut under
+both; D55 dominates D84 under both. The D84 dominance is conservative with respect to the D1 floor:
+a lower floor reduces the D84 benefit, and the benefit would need to nearly quadruple to close the
+cost gap to D55.
 
 \subsection*{S5. Rotation estimate}
 
-For every block with more than one harvest in the schedule, the rotation is the interval between
-consecutive harvests. The baseline yields 53,071 intervals, an area-weighted mean of 102.2 years
-(median 100, tenth-to-ninetieth percentile 60 to 160). The estimate is conditional on re-entry
-within the 200-year horizon and is therefore biased toward productive and accessible stands. It
-describes the baseline schedule; the standards are re-optimised and their rotation is an outcome
-of the enterprise response. The summaries are in the archived analysis repository; the area-weighted median managed age is
-92 years, and 44 percent of the managed area is older than 100 years.
+For every block with more than one harvest in the converged CC schedule, the rotation is the interval
+between consecutive harvests. The schedule yields 153,190 intervals, an area-weighted mean of 92.8
+years (median 90, tenth-to-ninetieth percentile 60 to 140). At 6.935 million m3/yr over 3.06 million
+ha, about 33,000 ha are harvested each year; that is 210 m3/ha, about 89 percent of the 236 m3/ha
+that the area-weighted maximum mean annual increment accumulates over the rotation. The estimate is
+conditional on re-entry within the 200-year horizon and is biased toward productive and accessible
+stands.
 
 \subsection*{S6. Reproduction}
 
-The derived species-period table, the rotation summaries, the stocking-standard surface, the fuel
-projection checks, the fire regime and surface, and the valuation and
-rotation code are archived in a public repository with a DOI on acceptance. The sensitivity values
-are reproducible from the valuation code and the recorded constants. The policy dataset, the
-schedules, the no-fire baseline, and the paired fire ensemble are rebuilt by the scripts in that
-repository. The estate model is WS4 \citep{ubc_fresh_ws4_2026}; harvest costing uses FHOPS
-\citep{fhops_2026}. The fire calibration and its perimeter set are documented in
+The state-based convergence uses the compact candidate index and the resident Model II state, with
+the two-stage target and the harvest-plateau stop. The candidate and simulator caches, the converged
+schedules, the observed and calibrated-retention fire surfaces, the fuel projection checks, and the
+valuation and rotation code are archived in a public repository with a DOI on acceptance. The
+sensitivity values are reproducible from the valuation code and the recorded constants. The policy
+dataset, the schedules, the no-fire baseline, and the paired fire ensembles are rebuilt by the
+scripts in that repository. The estate model is WS4 \citep{ubc_fresh_ws4_2026}; harvest costing uses
+FHOPS \citep{fhops_2026}. The fire calibration and its perimeter set are documented in
 \citet{ubc_fresh_fire_calibration_2026}.
