@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  26 NOV 2026 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  26 NOV 2026 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -540,11 +540,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-]) [4]
+]) [4] [5]
 \openout2 = `text/2_methods.aux'.
 
  (./text/2_methods.tex
-<figures/studyArea_map.pdf, id=172, 415.67802pt x 398.81085pt>
+<figures/studyArea_map.pdf, id=176, 415.67802pt x 398.81085pt>
 File: figures/studyArea_map.pdf Graphic file (type pdf)
 <use figures/studyArea_map.pdf>
 Package pdftex.def Info: figures/studyArea_map.pdf  used on input line 25.
@@ -553,11 +553,11 @@ Package pdftex.def Info: figures/studyArea_map.pdf  used on input line 25.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5
+[6
 
 
 
- <./figures/studyArea_map.pdf>] [6] [7] [8] [9]) [10] [11]
+ <./figures/studyArea_map.pdf>] [7] [8] [9] [10] [11]) [12]
 \openout2 = `text/3_results.aux'.
 
 
@@ -565,29 +565,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12
+[13
 
 
 
-] [13] [14] [15]) [16]
+] [14] [15] [16]) [17]
 \openout2 = `text/4_discussion.aux'.
 
- (./text/4_discussion.tex [17
+ (./text/4_discussion.tex [18
 
 
 
-] [18] [19]) [20]
+] [19] [20]) [21]
 \openout2 = `text/5_conclusion.aux'.
 
 
-(./text/5_conclusion.tex) [21
+(./text/5_conclusion.tex) [22
 
 
 
 ]
 \openout2 = `text/6_declarations_review.aux'.
 
- (./text/6_declarations_review.tex) [22
+ (./text/6_declarations_review.tex) [23
 
 
 
@@ -611,10 +611,10 @@ allowable [] -annual [] -cut [] -timber [] -supply [] -areas$[]\OT1/cmr/m/n/10
 .  TSA
  []
 
-[23
+[24
 
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [24]
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [25]
 (./main-review.aux (./text/0_abstract.aux) (./text/1_introduction.aux)
 (./text/2_methods.aux) (./text/3_results.aux) (./text/4_discussion.aux)
 (./text/5_conclusion.aux) (./text/6_declarations_review.aux))
@@ -626,8 +626,8 @@ Package rerunfilecheck Info: File `main-review.out' has not changed.
 (rerunfilecheck)             Checksum: 9BCA67004B3E37DCEEF59F53392722F1;3947.
  ) ) 
 Here is how much of TeX's memory you used:
- 15099 strings out of 476106
- 295644 string characters out of 5793934
+ 15100 strings out of 476106
+ 295651 string characters out of 5793934
  1941975 words of memory out of 5000000
  36792 multiletter control sequences out of 15000+600000
  568626 words of font info for 77 fonts, out of 8000000 for 9000
@@ -651,10 +651,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfrm1000.pfb>
-Output written on main-review.pdf (24 pages, 1919859 bytes).
+Output written on main-review.pdf (25 pages, 1921296 bytes).
 PDF statistics:
- 528 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 93 named destinations out of 1000 (max. 500000)
+ 533 PDF objects out of 1000 (max. 8388607)
+ 430 compressed objects within 5 object streams
+ 94 named destinations out of 1000 (max. 500000)
  198 words of extra memory for PDF output out of 10000 (max. 10000000)
 

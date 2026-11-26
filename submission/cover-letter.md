@@ -3,14 +3,15 @@
 Dear Editors,
 
 We submit for consideration in *Forest Policy and Economics* the manuscript **"Deciduous-forward
-stocking standards at the allowable cut: value and tail-risk trade-offs in the Prince George Timber
-Supply Area."**
+stocking standards at the allowable cut: a bilevel evaluation of value and tail-risk trade-offs in
+the Prince George Timber Supply Area."**
 
 The paper asks whether a regulatory allowable annual cut (AAC) is feasible under deciduous-forward
 post-clearcut stocking standards, and what those standards cost in value and tail risk at that cut.
-Its contribution is methodological and policy-relevant: it links a regulatory ceiling, enterprise
-harvest scheduling, species composition, and tail risk in one evaluation. The Prince George Timber
-Supply Area is the application, not the contribution.
+Its methodological novelty is a bilevel evaluation: the upper level is the regulator's choice of a
+stocking standard; the lower level is the enterprise's even-flow harvest schedule under the AAC. We
+solve the lower-level response for each standard and compare the upper-level outcomes in value and
+tail risk. The Prince George Timber Supply Area is the application, not the contribution.
 
 First, we report the production result. A state-based two-stage convergence is at or above the 2025
 AAC of 6.917 million m3/yr in every period under all four standards: 19 periods sit at the cut, and

@@ -52,13 +52,16 @@ matches the base-case timber harvesting land base (THLB) in the 2017 timber supp
 
 \subsection{Decision structure}
 
-We analyse two layers of decision. A policy layer sets a post-clearcut stocking standard; an
-enterprise layer chooses the even-flow harvest schedule under that standard. The standard specifies
-the species composition of a plantation, and the landscape composition is an outcome.
+We analyse a bilevel decision problem. At the upper level, a regulator chooses a post-clearcut
+stocking standard. At the lower level, an enterprise chooses an even-flow harvest schedule under that
+standard and the AAC. The standard specifies the species composition of regeneration; the landscape
+composition, volume, value, and tail risk are outcomes of the lower-level response.
 
-This is a policy evaluation with an enterprise response, not a bilevel equilibrium. The standard is
-exogenous and no equilibrium is claimed. The enterprise response is the policy-relevant comparison
-because the standard changes the volume, timing, and value of harvest.
+This is a bilevel evaluation, not a bilevel equilibrium. The upper-level choice is discrete and
+exogenous, the regulator's objective is multi-attribute (value and tail risk across discount rates),
+and no strategic equilibrium is claimed. For each standard we solve the lower-level even-flow problem
+and compare the upper-level outcomes. The enterprise response is the policy-relevant object because
+the standard changes the feasible schedule and its value.
 
 \paragraph{State-based convergence} The baseline schedule is the historical clearcut mapped onto the compiled stands. For each
 standard we build a single-standard dataset and search for an even-flow schedule with WS4's
