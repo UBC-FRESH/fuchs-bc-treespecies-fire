@@ -24,8 +24,8 @@ matches the base-case timber harvesting land base (THLB) in the 2017 timber supp
     \centering
     \includegraphics[width=0.75\linewidth]{figures/studyArea_map.pdf}
     \caption{The Prince George Timber Supply Area (TSA~24), showing the leading species of the
-    stand inventory. Contains information licensed under the Open Government Licence -- British
-    Columbia.}
+    stand inventory. Contains information licensed under the Open Government Licence (British
+    Columbia).}
     \label{fig:meth:modelregion}
 \end{figure}
 
@@ -63,7 +63,7 @@ because the standard changes the volume, timing, and value of harvest.
 \paragraph{State-based convergence} The baseline schedule is the historical clearcut mapped onto the compiled stands. For each
 standard we build a single-standard dataset and search for an even-flow schedule with WS4's
 state-based search, using a compact index of candidate harvest and regeneration moves and the
-resident stand state \citep{ubc_fresh_ws4_2026}. The search uses a two-stage target. Stage 1 is a lower-bound level target at the 2025 allowable annual cut
+resident stand state~\citep{ubc_fresh_ws4_2026}. The search uses a two-stage target. Stage 1 is a lower-bound level target at the 2025 allowable annual cut
 (minimum \SI{69172310}{\cubic\meter} per ten-year period, nonlinear penalty, penalty weight 1) with a
 1,000,000-iteration budget; because it is a lower bound, its realised harvests overshoot the AAC and
 are used only as a warm start. Stage 2 adds an even-flow target that compares each period to the
@@ -121,7 +121,7 @@ a small number of events.
 
 The fire-risk surface uses the recorded size and frequency distribution with a
 composition-dependent severity model, which holds the regime fixed and isolates the fuel effect. The
-calibrated surface-fire model \citep{ubc_fresh_fire_calibration_2026} couples fire to the estate
+calibrated surface-fire model~\citep{ubc_fresh_fire_calibration_2026} couples fire to the estate
 state; its fire-spread suppression parameters were fitted on 24 map tiles against 432 historical
 perimeters. The calibrated sample has a higher median but lower mean, p90, p95, and maximum than the
 observed record; it is a lower-severity in-sample scenario, not a central fit, and not a validation
@@ -129,7 +129,7 @@ or the policy engine.
 
 \paragraph{Fuel projection} The 2025 Vegetation Resources Inventory (VRI) fuel type is the
 baseline for every unharvested stand. Fuel types follow the Canadian Forest Fire Behavior Prediction
-(FBP) system \citep{forestry_canada_fbp_1992}: C1--C7 are conifer, M1--M4 mixedwood, D1 deciduous,
+(FBP) system~\citep{forestry_canada_fbp_1992}: C1--C7 are conifer, M1--M4 mixedwood, D1 deciduous,
 S1 slash, and O1B open herb/grass. For a harvested stand we follow the BC fuel-typing chronology: S1
 for 0--5 years, O1B for 6--24 years, and the species-based forest type from year 25. The forest type
 uses the operational rule that maps VRI species composition to an FBP fuel type, with a 30 percent
@@ -195,8 +195,8 @@ present value of policy $p$ under one fire draw, and let the loss be $-X_p$. Val
 $\alpha$ is the $\alpha$ quantile of the loss distribution. Conditional value at risk (CVaR) at level $\alpha$ is the mean
 loss in the worst $\alpha$ fraction of draws, the expected shortfall conditional on being in the
 tail. CVaR is a coherent risk measure: it is monotone, subadditive, positively homogeneous, and
-translation invariant \citep{artzner_coherent_1999}, and it can be represented as a convex
-optimization problem \citep{rockafellar_optimization_2000}. Subadditivity means that combining two
+translation invariant~\citep{artzner_coherent_1999}, and it can be represented as a convex
+optimization problem~\citep{rockafellar_optimization_2000}. Subadditivity means that combining two
 portfolios cannot create more measured risk than the sum of their separate risks; value at risk does
 not guarantee this, which is one reason we do not use it. Unlike value at risk, it reflects the
 size of losses beyond the threshold, so it does not treat a large loss just beyond the quantile as
@@ -234,8 +234,8 @@ in grades 1 and 2. Net present value is computed at a \SI{4}{\percent} real disc
 Ministry of Forests rate for public-sector forestry investment analysis
 \citep{bc_mof_silviculture_lesson4}; each period's net value is discounted at its end. The rate is a
 normative choice, not an estimate: \SI{3}{\percent} is the federal social rate for environmental
-analysis \citep{treasury_board_2007}, \SI{5}{\percent} the upper end of the silvicultural social-rate
-range \citep{heaps_pratt_1989}, and \SI{8}{\percent} the federal opportunity cost of capital. The net
+analysis~\citep{treasury_board_2007}, \SI{5}{\percent} the upper end of the silvicultural social-rate
+range~\citep{heaps_pratt_1989}, and \SI{8}{\percent} the federal opportunity cost of capital. The net
 present value is an operating margin: it excludes road construction, administration, taxes, and risk
 premia.
 
