@@ -1,4 +1,6 @@
 \documentclass{article}
+\newif\ifreview
+\ifdefined\reviewmode\reviewtrue\fi
 
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -25,6 +27,15 @@
 
 \linenumbers
 
+\ifreview
+\hypersetup{
+  pdftitle={Deciduous-forward stocking standards at the allowable cut: value and tail-risk trade-offs in the Prince George Timber Supply Area},
+  pdfauthor={Anonymized manuscript}
+}
+\title{Deciduous-forward stocking standards at the allowable cut: value and tail-risk trade-offs in the Prince George Timber Supply Area}
+\author{Anonymized manuscript}
+\date{\vspace{1cm}November 2026}
+\else
 \hypersetup{
   pdftitle={Deciduous-forward stocking standards at the allowable cut: value and tail-risk trade-offs in the Prince George Timber Supply Area},
   pdfauthor={Jasper M. Fuchs, Gregory Paradis, Verena C. Griess, Bianca N.I. Eskelson}
@@ -37,6 +48,7 @@
     $^2$Department of Forest Resources Management, The University of British Columbia, Canada\\
     $*$\textit{corresponding author: jasper.fuchs@usys.ethz.ch}\\
     \vspace{1cm}November 2026}
+\fi
 
 \begin{document}
 \renewcommand{\figurename}{Fig.}
@@ -51,9 +63,13 @@
 \include{text/3_results}
 \include{text/4_discussion}
 \include{text/5_conclusion}
+\ifreview
+\include{text/6_declarations_review}
+\else
 \include{text/6_declarations}
 \include{text/9_acknowledgements}
 \include{text/99_online_supplement}
+\fi
 
 
 \bibliographystyle{apalike}

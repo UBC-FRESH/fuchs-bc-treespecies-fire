@@ -1,0 +1,164 @@
+\begin{thebibliography}{}
+
+\bibitem[Artzner et~al., 1999]{artzner_coherent_1999}
+Artzner, P., Delbaen, F., Eber, J.-M., and Heath, D. (1999).
+\newblock Coherent measures of risk.
+\newblock {\em Mathematical Finance}, 9(3):203--228.
+
+\bibitem[{British Columbia Ministry of Forests}, 2026a]{bc_mof_log_market_2026}
+{British Columbia Ministry of Forests} (2026a).
+\newblock {B.C. Interior Log Market Report}, three months ending 30 september
+  2026.
+\newblock Timber Pricing Branch, Victoria, BC.
+\newblock Average price rows. Accessed 21 November 2026.
+
+\bibitem[{British Columbia Ministry of Forests},
+  2026b]{bc_mof_tabular_stumpage_2026}
+{British Columbia Ministry of Forests} (2026b).
+\newblock Interior non-appraised tabular stumpage rates.
+\newblock Victoria, BC.
+\newblock Table 6-1, North Central average sawlog rate, effective 1 November
+  2026.
+
+\bibitem[{British Columbia Ministry of Forests},
+  2026c]{bc_mof_silviculture_costs_2026}
+{British Columbia Ministry of Forests} (2026c).
+\newblock Interior silviculture costs (\$/m3).
+\newblock Timber Pricing Branch, Victoria, BC.
+\newblock North Central zone, effective 1 October 2026.
+
+\bibitem[{British Columbia Ministry of Forests},
+  nd]{bc_mof_silviculture_lesson4}
+{British Columbia Ministry of Forests} (n.d.).
+\newblock Lesson 4: Economic principles of timber production.
+\newblock Silviculture Training Modules, Forest Practices Branch.
+\newblock States that the Ministry of Forests uses a 4 percent real rate for
+  public-sector forestry investment analysis. Accessed 23 November 2026.
+
+\bibitem[Chung, 2015]{chung_optimizing_2015}
+Chung, W. (2015).
+\newblock Optimizing fuel treatments to reduce wildland fire risk.
+\newblock {\em Current Forestry Reports}, 1:44--51.
+
+\bibitem[{Forestry Canada Fire Danger Group}, 1992]{forestry_canada_fbp_1992}
+{Forestry Canada Fire Danger Group} (1992).
+\newblock Development and structure of the canadian forest fire behavior
+  prediction system.
+\newblock Information Report ST-X-3, Forestry Canada, Ottawa, ON.
+
+\bibitem[Fuchs et~al., 2024]{fuchs_severe_2024}
+Fuchs, J.~M., Husmann, K., Schick, J., Albert, M., Lintunen, J., and Paul, C.
+  (2024).
+\newblock Severe and frequent extreme weather events undermine economic
+  adaptation gains of tree-species diversification.
+\newblock {\em Scientific Reports}, 14:2140.
+
+\bibitem[{Government of British Columbia},
+  2017]{government_of_british_columbia_pg_rationale_2017}
+{Government of British Columbia} (2017).
+\newblock Prince george timber supply area: Rationale for allowable annual cut
+  determination.
+\newblock Technical report, Ministry of Forests, Lands, Natural Resource
+  Operations and Rural Development.
+
+\bibitem[{Government of British Columbia},
+  2026a]{government_of_british_columbia_aac_2026}
+{Government of British Columbia} (2026a).
+\newblock Allowable annual cut: Timber supply areas.
+\newblock
+  \url{https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/timber-supply-review-and-allowable-annual-cut/allowable-annual-cut-timber-supply-areas}.
+\newblock TSA 24 Prince George, \SI{6917231}{\cubic\meter\per\year}, effective
+  28 August 2025. Accessed 21 November 2026.
+
+\bibitem[{Government of British Columbia},
+  2026b]{government_of_british_columbia_tipsy_2026}
+{Government of British Columbia} (2026b).
+\newblock {TIPSY}: Table interpolation program for stand yields.
+\newblock Growth-model documentation, Ministry of Forests, Victoria, BC.
+  Accessed 26 November 2026.
+
+\bibitem[Heaps and Pratt, 1989]{heaps_pratt_1989}
+Heaps, T. and Pratt, B. (1989).
+\newblock The social discount rate for silvicultural investments.
+\newblock FRDA Report 071, British Columbia Ministry of Forests, Research
+  Branch.
+
+\bibitem[{Industrial Forestry Service Ltd.}, 2018]{ifs_aspen_2018}
+{Industrial Forestry Service Ltd.} (2018).
+\newblock A review of aspen/hardwood resources in northeast british columbia.
+\newblock Technical report, Industrial Forestry Service Ltd.
+\newblock Interior hardwood log price 35--40 CAD/m3 (ten-year average) and
+  deciduous stumpage 0.50 CAD/m3 for grades 1 and 2.
+
+\bibitem[Lagos et~al., 2025]{lagos_bilevel_2025}
+Lagos, T., Choi, J., Segundo, B., Gan, J., Ntaimo, L., and Prokopyev, O.~A.
+  (2025).
+\newblock Bilevel optimization approach for fuel treatment planning.
+\newblock {\em European Journal of Operational Research}, 320:205--218.
+
+\bibitem[Rockafellar and Uryasev, 2000]{rockafellar_optimization_2000}
+Rockafellar, R.~T. and Uryasev, S. (2000).
+\newblock Optimization of conditional value-at-risk.
+\newblock {\em Journal of Risk}, 2(3):21--41.
+
+\bibitem[Seidl et~al., 2014]{seidl_increasing_2014}
+Seidl, R., Schelhaas, M.-J., Rammer, W., and Verkerk, P.~J. (2014).
+\newblock Increasing forest disturbances in {Europe} and their impact on carbon
+  storage.
+\newblock {\em Nature Climate Change}, 4(9):806--810.
+\newblock Num Pages: 7.
+
+\bibitem[Topanotti et~al., 2024]{topanotti_enhancing_2024}
+Topanotti, L.~R., Fuchs, J.~M., Albert, M., Schick, J., Penanhoat, A., Lu,
+  J.-Z., Rivera~P{\'e}rez, C.~A., Foltran, E.~C., et~al. (2024).
+\newblock Enhancing economic multifunctionality without compromising
+  multidiversity and ecosystem multifunctionality via forest enrichment.
+\newblock {\em Science Advances}, 10:eadp6566.
+
+\bibitem[{Treasury Board of Canada Secretariat}, 2007]{treasury_board_2007}
+{Treasury Board of Canada Secretariat} (2007).
+\newblock Canadian cost-benefit analysis guide: Regulatory proposals.
+\newblock Technical report, Government of Canada.
+
+\bibitem[{UBC FRESH Laboratory}, 2026a]{femic_tsa24_2026}
+{UBC FRESH Laboratory} (2026a).
+\newblock {FEMIC} {TSA24} instance: compiled forest estate for the prince
+  george timber supply area.
+\newblock \url{https://github.com/UBC-FRESH/femic-tsa24-instance}.
+\newblock Built from BC Vegetation Resources Inventory, disturbance mapping,
+  and Site Productivity data under the Open Government Licence (British
+  Columbia). Accessed 21 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026b]{fhops_2026}
+{UBC FRESH Laboratory} (2026b).
+\newblock {FHOPS}: forest harvest and operations planning system.
+\newblock \url{https://github.com/UBC-FRESH/fhops}.
+\newblock Machine rates for the tree-length ground harvest system and highway
+  haul. Accessed 21 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026c]{ubc_fresh_fire_calibration_2026}
+{UBC FRESH Laboratory} (2026c).
+\newblock {TSA24} fire regime calibration: 24-tile real-layer ensemble and
+  region-level suppression.
+\newblock \url{https://github.com/UBC-FRESH/ws4}.
+\newblock Calibration index and reports. Accessed 21 November 2026.
+
+\bibitem[{UBC FRESH Laboratory}, 2026d]{ubc_fresh_ws4_2026}
+{UBC FRESH Laboratory} (2026d).
+\newblock {WS4}: spatially explicit wood supply simulation system.
+\newblock \url{https://github.com/UBC-FRESH/ws4}.
+\newblock Accessed 21 November 2026.
+
+\bibitem[Wei, 2012]{wei_optimize_2012}
+Wei, Y. (2012).
+\newblock Optimize landscape fuel treatment locations to create control
+  opportunities for future fires.
+\newblock {\em Canadian Journal of Forest Research}, 42:1002--1014.
+
+\bibitem[Zelnik et~al., 2025]{zelnik_managing_2025}
+Zelnik, Y.~R., Launiainen, S., and Vico, G. (2025).
+\newblock Managing for heterogeneity reduces fire risk in boreal forest
+  landscapes---a model analysis.
+\newblock {\em Ecological Modelling}, 509:111222.
+
+\end{thebibliography}
