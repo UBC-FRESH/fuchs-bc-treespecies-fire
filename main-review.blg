@@ -12,7 +12,7 @@ The style file: apalike.bst
 Database file #1: references.bib
 You've used 27 entries,
             1935 wiz_defined-function locations,
-            620 strings with 9427 characters,
+            621 strings with 9522 characters,
 and the built_in function-call counts, 8706 in all, are:
 = -- 889
 > -- 337
